@@ -1,0 +1,6 @@
+E:\OpenSource\DNN\src\Modules\Articles\obj\Debug\ResolveAssemblyReference.cache
+E:\OpenSource\DNN\src\bin\Articles.xml
+E:\OpenSource\DNN\src\bin\Articles.dll
+E:\OpenSource\DNN\src\bin\Articles.pdb
+E:\OpenSource\DNN\src\Modules\Articles\obj\Debug\Articles.dll
+E:\OpenSource\DNN\src\Modules\Articles\obj\Debug\Articles.pdb
