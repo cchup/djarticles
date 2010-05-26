@@ -67,6 +67,20 @@ namespace DjArticles.Components
             get { return createdDate; }
             set { createdDate = value; }
         }
+        private int approve;
+
+        public int Approve
+        {
+            get { return approve; }
+            set { approve = value; }
+        }
+        private int oppose;
+
+        public int Oppose
+        {
+            get { return oppose; }
+            set { oppose = value; }
+        }
         private string qq;
 
         public string Qq
@@ -101,6 +115,16 @@ namespace DjArticles.Components
         {
             get { return ip; }
             set { ip = value; }
+        }
+
+        private string avatarPic;
+        /// <summary>
+        /// Í·Ïñ
+        /// </summary>
+        public string AvatarPic
+        {
+            get { return avatarPic; }
+            set { avatarPic = value; }
         }
 
         private List<CommentInfo> subCommentInfo = new List<CommentInfo>();

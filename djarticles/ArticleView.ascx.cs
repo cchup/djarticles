@@ -245,6 +245,10 @@ namespace DjArticles
             this.PostComment();
         }
 
+        protected void lbnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
     }
 }
