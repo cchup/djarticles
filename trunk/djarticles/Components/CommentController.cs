@@ -26,7 +26,7 @@ namespace DjArticles.Components
             List<CommentInfo> comments = new List<CommentInfo>();
             foreach (CommentInfo comment in allComments)
             {
-                if (Null.IsNull(comment.ParentID))
+                if (Null.IsNull(comment.ParentID) || comment.ParentID==0)
                 {
                     comments.Add(comment);
                 }
@@ -38,7 +38,7 @@ namespace DjArticles.Components
                         parent.AddSubCommentInfo(comment);
                     }
                 }
-                if (!Null.IsNull(comment.ReferenceCommentID))
+                if (!Null.IsNull(comment.ReferenceCommentID) && comment.ReferenceCommentID!=0)
                 {
                     CommentInfo reference = commentsMap[comment.ReferenceCommentID];
                     if (reference != null)

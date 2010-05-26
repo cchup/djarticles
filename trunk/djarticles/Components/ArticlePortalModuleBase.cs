@@ -165,6 +165,11 @@ namespace DjArticles.Components
             {
                 return "";
             }
+            string _value = value.ToString();
+            if (string.IsNullOrEmpty(_value))
+            {
+                return "";
+            }
             string format = "";
             if (formats != null && formats.Length > 0)
             {
@@ -172,11 +177,11 @@ namespace DjArticles.Components
             }
             if (string.IsNullOrEmpty(format))
             {
-                return value.ToString();
+                return _value;
             }
             else
             {
-                return string.Format(format, value);
+                return string.Format(format, _value);
             }
         }
     }

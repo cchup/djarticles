@@ -207,6 +207,14 @@ namespace DjArticles
             {
                 return;
             }
+            if (string.IsNullOrEmpty(commentMessage))
+            {
+                throw new ArticlesException("评论内容为空！");
+            }
+            if (this.UserId == Null.NullInteger)
+            {
+                throw new ArticlesException("您还未登录！");
+            }
             int referenceId = WebControlUtils.GetObjectIntValue(this.hdfReferenceId);
             CommentInfo commentInfo = new CommentInfo();
             commentInfo.Comment = commentMessage;
@@ -232,13 +240,11 @@ namespace DjArticles
             }
         }
 
-        protected void btnPostComment_Click(object sender, EventArgs e)
+        protected void btnSubmit_Click(object sender, EventArgs e)
         {
             this.PostComment();
         }
 
         #endregion
-
-
     }
 }
