@@ -6,7 +6,7 @@
     <file relUrl="App_LocalResources/ArticleManage.ascx.resx" publishTime="05/26/2010 11:42:14" />
     <file relUrl="Bin/CountryListBox.xml" publishTime="05/26/2010 11:42:15" />
     <file relUrl="ArticleEdit.ascx" publishTime="05/26/2010 11:42:16" />
-    <file relUrl="ArticleView.ascx" publishTime="05/26/2010 13:30:31" />
+    <file relUrl="ArticleView.ascx" publishTime="05/26/2010 17:07:58" />
     <file relUrl="CategoryManage.ascx" publishTime="05/26/2010 11:42:16" />
     <file relUrl="bin/.svn/text-base/DotNetNuke.Services.Syndication.dll.svn-base" publishTime="05/26/2010 11:42:14" />
     <file relUrl="bin/.svn/prop-base/DotNetNuke.WebControls.dll.svn-base" publishTime="05/26/2010 11:42:15" />
@@ -40,7 +40,8 @@
     <file relUrl="App_LocalResources/ArticleEdit.ascx.resx" publishTime="05/26/2010 11:42:14" />
     <file relUrl="ArticleManage.ascx" publishTime="05/26/2010 11:42:16" />
     <file relUrl="App_LocalResources/CategoryManage.ascx.resx" publishTime="05/26/2010 11:42:14" />
-    <file relUrl="module.css" publishTime="05/26/2010 13:31:49" />
+    <file relUrl="module.css" publishTime="05/26/2010 16:09:41" />
+    <file relUrl="jQComment.js" publishTime="05/26/2010 15:51:02" />
     <file relUrl="CategoryEdit.ascx" publishTime="05/26/2010 11:42:16" />
     <file relUrl="bin/.svn/all-wcprops" publishTime="05/26/2010 11:42:15" />
     <file relUrl="ArticlePreview.ascx" publishTime="05/26/2010 11:42:16" />

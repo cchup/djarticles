@@ -158,30 +158,39 @@ namespace DjArticles.Components
         /// 绑定值
         /// </summary>
         /// <param name="value">绑定对象</param>
+        /// <param name="parameters">绑定参数，第一个参数指定默认值，第二个参数指定绑定格式</param>
         /// <returns></returns>
-        protected string EvalValue(object value,params string[] formats)
+        protected string EvalValue(object value,params string[] parameters)
         {
-            if (value == null)
-            {
-                return "";
-            }
-            string _value = value.ToString();
-            if (string.IsNullOrEmpty(_value))
-            {
-                return "";
-            }
+            string defaultValue = "";
             string format = "";
-            if (formats != null && formats.Length > 0)
+            if (parameters != null)
             {
-                format = formats[0];
+                if (parameters.Length > 0)
+                {
+                    defaultValue = parameters[0];
+                }
+                if (parameters.Length > 1)
+                {
+                    format = parameters[1];
+                }
+            }
+            string paravalue = defaultValue;
+            if (value != null)
+            {
+                string _value = value.ToString();
+                if (!string.IsNullOrEmpty(_value))
+                {
+                    paravalue = _value;
+                }
             }
             if (string.IsNullOrEmpty(format))
             {
-                return _value;
+                return paravalue;
             }
             else
             {
-                return string.Format(format, _value);
+                return string.Format(format, paravalue);
             }
         }
     }

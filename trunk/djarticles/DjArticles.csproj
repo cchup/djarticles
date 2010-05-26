@@ -201,6 +201,7 @@
     <Content Include="ArticleComments.ascx" />
     <Content Include="ArticlePreview.ascx" />
     <Content Include="ArticleView.ascx" />
+    <Content Include="jQComment.js" />
     <Content Include="module.css" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
