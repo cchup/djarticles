@@ -1,0 +1,700 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dj.Modules.Articles</name>
+    </assembly>
+    <members>
+        <member name="F:Dj.Modules.Articles.CategoryManage.grdCategories">
+            <summary>
+            grdCategories 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:Dj.Modules.Articles.EditArticle">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            The EditArticles class is used to manage content 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.EditArticle.Page_Load(System.Object,System.EventArgs)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            Page_Load runs when the control is loaded 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.EditArticle.cmdCancel_Click(System.Object,System.EventArgs)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            cmdCancel_Click runs when the cancel button is clicked 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.EditArticle.cmdUpdate_Click(System.Object,System.EventArgs)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            cmdUpdate_Click runs when the update button is clicked 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.EditArticle.cmdDelete_Click(System.Object,System.EventArgs)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            cmdDelete_Click runs when the delete button is clicked 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.lblContent">
+            <summary>
+            lblContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.txtContent">
+            <summary>
+            txtContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.valContent">
+            <summary>
+            valContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.cmdUpdate">
+            <summary>
+            cmdUpdate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.cmdCancel">
+            <summary>
+            cmdCancel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.cmdDelete">
+            <summary>
+            cmdDelete 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.EditArticle.ctlAudit">
+            <summary>
+            ctlAudit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:Dj.Modules.Articles.Settings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            The Settings class manages Module Settings 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Settings.LoadSettings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            LoadSettings loads the settings from the Database and displays them 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Settings.UpdateSettings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            UpdateSettings saves the modified settings to the Database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="F:Dj.Modules.Articles.Settings.lblTemplate">
+            <summary>
+            lblTemplate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:Dj.Modules.Articles.Settings.txtTemplate">
+            <summary>
+            txtTemplate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:Dj.Modules.Articles.ViewArticle">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            The ViewArticles class displays the content 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="F:Dj.Modules.Articles.ViewArticle.lstContent">
+            <summary>
+            lstContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:Dj.Modules.Articles.ViewArticle.Page_Load(System.Object,System.EventArgs)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            Page_Load runs when the control is loaded 
+            </summary> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.ViewArticle.lstContent_ItemDataBound(System.Object,System.Web.UI.WebControls.DataListItemEventArgs)">
+            ----------------------------------------------------------------------------- 
+            <summary>
+            lstContent_ItemDataBound runs when items are bound. Here the 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="P:Dj.Modules.Articles.ViewArticle.ModuleActions">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            Registers the module actions required for interfacing with the portal framework 
+            </summary> 
+            <value></value> 
+            <returns></returns> 
+            <remarks></remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.CategoryController.GetCategories(System.Int32)">
+            <summary>
+            获取所有的分类信息
+            </summary>
+            <param name="ModuleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.CategoryController.GetCategory(System.Int32,System.Int32)">
+            <summary>
+            获取某一分类详细信息
+            </summary>
+            <param name="CategoryID"></param>
+            <param name="ModuleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dj.Modules.Articles.Components.DataProvider">
+            数据访问抽象实现类
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.DataProvider.AddArticle(System.Int32,System.String,System.String,System.Int32,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Int32,System.String,System.Boolean,System.Boolean,System.Int32)">
+                    #region category info data access
+            
+                    public abstract CategoryInfo GetCategoryByID();
+            
+                    public abstract Array GetAllCategorys();
+            
+                    public abstract int AddCategory(CategoryInfo categoryInfo);
+            
+                    public abstract int DeleteCategoryByID(int categoryId);
+            
+                    public abstract int UpdateCategory(CategoryInfo categoryInfo);
+            
+                    #endregion
+            
+                    #region article info data access
+             
+                    public abstract ArticleInfo GetArticleByID(int articleId);
+            
+                    public abstract Array GetArticlesByCategoryID_(int categoryId, int size);
+            
+                    public abstract Array GetArticlesByCategoryID(int categoryId);
+            
+                    public abstract int AddArticle(ArticleInfo articleInfo);
+            
+                    public abstract int DeleteArticleByID(int articleId);
+            
+                    public abstract int UpdateArticle(ArticleInfo articleInfo);
+            
+                    public abstract int UpdateArticlePassState(int articleId, int isPass);
+            
+                    public abstract int UpdateArticleStars(int articleId, int stars);
+            
+                    public abstract int UpdateArticleHits(int articleId);
+            
+                    public abstract int UpdateArticleOnTop(int articleId);
+            
+                    #endregion
+            
+                    #region comment info data access
+            
+                    public abstract Array GetCommentsByIArticleID(int articleId);
+            
+                    public abstract int AddComment(CommentInfo commentInfo);
+            
+                    public abstract int DeleteComment(int commentId);
+            
+                    public abstract int UpdateComment(int commentInfo);
+            
+                    #endregion
+                    *
+        </member>
+        <member name="T:Dj.Modules.Articles.Components.ArticlesController">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            The Controller class for Articles 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.GetArticless(System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            gets an object from the database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleId">The Id of the module</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.GetArticles(System.Int32,System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            gets an object from the database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleId">The Id of the module</param> 
+            <param name="ItemId">The Id of the item</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.AddArticles(Dj.Modules.Articles.Components.ArticleInfo)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            adds an object to the database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="objArticles">The ArticlesInfo object</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.UpdateArticles(Dj.Modules.Articles.Components.ArticleInfo)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            saves an object to the database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="objArticles">The ArticlesInfo object</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.DeleteArticles(System.Int32,System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            deletes an object from the database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleId">The Id of the module</param> 
+            <param name="ItemId">The Id of the item</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.GetSearchItems(DotNetNuke.Entities.Modules.ModuleInfo)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            GetSearchItems implements the ISearchable Interface 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModInfo">The ModuleInfo for the module to be Indexed</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.ExportModule(System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            ExportModule implements the IPortable ExportModule Interface 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleID">The Id of the module to be exported</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.ArticlesController.ImportModule(System.Int32,System.String,System.String,System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            ImportModule implements the IPortable ImportModule Interface 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleID">The Id of the module to be imported</param> 
+            <param name="Content">The content to be imported</param> 
+            <param name="Version">The version of the module to be imported</param> 
+            <param name="UserId">The Id of the user performing the import</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:Dj.Modules.Articles.Components.CommentController.GetCommentsByIArticleID(System.Int32)">
+            查询与该文章相关的所有评论
+            查询出的评论文章以树形结构返回
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.getCommandName(System.String,System.String)">
+            <summary>
+            获取要执行命令的名称
+            </summary>
+            <param name="tableName"></param>
+            <param name="operationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.AddArticle(System.Int32,System.String,System.String,System.Int32,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Int32,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            插入一篇文章
+            </summary>
+            <param name="CategoryID"></param>
+            <param name="Title"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="CopyFrom"></param>
+            <param name="Author"></param>
+            <param name="KeyWords"></param>
+            <param name="Hot"></param>
+            <param name="OnTop"></param>
+            <param name="Elite"></param>
+            <param name="Stars"></param>
+            <param name="Passed"></param>
+            <param name="Summary"></param>
+            <param name="Content"></param>
+            <param name="IncludePic"></param>
+            <param name="DefaultPicUrl"></param>
+            <param name="PaginationType"></param>
+            <param name="MaxCharPerPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.AddCategory(System.Int32,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.Boolean)">
+            <summary>
+            插入Category分类信息
+            </summary>
+            <param name="ModuleId"></param>
+            <param name="Name"></param>
+            <param name="Description"></param>
+            <param name="ParentID"></param>
+            <param name="ViewOrder"></param>
+            <param name="AdminRoles"></param>
+            <param name="EditRoles"></param>
+            <param name="ViewRoles"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="IsActive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.DeleteCategory(System.Int32)">
+            <summary>
+            删除一个分类信息
+            </summary>
+            <param name="CategoryID"></param>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.GetCategories(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ModuleId"></param>
+            <param name="Depth"></param>
+            <param name="ParentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.GetAllCategorys(System.Int32)">
+            <summary>
+            获取所有的分类信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.GetCategory(System.Int32,System.Int32)">
+            <summary>
+            查询一个分类信息
+            </summary>
+            <param name="CategoryID"></param>
+            <param name="ModuleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Modules.Articles.Providers.Data_Providers.SqlDataProvider.AddComment(System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.DateTime,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            插入评论信息
+            </summary>
+            <param name="ArticleID"></param>
+            <param name="Title"></param>
+            <param name="Comment"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="QQ"></param>
+            <param name="MSN"></param>
+            <param name="Email"></param>
+            <param name="Homepage"></param>
+            <param name="IP"></param>
+            <param name="Score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Web.Controls.GridView.DjGridView.InitializePager(System.Web.UI.WebControls.GridViewRow,System.Int32,System.Web.UI.WebControls.PagedDataSource)">
+            <summary>
+            初始化分页信息栏
+            </summary>
+            <param name="row"></param>
+            <param name="columnSpan"></param>
+            <param name="pagedDataSource"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.GridView.DjGridView.CreateCustomPager(System.Web.UI.WebControls.GridViewRow,System.Int32,System.Web.UI.WebControls.PagedDataSource)">
+            <summary>
+            创建自定义分页实现
+            </summary>
+            <param name="row"></param>
+            <param name="columnSpan"></param>
+            <param name="pagedDataSource"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.GridView.DjGridView.OnPageChanged(System.Object,Dj.Web.Controls.PageChangingEventArgs)">
+            <summary>
+            选择页更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Dj.Web.Controls.GridView.DjGridView.OddRowBackColor">
+            <summary>
+            奇数行背景颜色
+            </summary>
+        </member>
+        <member name="P:Dj.Web.Controls.GridView.DjGridView.EvenRowBackColor">
+            <summary>
+            偶数行背景颜色
+            </summary>
+        </member>
+        <member name="P:Dj.Web.Controls.GridView.DjGridView.MouseOverBackColor">
+            <summary>
+            鼠标停靠的行的背景颜色
+            </summary>
+        </member>
+        <member name="P:Dj.Web.Controls.GridView.DjGridView.CustomFontSize">
+            <summary>
+            自定义字体大小
+            </summary>
+        </member>
+        <member name="P:Dj.Web.Controls.GridView.DjGridView.HeaderRowBackColor">
+            <summary>
+            标题行的背景颜色
+            </summary>
+        </member>
+        <member name="P:Dj.Web.Controls.GridView.DjGridView.FooterRowBackColor">
+            <summary>
+            分页行的背景颜色
+            </summary>
+        </member>
+        <member name="E:Dj.Web.Controls.GridView.DjGridView.DataSourceBind">
+            <summary>
+            绑定数据源事件
+            </summary>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.GetViewStateString(System.String)">
+            <summary>
+            获取视图状态值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.GetViewStateString(System.String,System.String)">
+            <summary>
+            获取视图状态值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.GetViewStateInt(System.String,System.Int32)">
+            <summary>
+            获取视图状态的整形值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.GetViewStateBoolean(System.String,System.Boolean)">
+            <summary>
+            获取视图状态的Bool值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.ReSetClientID(System.String)">
+            <summary>
+            重设clientID
+            </summary>
+            <param name="newClientID"></param>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.AddScriptResource(System.String)">
+            <summary>
+            添加脚本资源引用
+            </summary>
+            <param name="resource"></param>
+        </member>
+        <member name="M:Dj.Web.DJBaseControl.AddCssResource(System.String)">
+            <summary>
+            添加相关css引用
+            </summary>
+            <param name="resource"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.OnLoad(System.EventArgs)">
+            <summary>
+            控件加载方法
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            渲染控件的开始标签
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            渲染控件的结束标签
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.RenderPagingInfo(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出分页信息
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.RenderPagingIndex(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出分页导航
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.RenderNavigationButton(System.Web.UI.HtmlTextWriter,Dj.Web.Controls.NetPager.NavigationButtonType,System.Int32)">
+            <summary>
+            输出按钮
+            </summary>
+            <param name="writer"></param>
+            <param name="btntype"></param>
+            <param name="btnPageIndex">只有当按钮类型为NavigationButtonType.PagingIndex才有效</param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.RenderMoreButton(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            输出更多按钮
+            </summary>
+            <param name="writer"></param>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.WriteCssClass(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            添加Css属性
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.WriteSpacingStyle(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出右边距空白间隔样式
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.GetHrefString(System.Int32)">
+            <summary>
+            获取指定分页的导航链接字符串
+            </summary>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dj.Web.Controls.NetPager.BuildUrlString(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            将指定的链接参数添加到当前的连接参数中
+            </summary>
+            <param name="col"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dj.Web.Controls.NetPager.NavigationButtonType">
+            <summary>
+            导航页按钮类型
+            </summary>
+        </member>
+        <member name="P:Dj.Web.Controls.PageChangingEventArgs.NewPageIndex">
+            <summary>
+            当前显示页码，以1开始的索引
+            </summary>
+        </member>
+    </members>
+</doc>

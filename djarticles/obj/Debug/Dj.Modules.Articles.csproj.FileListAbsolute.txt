@@ -1,0 +1,18 @@
+E:\OpenSource\DNN\src\Modules\Articles\obj\Debug\ResolveAssemblyReference.cache
+E:\OpenSource\DNN\src\Modules\Articles\obj\Debug\Dj.Modules.Articles.dll
+E:\OpenSource\DNN\src\Modules\Articles\obj\Debug\Dj.Modules.Articles.pdb
+E:\OpenSource\DNN\src\Website\DesktopModules\Articles\obj\Debug\ResolveAssemblyReference.cache
+E:\OpenSource\DNN\src\Website\DesktopModules\Articles\obj\Debug\Dj.Modules.Articles.dll
+E:\OpenSource\DNN\src\Website\DesktopModules\Articles\obj\Debug\Dj.Modules.Articles.pdb
+E:\OpenSource\DNN\src\Website\bin\Dj.Modules.Articles.xml
+E:\OpenSource\DNN\src\Website\bin\Dj.Modules.Articles.dll
+E:\OpenSource\DNN\src\Website\bin\Dj.Modules.Articles.pdb
+E:\OpenSource\DNN\src\Website\DesktopModules\Dj.Modules.Articles\obj\Debug\ResolveAssemblyReference.cache
+E:\OpenSource\DNN\src\Website\DesktopModules\Dj.Modules.Articles\obj\Debug\Dj.Modules.Articles.dll
+E:\OpenSource\DNN\src\Website\DesktopModules\Dj.Modules.Articles\obj\Debug\Dj.Modules.Articles.pdb
+E:\Developer Project\BroadWisdom\Src\Website\bin\Dj.Modules.Articles.dll
+E:\Developer Project\BroadWisdom\Src\Website\bin\Dj.Modules.Articles.pdb
+E:\Developer Project\BroadWisdom\Src\Website\bin\Dj.Modules.Articles.xml
+E:\Developer Project\BroadWisdom\Src\Website\DesktopModules\Dj.Modules.Articles\obj\Debug\ResolveAssemblyReference.cache
+E:\Developer Project\BroadWisdom\Src\Website\DesktopModules\Dj.Modules.Articles\obj\Debug\Dj.Modules.Articles.dll
+E:\Developer Project\BroadWisdom\Src\Website\DesktopModules\Dj.Modules.Articles\obj\Debug\Dj.Modules.Articles.pdb

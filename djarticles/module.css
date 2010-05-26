@@ -1,0 +1,38 @@
+﻿BODY 
+{
+	FONT-SIZE: 12px; 
+	FONT-FAMILY: "Verdana", "宋体","Arial", "细明体", "sans-serif";
+	margin:0px;
+    padding:0px 2px 0px 2px;
+}
+table
+{
+    FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "宋体","Arial", "细明体", "sans-serif";
+	height:100%;
+}
+/*table样式*/
+.table_default{ background-color: #cad9ea; width: 100%; margin-top:3px; border-top:solid 1px #8DB2E3 }
+.table_default tr td{background-color:#ffffff;}
+.table_default tr th{background-color:#ffffff;}
+.table_default .caption td,.table_default .caption th{background-color: #e7e7e7; height: 21px; font-weight: bold;}
+.table_default .white td,.table_default .white th{background-color: #ffffff; height: 21px;}
+.table_default .gray td,.table_default .gray th{background-color: #f7f6f3; height: 21px;}
+/*文章显示样式*/
+.articleItem
+{
+	padding:5px;
+	margin:20px;
+}
+.articleMain 
+{
+	 background:#f8fafd; border:#d9d9d9 1px solid;
+}
+.articleTitle{	text-align:center;}
+.articleInfo{	text-align:center;border:1px solid #dfe9f2;color:#8a8a8a;background-color:#fff;}
+.articleInfo p{	margin:0px;	padding:0px;}
+.articleComment{ border:#d9d9d9 1px solid;}
+.articleComment .commentTitle{ border-bottom:#cecece 1px solid; background-color:#f4f4f4;font-size:14px; font-weight:bold;}
+.articleComment .postnew{ text-align:center;}
+.articleComment TextArea{ border:#d4d0c8 1px solid; width:98%; height:100px; margin:6px 0px 6px 0px; font-size:14px;}
+.submit{float:right;}
+.articleComment .refCmt{ padding:2px 2px 2px 10px; border:#cecece 1px solid;}
