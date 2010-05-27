@@ -117,55 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddContent.Action" xml:space="preserve">
-    <value>添加新的文章</value>
+  <data name="chkAllowComments.Text" xml:space="preserve">
+    <value>允许评论</value>
   </data>
-  <data name="ArticleBindingError.Text" xml:space="preserve">
-    <value>文章列表绑定错误</value>
+  <data name="chkAnonymousComments.Text" xml:space="preserve">
+    <value>允许匿名评论</value>
   </data>
-  <data name="ArticlesListSettings.Action" xml:space="preserve">
-    <value>浏览设置</value>
+  <data name="chkShowCategory.Text" xml:space="preserve">
+    <value>现实分类</value>
   </data>
-  <data name="Author.Text" xml:space="preserve">
-    <value>作者: </value>
+  <data name="chkShowReadMore.Text" xml:space="preserve">
+    <value>显示阅读更多</value>
   </data>
-  <data name="CategoryError.Text" xml:space="preserve">
-    <value>Error Retrieving article list: Efficion's Categories module must be installed to use the Articles Module.</value>
+  <data name="dateRange1Month.Text" xml:space="preserve">
+    <value>一个月</value>
   </data>
-  <data name="Comments.Text" xml:space="preserve">
-    <value>Comments</value>
+  <data name="dateRange1Week.Text" xml:space="preserve">
+    <value>一周</value>
   </data>
-  <data name="Expired.Text" xml:space="preserve">
-    <value>Expired</value>
+  <data name="dateRange1Year.Text" xml:space="preserve">
+    <value>一年</value>
   </data>
-  <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>The Articles module is extends the core's Announcement module with a variety of features including: thumbnailed images, categories, an optional approval process, additional text, and much more.</value>
+  <data name="dateRange2Week.Text" xml:space="preserve">
+    <value>二周</value>
   </data>
-  <data name="MoreArticles.Text" xml:space="preserve">
-    <value>更多..</value>
+  <data name="dateRange3Month.Text" xml:space="preserve">
+    <value>三个月</value>
   </data>
-  <data name="NoResults.Text" xml:space="preserve">
-    <value>The are no results to display for the current criteria.</value>
+  <data name="dateRange6Month.Text" xml:space="preserve">
+    <value>六个月</value>
   </data>
-  <data name="PendingApproval.Text" xml:space="preserve">
-    <value>Pending Approval&lt;br/&gt;</value>
+  <data name="NoRestriction.Text" xml:space="preserve">
+    <value>无限制</value>
   </data>
-  <data name="plWillPage" xml:space="preserve">
-    <value />
+  <data name="plAllowComments.Text" xml:space="preserve">
+    <value>是否允许评论</value>
   </data>
-  <data name="PublishDate.Text" xml:space="preserve">
-    <value>发表</value>
+  <data name="plArticlesPerPage.Text" xml:space="preserve">
+    <value>每页大小</value>
   </data>
-  <data name="ReadMore.Text" xml:space="preserve">
-    <value>Read More...</value>
+  <data name="plCategory.Text" xml:space="preserve">
+    <value>所属分类</value>
   </data>
-  <data name="Search.Text" xml:space="preserve">
-    <value>搜索</value>
+  <data name="plDateRange.Text" xml:space="preserve">
+    <value>时间区间限制</value>
   </data>
-  <data name="SearchResults.Text" xml:space="preserve">
-    <value>搜索结果</value>
+  <data name="plDisplayedFields.Text" xml:space="preserve">
+    <value>显示域</value>
   </data>
-  <data name="Views.Text" xml:space="preserve">
-    <value>浏览</value>
+  <data name="plMoreArticles.Text" xml:space="preserve">
+    <value>更多</value>
+  </data>
+  <data name="plSortField.Text" xml:space="preserve">
+    <value>排序字段</value>
+  </data>
+  <data name="SortFieldCreatedDate.Text" xml:space="preserve">
+    <value>按创建时间排序</value>
+  </data>
+  <data name="SortFieldTitle.Text" xml:space="preserve">
+    <value>按标题排序</value>
+  </data>
+  <data name="plFilterByCategory.Text" xml:space="preserve">
+    <value>是否按分类显示</value>
+  </data>
+  <data name="plWillPage.Text" xml:space="preserve">
+    <value>是否分页现实</value>
   </data>
 </root>

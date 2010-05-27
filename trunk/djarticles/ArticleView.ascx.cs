@@ -230,7 +230,7 @@ namespace DjArticles
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            articleId = this.getIntParameter("ArticleId");
+            articleId = this.GetIntParameter("ArticleId");
             if (!IsPostBack)
             {
                 if (articleId != Null.NullInteger)

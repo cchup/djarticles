@@ -98,9 +98,9 @@ namespace DjArticles
         {
             get {
                 ModuleActionCollection actions = new ModuleActionCollection();
-                actions.Add(GetNextActionID(), Localization.GetString(ArticleActionType.CategoryManage), ArticleActionType.CategoryManage, "", "", EditUrl("CategoryManage"), false, DotNetNuke.Security.SecurityAccessLevel.Edit, true, false);
-                actions.Add(GetNextActionID(), Localization.GetString(ArticleActionType.NewCategoryAction), ArticleActionType.NewCategoryAction, "", "", EditUrl("CategoryEdit"), false, DotNetNuke.Security.SecurityAccessLevel.Edit, true, false);
-                actions.Add(GetNextActionID(), Localization.GetString(ArticleActionType.NewArticleAction), ArticleActionType.NewArticleAction, "", "", EditUrl("ArticleEdit"), false, DotNetNuke.Security.SecurityAccessLevel.Edit, true, false);
+                actions.Add(GetNextActionID(), Localization.GetString(ArticleActionType.CategoryManage,this.LocalResourceFile), ArticleActionType.CategoryManage, "", "", EditUrl("CategoryManage"), false, DotNetNuke.Security.SecurityAccessLevel.Edit, true, false);
+                actions.Add(GetNextActionID(), Localization.GetString(ArticleActionType.NewCategoryAction, this.LocalResourceFile), ArticleActionType.NewCategoryAction, "", "", EditUrl("CategoryEdit"), false, DotNetNuke.Security.SecurityAccessLevel.Edit, true, false);
+                actions.Add(GetNextActionID(), Localization.GetString(ArticleActionType.NewArticleAction, this.LocalResourceFile), ArticleActionType.NewArticleAction, "", "", EditUrl("ArticleEdit"), false, DotNetNuke.Security.SecurityAccessLevel.Edit, true, false);
                 return actions;
             }
         }

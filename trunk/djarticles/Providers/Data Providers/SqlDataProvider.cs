@@ -11,6 +11,7 @@ using DotNetNuke.Framework.Providers;
 using DjArticles.Components;
 using Microsoft.ApplicationBlocks.Data;
 using Microsoft.VisualBasic.CompilerServices;
+using System.Data.SqlClient;
 
 namespace DjArticles.Providers.Data_Providers
 {
@@ -118,6 +119,28 @@ namespace DjArticles.Providers.Data_Providers
         {
             string commandName = getCommandName("Article", "SelectAll");
             return SqlHelper.ExecuteReader(this._connectionString, commandName);
+        }
+
+        /// <summary>
+        /// 获取文章
+        /// </summary>
+        /// <param name="categoryId">指定分类</param>
+        /// <param name="pageSize">分页大小</param>
+        /// <param name="currentPage">当前页</param>
+        /// <param name="totalCount">输出总数</param>
+        /// <returns></returns>
+        public override IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, SqlParameter paTotalCount)
+        {
+            string commandName = getCommandName("Article", "SelectArticlesByPage");
+           
+            SqlParameter paCategoryId=new SqlParameter("CategoryID",categoryId);
+            SqlParameter paPageSize=new SqlParameter("pageSize",pageSize);
+            SqlParameter paCurrentPage=new SqlParameter("currentPage",currentPage);
+            if (paTotalCount != null)
+            {
+                paTotalCount.Direction = ParameterDirection.Output;
+            }
+            SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName, paCategoryId, paPageSize, paCurrentPage, paTotalCount);
         }
 
         /// <summary>

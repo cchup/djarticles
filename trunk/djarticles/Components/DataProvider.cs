@@ -20,62 +20,11 @@ namespace DjArticles.Components
         {
             return objProvider;
         }
-        /**
-        #region category info data access
-
-        public abstract CategoryInfo GetCategoryByID();
-
-        public abstract Array GetAllCategorys();
-
-        public abstract int AddCategory(CategoryInfo categoryInfo);
-
-        public abstract int DeleteCategoryByID(int categoryId);
-
-        public abstract int UpdateCategory(CategoryInfo categoryInfo);
-
-        #endregion
-
-        #region article info data access
- 
-        public abstract ArticleInfo GetArticleByID(int articleId);
-
-        public abstract Array GetArticlesByCategoryID_(int categoryId, int size);
-
-        public abstract Array GetArticlesByCategoryID(int categoryId);
-
-        public abstract int AddArticle(ArticleInfo articleInfo);
-
-        public abstract int DeleteArticleByID(int articleId);
-
-        public abstract int UpdateArticle(ArticleInfo articleInfo);
-
-        public abstract int UpdateArticlePassState(int articleId, int isPass);
-
-        public abstract int UpdateArticleStars(int articleId, int stars);
-
-        public abstract int UpdateArticleHits(int articleId);
-
-        public abstract int UpdateArticleOnTop(int articleId);
-
-        #endregion
-
-        #region comment info data access
-
-        public abstract Array GetCommentsByIArticleID(int articleId);
-
-        public abstract int AddComment(CommentInfo commentInfo);
-
-        public abstract int DeleteComment(int commentId);
-
-        public abstract int UpdateComment(int commentInfo);
-
-        #endregion
-        **/
-
         public abstract int AddArticle( int CategoryID, string Title, string CreatedByUserName, int CreatedByUserID, DateTime CreatedDate, string CopyFrom, string Author, string KeyWords, string Summary, string Content, bool Hot, bool OnTop, int Stars, bool Passed, int Hits, string DefaultPicUrl, bool AllowPrint, bool AllowComment, int CommentCount );
         public abstract int AddCategory(string Name, string Description, int ParentID, int Depth, int ViewOrder, string AdminRoles, string EditRoles, string ViewRoles, int CreatedByUserID, string CreatedByUserName, DateTime CreatedDate, bool IsActive);
         public abstract int AddComment(int ArticleID, string Title, string Comment, long ReferenceCommentID, long ParentID, int CreatedByUserID, string CreatedByUserName, DateTime CreatedDate, string QQ, string MSN, string Email, string Homepage, string IP);
         public abstract IDataReader GetArticles(int categoryId);
+        public abstract IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, out int totalCount);
         public abstract IDataReader GetAllArticles();
         public abstract IDataReader GetArticle(int articleId);
 
