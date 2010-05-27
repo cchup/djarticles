@@ -10,6 +10,7 @@ using DotNetNuke.Common;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Services.Search;
 using DotNetNuke.Entities.Modules;
+using DjArticles.Common;
 
 namespace DjArticles.Components
 {
@@ -35,6 +36,27 @@ namespace DjArticles.Components
         public List<ArticleInfo> GetArticles()
         {
             return CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetAllArticles());
+        }
+
+        /// <summary>
+        /// 查询文章列表
+        /// </summary>
+        /// <param name="filterByCategory">是否按分类进行查询</param>
+        /// <param name="filterCategoryID">要查询的分类</param>
+        /// <param name="willPage">是否分页</param>
+        /// <param name="articlesPerPage">分页大小</param>
+        /// <returns></returns>
+        public List<ArticleInfo> GetArticlesList(bool filterByCategory, int filterCategoryID, bool willPage, int articlesPerPage,int pageSize,int currentPage,out int totalCount)
+        {
+            if (filterByCategory && (filterCategoryID == Null.NullInteger || filterCategoryID == 0))
+            {
+                throw new ArticlesException("按分类查询时，分类标识ID必须指定！");
+            }
+            if (willPage && (articlesPerPage == Null.NullInteger || articlesPerPage == 0))
+            {
+                throw new ArticlesException("分页大小必须指定！");
+            }
+            CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetArticlesByPage(filterCategoryID,
         }
 
         /// <summary>

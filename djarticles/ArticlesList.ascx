@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlesList.ascx.cs" Inherits="DjArticles.ArticlesList" %>
 <%@ Register TagPrefix="dnnsc" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <asp:Label ID="lblMessage" Runat="server" />
-<asp:DataList id="lstArticles" CssClass="ArticleList" runat="server" OnItemDataBound="Item_Bound" EnableViewState="false" CellPadding="4" Width="100%">
+<asp:DataList id="lstArticles" CssClass="ArticleList" runat="server" EnableViewState="false" CellPadding="4" Width="100%">
 	<ItemTemplate>
 		<div class="Article">
 			<div style="float:right;">

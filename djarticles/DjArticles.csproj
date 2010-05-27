@@ -94,6 +94,13 @@
     <Compile Include="ArticlesList.ascx.designer.cs">
       <DependentUpon>ArticlesList.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ArticlesListSettings.ascx.cs">
+      <DependentUpon>ArticlesListSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticlesListSettings.ascx.designer.cs">
+      <DependentUpon>ArticlesListSettings.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ArticlesListTop.ascx.cs">
       <DependentUpon>ArticlesListTop.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,7 +191,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="01.00.00.SqlDataProvider" />
-    <None Include="Dj.Modules.Articles.dnn" />
+    <None Include="DjArticles.dnn" />
     <None Include="Uninstall.SqlDataProvider" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -227,6 +234,16 @@
     <Content Include="App_LocalResources\ArticlesList.ascx.resx">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="ArticlesListSettings.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ArticlesListSettings.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Manage\" />
+    <Folder Include="Show\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />

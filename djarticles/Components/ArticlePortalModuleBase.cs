@@ -140,7 +140,7 @@ namespace DjArticles.Components
         /// </summary>
         /// <param name="parameterName">参数名称</param>
         /// <returns>参数int值</returns>
-        protected int getIntParameter(string parameterName)
+        protected int GetIntParameter(string parameterName)
         {
             int value=Null.NullInteger;
             string _value = Request.Params.Get(parameterName);
@@ -193,5 +193,82 @@ namespace DjArticles.Components
                 return string.Format(format, paravalue);
             }
         }
+
+        /// <summary>
+        /// 获取模块设置值(整型）
+        /// </summary>
+        /// <param name="settingKey"></param>
+        /// <returns></returns>
+        protected int GetSettingInt(string settingKey, params int[] parameters)
+        {
+            int defaultValue = Null.NullInteger;
+            if (parameters != null && parameters.Length > 0)
+            {
+                defaultValue = parameters[0];
+            }
+            object _value = Settings[settingKey];
+            if (_value == null)
+            {
+                return defaultValue;
+            }
+            int settingValue = defaultValue;
+            if (!int.TryParse(_value.ToString(), out settingValue))
+            {
+                settingValue = defaultValue;
+            }
+            return settingValue;
+        }
+
+        /// <summary>
+        /// 获取模块设置值(布尔）
+        /// </summary>
+        /// <param name="settingKey"></param>
+        /// <returns></returns>
+        protected bool GetSettingBool(string settingKey, params bool[] parameters)
+        {
+            bool defaultValue = false;
+            if (parameters != null && parameters.Length > 0)
+            {
+                defaultValue = parameters[0];
+            }
+            object _value = Settings[settingKey];
+            if (_value == null)
+            {
+                return defaultValue;
+            }
+            bool settingValue = defaultValue;
+            if (!bool.TryParse(_value.ToString(), out settingValue))
+            {
+                settingValue = defaultValue;
+            }
+            return settingValue;
+        }
+
+        /// <summary>
+        /// 获取模块设置值(字符串）
+        /// </summary>
+        /// <param name="settingKey"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        protected string GetSettingString(string settingKey, params string[] parameters)
+        {
+            string defaultValue = "";
+            if (parameters != null && parameters.Length > 0)
+            {
+                defaultValue = parameters[0];
+            }
+            object _value = Settings[settingKey];
+            if (_value == null)
+            {
+                return defaultValue;
+            }
+            string settingValue = defaultValue;
+            if (!string.IsNullOrEmpty(_value.ToString()))
+            {
+                settingValue = _value.ToString();
+            }
+            return settingValue;
+        }
+
     }
 }

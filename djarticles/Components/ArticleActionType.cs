@@ -18,5 +18,6 @@ namespace DjArticles.Components
        public const string CategoryManage="CategoryManageAction.Action";
        public const string NewCategoryAction = "NewCategoryAction.Action";
        public const string NewArticleAction = "NewArticleAction.Action";
+       public const string ArticlesListSettings = "ArticlesListSettings.Action";
     }
 }
