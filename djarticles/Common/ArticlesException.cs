@@ -19,6 +19,7 @@ namespace DjArticles.Common
         public ArticlesException(string message)
             : base(message)
         {
+
         }
     }
 }
