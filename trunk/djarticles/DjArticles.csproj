@@ -125,17 +125,36 @@
     <Compile Include="Common\ArticlesException.cs" />
     <Compile Include="Common\ArticleConstants.cs" />
     <Compile Include="Common\WebControlUtils.cs" />
-    <Compile Include="Components\ArticleActionType.cs" />
+    <Compile Include="Components\ArticleActionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\ArticleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Components\ArticlePortalModuleBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Components\CategoryController.cs" />
-    <Compile Include="Components\CategoryInfo.cs" />
-    <Compile Include="Components\CommentController.cs" />
-    <Compile Include="Components\CommentInfo.cs" />
-    <Compile Include="Components\DataProvider.cs" />
-    <Compile Include="Components\ArticlesController.cs" />
-    <Compile Include="Components\ArticleInfo.cs" />
+    <Compile Include="Components\ArticlesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\ArticlesListBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\CategoryController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\CategoryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\CommentController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\CommentInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\DataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Controls\DJBaseControl.cs" />
     <Compile Include="Controls\GridView\DjGridView.cs" />
     <Compile Include="Controls\NetPager.cs">
@@ -203,6 +222,11 @@
     <Content Include="ArticleView.ascx" />
     <Content Include="jQComment.js" />
     <Content Include="module.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ArticlesList.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />

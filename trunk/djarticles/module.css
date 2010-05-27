@@ -1,16 +1,4 @@
-﻿BODY 
-{
-	FONT-SIZE: 12px; 
-	FONT-FAMILY: "Verdana", "宋体","Arial", "细明体", "sans-serif";
-	margin:0px;
-    padding:0px 2px 0px 2px;
-}
-table
-{
-    FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "宋体","Arial", "细明体", "sans-serif";
-	height:100%;
-}
-.clear{ clear:both;}
+﻿.clear{ clear:both;}
 /*table样式*/
 .table_default{ background-color: #cad9ea; width: 100%; margin-top:3px; border-top:solid 1px #8DB2E3 }
 .table_default tr td{background-color:#ffffff;}
@@ -19,20 +7,13 @@ table
 .table_default .white td,.table_default .white th{background-color: #ffffff; height: 21px;}
 .table_default .gray td,.table_default .gray th{background-color: #f7f6f3; height: 21px;}
 /*文章显示样式*/
-.articleItem
-{
-	padding:5px;
-	margin:20px;
-}
-.articleMain 
-{
-	 background:#f8fafd; border:#d9d9d9 1px solid;
-}
+.articleItem{padding:5px;margin:20px;}
+.articleMain { background:#f8fafd; border:#d9d9d9 1px solid;}
 .articleTitle{	text-align:center;}
 .articleInfo{	text-align:center;border:1px solid #dfe9f2;color:#8a8a8a;background-color:#fff;}
 .articleInfo p{	margin:0px;	padding:0px;}
-
-.commentlist{ border-bottom:#777 1px dotted; padding:2px 0px 2px;}
+.articleContent { padding:2px;word-break:break-all;word-wrap:break-word; }
+.commentlist{ border-bottom:#777 1px dotted; padding:2px 0px 2px; margin-bottom:10px;}
 .articleComment{ border:#d9d9d9 1px solid;}
 .articleComment .commentTitle{ border-bottom:#cecece 1px solid; font-size:14px; font-weight:bold; padding:2px 0px 2px;}
 .articleComment .postnew{ }

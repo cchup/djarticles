@@ -42,7 +42,7 @@
                                 <h4>
                                     <span style="color: #999">
                                         <%# Eval("CreatedDate", "{0:yyyy年M月d日 hh:mm:ss}")%></span> <span style="color: #003366;">
-                                            <%#Eval("CreatedByUserName")%></span>
+                                            <%# EvalValue(Eval("CreatedByUserName"),"匿名用户")%></span>
                                 </h4>
                             </span>
                             <p>
