@@ -10,28 +10,54 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using DotNetNuke.Entities.Modules;
 using DjArticles.Components;
+using DotNetNuke.Services.Exceptions;
 
 namespace DjArticles
 {
-    public partial class ArticlesList : ArticlesListBase
+    public partial class ArticlesList : ArticlePortalModuleBase
     {
-        private ArticlesController controller = new ArticlesController();
+        #region Private Members
+        private ArticlesListBase articlesList;
+        #endregion
 
+        #region Private Methods
         /// <summary>
-        /// 绑定数据源
+        /// 加载显示控件
         /// </summary>
-        private void BindArticlesSource()
+        private void LoadArticlesListControl()
         {
-            this.lstArticles.DataSource = controller.GetArticles();
-            this.lstArticles.DataBind();
+            try
+            {
+                string templateSetting = this.GetSettingString("Template");
+                if (string.IsNullOrEmpty(templateSetting))
+                {
+                    templateSetting = "Standard";
+                }
+                string controlPath = this.ControlPath + "ArticlesList_" + templateSetting+".ascx";
+                articlesList = (ArticlesListBase)LoadControl(controlPath);
+                if (articlesList != null)
+                {
+                    articlesList.ModuleConfiguration = this.ModuleConfiguration;
+                    this.objPlaceholder.Controls.Add(articlesList);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
+        #endregion
+
+        #region Events Handler
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                BindArticlesSource();
-            }   
+                LoadArticlesListControl();
+            }
         }
+        #endregion
+
     }
 }

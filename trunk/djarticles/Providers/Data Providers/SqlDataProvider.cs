@@ -12,6 +12,7 @@ using DjArticles.Components;
 using Microsoft.ApplicationBlocks.Data;
 using Microsoft.VisualBasic.CompilerServices;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace DjArticles.Providers.Data_Providers
 {
@@ -129,7 +130,7 @@ namespace DjArticles.Providers.Data_Providers
         /// <param name="currentPage">当前页</param>
         /// <param name="totalCount">输出总数</param>
         /// <returns></returns>
-        public override IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, SqlParameter paTotalCount)
+        public override IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, DbParameter paTotalCount)
         {
             string commandName = getCommandName("Article", "SelectArticlesByPage");
            
@@ -140,7 +141,7 @@ namespace DjArticles.Providers.Data_Providers
             {
                 paTotalCount.Direction = ParameterDirection.Output;
             }
-            SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName, paCategoryId, paPageSize, paCurrentPage, paTotalCount);
+            return SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName, paCategoryId, paPageSize, paCurrentPage,(SqlParameter)paTotalCount);
         }
 
         /// <summary>
@@ -366,6 +367,14 @@ namespace DjArticles.Providers.Data_Providers
             throw new NotImplementedException();
         }
 
+        #region 其他实现
 
+        public override System.Data.Common.DbParameter GetParameter(string name, object value)
+        {
+            SqlParameter parameter = new SqlParameter(name,value);
+            return parameter;
+        }
+
+        #endregion
     }
 }

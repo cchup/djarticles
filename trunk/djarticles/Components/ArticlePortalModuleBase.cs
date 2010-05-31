@@ -119,7 +119,7 @@ namespace DjArticles.Components
         /// <summary>
         /// 获取引用路径
         /// </summary>
-        /// <param name="path">相对于当前控件的相对路径</param>
+        /// <param name="path">当前控件的相对路径</param>
         /// <returns></returns>
         protected string ResolveModuleUrl(string path)
         {

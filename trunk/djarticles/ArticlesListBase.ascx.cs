@@ -13,13 +13,14 @@ using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.Entities.Modules.Actions;
+using DjArticles.Components;
 
-namespace DjArticles.Components
+namespace DjArticles
 {
     /// <summary>
     /// 文章列表的基类，用户可以根据此基础定制不同的现实效果
     /// </summary>
-    public class ArticlesListBase : ArticlePortalModuleBase,IActionable
+    public partial class ArticlesListBase : ArticlePortalModuleBase, IActionable
     {
         #region Controls
         /// <summary>
@@ -67,22 +68,69 @@ namespace DjArticles.Components
         /// 获取绑定数据源
         /// </summary>
         /// <returns></returns>
-        private List<ArticleInfo> GetDataPage()
+        private void GetDataPage()
         {
             filterByCategory = GetSettingBool("FilterByCategory", false);
             filterCategoryID = GetSettingInt("FilterCategoryID", Null.NullInteger);
             willPage = GetSettingBool("WillPage", true);
             articlesPerPage = GetSettingInt("ArticlesPerPage", 10);
-            return articleController.GetArticles();
+            int currentPage= GetIntParameter("CurrentPage");
+            int totalCount=0;
+            List<ArticleInfo> articles= articleController.GetArticlesList(filterByCategory, filterCategoryID, willPage, articlesPerPage, currentPage, out totalCount);
+            this.lstArticles.DataSource = articles;
+            this.lstArticles.DataBind();
+            if (willPage)
+            {
+                this.ctlPagingControl.CurrentPage = currentPage;
+                this.ctlPagingControl.PageSize = articlesPerPage;
+                this.ctlPagingControl.TotalRecords = totalCount;
+            }
         }
 
+        /// <summary>
+        /// 显示文章内容
+        /// </summary>
+        /// <param name="e"></param>
+        private void ShowArticles(DataListItemEventArgs e)
+        {
+            HyperLink lnkReadMore = e.Item.FindControl("lnkReadMore") as HyperLink;
+            if (lnkReadMore == null)
+            {
+                lnkReadMore = new HyperLink();
+            }
+            Image articleImage = e.Item.FindControl("imgArticleImage") as Image;
+            if (articleImage == null)
+            {
+                articleImage = new Image();
+            }
+            object _objPicUrl =DataBinder.Eval(e.Item.DataItem, "DefaultPicUrl");
+            if (_objPicUrl != null)
+            {
+                articleImage.ImageUrl = _objPicUrl.ToString();
+            }
+            if (string.IsNullOrEmpty(articleImage.ImageUrl))
+            {
+                articleImage.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// 显示评论内容
+        /// </summary>
+        /// <param name="e"></param>
+        private void ShowComments(DataListItemEventArgs e)
+        {
+        }
         #endregion
 
         #region Event Handler
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                this.GetDataPage();
+            }
         }
 
         protected void Page_Init(object sender, EventArgs e)
@@ -90,8 +138,16 @@ namespace DjArticles.Components
             this.LocalResourceFile = Localization.GetResourceFile(this, "ArticlesList.ascx").Replace("/Templates", "");
         }
 
-        #endregion
 
+        protected void Item_Bound(object sender, DataListItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item)
+            {
+                ShowArticles(e);
+            }
+        }
+
+        #endregion
 
         #region IActionable 成员
 
