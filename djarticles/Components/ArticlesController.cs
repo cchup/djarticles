@@ -11,6 +11,7 @@ using DotNetNuke.Common.Utilities;
 using DotNetNuke.Services.Search;
 using DotNetNuke.Entities.Modules;
 using DjArticles.Common;
+using System.Data.Common;
 
 namespace DjArticles.Components
 {
@@ -46,17 +47,33 @@ namespace DjArticles.Components
         /// <param name="willPage">是否分页</param>
         /// <param name="articlesPerPage">分页大小</param>
         /// <returns></returns>
-        public List<ArticleInfo> GetArticlesList(bool filterByCategory, int filterCategoryID, bool willPage, int articlesPerPage,int pageSize,int currentPage,out int totalCount)
+        public List<ArticleInfo> GetArticlesList(bool filterByCategory, int filterCategoryID, bool willPage,int pageSize,int currentPage,out int totalCount)
         {
             if (filterByCategory && (filterCategoryID == Null.NullInteger || filterCategoryID == 0))
             {
                 throw new ArticlesException("按分类查询时，分类标识ID必须指定！");
             }
-            if (willPage && (articlesPerPage == Null.NullInteger || articlesPerPage == 0))
+            if (willPage && (pageSize == Null.NullInteger || pageSize == 0))
             {
                 throw new ArticlesException("分页大小必须指定！");
             }
-            CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetArticlesByPage(filterCategoryID,
+            if (!filterByCategory)
+            {
+                filterCategoryID = Null.NullInteger;
+            }
+            if (willPage)
+            {
+                DbParameter paTotalCount = DataProvider.Instance().GetParameter("totalCount", Null.NullInteger);
+                List<ArticleInfo> articles = CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetArticlesByPage(filterCategoryID, pageSize, currentPage, paTotalCount));
+                totalCount = (int)paTotalCount.Value;
+                return articles;
+            }
+            else
+            {
+                List<ArticleInfo> articles = this.GetArticles(filterCategoryID);
+                totalCount = articles.Count;
+                return articles;
+            }
         }
 
         /// <summary>

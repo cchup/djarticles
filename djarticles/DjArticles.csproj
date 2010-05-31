@@ -144,7 +144,7 @@
     <Compile Include="Components\ArticlesController.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Components\ArticlesListBase.cs">
+    <Compile Include="ArticlesListBase.ascx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Components\CategoryController.cs">
@@ -209,7 +209,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ArticleManage.ascx" />
-    <Content Include="ArticlesList.ascx" />
     <Content Include="ArticlesListTop.ascx" />
     <Content Include="CategoryEdit.ascx" />
     <Content Include="CategoryManage.ascx" />
@@ -240,6 +239,10 @@
     <Content Include="App_LocalResources\ArticlesListSettings.ascx.resx">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="ArticlesList.ascx" />
+    <Content Include="ArticlesList_Standard.ascx" />
+    <Content Include="ArticlesList_Fancy.ascx" />
+    <Content Include="ArticlesList_TitleOnly.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Manage\" />

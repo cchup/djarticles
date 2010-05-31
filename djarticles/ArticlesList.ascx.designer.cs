@@ -14,30 +14,48 @@ namespace DjArticles {
     public partial class ArticlesList {
         
         /// <summary>
-        /// lblMessage 控件。
+        /// lblSearchResults 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Label lblSearchResults;
         
         /// <summary>
-        /// lstArticles 控件。
+        /// objPlaceholder 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList lstArticles;
+        protected global::System.Web.UI.WebControls.PlaceHolder objPlaceholder;
         
         /// <summary>
-        /// ctlPagingControl 控件。
+        /// pnlSearch 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::DotNetNuke.UI.WebControls.PagingControl ctlPagingControl;
+        protected global::System.Web.UI.WebControls.Panel pnlSearch;
+        
+        /// <summary>
+        /// txtSearch 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        
+        /// <summary>
+        /// cmdSearch 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton cmdSearch;
     }
 }
