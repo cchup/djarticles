@@ -34,7 +34,7 @@ namespace DjArticles
         /// <summary>
         /// 文章列表控件
         /// </summary>
-        protected global::System.Web.UI.WebControls.DataList lstArticles;
+        protected global::System.Web.UI.WebControls.Repeater lstArticles;
         /// <summary>
         /// 文章列表分页控件
         /// </summary>
@@ -81,9 +81,14 @@ namespace DjArticles
             this.lstArticles.DataBind();
             if (willPage)
             {
+                this.ctlPagingControl.Visible = true;
                 this.ctlPagingControl.CurrentPage = currentPage;
                 this.ctlPagingControl.PageSize = articlesPerPage;
                 this.ctlPagingControl.TotalRecords = totalCount;
+            }
+            else
+            {
+                this.ctlPagingControl.Visible = false;
             }
         }
 
@@ -91,7 +96,7 @@ namespace DjArticles
         /// 显示文章内容
         /// </summary>
         /// <param name="e"></param>
-        private void ShowArticles(DataListItemEventArgs e)
+        private void ShowArticles(RepeaterItemEventArgs e)
         {
             HyperLink lnkReadMore = e.Item.FindControl("lnkReadMore") as HyperLink;
             if (lnkReadMore == null)
@@ -118,7 +123,7 @@ namespace DjArticles
         /// 显示评论内容
         /// </summary>
         /// <param name="e"></param>
-        private void ShowComments(DataListItemEventArgs e)
+        private void ShowComments(RepeaterItemEventArgs e)
         {
         }
         #endregion
@@ -139,7 +144,7 @@ namespace DjArticles
         }
 
 
-        protected void Item_Bound(object sender, DataListItemEventArgs e)
+        protected void Item_Bound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item)
             {

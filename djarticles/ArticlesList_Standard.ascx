@@ -1,27 +1,29 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlesListBase.ascx.cs" Inherits="DjArticles.ArticlesListBase" %>
+Ôªø<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlesListBase.ascx.cs" Inherits="DjArticles.ArticlesListBase" %>
 <%@ Register TagPrefix="dnnsc" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<asp:Label ID="lblMessage" Runat="server" />
-<asp:DataList id="lstArticles" CssClass="ArticleList" runat="server" OnItemDataBound="Item_Bound" EnableViewState="false" CellPadding="4" Width="100%">
-	<ItemTemplate>
-		<div class="Article">
-			<div style="float:right;">
-				<asp:Label id="lblCategories" cssclass="CategoryList" runat="server" />
-			</div>
-		<div class="Head">
-				<asp:HyperLink id="titleLink" runat="server" text='<%# Eval("Title") %>' NavigateUrl='<%# EditUrl("ArticleView","ArticleID",Eval("ArticleID").ToString()) %>' />
-		</div>
-			<asp:Label id="lblPublishDate"  cssclass="NormalRed" runat="server" text='<%# Eval("CreatedDate","{0:yyyyƒÍMM‘¬dd»’ hh:mm:ss}") %>' />
-			<div class="normal">
-				<asp:Image ID="imgArticleImage" runat="server" cssclass="thumbnail" />
-				<asp:Label id="lblSubHead" cssclass="Subhead" runat="server" text='<%# Eval("Title") + "<br/>" %>' />
-				<asp:Label id="lblDescription" cssclass="Normal" runat="server" text='<%#  Eval("Summary") %>' />
-				&nbsp;&nbsp;<asp:HyperLink id="lnkReadMore" ResourceKey="ReadMore" cssclass="NormalBold" runat="server" />
-			</div>
-			<div><asp:HyperLink id="lnkComments" cssclass="CommentsLink" runat="server" /></div>
-		</div>
-	</ItemTemplate>
-	<FooterTemplate>
-		<div class="MoreArticlesLink"><asp:HyperLink id="lnkMoreArticles" ResourceKey="MoreArticles" runat="server" /></div>
-	</FooterTemplate>
-</asp:DataList>
+<asp:Label ID="lblMessage" runat="server" />
+<asp:Repeater ID="lstArticles" runat="server" OnItemDataBound="Item_Bound"
+    EnableViewState="false">
+    <ItemTemplate>
+        <div class="Article">
+            <h3>
+                <asp:HyperLink ID="titleLink" runat="server" Text='<%# Eval("Title") %>' NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleView") %>' />
+            </h3>
+
+            <p class="normal">
+                <asp:Image ID="imgArticleImage" runat="server" CssClass="thumbnail" />
+                <asp:Label ID="lblDescription" CssClass="Normal" runat="server" Text='<%#  Eval("Summary") %>' />
+            </p>
+            <div>
+                
+                <a href="#"><%# Eval("CreatedByUserName")%></a>
+                ÂèëË°®‰∫é&nbsp;
+                <asp:Label ID="lblPublishDate" CssClass="Normal" runat="server" Text='<%# Eval("CreatedDate","{0:yyyy-MM-dd hh:mm}") %>' />
+                <asp:HyperLink ID="lnkComments" CssClass="CommentsLink" runat="server" /></div>
+        </div>
+    </ItemTemplate>
+    <FooterTemplate>
+        <div class="MoreArticlesLink">
+            <asp:HyperLink ID="lnkMoreArticles" ResourceKey="MoreArticles" runat="server" /></div>
+    </FooterTemplate>
+</asp:Repeater>
 <dnnsc:PagingControl id="ctlPagingControl" runat="server" />
