@@ -183,4 +183,13 @@
   <data name="plWillPage.Text" xml:space="preserve">
     <value>是否分页现实</value>
   </data>
+  <data name="plTemplate.Text" xml:space="preserve">
+    <value>模板</value>
+  </data>
+  <data name="Template_Standard.Text" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="Template_TitleOnly.Text" xml:space="preserve">
+    <value>仅标题</value>
+  </data>
 </root>

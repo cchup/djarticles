@@ -12,3 +12,4 @@ E:\Developer Project\BroadWisdom\Src\web\bin\DjArticles.pdb
 E:\Developer Project\BroadWisdom\Src\modules\Dj.Modules.Articles\obj\Debug\ResolveAssemblyReference.cache
 E:\Developer Project\BroadWisdom\Src\modules\Dj.Modules.Articles\obj\Debug\DjArticles.dll
 E:\Developer Project\BroadWisdom\Src\modules\Dj.Modules.Articles\obj\Debug\DjArticles.pdb
+E:\Developer Project\BroadWisdom\Src\web\bin\DjArticles.xml

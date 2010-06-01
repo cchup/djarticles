@@ -136,6 +136,7 @@ namespace DjArticles
             {
                 ArticleInfo articleInfo= GetArticleInfo();
                 controller.SaveArticle(articleInfo);
+                Response.Redirect(Globals.NavigateURL(), true);
             }
             catch (Exception exc)
             {

@@ -49,6 +49,7 @@ namespace DjArticles
                 }
                 drpSortField.SelectedValue = TabModuleSettings["SortField"] as string;
                 drpDateRange.SelectedValue = TabModuleSettings["DateRange"] as string;
+                drpTemplate.SelectedValue = TabModuleSettings["Template"] as string;
                 cboCategory.SelectedValue = TabModuleSettings["FilterCategoryID"] as string;
                 chkShowCategory.Checked = (TabModuleSettings["ShowCategory"] as string == "True");
                 chkShowReadMore.Checked = (TabModuleSettings["ShowReadMore"] as string == "True");
@@ -80,6 +81,7 @@ namespace DjArticles
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "ArticlesPerPage", txtArticlesPerPage.Text);
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "SortField", drpSortField.SelectedValue);
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "DateRange", drpDateRange.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "Template", drpTemplate.SelectedValue);
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "ShowCategory", chkShowCategory.Checked.ToString());
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "ShowReadMore", chkShowReadMore.Checked.ToString());
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "AllowComments", chkAllowComments.Checked.ToString());
@@ -117,24 +119,5 @@ namespace DjArticles
         }
 
         #endregion
-
-        #region Event Handler
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (IsPostBack)
-            {
-                try
-                {
-                    LoadSettings();
-                }
-                catch (Exception exc)
-                {
-                    Exceptions.ProcessModuleLoadException(this, exc);
-                }
-               
-            }
-        }
-        #endregion
-
     }
 }

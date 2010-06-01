@@ -241,12 +241,7 @@
     </Content>
     <Content Include="ArticlesList.ascx" />
     <Content Include="ArticlesList_Standard.ascx" />
-    <Content Include="ArticlesList_Fancy.ascx" />
     <Content Include="ArticlesList_TitleOnly.ascx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Manage\" />
-    <Folder Include="Show\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />

@@ -3,7 +3,7 @@
 <div>
         <dnn:label id="lblCategory" runat="server" controlname="lblContent" 
             suffix=":" />
-        <asp:DropDownList ID="cboCategory" runat="server" Width="300" CssClass="NormalTextBox"
+        <asp:DropDownList ID="cboCategory" runat="server" CssClass="NormalTextBox"
             DataTextField="Name" DataValueField="CategoryID">
         </asp:DropDownList>
         <asp:LinkButton ID="cmdSearch" resourcekey="cmdSearch" runat="server"
@@ -20,24 +20,24 @@
     custompager="True" width="90%" autogeneratecolumns="False" pagesize="15">
     <Columns>
         <asp:BoundField DataField="CategoryName" HeaderText="CategoryName">
-            <HeaderStyle Width="200px" CssClass="NormalBold"></HeaderStyle>
-            <ItemStyle Wrap="False" CssClass="Normal"></ItemStyle>
+            <HeaderStyle Width="10%" CssClass="NormalBold"></HeaderStyle>
+            <ItemStyle Wrap="true" CssClass="Normal"></ItemStyle>
         </asp:BoundField>
         <asp:BoundField DataField="Title" HeaderText="Title">
-            <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-            <ItemStyle Wrap="False" CssClass="Normal"></ItemStyle>
+            <HeaderStyle width="10%" CssClass="NormalBold"></HeaderStyle>
+            <ItemStyle Wrap="true" CssClass="Normal"></ItemStyle>
         </asp:BoundField>
         <asp:BoundField DataField="Summary" HeaderText="Summary">
-            <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-            <ItemStyle Wrap="False" CssClass="Normal"></ItemStyle>
+            <HeaderStyle  width="40%"  CssClass="NormalBold"></HeaderStyle>
+            <ItemStyle Wrap="true" CssClass="Normal"></ItemStyle>
         </asp:BoundField>
         <asp:BoundField DataField="CreatedByUserName" HeaderText="CreatedByUserName">
             <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-            <ItemStyle Wrap="False" CssClass="Normal"></ItemStyle>
+            <ItemStyle Wrap="true" CssClass="Normal"></ItemStyle>
         </asp:BoundField>
         <asp:BoundField DataField="CreatedDate" HeaderText="CreatedDate">
             <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-            <ItemStyle Wrap="False" CssClass="Normal"></ItemStyle>
+            <ItemStyle Wrap="true" CssClass="Normal"></ItemStyle>
         </asp:BoundField>
         <asp:TemplateField HeaderText="Passed">
             <HeaderStyle HorizontalAlign="Center" Width="60px" CssClass="NormalBold"></HeaderStyle>

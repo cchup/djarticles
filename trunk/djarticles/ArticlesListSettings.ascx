@@ -20,7 +20,7 @@
             </td>
             <td>
                 <asp:Label ID="lblNoCategories" runat="server" Text="<br>还没有可用分类" />
-                <asp:DropDownList ID="cboCategory" runat="server" Width="300" CssClass="NormalTextBox"
+                <asp:DropDownList ID="cboCategory" runat="server" 
                     DataTextField="Name" DataValueField="CategoryID">
                 </asp:DropDownList>
             </td>
@@ -42,6 +42,17 @@
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ValidationExpression="^\d+$"
                     ControlToValidate="txtArticlesPerPage" ErrorMessage="Must be a positive number."
                     Display="Dynamic" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td class="SubHead">
+                <dnn:label id="plTemplate" runat="server" controlname="drpTemplate" suffix=":" />
+            </td>
+            <td>
+                 <asp:DropDownList ID="drpTemplate" runat="server">
+                    <asp:ListItem Value="Standard" Selected="True" ResourceKey="Template_Standard" />
+                    <asp:ListItem Value="TitleOnly" ResourceKey="Template_TitleOnly" />
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
