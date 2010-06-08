@@ -10,13 +10,12 @@ body{
 }
 #header_wrap{
 	clear:both;
-	overflow:hidden;
 	border-bottom:#2f2f2f 5px solid;
 }
 #header{
 	width:950px;
 	margin: 0px auto;
-	padding:25px 0px 25px 0px;	
+	padding:10px 0px 25px 0px;	
 }
 #Logo {
 	width:220px;
@@ -86,11 +85,10 @@ body{
 	padding:0;
 }
 .nav{
+	clear:both;
 	width:950px;
 	padding:0px;
-	margin:0px auto;
-	clear:both;
-	overflow:hidden;
+  margin:0px auto;
 }
 #but_l{
 	width:8px;
@@ -125,27 +123,17 @@ body{
 }
 
 #banner_internal{
-	width:950px;
+	background:url(images/bn-bg.jpg) repeat-x bottom;
 	margin:0px auto;
 	height:auto;
-	background-image:url(images/banner_internal.jpg);
-	background-repeat:no-repeat;
-	
-}
-
-
-#internalTitle{
-	width:950px;
-	height:65px;
-	background-image:url(images/header.jpg);
-	background-repeat:no-repeat;
-	float:left;
 }
 
 #banner_t {
-	margin: 20px 0 0 30px;
-	float:left;
+	width:950px;
+	margin: 0px auto;
 	text-align:left;
+	overflow:hidden;
+	clear:both;
 }
 #banner_tint {
 	float:right;
@@ -182,24 +170,29 @@ body{
 }
 #footer{
 	width: 950px;
-	padding: 10px 0 15px 0 auto;
+	padding: 0px;
+	margin:0px auto;
 }
 #foot_l{
+	margin:0px;
+	float: left;
 	width:15px;
 	height:42px;
-	float:left;
+	display:inline;
 	background-image:url(images/footer_l.jpg);
 }
 #foot_m{
+	margin:0px;
 	width:920px;
 	height:42px;
-	float:left;
+	float: left;
 	background-image:url(images/footer_m.jpg);
 }
 #foot_r{
+	margin:0px;
+	float: left;
 	width:15px;
 	height:42px;
-	float:left;
 	background-image:url(images/footer_r.jpg);
 }
 #footer_mid{

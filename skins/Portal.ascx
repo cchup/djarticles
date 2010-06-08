@@ -45,18 +45,20 @@
             </div>
         </div>
         <div class="nav">
-            <div id="Menu">
-                 <dnn:DNNRADMENU runat="server" id="dnnRADMENU"  EnableEmbeddedSkins="false" SelectedPathHeaderItemCss="focused" SelectedPathItemCss="focused" ShowPath="true" Skin="Topmenu" />
+            <dnn:DNNRADMENU runat="server" id="dnnRADMENU"  EnableEmbeddedSkins="false" SelectedPathHeaderItemCss="focused" SelectedPathItemCss="focused" ShowPath="true" Skin="Topmenu" />
+        		<div class="clear">
             </div>
-        </div>
+				</div>
     </div>
     <div id="banner_internal">
+				<a />
         <div id="banner_t">
             <div id="TopPane" runat="server">
             </div>
         </div>
-        <div class="clear" />
+        <div class="clear"></div>
     </div>
+		<div class="clear"></div>
     <div id="mid">
         <div>
             <div id="mid_content">
@@ -77,25 +79,26 @@
                     </div>
                 </div>
             </div>
+						<div class="clear"></div>
         </div>
     </div>
     <div id="footer">
         <div id="foot_l">
-        </div>
-        <div id="foot_m">
-            <div id="footer_mid">
-                <div id="footerLeft" class="verdana12wht_nor_c">
-                    <dnn:COPYRIGHT runat="server" ID="dnnCOPYRIGHT" CssClass="verdana12wht_nor_c" />
-                </div>
-                <div id="footerRight" class="verdana12wht_nor_c">
-                    <dnn:TERMS runat="server" ID="dnnTERMS" CssClass="verdana12wht_nor_c" />
-                    |
-                    <dnn:PRIVACY runat="server" ID="dnnPRIVACY" CssClass="verdana12wht_nor_c" />
-                </div>
-            </div>
-        </div>
-        <div id="foot_r">
-        </div>
+        </div>  
+					<div id="foot_m">
+	            	<div id="footer_mid">
+	                <div id="footerLeft" class="verdana12wht_nor_c">
+	                    <dnn:COPYRIGHT runat="server" ID="dnnCOPYRIGHT" CssClass="verdana12wht_nor_c" />
+	                </div>
+	                <div id="footerRight" class="verdana12wht_nor_c">
+	                    <dnn:TERMS runat="server" ID="dnnTERMS" CssClass="verdana12wht_nor_c" />
+	                    |
+	                    <dnn:PRIVACY runat="server" ID="dnnPRIVACY" CssClass="verdana12wht_nor_c" />
+	                </div>
+	            	</div>
+	        </div>
+					<div id="foot_r">
+	        </div>     
     </div>
 </div>
 
