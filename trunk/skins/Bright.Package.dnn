@@ -181,6 +181,27 @@
 						<skinFile>
 							<name>skin.xml</name>
 						</skinFile>
+
+						<skinFile>
+							<path>Navigation</path>
+							<name>styles.css</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>ls-nav.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>rs-nav.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>ls-nav-on.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>rs-nav-on.gif</name>
+						</skinFile>
 					</skinFiles>
 				</component>
 			</components>

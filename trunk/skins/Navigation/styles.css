@@ -1,239 +1,60 @@
-/* r.a.d.menu TopMenu skin */
-
-/* ********** Menu Style ************** */
-.RadMenu_Topmenu {outline:none;}
-
-.RadMenu_Topmenu .rmLink
-{
-	color:#ffffff !important;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	line-height:44px;
+/************* 对原有样式就行重写 ****************/
+.RadMenu_Topmenu .rmRootGroup .rmLink {
+	padding:0px 0px 0px 5px;
+	margin:0px 5px 0px 0px;
+	cursor:pointer;
 	font-weight:bold;
-	margin-right:1px;
-	padding:0px 10px 0px 20px;
-	outline:none;
-	cursor:pointer;
-	text-decoration:none;
+	background:url(img/ls-nav.gif) no-repeat top left;
 }
 
-.RadMenu_Topmenu .rmLink:hover,
-.RadMenu_Topmenu .focused,
-.RadMenu_Topmenu .expanded
-{
-	color: #ffffff !important;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	margin-right:1px;	
-	background:url(img/menu_hovbg.gif) repeat-x top left;
-	line-height:44px;
-	outline:none;
-	cursor:pointer;
+.RadMenu_Topmenu .rmRootGroup .rmLink .rmText {
+	line-height:23px;
+  padding:0px 12px 0px 7px;
+  font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background:url(img/rs-nav.gif) no-repeat top right;
 }
 
-/* Submenu of menu */
+.RadMenu_Topmenu .rmRootGroup .rmLink:hover,
+.RadMenu_Topmenu .rmRootGroup .rmLink.focused,
+.RadMenu_Topmenu .rmRootGroup .rmLink.expanded
+ {
+	background:url(img/ls-nav-on.gif) no-repeat top left;
+}
 
+.RadMenu_Topmenu .rmRootGroup .rmLink:hover .rmText,
+.RadMenu_Topmenu .rmRootGroup .rmLink.focused .rmText,
+.RadMenu_Topmenu .rmRootGroup .rmLink.expanded .rmText{
+	background:url(img/rs-nav-on.gif) no-repeat top right;
+}
+
+/**sub menu**/
 .RadMenu_Topmenu .rmGroup
 {
 	border:#000000 1px solid;
 	padding-bottom:0px !important;
-	background:#124e6c;
+	background:#F4F4F4 !important;
 } 
 
-.RadMenu_Topmenu .rmLevel1 {
-	display:inline-block !important;
-	text-align:left !important;
+.RadMenu_Topmenu .rmGroup .rmLink {
+	background:#F4F4F4 !important;
 }
 
-.RadMenu_Topmenu .rmGroup .rmText
-{
-	color: #ffffff;
-	padding-left:9px;
-	padding-right:19px !important;
-	margin:0px;
-	font-size:11px;
-}      
-
-.RadMenu_Topmenu .rmGroup .rmLink
-{
-	line-height: 23px;
-	text-align: left;
-	margin:0px; 
-}
-
-.RadMenu_Topmenu .rmGroup .rmLink .rmText 
-{
-	color: #ffffff;
-	padding:0px 10px;
-	margin:0px;
-}
-
-.RadMenu_Topmenu .rmGroup .rmLink:hover .rmText, 
-.RadMenu_Topmenu .rmGroup .focused .rmText 
-{
-	color:#ffffff;
-	padding:0px 10px;
-	margin:0px;
+.RadMenu_Topmenu .rmGroup .rmLink .rmText {
+	background:#F4F4F4 !important;
+	color:#000;
 }
 
 .RadMenu_Topmenu .rmGroup .rmLink:hover,
-.RadMenu_Topmenu .rmGroup .focused,
-.RadMenu_Topmenu .rmGroup .expanded
-{
-	background:#003e5c;
-	line-height: 23px;
-	text-align: left;
+.RadMenu_Topmenu .rmGroup .rmLink.focused,
+.RadMenu_Topmenu .rmGroup .rmLink.expanded
+ {
+	background:#F4F4F4 !important;
 }
 
-.RadMenu_Topmenu .rmRootGroup .rmLink .rmExpandRight    
-{ 
-    background: url(img/submenu_arrow.gif) no-repeat right !important;
-} 
-
-.RadMenu_Topmenu .rmRootGroup .rmLink:hover .rmExpandRight, 
-.RadMenu_Topmenu .rmRootGroup .focused .rmExpandRight  
-{ 
-    background: url(img/submenu_arrow.gif) no-repeat right !important;
-} 
-
-
-
-/******************  RADPANELBAR  ***************/
-/*********** SideMenu Styles  **************/
-.RadPanelBar_Sidemenu .rpRootGroup 
-{
-	width:220px !important;
-	margin:0px !important;
-	border:none !important;
-	border-color:transparent;
+.RadMenu_Topmenu .rmGroup .rmLink:hover .rmText,
+.RadMenu_Topmenu .rmGroup .rmLink.focused .rmText,
+.RadMenu_Topmenu .rmGroup .rmLink.expanded .rmText{
+	background:#F4F4F4 !important;
 }
-
-.RadPanelBar_Sidemenu .rpRootGroup .rpItem
-{
-	border:none;
-	padding-bottom:0px;
-}
-
-.RadPanelBar_Sidemenu .rpOut
-{
-    border:0 !important;
-    padding: 0 !important;
-}
-
-.RadPanelBar_Sidemenu .rpRootGroup .rpText
-{
-	border:none !important;
-	padding:0px 0px 0px 15px;
-}
-
-.RadPanelBar_Sidemenu .rpRootGroup .rpLink
-{
-	font-size:13px !important;
-	color:#003e5c !important;
-	font-weight:bold;
-	line-height:28px;
-	background:url(img/menu_bg.gif) repeat-x top left;
-	border:none !important;
-}
-
-.RadPanelBar_Sidemenu .rpRootGroup .rpLink:hover
-{
-	color:#1faeef !important;
-	text-decoration:none;
-	border:none !important;
-}
-
-
-.RadPanelBar_Sidemenu .rpRootGroup .rpLink:link .rpText
-{
-	color: #003e5c;
-	border:none !important;
-	font-size:13px !important;
-	font-family:Arial, Helvetica !important;
-	pading:0px 0px 0px 0px;
- }
-
-.RadPanelBar_Sidemenu .rpRootGroup .rpLink:hover .rpText
-{
-	color:#1faeef !important;  
-    border:none !important;
-	font-size:13px !important;
-}
-
-/* Selected */
-.RadPanelBar_Sidemenu .rpRootGroup .selected
-{
-	color:#1faeef !important;  
-	font-size:13px !important;
-	padding:0px 0px 0px 0px;
-	border:none !important;
-}
-
-/************* Submenu ****************/
-.RadPanelBar_Sidemenu .rpGroup
-{
-	height:auto !important;
-	border-bottom:#ffffff 1px solid;
-	background-color:#f2f2f2;
-	padding:0px;	
-}
-
-.RadPanelBar_Sidemenu .rpLevel1
-{
-	padding:5px 0px !important;	
-}
-
-.RadPanelBar_Sidemenu .rpGroup .rpText
-{
-	font-size: 13px;
-	font-weight:bold;
-	text-decoration:none;  
-	padding:0px 0px 0px 37px;
-	color:#57616b !important;
-}
-
-/************* Submenu_Normal ****************/
-.RadPanelBar_Sidemenu .rpGroup .rpLink
-{
-	color:#57616b !important;
-	background:url(img/submenu_normal.gif) no-repeat center left !important;
-	font-size: 13px;
-	text-decoration:none;
-}
-
-/************* Submenu_Hover ****************/
-
-.RadPanelBar_Sidemenu .rpGroup .rpLink:hover .rpText
-{
-	color:#003e5c !important;
-	font-size: 13px;
-	text-decoration:none;
-	background:url(img/submenu_hover.gif) no-repeat center left !important;
-}
-
-/************* Submenu_Selected ****************/
-.RadPanelBar_Sidemenu .rpGroup .rpSelected .rpText
-{
-	color:#003e5c !important;
-	font-size: 13px;
-	text-decoration:none;
-	background:url(img/submenu_hover.gif) no-repeat center left !important;
-}
-
-.RadPanelBar_Sidemenu .rpLevel1 .rpItem
-{
-	padding: 0px 0px 0px 0px; 
-	font-size:13px;
-	text-decoration:none;
-} 
-
-.RadPanelBar_Sidemenu .rpLevel2 .rpItem
-{
-	padding: 0px 0px 0px 20px;
-	font-size:13px;
-	text-decoration:none;
-}
-
-
-
-
