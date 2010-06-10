@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" CodeBehind="~/admin/Skins/skin.vb" AutoEventWireup="false"
+<%@ Control Language="vb" CodeBehind="~/admin/Skins/skin.vb" AutoEventWireup="false"
     Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
@@ -49,15 +49,6 @@
                 SelectedPathItemCss="focused" ShowPath="true" Skin="Topmenu" />
             <div class="clear">
             </div>
-        </div>
-    </div>
-    <div id="banner_internal">
-        <a />
-        <div id="banner_t">
-            <div id="TopPane" runat="server">
-            </div>
-        </div>
-        <div class="clear">
         </div>
     </div>
     <div class="clear">
@@ -135,3 +126,4 @@
 
 <dnn:STYLES runat="server" ID="dnnSTYLES" Name="Sidemenu" StyleSheet="Navigation/styles.css"
     UseSkinPath="True" />
+
