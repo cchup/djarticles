@@ -118,40 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="plEmail.Text" xml:space="preserve">
-    <value>Email</value>
+    <value>邮箱</value>
   </data>
   <data name="plEmail.Help" xml:space="preserve">
-    <value>Enter your Email address</value>
+    <value>输入您的邮箱地址</value>
   </data>
   <data name="valEmail1.Text" xml:space="preserve">
-    <value>&lt;br/&gt;Email Is Required.</value>
+    <value>&lt;br/&gt;请输入您的邮箱地址，以方便我们联系.</value>
   </data>
   <data name="valEmail2.Text" xml:space="preserve">
-    <value>&lt;br/&gt;Email Must be Valid.</value>
+    <value>&lt;br/&gt;邮箱地址格式有误.</value>
   </data>
   <data name="plName.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>姓名</value>
   </data>
   <data name="plName.Help" xml:space="preserve">
-    <value>Enter your Name</value>
+    <value>输入您的姓名!</value>
   </data>
   <data name="plSubject.Text" xml:space="preserve">
-    <value>Subject</value>
+    <value>主题</value>
   </data>
   <data name="plSubject.Help" xml:space="preserve">
-    <value>Choose a subject from the list</value>
+    <value>从列表中选择主题</value>
   </data>
   <data name="plSubject2.Text" xml:space="preserve">
-    <value>Subject</value>
+    <value>主题</value>
   </data>
   <data name="plSubject2.Help" xml:space="preserve">
-    <value>Enter the subject of your message</value>
+    <value>输入您的留言主题</value>
   </data>
   <data name="plBody.Text" xml:space="preserve">
-    <value>Message</value>
+    <value>内容</value>
   </data>
   <data name="plBody.Help" xml:space="preserve">
-    <value>Enter your message</value>
+    <value>输入留言内容！</value>
   </data>
   <data name="plCopy.Text" xml:space="preserve">
     <value>Send Copy</value>
@@ -160,16 +160,16 @@
     <value>Send a copy of the message to yourself?</value>
   </data>
   <data name="cmdSend.Text" xml:space="preserve">
-    <value>Send</value>
+    <value>提交</value>
   </data>
   <data name="MessageSent.Text" xml:space="preserve">
-    <value>&lt;br/&gt;Your Message Has Been Sent</value>
+    <value>&lt;br/&gt;你的留言已成功提交</value>
   </data>
   <data name="Moderate.Text" xml:space="preserve">
     <value>Moderate Posts</value>
   </data>
   <data name="SubmittedBy.Text" xml:space="preserve">
-    <value>Submitted By:</value>
+    <value>提交者:</value>
   </data>
   <data name="MessagePending.Text" xml:space="preserve">
     <value>A New Feedback has been submitted which needs to be published, Please log into the website and change the status of the post</value>
@@ -195,7 +195,7 @@
     <value>Choose a category if it is available</value>
   </data>
   <data name="cmdCancel.Text" xml:space="preserve">
-    <value>Continue</value>
+    <value>继续</value>
   </data>
   <data name="Private" xml:space="preserve">
     <value>Private</value>
@@ -228,9 +228,9 @@
     <value>Moderate Posts</value>
   </data>
   <data name="valBody.Text" xml:space="preserve">
-    <value>&lt;br/&gt;You must enter a message.</value>
+    <value>&lt;br/&gt;请输入留言内容.</value>
   </data>
   <data name="valName.Text" xml:space="preserve">
-    <value>&lt;br\&gt;Name Is Required.</value>
+    <value>&lt;br\&gt;请输入您的姓名.</value>
   </data>
 </root>
