@@ -121,6 +121,6 @@
     <value>Comment View Settings</value>
   </data>
   <data name="RecordsPage.Text" xml:space="preserve">
-    <value>Records per Page</value>
+    <value>每页记录数</value>
   </data>
 </root>

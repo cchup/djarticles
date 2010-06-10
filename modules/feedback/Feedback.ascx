@@ -21,7 +21,7 @@
 			<asp:textbox id="txtName" runat="server"  cssclass="NormalTextBox" columns="35"
 				maxlength="100"></asp:textbox>
 			<asp:requiredfieldvalidator id="valName" runat="server" cssclass="NormalRed" display="Dynamic" errormessage="<br\>Name Is Required."
-				controltovalidate="txtName" Enabled="false" resourcekey="valName" ValidationGroup="FeedbackForm"></asp:requiredfieldvalidator>
+				controltovalidate="txtName" resourcekey="valName" ValidationGroup="FeedbackForm"></asp:requiredfieldvalidator>
 		
 		</td>
 	</tr>
