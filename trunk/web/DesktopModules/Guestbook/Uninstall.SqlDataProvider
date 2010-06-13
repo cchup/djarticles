@@ -1,0 +1,46 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook] DROP CONSTRAINT [FK_{objectQualifier}IowaComputerGurus_Guestbook_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook] DROP CONSTRAINT [PK_{objectQualifier}IowaComputerGurus_Guestbook]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook].[IX_{objectQualifier}IowaComputerGurus_Guestbook]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_GetGuestbooks]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_GetGuestbook]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_AddGuestbook]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_UpdateGuestbook]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_DeleteGuestbook]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_GetModeratedGuestbooks]
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

@@ -1,0 +1,72 @@
+--Fix scripts for muli language
+ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]
+	ALTER COLUMN [Name] NVARCHAR(200) NOT NULL
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]
+	ALTER COLUMN [Location] NVARCHAR(100) NOT NULL
+GO
+
+--Modify procedures
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_AddGuestbook
+	@ModuleId       int,
+	@Name			nvarchar(200),
+	@Email			varchar(255),
+	@Website		varchar(255), 
+	@Location		nvarchar(100),
+	@Rating			int,
+	@Comments		ntext,
+	@IsApproved		BIT
+AS
+INSERT INTO {objectQualifier}IowaComputerGurus_Guestbook (
+	ModuleId,
+	Name,
+	Email,
+	Website,
+	Location,
+	Rating,
+	Comments,
+	VisitDate,
+	IsApproved
+) 
+VALUES (
+	@ModuleId,
+	@Name,
+	@Email,
+	@Website,
+	@Location,
+	@Rating,
+	@Comments,
+	getdate(),
+	@IsApproved
+)
+
+GO
+
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_UpdateGuestbook
+	@ModuleId       int,
+    @ItemId         int,
+	@Name			nvarchar(200),
+	@Email			varchar(255),
+	@Website		varchar(255), 
+	@Location		nvarchar(100),
+	@Rating			int,
+	@Comments		ntext,
+	@IsApproved		BIT
+AS
+UPDATE {objectQualifier}IowaComputerGurus_Guestbook
+SET    Name			= @Name,
+		Email		= @Email,
+		Website		= @Website,
+		Location	= @location,
+		Rating		= @Rating,
+		Comments	= @Comments,
+		IsApproved	= @IsApproved
+WHERE  ModuleId = @ModuleId
+	AND    ItemId = @ItemId
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

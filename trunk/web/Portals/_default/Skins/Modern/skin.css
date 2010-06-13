@@ -1,0 +1,127 @@
+        /******
+Skin Designed and developed by SalarO
+http://www.salaro.com
+Designer       : Bazeeth Ali
+Skin Developer : Dilip
+Released for free under Dotnetnuke License
+
+Skin Information
+Title        : salaro mss
+DNN Version  : 5.2.2
+********/
+
+body{margin:0px; padding:0px;}
+div{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#757575;}
+.clr{clear:both;}
+
+TH,TD,DIV,P{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#4a4a4a; font-weight:normal;}
+
+A,A:link,A:visited,A:active{color:#003e5d; text-decoration:none;}
+A:hover{color:#5bc3f7; text-decoration:none;}
+
+/* ********** Control Panel Style ************** */
+/* ControlPanel style */
+.ControlPanel{background:#ffffff url(images/cpanel_center.png) repeat-x bottom left; border:none;padding-bottom:10px;}
+.cpanel_left {background: url(images/cpanel_left.png) no-repeat bottom left;padding-left:21px;}
+.cpanel_right {background: url(images/cpanel_right.png) no-repeat bottom right;padding-right:33px;}
+
+/*-------ControlPanel changes ---------------*/
+.ControlPanel a.CommandButton:link, .ControlPanel a.CommandButton:visited{color:#000000;}
+.ControlPanel a.CommandButton:hover{color:#4c5876; text-decoration:underline;}
+.ControlPanel a.CommandButton:link, .ControlPanel a.CommandButton:visited, .ControlPanel .SubHead{font-size:11px;}
+
+
+ a.CommandButton:link, .ControlPanel a.CommandButton:visited{color:#000000; text-decoration:none;}
+ a.CommandButton:hover{color:#4c5876; text-decoration:underline;}
+
+.search_bg{background:url(images/search_bg.gif) no-repeat top left; width:209px; height:23px;}
+
+/*********skin styles******/
+.temp{background:#ffffff url(images/temp_bg.gif) repeat-x top left; text-align:center;}
+.main{width:950px; text-align:left; margin:auto;}
+
+.menuarea{height:45px;}
+
+.headerpart{padding:20px 0px 20px 20px;}
+.headerpart_left{ margin-right:300px;}
+.headerpart_right{float:right;}
+.footerpart{line-height:38px;}
+.footerpart_left{float:left; width:60%;}
+.footerpart_right{float:left; width:40%;}
+
+.breadcrumbarea{line-height:30px; padding-left:2px;}
+.login_pad{padding-top:10px; color:#003e5d; font-size:12px;}
+
+#SearchContainer Input{ border:none; width:170px !important; HEIGHT:23px; background:none;
+ padding:2px 3px 0px 3px; vertical-align:top; margin:0px; font-size:12px; color:#000000; }
+
+.contentpart{border:#ededed 1px solid; background:url(images/white_bg.gif) repeat-x top left; padding:20px;}
+
+.contentpart_left{float:left; background:none; width:220px;}
+.contentpart_right{float:left; width:668px; background:none;}
+.con_contentarea{float:left; display:inline;}
+.con_contentarea_left{float:left; width:334px; background:none;}
+.con_contentarea_right{float:left; width:334px;  background:none;}
+.confour_headpad{padding-left:67px;}
+.menu_bot_pad{ padding-bottom:20px;}
+
+
+/****** pane details *********/
+
+.contentpane{padding:0px; margin:0px;}
+.leftpane{padding:0px 20px 0px 0px; margin:0px;}
+.bannerpane{padding:0px; margin:0px;}
+.bottomleftpane{padding:0px 20px 0px 0px; margin:0px;}
+.bottomrightpane{padding:0px; margin:0px;}
+.banneronepane{padding:0px; margin:0px;}
+.DNNEmptyPane {width:0px !important; padding:0px !important; margin:0px !important;}
+.toppane{margin:0px; padding:0px;}
+
+
+.list{padding:0px 0px 0px 0px; margin:0px;}
+.list li{padding:17px 0px 0px 14px; margin:0px; list-style-type:none; background:url(images/arrow.gif) no-repeat; background-position:0px 22px; color:#8e8e8e;}
+
+.blue-text{color:#003e5d !important; font-weight:bold !important;}
+.blue-head{color:#003e5d; font-size:16px;}
+.contwo_pad{padding:12px;}
+
+
+.more{background:#f2f2f2; height:19px; line-height:19px; margin:0px 1px; padding:0px 11px;}
+.more-link:link, .more-link:visited{color:#5f5f5f; font-size:11px; text-decoration:underline; font-weight:bold;}
+.more-link:hover{color:#000000; text-decoration:underline;}
+
+.read-link:link, .read-link:visited{color:#ababab; font-size:12px; font-weight:bold; text-decoration:underline;}
+.read-link:hover{color:#000000; text-decoration:underline;}
+
+/* ********** User Style ************** */
+.user,a.user:link,a.user:active,a.user:visited {font-weight:bold; font-size:12px; color:#003e5d; text-decoration:none;}
+a.user:hover{color:#5bc3f7;}
+
+/* ********** Footer Style ************** */
+.footer,a.footer:link,a.footer:active,a.footer:visited{color:#5f5f5f; font-weight:bold; text-decoration:none; font-size:11px;}
+a.footer:hover{color:#5f5f5f; text-decoration:underline;}
+
+
+/* ********** breadcrumb Style ************** */
+.Breadcrumb,a.Breadcrumb:link,a.Breadcrumb:active,a.Breadcrumb:visited{color:#003e5d; text-decoration:none; font-weight:bold; font-size:12px;}
+a.Breadcrumb:hover{color:#5bc3f7;}
+
+
+ 
+ ul, li {
+	line-height:normal;
+	list-style-image:url(images/bullets_img.gif);
+	line-height:1.7em;
+	list-style-type: disc;
+}
+
+.more_link,a.more_link:link,a.more_link:active,a.more_link:visited {font-weight:normal; font-size:12px; color:#003e5d; text-decoration:none;}
+a.more_link:hover{color:#5bc3f7;}
+
+.breadcrumb_text{ color:#4a4a4a; font-weight:bold; font-size:13px;}
+
+
+
+
+
+

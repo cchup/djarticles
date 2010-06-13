@@ -1,0 +1,2 @@
+<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Controls.DNNRadPanelBar" CodeFile="DNNRadPanelBar.ascx.vb" %>
+<asp:PlaceHolder id="LeftMenu1" runat="server" />

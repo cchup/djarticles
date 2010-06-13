@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>TR-Skin</title>
+<link href="skin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="images/pngfix.js"></script>
+<![endif]-->
+<!-- BG Table start -->
+<div class="BGTable">
+  <!-- BG Table 1 start -->
+  <div class="BGTable1">
+    <!-- BG Table 2 start -->
+    <div class="BGTable2">
+      <!-- Container start -->
+      <div class="Container">
+        <!-- Logo Panel start -->
+        <div class="LogoPane">
+          <object id="dnnLOGO" codetype="dotnetnuke/server" codebase="LOGO">
+          </object>
+        </div>
+        <!-- Logo Panel end -->
+        <!-- Bookmark panel start -->
+        <div class="BookMarkPane" id="BookMarkPane" runat="server" visible="false"> <span class="BookMarkLeft"></span> <span class="BookMarkRight"></span> </div>
+        <!-- Bookmark panel end -->
+        <div class="ClearFloat"></div>
+        <!-- Twitter panel start -->
+        <div class="TwitterPane" id="TwitterPane" runat="server" visible="false"></div>
+        <!-- Twitter panel end -->
+        <!-- Body Content Top start -->
+        <div class="BodyContentTop">
+          <!-- Font sizer panel start -->
+          <div class="FontSizerPane">
+            <div class="Widgets">
+              <object id="TextSizeWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+                <param name="baseUrl" value="<%= SkinPath %>variations/" />
+                <param name="template" value="&lt;div title='{TEXT}' {ID} {CLASS}&gt;&lt;/div&gt;" />
+                <param name="default" value="MediumText" />
+                <param name="Small Text" value="SmallText" />
+                <param name="Medium Text" value="MediumText" />
+                <param name="Large Text" value="LargeText" />
+              </object>
+            </div>
+          </div>
+          <!-- Font sizer panel end -->
+          <!-- Login panel start -->
+          <div class="LoginPane">
+            <object id="dnnLOGIN" codetype="dotnetnuke/server" codebase="LOGIN">
+              <param name="CssClass" value="Login" />
+              <param name="Text" value="Login" />
+              <param name="LogoffText" value="LogOut" />
+            </object>
+            |
+            <object id="dnnUSER" codetype="dotnetnuke/server" codebase="USER">
+              <param name="CssClass" value="User" />
+            </object>
+          </div>
+          <!-- Login panel end -->
+          <br class="ClearFloat" />
+        </div>
+        <!-- Body Content Top end -->
+        <!-- Body Content Middle start -->
+        <div class="BodyContentMiddle">
+          <!-- Nav Panel start -->
+          <div class="NavPane"> <span class="NavLeft">&nbsp;</span> <span class="NavRight">&nbsp;</span>
+            <div class="NavInner">
+              <object id="dnnDNNRADMENU" codetype="dotnetnuke/server" codebase="DNNRADMENU">
+                <param name="style" value="float:left;height:auto;width:auto;" />
+                <param name="Skin" value="TRMenu" />
+                <param name="SelectedPathHeaderItemCss" value="rmSelected" />
+                <param name="SelectedPathItemCss" value="rmSelected" />
+                <param name="EnableEmbeddedSkins" value="false" />
+                <param name="ShowPath" value="true" />
+              </object>
+            </div>
+            <!-- Search panel start -->
+            <div class="SearchPane">
+              <object id="dnnSEARCH" codetype="dotnetnuke/server" codebase="SEARCH">
+                <param name="CssClass" value="ServerSkinWidget" />
+                <param name="UseDropDownList" value="false" />
+                <param name="ShowWeb" value="false" />
+                <param name="ShowSite" value="false" />
+                <param name="Submit" value="<img src=&quot;images/search.gif&quot; border=&quot;0&quot; alt=&quot;Search&quot; /&gt;" />
+              </object>
+            </div>
+            <!-- Search panel end -->
+            <br class="ClearFloat" />
+          </div>
+          <!-- Nav Panel end -->
+          <!-- Contant Pane 1 start -->
+          <div class="ContentPane1">
+            <div class="ContentPane2" id="ContentPane2" runat="server" visible="false"></div>
+            <div class="ContentPane3" id="ContentPane3" runat="server" visible="false"></div>
+            <div class="ClearFloat"></div>
+          </div>
+          <!-- Contant Pane 1 end -->
+        </div>
+        <!-- Body Content Middle end -->
+        <!-- Bottom Joint start -->
+        <div class="BodyContentJoint">
+          <div class="BreadcrumbPaneIP">You are here:
+            <object id="dnnBREADCRUMB" codetype="dotnetnuke/server" codebase="BREADCRUMB">
+              <param name="CssClass" value="Breadcrumb" />
+              <param name="RootLevel" value="0" />
+              <param name="Separator" value="&nbsp;&raquo;&nbsp;" />
+            </object>
+          </div>
+        </div>
+        <!-- Bottom Joint end -->
+        <!-- Body Content Middle start -->
+        <div class="BodyContentMiddle">
+          <div class="ContentPane" id="ContentPane" runat="server" visible="false"></div>
+          <!-- Contant panel 4 start -->
+          <div class="ContentPane4">
+            <div class="ContentPane1T" id="ContentPane1" runat="server" visible="false"></div>
+            <div class="ContentPane5" id="ContentPane5" runat="server" visible="false"></div>
+            <div class="ContentPane6" id="ContentPane6" runat="server" visible="false"></div>
+            <div class="ContentPane7" id="ContentPane7" runat="server" visible="false"></div>
+            <div class="ClearFloat"></div>
+          </div>
+          <!-- Contant panel 4 end -->
+        </div>
+        <!-- Body Content Middle end -->
+        <!-- Bottom Joint start -->
+        <div class="BodyContentJoint"></div>
+        <!-- Bottom Joint end -->
+        <!-- Body Content Middle start -->
+        <div class="BodyContentMiddle">
+          <!-- Contant panel 4 start -->
+          <div class="ContentPane4">
+            <div class="ContentPane5" id="ContentPane8" runat="server" visible="false"></div>
+            <div class="ContentPane6" id="ContentPane9" runat="server" visible="false"></div>
+            <div class="ContentPane7" id="ContentPane10" runat="server" visible="false"></div>
+            <div class="ClearFloat"></div>
+          </div>
+          <!-- Contant panel 4 end -->
+        </div>
+        <!-- Body Content Middle end -->
+        <!-- Body Content Bottom Start -->
+        <div class="BodyContentBottom"></div>
+        <!-- Body Content Bottom end -->
+      </div>
+      <!-- Container end -->
+      <!-- Bottom Panel start -->
+      <div class="BottomPane">
+        <!-- Footer panel start -->
+        <div class="FooterPane">
+          <div class="FooterInner">
+            <div class="FooterLeft">
+              <object id="dnnLINKS" codetype="dotnetnuke/server" codebase="LINKS">
+                <param name="CssClass" value="Link" />
+                <param name="Level" value="Root" />
+                <param name="Separator" value="&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;" />
+              </object>
+              <div class="ClearFloat"></div>
+              <object id="dnnCOPYRIGHT" codetype="dotnetnuke/server" codebase="COPYRIGHT">
+                <param name="CssClass" value="Copyright" />
+              </object>
+            </div>
+            <div class="FooterRight">
+              <object id="dnnPRIVACY" codetype="dotnetnuke/server" codebase="PRIVACY">
+                <param name="CssClass" value="Footer" />
+              </object>
+              &nbsp;
+              <object id="dnnTERMS" codetype="dotnetnuke/server" codebase="TERMS">
+                <param name="CssClass" value="Footer" />
+              </object>
+            </div>
+          </div>
+        </div>
+        <!-- Footer panel end -->
+      </div>
+      <!-- Bottom Panel end -->
+    </div>
+    <!-- BG Table 2 end -->
+  </div>
+  <!-- BG Table 1 end -->
+</div>
+<!-- BG Table end -->
+<object id="StylesIE" codetype="dotnetnuke/server" codebase="STYLES">
+  <param name="Name" value="IE" />
+  <param name="StyleSheet" value="ie.css" />
+  <param name="Condition" value="IE" />
+  <param name="UseSkinPath" value="true" />
+</object>
+</body>
+</html>

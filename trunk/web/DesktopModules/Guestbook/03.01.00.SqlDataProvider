@@ -1,0 +1,120 @@
+ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]
+	ADD IsApproved BIT NOT NULL DEFAULT 1
+GO
+
+--Update stored procedures
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbooks
+	@ModuleId int
+AS
+SELECT ModuleId,
+       ItemId,
+       Name,
+       Email,
+       Website,
+       Location,
+       Rating,
+       Comments,
+       Visitdate,
+	   IsApproved
+FROM {objectQualifier}IowaComputerGurus_Guestbook
+WHERE  ModuleId = @ModuleId
+	AND IsApproved = 1
+GO
+
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbook
+	@ModuleId int,
+    @ItemId int
+AS
+SELECT ModuleId,
+       ItemId,
+       Name,
+       Email,
+       Website,
+       Location,
+       Rating,
+       Comments,
+       Visitdate,
+	   IsApproved
+FROM {objectQualifier}IowaComputerGurus_Guestbook 
+WHERE  ModuleId = @ModuleId
+	and ItemId = @ItemId
+GO
+
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_AddGuestbook
+	@ModuleId       int,
+	@Name			varchar(200),
+	@Email			varchar(255),
+	@Website		varchar(255), 
+	@Location		varchar(100),
+	@Rating			int,
+	@Comments		ntext,
+	@IsApproved		BIT
+AS
+INSERT INTO {objectQualifier}IowaComputerGurus_Guestbook (
+	ModuleId,
+	Name,
+	Email,
+	Website,
+	Location,
+	Rating,
+	Comments,
+	VisitDate,
+	IsApproved
+) 
+VALUES (
+	@ModuleId,
+	@Name,
+	@Email,
+	@Website,
+	@Location,
+	@Rating,
+	@Comments,
+	getdate(),
+	@IsApproved
+)
+
+GO
+
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_UpdateGuestbook
+	@ModuleId       int,
+    @ItemId         int,
+	@Name			varchar(200),
+	@Email			varchar(255),
+	@Website		varchar(255), 
+	@Location		varchar(100),
+	@Rating			int,
+	@Comments		ntext,
+	@IsApproved		BIT
+AS
+UPDATE {objectQualifier}IowaComputerGurus_Guestbook
+SET    Name			= @Name,
+		Email		= @Email,
+		Website		= @Website,
+		Location	= @location,
+		Rating		= @Rating,
+		Comments	= @Comments,
+		IsApproved	= @IsApproved
+WHERE  ModuleId = @ModuleId
+	AND    ItemId = @ItemId
+
+GO
+
+--Add new procedure for the pending
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}IowaComputerGurus_GetModeratedGuestbooks]
+	@ModuleId int
+AS
+SELECT ModuleId,
+       ItemId,
+       Name,
+       Email,
+       Website,
+       Location,
+       Rating,
+       Comments,
+       Visitdate,
+	   IsApproved
+FROM {objectQualifier}IowaComputerGurus_Guestbook
+WHERE  ModuleId = @ModuleId
+	AND IsApproved = 0
+GO
+
