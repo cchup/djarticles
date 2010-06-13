@@ -1,0 +1,20 @@
+ALTER PROCEDURE {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbooks
+	@ModuleId int
+AS
+SELECT ModuleId,
+       ItemId,
+       Name,
+       Email,
+       Website,
+       Location,
+       Rating,
+       Comments,
+       Visitdate,
+	   IsApproved
+FROM {objectQualifier}IowaComputerGurus_Guestbook
+WHERE  ModuleId = @ModuleId
+	AND IsApproved = 1
+ORDER BY VisitDate DESC
+GO
+
+

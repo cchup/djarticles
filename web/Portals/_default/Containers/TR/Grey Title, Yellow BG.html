@@ -1,0 +1,52 @@
+<div class="YellowBGWidth">
+	<span class="YellowBGTL"></span>
+	<span class="YellowBGTR"></span>
+	<span class="YellowBGBL"></span>
+	<span class="YellowBGBR"></span>
+  <div class="YellowBGTopMIddle">
+    <div class="TitleActionscell">
+      <object id="ModuleMenu" codetype="dotnetnuke/server" codebase="ACTIONS" >
+        <param name="ProviderName" value="DNNMenuNavigationProvider" />
+        <param name="ExpandDepth" value="1" />
+        <param name="PopulateNodesFromClient" value="True" />
+      </object>
+    </div>
+	<div class="YellowBGIcon">
+		  <object id="ICON" codetype="dotnetnuke/server" codebase="ICON">
+		  </object>
+		</div>		
+    <div class="YellowBGVisibilitycell">
+      <object id="Visibility" codetype="dotnetnuke/server" codebase="VISIBILITY">
+      </object>
+    </div>
+  </div>
+     <div class="YellowBGTitle">
+      <h2>	  
+        <object id="Title" codetype="dotnetnuke/server" codebase="TITLE" >
+          <param name="CssClass" value="ContainerTitle" />
+        </object>
+      </h2>
+    </div>
+  <div class="YellowBGContentpane" id="ContentPane" runat="server"></div>
+  <div class="ClearFloat"></div>
+</div>
+<div class="BottomAction">
+  <object id="AddContent" codetype="dotnetnuke/server" codebase="ACTIONBUTTON" >
+    <param name="CommandName" value="AddContent.Action" />
+    <param name="DisplayIcon" value="True" />
+    <param name="DisplayLink" value="True" />
+  </object>
+  <!-- Add Action -->
+  <object id="Settings" codetype="dotnetnuke/server" codebase="ACTIONBUTTON" >
+    <param name="CommandName" value="ModuleSettings.Action" />
+    <param name="DisplayIcon" value="True" />
+    <param name="DisplayLink" value="True" />
+  </object>
+  <!-- Module Settings Action -->
+  <object id="Syndicate" codetype="dotnetnuke/server" codebase="ACTIONBUTTON" >
+    <param name="CommandName" value="SyndicateModule.Action" />
+    <param name="DisplayIcon" value="True" />
+    <param name="DisplayLink" value="False" />
+  </object>
+  <!-- RSS Syndication Action -->
+</div>

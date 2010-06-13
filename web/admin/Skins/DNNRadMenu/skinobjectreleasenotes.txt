@@ -1,0 +1,21 @@
+<h3>DNNRadMenu 1.0.0</h3>
+<p class="Contributor">
+	DotNetNuke&reg; <br />
+	<a href="mailto:support@dotnetnuke.com">support@dotnetnuke.com</a><br />
+	<a href=http://www.dotnetnuke.com>http://www.dotnetnuke.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<p class="Owner">
+		<h3>About the DNNRadMenu (Skin Object)</h3>
+		<b>Verion 1.0.0 </b><br /><br />
+		
+		This is the initial release of the DotNetNuke Telerik RadMenu skin object for DotNetNuke. DNNRadMenu makes it easy to create skins which use the Telerik RadMenu functionality. 
+		Licensing permits anyone (including designers) to use the components. Developers should review whether they need a Telerik or DotNetNuke Professional license for their purposes.
+		There is a file called DNNRadMenu.xml located in the skins directory that can be utilized by designers to see the options available to them (such as Css Classes).  
+		Please note, DNNRadMenu requires DotNetNuke 5.2.0 or greater.  <br /><br />
+
+		You can view information about the Telerik and DotNetNuke Corp. partnership here: <a href="http://www.telerik.com/purchase/faqs/telerik-dnn-partnership-qanda.aspx">http://www.telerik.com/purchase/faqs/telerik-dnn-partnership-qanda.aspx</a>. <br /><br />
+		For more information about  the DNNRadMenu project, or to check for the latest version, please visit the project on CodePlex here: <a href="http://dnnradmenu.codeplex.com">http://dnnradmenu.codeplex.com</a>. 
+	</p>
+</div>

@@ -1,0 +1,13 @@
+body,th,td,div,p,table,.Normal,.NormalDisabled,.Head,.SubHead,.SubSubHead, a:link, a:visited, a:hover{font-size:16px;}
+h1{font-size:35px;}
+h2{font-size:32px;}
+h1 {font-size:30px;}
+h3{font-size:26px;}
+h4{font-size:22px;}
+h5, h6{font-size:18px;}
+.ControlPanel a.CommandButton:link, .ControlPanel a.CommandButton:visited, .ControlPanel .SubHead{font-size:16px;}
+
+
+
+
+

@@ -1,0 +1,212 @@
+/********container styles ********/
+.space_pad{padding-top:20px;}
+
+.common_head_pad{padding:0px 0px 0px 0px;}
+
+.action_pad{}
+.visibility_pad{margin:0; float:right;}
+
+.common_content_pad{padding:10px 10px 0px 0px;}
+.content_pad{padding:12px 0px 12px 0px;}
+.content_pad1{padding:10px 10px 10px 17px;}
+.content_padtwo{padding:10px;}
+.conthree{background:#f7f7f7; border:#f7f7f7 1px solid;}
+.conthree_pad{ padding:15px 15px 0px 15px;}
+.conthree_contpad{padding:15px 15px 15px 15px;}
+.confour{border:#f0f0f0 1px solid; background:#f0f0f0 url(confour_bg.gif) repeat-x top left;}
+.head_padone{padding:15px 15px 0px 15px;}
+.head_pad{padding:10px 12px 0px 12px;}
+.head_pad_common{padding:10px 12px 0px 0px;}
+.head_padthree{padding:10px 14px 10px 14px;}
+
+
+.bottom_pad{padding:0px 10px;}
+
+.clear_both{clear:both;}
+
+
+
+.conone{border:#f7f7f7 3px solid; background:#ffffff;}
+.contwo_topbg{ margin-bottom:2px; border-top:8px #e0e0e0 solid;}
+.contwo{border:#e0e0e0 1px solid; background:#ffffff;}
+.content_padthree{padding:0px 14px 17px 14px;}
+
+.Head
+{
+    font-size:15px;
+    font-weight:bold;
+    color:#8e8e8e;
+}
+
+.Normal
+{
+    font-size: 11px;
+    font-weight:normal;
+	font-family:Arial, Helvetica;
+    color:#757575;
+}
+
+/***** common_print ******/
+.common_print .Head
+{
+    font-size:15px;
+    font-weight:bold;
+    color:#8e8e8e;
+}
+
+.common_print .Normal
+{
+    font-size:11px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+.common_print td, .common_print th, .common_print div, .common_print p 
+{
+    font-size:11px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+
+/***** conone_c ******/
+.conone_c .Head
+{
+    font-size:16px;
+    font-weight:bold;
+    color:#8e8e8e;
+}
+
+.conone_c .Normal
+{
+    font-size:12px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+.conone_c td, .conone_c th, .conone_c div, .conone_c p 
+{
+    font-size:12px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+/***** contwo_c ******/
+.contwo_c .Head
+{
+    font-size:14px;
+    font-weight:bold;
+    color:#8e8e8e;
+}
+
+.contwo_c .Normal
+{
+    font-size:11px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+.contwo_c td, .contwo_c th, .contwo_c div, .contwo_c p 
+{
+    font-size:11px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+
+/***** conthree_c ******/
+.conthree_c .Head
+{
+    font-size:16px;
+    font-weight:bold;
+    color:#8e8e8e;
+}
+
+.conthree_c .Normal
+{
+    font-size:12px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+.conthree_c td, .conthree_c th, .conthree_c div, .conthree_c p 
+{
+    font-size:12px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+/***** confour_c ******/
+.confour_c .Head
+{
+    font-size:12px;
+    font-weight:bold;
+    color:#003e5d;
+}
+
+.confour_c .Normal
+{
+    font-size:11px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+.confour_c td, .confour_c th, .confour_c div, .confour_c p 
+{
+    font-size:11px;
+    font-weight:normal;
+    color:#757575;
+	font-family:Arial, Helvetica;
+}
+
+/* Module Action Menus Styles */
+
+.ModuleTitle_MenuItem td, .ModuleTitle_MenuItem th, .ModuleTitle_MenuItem div
+{ 
+	border:none; 
+	padding:3px; 
+	color:#000000 !important; 
+	font-size:11px; 
+	font-weight:bold !important;
+	white-space:nowrap;
+}
+
+.ModuleTitle_MenuItem { 
+	border:none;
+	padding-right:10px;
+}
+
+.ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon
+{
+	background-color: #c1d2ee !important;
+	color:#000000 !important; 
+	font-size:11px; 
+	font-weight:bold !important;
+	white-space:nowrap;
+}
+
+.ModuleTitle_MenuBreak td, .ModuleTitle_MenuBreak, .ModuleTitle_MenuIcon
+{
+	height: 2px;
+	background:transparent;
+}
+
+
+
+
+
+
+
+
+
+
+

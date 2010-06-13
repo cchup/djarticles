@@ -1,0 +1,333 @@
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+	<package name="DotNetNuke.RADMENUSkinObject" type="SkinObject" version="1.0.0">
+			<friendlyName>DNNRADMENU SkinObject</friendlyName>
+			<description>DNNRadMenu makes it easy to create skins which use the Telerik RadMenu functionality. Licensing permits anyone (including designers) to use the components. Developers should review whether they need a Telerik or DotNetNuke Professional license for their purposes. Please be advised, because this install contains installable skin  objects: at first it may appear that you are installing a package that exists, this can happen if you installed one of the skin objects or another skin that utilizes the same skin object(s) previously.</description>
+			<owner>
+				<name>DotNetNuke</name>
+				<organization>DotNetNuke Corporation</organization>
+				<url>www.dotnetnuke.com</url>
+				<email>support@dotnetnuke.com</email>
+			</owner>
+		<license src="skinlicense.txt"></license>
+			<releaseNotes src="skinreleasenotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">05.02.00</dependency>
+			</dependencies>
+			<components>       
+				<component type="SkinObject">
+					<moduleControl>
+						<controlKey>DNNRADMENU</controlKey>
+						<controlSrc>Admin/Skins/DNNRadMenu/DNNRadMenu.ascx</controlSrc>
+						<supportsPartialRendering>True</supportsPartialRendering>
+					</moduleControl>
+				</component>
+				<component type="File">
+					<files>
+						<basePath>Admin/Skins/DNNRadMenu</basePath>
+						<file>
+							<name>DNNRadMenu.ascx</name>
+						</file>
+						<file>
+							<name>DNNRadMenu.ascx.vb</name>
+						</file>
+						<file>
+							<name>DNNRadMenu.xml</name>
+						</file>
+						<file>
+							<name>skinobjectlicense.txt</name>
+						</file>
+						<file>
+							<name>skinobjectreleasenotes.txt</name>
+						</file>
+					</files>
+				</component>
+			</components>
+		</package>
+		<package name="DotNetNuke.Bright.Skin" type="Skin" version="1.0.0">
+			<friendlyName>Bright</friendlyName>
+			<description>A DotNetNuke Design Challenge skin package submitted to the "Modern Business" category by Noel Jerke of SiteToolset. This simple and clean business skin works perfectly on IE and Mozilla Firefox and also utilizes the Core Navigation Provider.</description>
+			<owner>
+				<name>DotNetNuke</name>
+				<organization>DotNetNuke Corporation</organization>
+				<url>www.dotnetnuke.com</url>
+				<email>support@dotnetnuke.com</email>
+			</owner>
+			<license src="skinlicense.txt"></license>
+			<releaseNotes src="skinreleasenotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">05.02.00</dependency>
+			</dependencies>
+			<components>
+				<component type="File">
+					<files>
+						<file>
+							<name>skinlicense.txt</name>
+						</file>
+						<file>
+							<name>skinreleasenotes.txt</name>
+						</file>
+					</files>
+				</component>
+				<component type="Skin">
+					<skinFiles>
+						<skinName>Bright</skinName>
+						<basePath />
+						<skinFile>
+							<path>images</path>
+							<name>banner_internal.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>bodyBg.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>but_bg.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>but_l.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>but_r.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>footer_l.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>footer_m.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>footer_r.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>header.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>hover_menu.png</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>internal.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>login_l.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>login_m.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>login_r.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>logo.png</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>menuBg_Ov.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>search_bg.jpg</name>
+						</skinFile>
+							<skinFile>
+							<path>images</path>
+							<name>search_l.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>search_r.jpg</name>
+						</skinFile>
+							<skinFile>
+							<path>images</path>
+							<name>separator.jpg</name>
+						</skinFile>
+						<skinFile>
+							<path>images</path>
+							<name>submit.jpg</name>
+						</skinFile>
+						<skinFile>
+							<name>Home.ascx</name>
+						</skinFile>
+						<skinFile>
+							<name>Home.doctype.xml</name>
+						</skinFile>
+						<skinFile>
+							<name>Home.jpg</name>
+						</skinFile>
+						<skinFile>
+							<name>Portal.ascx</name>
+						</skinFile>
+						<skinFile>
+							<name>Portal.doctype.xml</name>
+						</skinFile>
+						<skinFile>
+							<name>Portal.jpg</name>
+						</skinFile>
+						<skinFile>
+							<name>skin.css</name>
+						</skinFile>
+						<skinFile>
+							<name>skin.xml</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation</path>
+							<name>styles.css</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>menu_bg.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>menu_hovbg.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>submenu_arrow.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>submenu_hover.gif</name>
+						</skinFile>
+						<skinFile>
+							<path>Navigation/img</path>
+							<name>submenu_normal.gif</name>
+						</skinFile>
+					</skinFiles>
+				</component>
+			</components>
+		</package>
+		<package name="DotNetNuke.Bright.Container" type="Container" version="1.0.0">
+			<friendlyName>Bright</friendlyName>
+			<description>A DotNetNuke Design Challenge container package submitted to the "Modern Business" category by Noel Jerke of SiteToolset. This simple and clean business skin works perfectly on IE and Mozilla Firefox and also utilizes the Core Navigation Provider.</description>
+			<owner>
+				<name>DotNetNuke</name>
+				<organization>DotNetNuke Corporation</organization>
+				<url>www.dotnetnuke.com</url>
+				<email>support@dotnetnuke.com</email>
+			</owner>
+			<license src="containerlicense.txt"></license>
+			<releaseNotes src="containerreleasenotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">05.02.00</dependency>
+			</dependencies>
+			<components>
+				<component type="File">
+					<files>
+						<file>
+							<name>containerlicense.txt</name>
+						</file>
+						<file>
+							<name>containerreleasenotes.txt</name>
+						</file>
+					</files>
+				</component>
+				<component type="Container">
+					<containerFiles>
+						<containerName>Bright</containerName>
+						<basePath />
+						<containerFile>
+							<path>images</path>
+							<name>cont_cl.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>cont_cm.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>cont_cr.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>cont02Left.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>cont02Leftbg.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>cont02Right.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>cont02Rightbg.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_1.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_2.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_3.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_4.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_bbg.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_bg.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>corn_tbg.jpg</name>
+						</containerFile>
+						<containerFile>
+							<path>images</path>
+							<name>dotted_line.jpg</name>
+						</containerFile>
+						<containerFile>
+							<name>Black Title, White BG, Rule.ascx</name>
+						</containerFile>
+						<containerFile>
+							<name>Black Title, White BG, Rule.jpg</name>
+						</containerFile>
+						<containerFile>
+							<name>container.css</name>
+						</containerFile>
+						<containerFile>
+							<name>Content Only.ascx</name>
+						</containerFile>
+						<containerFile>
+							<name>Content Only.jpg</name>
+						</containerFile>
+						<containerFile>
+							<name>Grey Title Bar, White BG.ascx</name>
+						</containerFile>
+						<containerFile>
+							<name>Grey Title Bar, White BG.jpg</name>
+						</containerFile>
+						<containerFile>
+							<name>No Title, Grey BG, Rounded Corners.ascx</name>
+						</containerFile>
+						<containerFile>
+							<name>No Title, Grey BG, Rounded Corners.jpg</name>
+						</containerFile>
+					</containerFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

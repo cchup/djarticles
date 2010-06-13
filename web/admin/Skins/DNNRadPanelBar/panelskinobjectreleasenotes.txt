@@ -1,0 +1,18 @@
+<h3>DNNRadPanelBar 1.0.0</h3>
+<p class="Contributor">
+	DotNetNuke&reg; <br />
+	<a href="mailto:support@dotnetnuke.com">support@dotnetnuke.com</a><br />
+	<a href=http://www.dotnetnuke.com>http://www.dotnetnuke.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<p class="Owner">
+		<h3>About the DNNRadPanelBar (Skin Object)</h3>
+		<b>Verion 1.0.0 </b><br /><br />
+		
+		DNNRadPanelBar makes it easy to add telerik RadPanelBar functionality to your module or skin. Licensing permits anyone to use the components (including designers). Developers should review whether they need a telerik or DotNetNuke Professional license for their purposes.<br /><br />
+
+		You can view information about the Telerik and DotNetNuke Corp. partnership here: <a href="http://www.telerik.com/purchase/faqs/telerik-dnn-partnership-qanda.aspx">http://www.telerik.com/purchase/faqs/telerik-dnn-partnership-qanda.aspx</a>. <br /><br />
+		For more information about  the DNNRadMenu project, or to check for the latest version, please visit the project on CodePlex here: <a href="http://dnnradpanelbar.codeplex.com">http://dnnradpanelbar.codeplex.com</a>. 
+	</p>
+</div>

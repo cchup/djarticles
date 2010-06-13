@@ -1,0 +1,231 @@
+/* container styles */
+
+#container01{
+	width:100%;
+	float: left;
+	margin: 0 0 10px 0;
+}
+#container01_title_bg{
+	background-image: url(images/dotted_line.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height:35px;
+}
+#container01_cont{
+	padding:10px 0 0 0;
+}
+
+#cont02wrapper{
+	width:100%;
+	padding: 0;
+	height:46px;background-color: #878787;
+}
+#container02{
+	text-align:left;
+	float:left;
+	width:auto;
+	height:46px;
+	padding: 0;
+	background-color: #878787;
+}
+#sol_03{
+	width:0px;
+	height:46px;
+	float:left;
+}
+#title_03{
+	width:auto;
+	text-align:left;
+	padding: 8px 0 0 0;
+}
+.container02_cl{
+	width:15px;
+	height:46px;
+	float:left;
+}
+.container02_cr{
+	width:15px;
+	height:46px;
+	float:right;
+}
+.container02_cont{
+	width:100%;
+	float:left;
+	padding:5px 0 0 0;
+}
+
+#container03{
+	width:100%;
+	padding:0 0 10px 0;
+}
+#cont03{
+	background-image: url(images/corn_tbg.jpg);
+	background-repeat:repeat-x;
+	background-position:top;text-align:left;
+	height:17px;
+	padding: 0 0 0 0;
+	background-color:#E4E4E4;
+}
+#container03_cbb{
+	
+	background-image: url(images/corn_bbg.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;text-align:left;
+	height:17px;
+	padding: 0 0 0 0;
+}
+#container03_cont{
+	width:auto;
+	float:left;
+	padding:0 0 0 0;
+}
+#container03_cl{
+	background-image: url(images/corn_1.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+	width:16px;
+	height:17px;
+	float:left;
+	
+}
+#container03_cr{
+	background-image: url(images/corn_2.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+	width:16px;
+	height:17px;
+	float:right;
+}
+#container03_crb{
+	background-image: url(images/corn_3.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	width:16px;
+	height:17px;
+	float:right;
+}
+#container03_clb{
+	background-image: url(images/corn_4.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	width:16px;
+	height:17px;
+	float:left;
+	background-color:#E4E4E4;
+}
+#container03_mid{
+	width:100%;
+	background-color: #EDEDED;
+	background-image: url(images/corn_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border-top: 0px solid #D8D9D9;
+	border-right: 1px solid #D8D9D9;
+	border-bottom: 0px solid #D8D9D9;
+	border-left: 1px solid #D8D9D9;
+}
+
+.verdana12wht_nor {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.verdana12wht_bld {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.verdana12nor {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.verdana12bld {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.verdana42wht {
+	font-family: Verdana;
+	font-size: 42px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.verdana30wht {
+	font-family: Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.verdana22wht {
+	font-family: Verdana;
+	font-size: 22px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	
+}
+.verdana22 {
+	font-family: Verdana;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.verdana22_03 {
+	font-family: Verdana;
+	font-size: 30px;
+	font-weight:normal;
+	color: #4d4d4d;
+	text-decoration: none;
+	padding-left:16px;
+}
+
+.container02_mid{
+	background-color: #ededed;
+	background-image: url(images/corn_bg.jpg);
+	background-repeat: repeat-x;
+	background-position:bottom;
+}
+
+.container02_LBG{
+	background-image: url(images/cont02Leftbg.jpg);
+	background-repeat: repeat-y;
+	background-position:top;
+}
+.container02_RBG{
+	background-image: url(images/cont02Rightbg.jpg);
+	background-repeat: repeat-y;
+	background-position:top;
+}
+.container02_cbb{
+	
+	background-image: url(images/corn_bbg.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+.corn_tbg{
+	
+	background-image: url(images/corn_tbg.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+.verdana40_int {
+	font-family: Verdana;
+	font-size: 40px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 25px 30px 25px 0;
+}

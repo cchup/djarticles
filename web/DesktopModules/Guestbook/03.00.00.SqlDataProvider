@@ -1,0 +1,5 @@
+--Dummy provider to allow delete file operation to occur
+SELECT *
+FROM {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]
+GO
+

@@ -1,0 +1,60 @@
+/************* ��ԭ����ʽ������д ****************/
+.RadMenu_Topmenu .rmRootGroup .rmLink {
+	padding:0px 0px 0px 5px;
+	margin:0px 5px 0px 0px;
+	cursor:pointer;
+	font-weight:bold;
+	background:url(img/ls-nav.gif) no-repeat top left;
+}
+
+.RadMenu_Topmenu .rmRootGroup .rmLink .rmText {
+	line-height:23px;
+  padding:0px 12px 0px 7px;
+  font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background:url(img/rs-nav.gif) no-repeat top right;
+}
+
+.RadMenu_Topmenu .rmRootGroup .rmLink:hover,
+.RadMenu_Topmenu .rmRootGroup .rmLink.focused,
+.RadMenu_Topmenu .rmRootGroup .rmLink.expanded
+ {
+	background:url(img/ls-nav-on.gif) no-repeat top left;
+}
+
+.RadMenu_Topmenu .rmRootGroup .rmLink:hover .rmText,
+.RadMenu_Topmenu .rmRootGroup .rmLink.focused .rmText,
+.RadMenu_Topmenu .rmRootGroup .rmLink.expanded .rmText{
+	background:url(img/rs-nav-on.gif) no-repeat top right;
+}
+
+/**sub menu**/
+.RadMenu_Topmenu .rmGroup
+{
+	border:#000000 1px solid;
+	padding-bottom:0px !important;
+	background:#F4F4F4 !important;
+} 
+
+.RadMenu_Topmenu .rmGroup .rmLink {
+	background:#F4F4F4 !important;
+}
+
+.RadMenu_Topmenu .rmGroup .rmLink .rmText {
+	background:#F4F4F4 !important;
+	color:#000;
+}
+
+.RadMenu_Topmenu .rmGroup .rmLink:hover,
+.RadMenu_Topmenu .rmGroup .rmLink.focused,
+.RadMenu_Topmenu .rmGroup .rmLink.expanded
+ {
+	background:#F4F4F4 !important;
+}
+
+.RadMenu_Topmenu .rmGroup .rmLink:hover .rmText,
+.RadMenu_Topmenu .rmGroup .rmLink.focused .rmText,
+.RadMenu_Topmenu .rmGroup .rmLink.expanded .rmText{
+	background:#F4F4F4 !important;
+}

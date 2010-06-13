@@ -1,0 +1,178 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Guestbook Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook]
+		(
+			[ModuleID] [int] NOT NULL,
+			[ItemID] [int] NOT NULL IDENTITY(1, 1),
+			[Name] varchar(200) NOT NULL,
+			[Email] varchar(255) NOT NULL,
+			[Website] varchar(255),
+			[Location] varchar(100) NOT NULL,
+			[Rating] [int] NOT NULL,
+			[Comments] [ntext] NOT NULL,
+			[VisitDate] [datetime] NOT NULL
+		)
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook] ADD CONSTRAINT [PK_{objectQualifier}IowaComputerGurus_Guestbook] PRIMARY KEY CLUSTERED  ([ItemID])
+		CREATE NONCLUSTERED INDEX [IX_{objectQualifier}IowaComputerGurus_Guestbook] ON {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook] ([ModuleID])
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}IowaComputerGurus_Guestbook] WITH NOCHECK ADD CONSTRAINT [FK_{objectQualifier}IowaComputerGurus_Guestbook_{objectQualifier}Modules] FOREIGN KEY ([ModuleID]) REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE NOT FOR REPLICATION
+	END
+GO
+
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}IowaComputerGurus_GetGuestbooks]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbooks
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}IowaComputerGurus_GetGuestbook]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbook
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}IowaComputerGurus_AddGuestbook]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}IowaComputerGurus_AddGuestbook
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}IowaComputerGurus_UpdateGuestbook]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}IowaComputerGurus_UpdateGuestbook
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}IowaComputerGurus_DeleteGuestbook]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}IowaComputerGurus_DeleteGuestbook
+GO
+
+/** Create Stored Procedures **/
+
+
+create procedure {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbooks
+
+	@ModuleId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Name,
+       Email,
+       Website,
+       Location,
+       Rating,
+       Comments,
+       Visitdate
+from {objectQualifier}IowaComputerGurus_Guestbook
+where  ModuleId = @ModuleId
+GO
+
+create procedure {databaseOwner}{objectQualifier}IowaComputerGurus_GetGuestbook
+
+	@ModuleId int,
+        @ItemId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Name,
+       Email,
+       Website,
+       Location,
+       Rating,
+       Comments,
+       Visitdate
+from {objectQualifier}IowaComputerGurus_Guestbook 
+where  ModuleId = @ModuleId
+	and ItemId = @ItemId
+GO
+
+
+create procedure {databaseOwner}{objectQualifier}IowaComputerGurus_AddGuestbook
+
+	@ModuleId       int,
+	@Name			varchar(200),
+	@Email			varchar(255),
+	@Website		varchar(255), 
+	@Location		varchar(100),
+	@Rating			int,
+	@Comments		ntext
+
+as
+
+insert into {objectQualifier}IowaComputerGurus_Guestbook (
+	ModuleId,
+	Name,
+	Email,
+	Website,
+	Location,
+	Rating,
+	Comments,
+	VisitDate
+) 
+values (
+	@ModuleId,
+	@Name,
+	@Email,
+	@Website,
+	@Location,
+	@Rating,
+	@Comments,
+	getdate()
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}IowaComputerGurus_UpdateGuestbook
+
+	@ModuleId       int,
+    @ItemId         int,
+	@Name			varchar(200),
+	@Email			varchar(255),
+	@Website		varchar(255), 
+	@Location		varchar(100),
+	@Rating			int,
+	@Comments		ntext
+
+as
+
+update {objectQualifier}IowaComputerGurus_Guestbook
+set    Name			= @Name,
+		Email		= @Email,
+		Website		= @Website,
+		Location	= @location,
+		Rating		= @Rating,
+		Comments	= @Comments
+where  ModuleId = @ModuleId
+	and    ItemId = @ItemId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}IowaComputerGurus_DeleteGuestbook
+
+	@ModuleId       int,
+        @ItemId         int
+
+as
+
+delete
+from   {objectQualifier}IowaComputerGurus_Guestbook
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/
