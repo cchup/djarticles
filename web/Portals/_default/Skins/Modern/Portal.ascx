@@ -1,4 +1,4 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+﻿<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="SEARCH" Src="~/Admin/Skins/Search.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/User.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
@@ -8,18 +8,6 @@
 <%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="STYLES" Src="~/Admin/Skins/Styles.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="DNNRADMENU" Src="~/Admin/Skins/DNNRadMenu/DNNRadMenu.ascx" %>
-<!--
-Skin Designed and developed by SalarO
-http://www.salaro.com
-Designer       : Bazeeth Ali
-Skin Developer : Dilip
-Released for free under Dotnetnuke License
-
-Skin Information
-Title        : salaro mss
-DNN Version  : 5.2.2
--->
-
 <!-- Main Template starts -->
 <div class="temp">
 	<div class="main">
@@ -43,7 +31,7 @@ DNN Version  : 5.2.2
       <div id="mn" class="contentpart_right">
          <div class="toppane" id="toppane" runat="server" visible="false"></div>
          <div class="bannerpane" id="bannerpane" runat="server" visible="false"></div>
-         <div class="breadcrumbarea"><dnn:TEXT runat="server" id="dnnTEXT" CssClass="breadcrumb_text" Text="You are here��" ResourceKey="Breadcrumb" /> : <dnn:BREADCRUMB runat="server" id="dnnBREADCRUMB" RootLevel="0" Separator="&nbsp;<img src=&quot;images/arrow.gif&quot; border=&quot;0&quot; alt=&quot;arrow&quot; /&gt;&nbsp;" CssClass="Breadcrumb" /></div>
+         <div class="breadcrumbarea"><dnn:TEXT runat="server" id="dnnTEXT" CssClass="breadcrumb_text" Text="You are here：" ResourceKey="Breadcrumb" /> : <dnn:BREADCRUMB runat="server" id="dnnBREADCRUMB" RootLevel="0" Separator="&nbsp;<img src=&quot;images/arrow.gif&quot; border=&quot;0&quot; alt=&quot;arrow&quot; /&gt;&nbsp;" CssClass="Breadcrumb" /></div>
          <div class="contentpane" id="contentpane" runat="server" visible="false"></div>
          <div class="con_contentarea">
             <div id="bolt" class="con_contentarea_left">
@@ -63,7 +51,7 @@ DNN Version  : 5.2.2
 <div class="footerpart">
         	<div class="footerpart_left"><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" CssClass="footer" /></div>
             <div align="right" class="footerpart_right">
-            	
+            	Developed By：<a href="mailto:houdejun214@163.com" target="_blank">侯德军</a>
             </div>
         </div>
         <div class="clr"></div>
