@@ -1,6 +1,6 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Archive.ascx.vb" Inherits="DotNetNuke.Modules.Blog.Archive" %>
 <asp:Label ID="lblArchive" runat="server" CssClass="SubHead" ResourceKey="lblArchive" />
-<asp:Calendar ID="calMonth" runat="server" CssClass="Normal" DayHeaderStyle-CssClass="BlogArchiveDayHeader" DayStyle-CssClass="BlogArchiveDay" NextPrevStyle-CssClass="BlogArchiveNextPrev" OtherMonthDayStyle-CssClass="BlogArchiveOtherMonth" SelectedDayStyle-CssClass="BlogArchiveSelectedDay" SelectorStyle-CssClass="BlogArchiveSelector" TitleStyle-CssClass="BlogArchiveTitle" TodayDayStyle-CssClass="BlogArchiveTodayDay" WeekendDayStyle-CssClass="BlogArchiveWeekendDay">
+<asp:Calendar ID="calMonth" runat="server"  width="100%" CssClass="Normal" DayHeaderStyle-CssClass="BlogArchiveDayHeader" DayStyle-CssClass="BlogArchiveDay" NextPrevStyle-CssClass="BlogArchiveNextPrev" OtherMonthDayStyle-CssClass="BlogArchiveOtherMonth" SelectedDayStyle-CssClass="BlogArchiveSelectedDay" SelectorStyle-CssClass="BlogArchiveSelector" TitleStyle-CssClass="BlogArchiveTitle" TodayDayStyle-CssClass="BlogArchiveTodayDay" WeekendDayStyle-CssClass="BlogArchiveWeekendDay">
  <TodayDayStyle CssClass="BlogArchiveTodayDay" />
  <SelectorStyle CssClass="BlogArchiveSelector" />
  <DayStyle CssClass="BlogArchiveDay" />
@@ -13,7 +13,7 @@
 </asp:Calendar>
 <asp:Label ID="lblMonthly" runat="server" CssClass="SubHead" ResourceKey="lblMonthly" />
 <asp:DataList ID="lstArchiveMonths" runat="server" CssClass="CommandButton"
- CellPadding="0" CellSpacing="0" BorderWidth="0">
+ CellPadding="0" CellSpacing="0" BorderWidth="0"  width="100%">
  <ItemTemplate>
   <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
    <tr>

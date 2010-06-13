@@ -1,4 +1,4 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
+﻿<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="SEARCH" Src="~/Admin/Skins/Search.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/User.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
@@ -40,7 +40,7 @@ DNN Version  : 5.2.2
         <div class="footerpart">
         	<div class="footerpart_left"><dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" CssClass="footer" /></div>
             <div align="right" class="footerpart_right">
-            	<div class="footer">Designed and developed by <a href="http://www.salaro.com/" target="_blank">SalarO</a></div>
+            	<div class="footer">Developed By：<a href="mailto:houdejun214@163.com" target="_blank">侯德军</a></div>
             </div>
         </div>
         <div class="clr"></div>
