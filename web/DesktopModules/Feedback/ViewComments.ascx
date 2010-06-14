@@ -4,7 +4,7 @@
 	<table width="100%" border="0">
 		<tr>
 			<td colspan="2">
-				<asp:datalist id="dlComments" runat="server"  RepeatColumns="1">
+				<asp:datalist id="dlComments" width="100%" runat="server"  RepeatColumns="1">
 					<ItemTemplate>
 						<table border="0" >
 							<tr>
