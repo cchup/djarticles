@@ -213,16 +213,16 @@
     <value>Feedback Moderation</value>
   </data>
   <data name="plCaptcha.Text" xml:space="preserve">
-    <value>Security Code</value>
+    <value>验证码</value>
   </data>
   <data name="plCaptcha.Help" xml:space="preserve">
-    <value>Enter the security code.</value>
+    <value>验证码需要输入.</value>
   </data>
   <data name="CaptchaText.Text" xml:space="preserve">
-    <value>Enter the code shown above in the box below</value>
+    <value>请输入上面方框内显示的验证码</value>
   </data>
   <data name="InvalidCaptcha.Text" xml:space="preserve">
-    <value>Incorrect Security Code</value>
+    <value>验证码错误</value>
   </data>
   <data name="cmdModeratePosts.Text" xml:space="preserve">
     <value>Moderate Posts</value>

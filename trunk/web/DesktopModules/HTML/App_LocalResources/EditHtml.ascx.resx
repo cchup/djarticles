@@ -118,76 +118,76 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="plPublish.Text" xml:space="preserve">
-    <value>Publish</value>
+    <value>发表</value>
   </data>
   <data name="plPublish.Help" xml:space="preserve">
-    <value>Indicate if the content is ready for publishing</value>
+    <value>指示内容是否可以发表</value>
   </data>
   <data name="dshReview.Text" xml:space="preserve">
     <value>Review Content</value>
   </data>
   <data name="plComment.Text" xml:space="preserve">
-    <value>Comment</value>
+    <value>评论</value>
   </data>
   <data name="plComment.Help" xml:space="preserve">
     <value>Enter a comment related to your review of the content.</value>
   </data>
   <data name="cmdApprove.Text" xml:space="preserve">
-    <value>Approve</value>
+    <value>批准</value>
   </data>
   <data name="cmdReject.Text" xml:space="preserve">
     <value>Reject</value>
   </data>
   <data name="RejectMessage.Text" xml:space="preserve">
-    <value>You Must Enter A Comment</value>
+    <value>评论需要输入</value>
   </data>
   <data name="dshHistory.Text" xml:space="preserve">
-    <value>Item History</value>
+    <value>历史记录</value>
   </data>
   <data name="plVersion.Text" xml:space="preserve">
-    <value>Version</value>
+    <value>版本</value>
   </data>
   <data name="plVersion.Help" xml:space="preserve">
-    <value>Displays the content version number</value>
+    <value>显示内容版本号</value>
   </data>
   <data name="plWorkflow.Text" xml:space="preserve">
-    <value>Workflow</value>
+    <value>工作流</value>
   </data>
   <data name="plWorkflow.Help" xml:space="preserve">
-    <value>Displays the workflow which is currently active</value>
+    <value>显示当前工作流程状态</value>
   </data>
   <data name="plState.Text" xml:space="preserve">
-    <value>State</value>
+    <value>状态</value>
   </data>
   <data name="plState.Help" xml:space="preserve">
-    <value>Displays the current state of the content</value>
+    <value>显示当前状态</value>
   </data>
   <data name="Date.Header" xml:space="preserve">
-    <value>Date</value>
+    <value>日期</value>
   </data>
   <data name="Updated.Header" xml:space="preserve">
-    <value>Updated By</value>
+    <value>更新者</value>
   </data>
   <data name="State.Header" xml:space="preserve">
-    <value>State</value>
+    <value>状态</value>
   </data>
   <data name="Approved.Header" xml:space="preserve">
-    <value>Approved</value>
+    <value>批准</value>
   </data>
   <data name="dshVersions.Text" xml:space="preserve">
-    <value>Version History</value>
+    <value>历史版本信息</value>
   </data>
   <data name="Version.Header" xml:space="preserve">
-    <value>Version</value>
+    <value>版本</value>
   </data>
   <data name="Item.Text" xml:space="preserve">
-    <value>Preview Content</value>
+    <value>内容预览</value>
   </data>
   <data name="Edit.Text" xml:space="preserve">
-    <value>Rollback Content</value>
+    <value>回滚内容</value>
   </data>
   <data name="dshPreview.Text" xml:space="preserve">
-    <value>Preview Content</value>
+    <value>内容预览</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
     <value>&lt;P&gt;The Text/HTML Module renders plain text, rich text or HTML. Five different editing views are available: &lt;/P&gt;
@@ -199,39 +199,39 @@
 &lt;LI&gt;&lt;STRONG&gt;Rich Text Editor / Design&lt;/STRONG&gt;: A full word processor or WYSIWYG (What You See is What You Get) editor with functionality such as hyperlinks, email links, File Manager image gallery, bullet points, spell check and more.</value>
   </data>
   <data name="ControlTitle_edit.Text" xml:space="preserve">
-    <value>Edit Content</value>
+    <value>编辑内容</value>
   </data>
   <data name="AddContent.Text" xml:space="preserve">
-    <value>Add Content...</value>
+    <value>填写内容...</value>
   </data>
   <data name="cmdPreview.Text" xml:space="preserve">
-    <value>Preview</value>
+    <value>预览</value>
   </data>
   <data name="cmdReview.Text" xml:space="preserve">
-    <value>Review</value>
+    <value>回顾</value>
   </data>
   <data name="cmdSave.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="User.Header" xml:space="preserve">
-    <value>User</value>
+    <value>用户</value>
   </data>
   <data name="Content Staging.Text" xml:space="preserve">
     <value>Content Staging</value>
   </data>
   <data name="Direct Publish.Text" xml:space="preserve">
-    <value>Direct Publish</value>
+    <value>直接发表</value>
   </data>
   <data name="Draft.Text" xml:space="preserve">
-    <value>Draft</value>
+    <value>保存草稿</value>
   </data>
   <data name="Published.Text" xml:space="preserve">
-    <value>Published</value>
+    <value>已发表</value>
   </data>
   <data name="False.Text" xml:space="preserve">
-    <value>False</value>
+    <value>否</value>
   </data>
   <data name="True.Text" xml:space="preserve">
-    <value>True</value>
+    <value>是</value>
   </data>
 </root>
