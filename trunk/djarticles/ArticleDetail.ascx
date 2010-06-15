@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleView.ascx.cs"
-    Inherits="DjArticles.ArticleView" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleDetail.ascx.cs"
+    Inherits="DjArticles.ArticleDetail" %>
 <script type="text/javascript" src='<%=  ResolveUrl("jQComment.js")%>'> </script>
 <div class="articleMain">
     <h1 class="articleItem articleTitle">

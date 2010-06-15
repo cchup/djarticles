@@ -17,7 +17,8 @@
 </div>
 
 <dj:djgridview id="grdArticles" runat="server" enableviewstate="False" allowpaging="true"
-    custompager="True" width="90%" autogeneratecolumns="False" pagesize="15">
+    custompager="True" autogeneratecolumns="False" pagesize="15"
+     BackColor="#CAD9EA"  CellPadding="3"  GridLines="None"   CellSpacing="1"   Width="100%"    >
     <Columns>
         <asp:BoundField DataField="CategoryName" HeaderText="CategoryName">
             <HeaderStyle Width="10%" CssClass="NormalBold"></HeaderStyle>

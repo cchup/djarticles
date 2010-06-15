@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Web.UI;
 namespace DjArticles.Components
 {
-    public class CategoryInfo
+    public class CategoryInfo  
     {
         private int categoryID;
 

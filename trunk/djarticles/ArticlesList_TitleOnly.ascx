@@ -8,7 +8,7 @@
         <ItemTemplate>
             <li>
                 <p>
-                    <asp:HyperLink CssClass="Normal" ID="titleLink" runat="server" NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleView") %>'  Text='<%# Eval("Title") %>' />
+                    <asp:HyperLink CssClass="Normal" ID="titleLink" runat="server" NavigateUrl='<%# GetArticleDetailUrl(DataBinder.Eval(Container.DataItem,"ArticleID"))  %>'  Text='<%# Eval("Title") %>' />
                 </p>
                 <span>
                     <%# Eval("CreatedDate", "{0:yyyy-MM-dd}") %>
@@ -18,7 +18,7 @@
         </ItemTemplate>
         <FooterTemplate>
             <div class="MoreArticlesLink">
-                <asp:HyperLink ID="lnkMoreArticles" ResourceKey="MoreArticles" runat="server" /></div>
+                <asp:HyperLink ID="lnkMoreArticles" NavigateUrl='<%# GetMoreArticleDetialUrl() %>' ResourceKey="MoreArticles" runat="server" /></div>
         </FooterTemplate>
     </asp:Repeater>
 </ul>

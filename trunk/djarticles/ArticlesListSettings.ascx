@@ -108,5 +108,22 @@
                 <asp:CheckBox ID="chkMoreArticles" runat="server" />
             </td>
         </tr>
+        <tr>
+            <td class="SubHead">
+                <dnn:label id="plMoreArticlesPage" runat="server" controlname="chkMoreArticles" suffix=":" />
+            </td>
+            <td>
+                 <asp:DropDownList ID="drpMoreArticlesPage" runat="server">
+                 </asp:DropDownList>
+            </td>
+        </tr>
+          <tr>
+            <td class="SubHead">
+                <dnn:label id="plAcceptParameter" runat="server" suffix=":" />
+            </td>
+            <td class="Normal">
+                <asp:CheckBox ID="chkAcceptParameter" ResourceKey="chkAcceptParameter" runat="server" />
+            </td>
+        </tr>
     </tbody>
 </table>
