@@ -57,15 +57,23 @@ namespace DjArticles.Components
             {
                 throw new ArticlesException("分页大小必须指定！");
             }
-            if (!filterByCategory)
-            {
-                filterCategoryID = Null.NullInteger;
-            }
+            // 下面的代码注释掉：如果不按模块分类，可能系统接受模块ID参数也可以查询指定模块
+            //if (!filterByCategory)
+            //{
+            //    filterCategoryID = Null.NullInteger;
+            //}
             if (willPage)
             {
                 DbParameter paTotalCount = DataProvider.Instance().GetParameter("totalCount", Null.NullInteger);
                 List<ArticleInfo> articles = CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetArticlesByPage(filterCategoryID, pageSize, currentPage, paTotalCount));
-                totalCount = (int)paTotalCount.Value;
+                if (paTotalCount.Value!=null)
+                {
+                    totalCount = (int)paTotalCount.Value;
+                }
+                else
+                {
+                    totalCount = 0;
+                }
                 return articles;
             }
             else

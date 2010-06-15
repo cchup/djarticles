@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryManage.ascx.cs"
     Inherits="DjArticles.CategoryManage" %>
 <dj:djgridview id="grdCategories" runat="server" enableviewstate="False" allowpaging="true"
-    custompager="True" width="90%" autogeneratecolumns="False" pagesize="15">
+    custompager="True" width="100%" autogeneratecolumns="False" pagesize="15">
     <Columns>
         <asp:BoundField DataField="Name" HeaderText="Name">
             <HeaderStyle Width="200px" CssClass="NormalBold"></HeaderStyle>

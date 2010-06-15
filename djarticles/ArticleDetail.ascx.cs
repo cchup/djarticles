@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace DjArticles
 {
-    public partial class ArticleView : ArticlePortalModuleBase
+    public partial class ArticleDetail : ArticlePortalModuleBase
     {
         #region "Private Members"
 

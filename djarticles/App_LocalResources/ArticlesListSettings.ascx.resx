@@ -192,4 +192,16 @@
   <data name="Template_TitleOnly.Text" xml:space="preserve">
     <value>仅标题</value>
   </data>
+  <data name="plAcceptParameter.Help" xml:space="preserve">
+    <value>如果选择是，则可以通过Url中的参数指定要显示的分类新闻</value>
+  </data>
+  <data name="plAcceptParameter.Text" xml:space="preserve">
+    <value>是否接受分类参数</value>
+  </data>
+  <data name="plMoreArticlesPage.Help" xml:space="preserve">
+    <value>指定更多超链接转向的页面</value>
+  </data>
+  <data name="plMoreArticlesPage.Text" xml:space="preserve">
+    <value>更多转向页面</value>
+  </data>
 </root>

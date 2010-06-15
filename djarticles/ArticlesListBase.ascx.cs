@@ -44,6 +44,7 @@ namespace DjArticles
         #region Private Members
 
         ArticlesController articleController = new ArticlesController();
+        ModuleController moduleController = new ModuleController();
         /// <summary>
         /// 是否按类别查询
         /// </summary>
@@ -60,6 +61,11 @@ namespace DjArticles
         /// 每页大小
         /// </summary>
         private int articlesPerPage = 10;
+        /// <summary>
+        /// 文章详细模块名称
+        /// </summary>
+        private readonly string DetailModuleName = "DjArticles-Detail";
+        private readonly string DetailModuleControlName = "ArticleDetail";
         #endregion
 
         #region Member Methods
@@ -71,8 +77,18 @@ namespace DjArticles
         private void GetDataPage()
         {
             filterByCategory = GetSettingBool("FilterByCategory", false);
-            filterCategoryID = GetSettingInt("FilterCategoryID", Null.NullInteger);
-            willPage = GetSettingBool("WillPage", true);
+            bool AcceptParameter = GetSettingBool("AcceptParameter", false);
+            if (filterByCategory)
+            {
+                //如果设置指定按模块分类查询，则必须指定分类模块ID
+                filterCategoryID = GetSettingInt("FilterCategoryID", Null.NullInteger);
+            }
+            else if (AcceptParameter)
+            {
+                // 如果未设置按模块分类查询， 但指定可以接受模块ID参数时也可以查询指定的模块
+                filterCategoryID = GetIntParameter("CategoryId");
+            }
+            willPage = GetSettingBool("WillPage", false);
             articlesPerPage = GetSettingInt("ArticlesPerPage", 10);
             int currentPage= GetIntParameter("CurrentPage");
             int totalCount=0;
@@ -116,6 +132,59 @@ namespace DjArticles
             if (string.IsNullOrEmpty(articleImage.ImageUrl))
             {
                 articleImage.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// 找到文章详细信息的Url
+        /// </summary>
+        /// <param name="articleId"></param>
+        /// <returns></returns>
+        protected string GetArticleDetailUrl(object articleId)
+        {
+            int _articleId = Null.NullInteger;
+            if (articleId != null)
+            {
+                
+                if(!int.TryParse(articleId.ToString(),out _articleId)){
+                    _articleId=Null.NullInteger;
+                }
+            }
+            if (Null.IsNull(_articleId))
+            {
+                return Globals.NavigateURL();
+            }
+            int detailTablId=Null.NullInteger;
+            ModuleInfo module = moduleController.GetModuleByDefinition(this.PortalId, DetailModuleName);
+            if (module != null)
+            {
+                detailTablId = module.TabID;
+            }
+            if (!Null.IsNull(detailTablId))
+            {
+                return Globals.NavigateURL(detailTablId, "", "ArticleID=" + _articleId);
+            }
+            else
+            {
+                return this.EditUrl("ArticleID", _articleId.ToString(), "ArticleView");
+            }
+        }
+
+        /// <summary>
+        /// 获取更多链接Url
+        /// </summary>
+        /// <returns></returns>
+        protected string GetMoreArticleDetialUrl()
+        {
+            int filterCategoryID = GetSettingInt("FilterCategoryID", Null.NullInteger);
+            int moreTabId = GetSettingInt("MoreArticlesPage");
+            if (!Null.IsNull(moreTabId))
+            {
+                return Globals.NavigateURL(moreTabId, "", "CategoryId=" + filterCategoryID);
+            }
+            else
+            {
+                return Globals.NavigateURL();
             }
         }
 

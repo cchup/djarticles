@@ -11,6 +11,7 @@ using System.Web.UI.WebControls.WebParts;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Services.Exceptions;
 using DjArticles.Components;
+using DotNetNuke.Entities.Tabs;
 
 namespace DjArticles
 {
@@ -20,6 +21,7 @@ namespace DjArticles
 
         CategoryController categoryController = new CategoryController();
         ModuleController objModuleController = new ModuleController();
+        TabController tabController = new TabController();
         #endregion
 
         #region Members Methods
@@ -39,6 +41,7 @@ namespace DjArticles
             {
 
                 BindCategories();
+                BindPages();
                 if (string.IsNullOrEmpty(TabModuleSettings["ArticlesPerPage"] as string))
                 {
                     txtArticlesPerPage.Text = "10";
@@ -51,6 +54,8 @@ namespace DjArticles
                 drpDateRange.SelectedValue = TabModuleSettings["DateRange"] as string;
                 drpTemplate.SelectedValue = TabModuleSettings["Template"] as string;
                 cboCategory.SelectedValue = TabModuleSettings["FilterCategoryID"] as string;
+                drpMoreArticlesPage.SelectedValue=TabModuleSettings["MoreArticlesPage"] as string;
+
                 chkShowCategory.Checked = (TabModuleSettings["ShowCategory"] as string == "True");
                 chkShowReadMore.Checked = (TabModuleSettings["ShowReadMore"] as string == "True");
                 chkAllowComments.Checked = (TabModuleSettings["AllowComments"] as string == "True");
@@ -58,6 +63,8 @@ namespace DjArticles
                 chkMoreArticles.Checked = (TabModuleSettings["MoreArticles"] as string == "True");
                 chkWillPage.Checked = (TabModuleSettings["WillPage"] as string == "True");
                 chkFilterByCategory.Checked = (TabModuleSettings["FilterByCategory"] as string == "True");
+                chkAcceptParameter.Checked = (TabModuleSettings["AcceptParameter"] as string == "True");
+                //
             }
             catch (Exception exc)
             {
@@ -90,6 +97,8 @@ namespace DjArticles
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "WillPage", chkWillPage.Checked.ToString());
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "FilterByCategory", chkFilterByCategory.Checked.ToString());
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "FilterCategoryID", cboCategory.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "AcceptParameter", chkAcceptParameter.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "MoreArticlesPage", drpMoreArticlesPage.SelectedValue);
             }
             catch (Exception exc)
             {
@@ -116,6 +125,17 @@ namespace DjArticles
                 this.cboCategory.DataSource = categorys;
                 this.cboCategory.DataBind();
             }
+        }
+        /// <summary>
+        /// 绑定所有页面数据源
+        /// </summary>
+        private void BindPages()
+        {
+            ArrayList tabCollection = tabController.GetTabs(this.PortalId);
+            this.drpMoreArticlesPage.DataSource = tabCollection;
+            this.drpMoreArticlesPage.DataTextField="TabName";
+            this.drpMoreArticlesPage.DataValueField="TabID";
+            this.drpMoreArticlesPage.DataBind();
         }
 
         #endregion

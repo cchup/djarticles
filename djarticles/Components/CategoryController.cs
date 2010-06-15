@@ -91,6 +91,29 @@ namespace DjArticles.Components
         {
             ArrayList categorys = this.GetCategories();
 
+            Dictionary<int, ArrayList> allDepthCategory = GetDepthCategoryTree(categorys);
+           
+            ArrayList allCategorys = new ArrayList();
+            if (allDepthCategory.ContainsKey(ArticleConstants.TopDepth))
+            {
+                ArrayList topCategorys = allDepthCategory[ArticleConstants.TopDepth];
+                GetCurrentDepthCategorys(allCategorys, topCategorys);
+            }
+            // 添加默认项
+            CategoryInfo defaultCategory = new CategoryInfo();
+            defaultCategory.Name = "--无--";
+            defaultCategory.CategoryID = Null.NullInteger;
+            allCategorys.Insert(0, defaultCategory);
+            return allCategorys;
+        }
+
+        /// <summary>
+        /// 将分类信息按树形结构分类存储。
+        /// </summary>
+        /// <param name="categorys"></param>
+        /// <returns></returns>
+        private static Dictionary<int, ArrayList> GetDepthCategoryTree(ArrayList categorys)
+        {
             #region 构建一个颗树形结构的对象集
             Dictionary<int, ArrayList> allDepthCategory = new Dictionary<int, ArrayList>();
             //将所有分类按深度分类
@@ -135,19 +158,25 @@ namespace DjArticles.Components
             }
 
             #endregion
-           
-            ArrayList allCategorys = new ArrayList();
+            return allDepthCategory;
+        }
+
+        /// <summary>
+        /// 获取菜单显示的分类列表
+        /// </summary>
+        /// <returns></returns>
+        public SideMenuSource GetCategorysForSideMenu()
+        {
+            ArrayList categorys = this.GetCategories();
+
+            Dictionary<int, ArrayList> allDepthCategory = GetDepthCategoryTree(categorys);
+
+             ArrayList topCategorys =new ArrayList();
             if (allDepthCategory.ContainsKey(ArticleConstants.TopDepth))
             {
-                ArrayList topCategorys = allDepthCategory[ArticleConstants.TopDepth];
-                GetCurrentDepthCategorys(allCategorys, topCategorys);
+                topCategorys = allDepthCategory[ArticleConstants.TopDepth];
             }
-            // 添加默认项
-            CategoryInfo defaultCategory = new CategoryInfo();
-            defaultCategory.Name = "--无--";
-            defaultCategory.CategoryID = Null.NullInteger;
-            allCategorys.Insert(0, defaultCategory);
-            return allCategorys;
+            return new SideMenuSource(topCategorys);
         }
 
         /// <summary>

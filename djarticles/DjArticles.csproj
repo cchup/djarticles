@@ -29,11 +29,11 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <OutputPath>..\..\web\bin\</OutputPath>
+    <OutputPath>..\..\..\HomeBook\web\bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\web\bin\DjArticles.xml</DocumentationFile>
+    <DocumentationFile>E:\Developer Project\HomeBook\web\bin\DjArticles.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -43,15 +43,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke">
+    <Reference Include="DotNetNuke, Version=5.4.1.26, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Website\bin\DotNetNuke.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\bin\DotNetNuke.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Website\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -122,6 +120,13 @@
     <Compile Include="CategoryEdit.ascx.designer.cs">
       <DependentUpon>CategoryEdit.ascx</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList.ascx.cs">
+      <DependentUpon>CategoryList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryList.ascx.designer.cs">
+      <DependentUpon>CategoryList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="CategoryManage.ascx.cs">
       <DependentUpon>CategoryManage.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,6 +167,7 @@
     <Compile Include="Components\DataProvider.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Components\SideMenuSource.cs" />
     <Compile Include="Controls\DJBaseControl.cs" />
     <Compile Include="Controls\GridView\DjGridView.cs" />
     <Compile Include="Controls\NetPager.cs">
@@ -182,6 +188,13 @@
     <Compile Include="Settings.ascx.designer.cs">
       <DependentUpon>Settings.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ArticleDetail.ascx.cs">
+      <DependentUpon>ArticleDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticleDetail.ascx.designer.cs">
+      <DependentUpon>ArticleDetail.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App_LocalResources\Settings.ascx.resx">
@@ -192,6 +205,7 @@
     </None>
     <None Include="01.00.00.SqlDataProvider" />
     <None Include="DjArticles.dnn" />
+    <Content Include="GridView.skin" />
     <None Include="Uninstall.SqlDataProvider" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -242,6 +256,9 @@
     <Content Include="ArticlesList.ascx" />
     <Content Include="ArticlesList_Standard.ascx" />
     <Content Include="ArticlesList_TitleOnly.ascx" />
+    <Content Include="CategoryList.ascx" />
+    <Content Include="images\list-icon.png" />
+    <Content Include="ArticleDetail.ascx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />

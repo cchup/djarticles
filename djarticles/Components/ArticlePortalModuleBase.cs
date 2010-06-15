@@ -21,6 +21,24 @@ namespace DjArticles.Components
         private UserController userController = new UserController();
 
         /// <summary>
+        /// 当前用户是否已登录
+        /// </summary>
+        protected bool IsLoginUser
+        {
+            get
+            {
+                if (Null.IsNull(this.UserId))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        /// <summary>
         /// 获取当前登陆用户名
         /// </summary>
         /// <returns></returns>
