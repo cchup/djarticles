@@ -1,0 +1,2020 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DjArticles</name>
+    </assembly>
+    <members>
+        <member name="M:DjArticles.Components.CommentController.GetCommentsByIArticleID(System.Int32)">
+            <summary>
+            查询与该文章相关的所有评论
+            查询出的评论文章以树形结构返回
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CommentController.setReferenceCommentContent(DjArticles.Components.CommentInfo,DjArticles.Components.CommentInfo)">
+            <summary>
+            设置引用内容
+            </summary>
+            <param name="nowComment"></param>
+            <param name="referenceComment"></param>
+        </member>
+        <member name="M:DjArticles.Components.CommentController.AddComment(DjArticles.Components.CommentInfo)">
+            <summary>
+            添加新的评论
+            </summary>
+            <param name="commentInfo">评论数据对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CommentController.DeleteComment(System.Int32)">
+            <summary>
+            删除评论
+            </summary>
+            <param name="commentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DjArticles.Components.ArticleActionType">
+            <summary>
+            文章模块动作类型
+            </summary>
+        </member>
+        <member name="T:DjArticles.Components.ArticlesController">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            The Controller class for Articles 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.GetArticles">
+            <summary>
+            查询所有的文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.GetArticlesList(System.Boolean,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查询文章列表
+            </summary>
+            <param name="filterByCategory">是否按分类进行查询</param>
+            <param name="filterCategoryID">要查询的分类</param>
+            <param name="willPage">是否分页</param>
+            <param name="articlesPerPage">分页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.GetArticles(System.Int32)">
+            <summary>
+            查获分类文章，如果没有置顶分类查询所有的文章
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.AddArticle(DjArticles.Components.ArticleInfo)">
+            <summary>
+            添加文章
+            </summary>
+            <param name="objArticles"></param>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.UpdateArticle(DjArticles.Components.ArticleInfo)">
+            <summary>
+            更新文章
+            </summary>
+            <param name="objArticles"></param>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.GetArticle(System.Int32)">
+            <summary>
+            获取文章
+            </summary>
+            <param name="articleId">文章Id</param>
+            <returns>文章对象</returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.SaveArticle(DjArticles.Components.ArticleInfo)">
+            <summary>
+            保存文章，如果存在则更新否则新增
+            </summary>
+            <param name="article"></param>
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.GetSearchItems(DotNetNuke.Entities.Modules.ModuleInfo)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            GetSearchItems implements the ISearchable Interface 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModInfo">The ModuleInfo for the module to be Indexed</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.ExportModule(System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            ExportModule implements the IPortable ExportModule Interface 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleID">The Id of the module to be exported</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.Components.ArticlesController.ImportModule(System.Int32,System.String,System.String,System.Int32)">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            ImportModule implements the IPortable ImportModule Interface 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <param name="ModuleID">The Id of the module to be imported</param> 
+            <param name="Content">The content to be imported</param> 
+            <param name="Version">The version of the module to be imported</param> 
+            <param name="UserId">The Id of the user performing the import</param> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.GetUserName">
+            <summary>
+            获取当前登陆用户名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.EvalChecked(System.Object)">
+            <summary>
+            获取是否选择的标识
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.SetDualListValue(System.Web.UI.UserControl,System.String)">
+            <summary>
+            设置角色控件值
+            </summary>
+            <param name="userControl"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.ResolveModuleUrl(System.String)">
+            <summary>
+            获取引用路径
+            </summary>
+            <param name="path">当前控件的相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.GetIntParameter(System.String)">
+            <summary>
+            获取参数值
+            </summary>
+            <param name="parameterName">参数名称</param>
+            <returns>参数int值</returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.EvalValue(System.Object,System.String[])">
+            <summary>
+            绑定值
+            </summary>
+            <param name="value">绑定对象</param>
+            <param name="parameters">绑定参数，第一个参数指定默认值，第二个参数指定绑定格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.GetSettingInt(System.String,System.Int32[])">
+            <summary>
+            获取模块设置值(整型）
+            </summary>
+            <param name="settingKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.GetSettingBool(System.String,System.Boolean[])">
+            <summary>
+            获取模块设置值(布尔）
+            </summary>
+            <param name="settingKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.ArticlePortalModuleBase.GetSettingString(System.String,System.String[])">
+            <summary>
+            获取模块设置值(字符串）
+            </summary>
+            <param name="settingKey"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DjArticles.Components.ArticlePortalModuleBase.IsLoginUser">
+            <summary>
+            当前用户是否已登录
+            </summary>
+        </member>
+        <member name="M:DjArticles.CategoryEdit.BindCategoryDataSource">
+            <summary>
+            绑定分类数据源
+            </summary>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.trp">
+            <summary>
+            trp 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.hfCategoryID">
+            <summary>
+            hfCategoryID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plParentCategory">
+            <summary>
+            plParentCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.cboParentCategory">
+            <summary>
+            cboParentCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.valParentCategory">
+            <summary>
+            valParentCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plName">
+            <summary>
+            plName 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.txtName">
+            <summary>
+            txtName 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.valName">
+            <summary>
+            valName 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plDescription">
+            <summary>
+            plDescription 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.txtDescription">
+            <summary>
+            txtDescription 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plIsActive">
+            <summary>
+            plIsActive 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.chkIsActive">
+            <summary>
+            chkIsActive 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.dshAuthorize">
+            <summary>
+            dshAuthorize 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.tblAuthorize">
+            <summary>
+            tblAuthorize 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plAdminRoles">
+            <summary>
+            plAdminRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.ctlAdminRoles">
+            <summary>
+            ctlAdminRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plEditRoles">
+            <summary>
+            plEditRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.ctlEditRoles">
+            <summary>
+            ctlEditRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.plViewRoles">
+            <summary>
+            plViewRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.ctlViewRoles">
+            <summary>
+            ctlViewRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.btnSave">
+            <summary>
+            btnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryEdit.btnCancel">
+            <summary>
+            btnCancel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.ArticlesList.LoadArticlesListControl">
+            <summary>
+            加载显示控件
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesList.lblSearchResults">
+            <summary>
+            lblSearchResults 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesList.objPlaceholder">
+            <summary>
+            objPlaceholder 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesList.pnlSearch">
+            <summary>
+            pnlSearch 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesList.txtSearch">
+            <summary>
+            txtSearch 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesList.cmdSearch">
+            <summary>
+            cmdSearch 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:DjArticles.Components.DataProvider">
+            数据访问抽象实现类
+        </member>
+        <member name="T:DjArticles.Common.WebControlUtils">
+            <summary>
+            webcontrol控件处理代码
+            </summary>
+        </member>
+        <member name="M:DjArticles.Common.WebControlUtils.GetObjectIntValue(System.Web.UI.WebControls.HiddenField)">
+            <summary>
+            从HiddenField控件中获取Int值
+            </summary>
+            <param name="hiddenField">HiddenField控件对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Common.WebControlUtils.GetObjectIntValue(System.Web.UI.WebControls.DropDownList)">
+            <summary>
+            从DropDownList控件中获取选择项的值
+            </summary>
+            <param name="dropDownControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Common.WebControlUtils.SetTextEditorValue(System.Web.UI.UserControl,System.String)">
+            <summary>
+            设置编辑器控件值
+            </summary>
+            <param name="userControl"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:DjArticles.Common.WebControlUtils.GetTextEditorValue(System.Web.UI.UserControl)">
+            <summary>
+            获取编辑器控件值
+            </summary>
+            <param name="userControl"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DjArticles.ArticleView.hdfArticleId">
+            <summary>
+            hdfArticleId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.lblTitle">
+            <summary>
+            lblTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.lblCreateDate">
+            <summary>
+            lblCreateDate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.lblHits">
+            <summary>
+            lblHits 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.ltlContent">
+            <summary>
+            ltlContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.dalComments">
+            <summary>
+            dalComments 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.hdfReferenceId">
+            <summary>
+            hdfReferenceId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.txtMessage">
+            <summary>
+            txtMessage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleView.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.ArticleView.SetArticleInfo(System.Int32)">
+            <summary>
+            根据ArticleId信息获取完整的Article信息
+            </summary>
+            <param name="articleId"></param>
+        </member>
+        <member name="M:DjArticles.ArticleView.PostComment">
+            <summary>
+            发表评论
+            </summary>
+        </member>
+        <member name="M:DjArticles.ArticleDetail.SetArticleInfo(System.Int32)">
+            <summary>
+            根据ArticleId信息获取完整的Article信息
+            </summary>
+            <param name="articleId"></param>
+        </member>
+        <member name="M:DjArticles.ArticleDetail.PostComment">
+            <summary>
+            发表评论
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.hdfArticleId">
+            <summary>
+            hdfArticleId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.lblTitle">
+            <summary>
+            lblTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.lblCreateDate">
+            <summary>
+            lblCreateDate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.lblHits">
+            <summary>
+            lblHits 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.ltlContent">
+            <summary>
+            ltlContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.dalComments">
+            <summary>
+            dalComments 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.hdfReferenceId">
+            <summary>
+            hdfReferenceId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.txtMessage">
+            <summary>
+            txtMessage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleDetail.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.Controls.GridView.DjGridView.InitializePager(System.Web.UI.WebControls.GridViewRow,System.Int32,System.Web.UI.WebControls.PagedDataSource)">
+            <summary>
+            初始化分页信息栏
+            </summary>
+            <param name="row"></param>
+            <param name="columnSpan"></param>
+            <param name="pagedDataSource"></param>
+        </member>
+        <member name="M:DjArticles.Controls.GridView.DjGridView.CreateCustomPager(System.Web.UI.WebControls.GridViewRow,System.Int32,System.Web.UI.WebControls.PagedDataSource)">
+            <summary>
+            创建自定义分页实现
+            </summary>
+            <param name="row"></param>
+            <param name="columnSpan"></param>
+            <param name="pagedDataSource"></param>
+        </member>
+        <member name="M:DjArticles.Controls.GridView.DjGridView.OnPageChanged(System.Object,DjArticles.Controls.PageChangingEventArgs)">
+            <summary>
+            选择页更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DjArticles.Controls.GridView.DjGridView.CreateEmptyDataRow(System.Web.UI.WebControls.GridViewRow)">
+            <summary>
+            创建空数据源占位行
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.GridView.DjGridView.OddRowBackColor">
+            <summary>
+            奇数行背景颜色
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.GridView.DjGridView.EvenRowBackColor">
+            <summary>
+            偶数行背景颜色
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.GridView.DjGridView.MouseOverBackColor">
+            <summary>
+            鼠标停靠的行的背景颜色
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.GridView.DjGridView.CustomFontSize">
+            <summary>
+            自定义字体大小
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.GridView.DjGridView.HeaderRowBackColor">
+            <summary>
+            标题行的背景颜色
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.GridView.DjGridView.FooterRowBackColor">
+            <summary>
+            分页行的背景颜色
+            </summary>
+        </member>
+        <member name="E:DjArticles.Controls.GridView.DjGridView.DataSourceBind">
+            <summary>
+            绑定数据源事件
+            </summary>
+        </member>
+        <member name="M:DjArticles.CategoryList.BindCategorySource">
+            <summary>
+            绑定显示数据源
+            </summary>
+        </member>
+        <member name="F:DjArticles.CategoryList.lblMessage">
+            <summary>
+            lblMessage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryList.lstCategory">
+            <summary>
+            lstCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="P:DjArticles.Components.CommentInfo.AvatarPic">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="T:DjArticles.ArticlesListBase">
+            <summary>
+            文章列表的基类，用户可以根据此基础定制不同的现实效果
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.lnkReadMore">
+            <summary>
+            更多按钮
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.lblMessage">
+            <summary>
+            消息提示框
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.lstArticles">
+            <summary>
+            文章列表控件
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.ctlPagingControl">
+            <summary>
+            文章列表分页控件
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.lnkMoreArticles">
+            <summary>
+            更多文章
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.filterByCategory">
+            <summary>
+            是否按类别查询
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.filterCategoryID">
+            <summary>
+            分类类别
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.willPage">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.articlesPerPage">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="F:DjArticles.ArticlesListBase.DetailModuleName">
+            <summary>
+            文章详细模块名称
+            </summary>
+        </member>
+        <member name="M:DjArticles.ArticlesListBase.GetDataPage">
+            <summary>
+            获取绑定数据源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.ArticlesListBase.ShowArticles(System.Web.UI.WebControls.RepeaterItemEventArgs)">
+            <summary>
+            显示文章内容
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DjArticles.ArticlesListBase.ShowFooter(System.Web.UI.WebControls.RepeaterItemEventArgs)">
+            <summary>
+            显示绑定数据Footer内容
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DjArticles.ArticlesListBase.GetArticleDetailUrl(System.Object)">
+            <summary>
+            找到文章详细信息的Url
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.ArticlesListBase.GetMoreArticleDetialUrl">
+            <summary>
+            获取更多链接Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.ArticlesListBase.ShowComments(System.Web.UI.WebControls.RepeaterItemEventArgs)">
+            <summary>
+            显示评论内容
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:DjArticles.ArticleEdit">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblCategory">
+            <summary>
+            lblCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.hfArticleId">
+            <summary>
+            hfArticleId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cboCategory">
+            <summary>
+            cboCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cmdCategoryManage">
+            <summary>
+            cmdCategoryManage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblTitle">
+            <summary>
+            lblTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.txtTitle">
+            <summary>
+            txtTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.RequiredFieldValidator2">
+            <summary>
+            RequiredFieldValidator2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblKeyWords">
+            <summary>
+            lblKeyWords 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.txtKeyWords">
+            <summary>
+            txtKeyWords 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.RequiredFieldValidator3">
+            <summary>
+            RequiredFieldValidator3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblSummary">
+            <summary>
+            lblSummary 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.txtSummary">
+            <summary>
+            txtSummary 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.RequiredFieldValidator1">
+            <summary>
+            RequiredFieldValidator1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblContent">
+            <summary>
+            lblContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.txtContent">
+            <summary>
+            txtContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.valContent">
+            <summary>
+            valContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblAllowComment">
+            <summary>
+            lblAllowComment 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cbAllowComment">
+            <summary>
+            cbAllowComment 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblAllowPrint">
+            <summary>
+            lblAllowPrint 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cbAllowPrint">
+            <summary>
+            cbAllowPrint 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblOnTop">
+            <summary>
+            lblOnTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cbOnTop">
+            <summary>
+            cbOnTop 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.lblPassed">
+            <summary>
+            lblPassed 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cbPassed">
+            <summary>
+            cbPassed 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cmdUpdate">
+            <summary>
+            cmdUpdate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cmdCancel">
+            <summary>
+            cmdCancel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleEdit.cmdDelete">
+            <summary>
+            cmdDelete 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.ArticleEdit.BindCategoryDataSource">
+            <summary>
+            绑定分类数据源
+            </summary>
+        </member>
+        <member name="M:DjArticles.ArticleEdit.SetArticleInfo(System.Int32)">
+            <summary>
+            根据ArticleId信息获取完整的Article信息
+            </summary>
+            <param name="articleId"></param>
+        </member>
+        <member name="M:DjArticles.ArticleEdit.GetArticleInfo">
+            <summary>
+            获取ArticleInfo对象
+            </summary>
+            <param name="articleId"></param>
+        </member>
+        <member name="M:DjArticles.ArticleManage.BindArticlesSource">
+            <summary>
+            绑定数据源
+            </summary>
+        </member>
+        <member name="M:DjArticles.ArticleManage.BindCategoryDataSource">
+            <summary>
+            绑定分类数据源
+            </summary>
+        </member>
+        <member name="M:DjArticles.ArticleManage.btnNew_Click(System.Object,System.EventArgs)">
+            <summary>
+            转到新增文章页面
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:DjArticles.ArticleManage.lblCategory">
+            <summary>
+            lblCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.cboCategory">
+            <summary>
+            cboCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.cmdSearch">
+            <summary>
+            cmdSearch 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.Image1">
+            <summary>
+            Image1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.cmdCategoryManage">
+            <summary>
+            cmdCategoryManage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.grdArticles">
+            <summary>
+            grdArticles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.btnPass">
+            <summary>
+            btnPass 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.btnNotPass">
+            <summary>
+            btnNotPass 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticleManage.btnNew">
+            <summary>
+            btnNew 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.GetViewStateString(System.String)">
+            <summary>
+            获取视图状态值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.GetViewStateString(System.String,System.String)">
+            <summary>
+            获取视图状态值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.GetViewStateInt(System.String,System.Int32)">
+            <summary>
+            获取视图状态的整形值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.GetViewStateBoolean(System.String,System.Boolean)">
+            <summary>
+            获取视图状态的Bool值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.ReSetClientID(System.String)">
+            <summary>
+            重设clientID
+            </summary>
+            <param name="newClientID"></param>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.AddScriptResource(System.String)">
+            <summary>
+            添加脚本资源引用
+            </summary>
+            <param name="resource"></param>
+        </member>
+        <member name="M:DjArticles.DJBaseControl.AddCssResource(System.String)">
+            <summary>
+            添加相关css引用
+            </summary>
+            <param name="resource"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.OnLoad(System.EventArgs)">
+            <summary>
+            控件加载方法
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            渲染控件的开始标签
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            渲染控件的结束标签
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.RenderPagingInfo(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出分页信息
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.RenderPagingIndex(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出分页导航
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.RenderNavigationButton(System.Web.UI.HtmlTextWriter,DjArticles.Controls.NetPager.NavigationButtonType,System.Int32)">
+            <summary>
+            输出按钮
+            </summary>
+            <param name="writer"></param>
+            <param name="btntype"></param>
+            <param name="btnPageIndex">只有当按钮类型为NavigationButtonType.PagingIndex才有效</param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.RenderMoreButton(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            输出更多按钮
+            </summary>
+            <param name="writer"></param>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.WriteCssClass(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            添加Css属性
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.WriteSpacingStyle(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出右边距空白间隔样式
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.GetHrefString(System.Int32)">
+            <summary>
+            获取指定分页的导航链接字符串
+            </summary>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Controls.NetPager.BuildUrlString(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            将指定的链接参数添加到当前的连接参数中
+            </summary>
+            <param name="col"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DjArticles.Controls.NetPager.NavigationButtonType">
+            <summary>
+            导航页按钮类型
+            </summary>
+        </member>
+        <member name="P:DjArticles.Controls.PageChangingEventArgs.NewPageIndex">
+            <summary>
+            当前显示页码，以1开始的索引
+            </summary>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.getCommandName(System.String,System.String)">
+            <summary>
+            获取要执行命令的名称
+            </summary>
+            <param name="tableName"></param>
+            <param name="operationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.AddArticle(System.Int32,System.String,System.String,System.Int32,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Int32,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            插入一篇文章
+            </summary>
+            <param name="CategoryID"></param>
+            <param name="Title"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="CopyFrom"></param>
+            <param name="Author"></param>
+            <param name="KeyWords"></param>
+            <param name="Hot"></param>
+            <param name="OnTop"></param>
+            <param name="Elite"></param>
+            <param name="Stars"></param>
+            <param name="Passed"></param>
+            <param name="Summary"></param>
+            <param name="Content"></param>
+            <param name="IncludePic"></param>
+            <param name="DefaultPicUrl"></param>
+            <param name="PaginationType"></param>
+            <param name="MaxCharPerPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetArticles(System.Int32)">
+            <summary>
+            获取某一分类的文章
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetAllArticles">
+            <summary>
+            查询所有文章，默认按照创建时间排序
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetArticlesByPage(System.Int32,System.Int32,System.Int32,System.Data.Common.DbParameter)">
+            <summary>
+            获取文章
+            </summary>
+            <param name="categoryId">指定分类</param>
+            <param name="pageSize">分页大小</param>
+            <param name="currentPage">当前页</param>
+            <param name="totalCount">输出总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetArticle(System.Int32)">
+            <summary>
+            查询当前文章
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.DeleteArticle(System.Int32)">
+            <summary>
+            删除当前文章
+            </summary>
+            <param name="articleID"></param>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.UpdateArticle(System.Int32,System.Int32,System.String,System.String,System.Int32,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Int32,System.String,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            更新文章
+            </summary>
+            <param name="ArticleID"></param>
+            <param name="CategoryID"></param>
+            <param name="Title"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="CopyFrom"></param>
+            <param name="Author"></param>
+            <param name="KeyWords"></param>
+            <param name="Hot"></param>
+            <param name="OnTop"></param>
+            <param name="Elite"></param>
+            <param name="Stars"></param>
+            <param name="Passed"></param>
+            <param name="Summary"></param>
+            <param name="Content"></param>
+            <param name="IncludePic"></param>
+            <param name="DefaultPicUrl"></param>
+            <param name="PaginationType"></param>
+            <param name="MaxCharPerPage"></param>
+            <param name="IsUpdateCreatedInfo"></param>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.AddCategory(System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.DateTime,System.Boolean)">
+            <summary>
+            插入Category分类信息
+            </summary>
+            <param name="Name"></param>
+            <param name="Description"></param>
+            <param name="ParentID"></param>
+            <param name="ViewOrder"></param>
+            <param name="AdminRoles"></param>
+            <param name="EditRoles"></param>
+            <param name="ViewRoles"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="IsActive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.DeleteCategory(System.Int32)">
+            <summary>
+            删除一个分类信息
+            </summary>
+            <param name="CategoryID"></param>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetCategories(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Depth"></param>
+            <param name="ParentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetAllCategorys">
+            <summary>
+            获取所有的分类信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetCategory(System.Int32)">
+            <summary>
+            查询一个分类信息
+            </summary>
+            <param name="CategoryID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.UpdateCategory(System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.DateTime,System.Boolean)">
+            <summary>
+            更新
+            </summary>
+            <param name="CategoryID"></param>
+            <param name="Name"></param>
+            <param name="Description"></param>
+            <param name="ViewOrder"></param>
+            <param name="AdminRoles"></param>
+            <param name="EditRoles"></param>
+            <param name="ViewRoles"></param>
+            <param name="CreatedByUserName"></param>
+            <param name="createByUserId"></param>
+            <param name="CreatedDate"></param>
+            <param name="IsActive"></param>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.AddComment(System.Int32,System.String,System.String,System.Int64,System.Int64,System.Int32,System.String,System.DateTime,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            插入评论信息
+            </summary>
+            <param name="ArticleID"></param>
+            <param name="Title"></param>
+            <param name="Comment"></param>
+            <param name="CreatedByUser"></param>
+            <param name="CreatedDate"></param>
+            <param name="QQ"></param>
+            <param name="MSN"></param>
+            <param name="Email"></param>
+            <param name="Homepage"></param>
+            <param name="IP"></param>
+            <param name="Score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Providers.Data_Providers.SqlDataProvider.GetCommentsByArticleID(System.Int32)">
+            <summary>
+            查询所有的评论信息
+            </summary>
+            <param name="ArticleID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DjArticles.Common.ArticleConstants">
+            <summary>
+            系统代码常数
+            </summary>
+        </member>
+        <member name="F:DjArticles.Common.ArticleConstants.TopDepth">
+            <summary>
+            第一级，深度值
+            </summary>
+        </member>
+        <member name="F:DjArticles.CategoryManage.grdCategories">
+            <summary>
+            grdCategories 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryManage.btnNew">
+            <summary>
+            btnNew 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.CategoryManage.btnCancel">
+            <summary>
+            btnCancel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.CategoryManage.BindCategorySource">
+            <summary>
+            绑定显示数据源
+            </summary>
+        </member>
+        <member name="M:DjArticles.CategoryManage.btnNew_Click(System.Object,System.EventArgs)">
+            <summary>
+            转到新增页面
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DjArticles.CategoryManage.btnDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plFilterByCategory">
+            <summary>
+            plFilterByCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkFilterByCategory">
+            <summary>
+            chkFilterByCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plCategory">
+            <summary>
+            plCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.lblNoCategories">
+            <summary>
+            lblNoCategories 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.cboCategory">
+            <summary>
+            cboCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plWillPage">
+            <summary>
+            plWillPage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkWillPage">
+            <summary>
+            chkWillPage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plArticlesPerPage">
+            <summary>
+            plArticlesPerPage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.txtArticlesPerPage">
+            <summary>
+            txtArticlesPerPage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.RegularExpressionValidator2">
+            <summary>
+            RegularExpressionValidator2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plTemplate">
+            <summary>
+            plTemplate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.drpTemplate">
+            <summary>
+            drpTemplate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plSortField">
+            <summary>
+            plSortField 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.drpSortField">
+            <summary>
+            drpSortField 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plAllowComments">
+            <summary>
+            plAllowComments 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkAllowComments">
+            <summary>
+            chkAllowComments 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkAnonymousComments">
+            <summary>
+            chkAnonymousComments 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plDateRange">
+            <summary>
+            plDateRange 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.drpDateRange">
+            <summary>
+            drpDateRange 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plDisplayedFields">
+            <summary>
+            plDisplayedFields 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkShowCategory">
+            <summary>
+            chkShowCategory 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkShowReadMore">
+            <summary>
+            chkShowReadMore 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plMoreArticles">
+            <summary>
+            plMoreArticles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkMoreArticles">
+            <summary>
+            chkMoreArticles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plMoreArticlesPage">
+            <summary>
+            plMoreArticlesPage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.drpMoreArticlesPage">
+            <summary>
+            drpMoreArticlesPage 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.plAcceptParameter">
+            <summary>
+            plAcceptParameter 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.ArticlesListSettings.chkAcceptParameter">
+            <summary>
+            chkAcceptParameter 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.ArticlesListSettings.LoadSettings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            LoadSettings loads the settings from the Database and displays them 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.ArticlesListSettings.UpdateSettings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            UpdateSettings saves the modified settings to the Database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.ArticlesListSettings.BindCategories">
+            <summary>
+            绑定分类信息源
+            </summary>
+        </member>
+        <member name="M:DjArticles.ArticlesListSettings.BindPages">
+            <summary>
+            绑定所有页面数据源
+            </summary>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.FormatTreeSpace(System.Int32)">
+            <summary>
+            获取Tree显示前面的格式字符串
+            </summary>
+            <param name="Depth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.GetCategories">
+            <summary>
+            获取所有的分类信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.GetCategoriesForDropDownList">
+            <summary>
+             获取绑定DropDownList的数据集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.GetDepthCategoryTree(System.Collections.ArrayList)">
+            <summary>
+            将分类信息按树形结构分类存储。
+            </summary>
+            <param name="categorys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.GetCategorysForSideMenu">
+            <summary>
+            获取菜单显示的分类列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.GetCurrentDepthCategorys(System.Collections.ArrayList,System.Collections.IList)">
+            <summary>
+            递归获取所有的分类
+            </summary>
+            <param name="allCategorys"></param>
+            <param name="currentCategorys"></param>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.GetCategory(System.Int32)">
+            <summary>
+            获取某一分类详细信息
+            </summary>
+            <param name="CategoryID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.UpdateCategory(DjArticles.Components.CategoryInfo)">
+            <summary>
+            更新
+            </summary>
+            <param name="objCategoryInfo"></param>
+        </member>
+        <member name="M:DjArticles.Components.CategoryController.SaveCategoryInfo(DjArticles.Components.CategoryInfo)">
+            <summary>
+            保存分类信息
+            </summary>,
+            <param name="objCategoryInfo"></param>
+        </member>
+        <member name="T:DjArticles.Settings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            The Settings class manages Module Settings 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.Settings.LoadSettings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            LoadSettings loads the settings from the Database and displays them 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="M:DjArticles.Settings.UpdateSettings">
+            ----------------------------------------------------------------------------- 
+            <summary> 
+            UpdateSettings saves the modified settings to the Database 
+            </summary> 
+            <remarks> 
+            </remarks> 
+            <history> 
+            </history> 
+            ----------------------------------------------------------------------------- 
+        </member>
+        <member name="F:DjArticles.Settings.lblTemplate">
+            <summary>
+            lblTemplate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:DjArticles.Settings.txtTemplate">
+            <summary>
+            txtTemplate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:DjArticles.Components.CategoryInfo.AddChildCategory(DjArticles.Components.CategoryInfo)">
+            <summary>
+            添加子分类
+            </summary>
+            <param name="category"></param>
+        </member>
+        <member name="P:DjArticles.Components.CategoryInfo.ChildCategorys">
+            <summary>
+            获取所有的子分类
+            </summary>
+        </member>
+        <member name="T:DjArticles.Common.ArticlesException">
+            <summary>
+            DjArticles 文章处理异常
+            </summary>
+        </member>
+        <member name="M:DjArticles.Components.SideMenuSource.BuildMenuListHtml">
+            <summary>
+            构建树形菜单HTML元素信息
+            </summary>
+        </member>
+        <member name="M:DjArticles.Components.SideMenuSource.GetCategoryHtml(DjArticles.Components.CategoryInfo)">
+            <summary>
+            生成单个菜单的HTML原始
+            </summary>
+            <param name="categoryInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DjArticles.Components.SideMenuSource.GetNavigatUrl(DjArticles.Components.CategoryInfo)">
+            <summary>
+            获取导航地址
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
