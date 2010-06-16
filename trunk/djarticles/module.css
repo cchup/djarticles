@@ -30,7 +30,8 @@
 .Article H3{ font-size:14px; font-weight:bold; color:#105cb6;}
 ul.article_list_title{ list-style-type:none; line-height:24px;margin:0px; padding:0px;}
 ul.article_list_title li{ list-style-type:none; margin:0px; width:100%}
-ul.article_list_title p{ float:left; line-height:14px; color:#999999; width:auto !important;}
+ul.article_list_title p{  float:left; line-height:18px; color:#999999; width:auto !important; vertical-align:middle; padding-top:2px;}
+ul.article_list_title p a{padding-left:15px; background:url(images/dian.jpg) no-repeat left;}
 ul.article_list_title span{ float:right; color:#999999; font-size:12px;}
 /*分类列表样式*/
 .LinksWrap{}
