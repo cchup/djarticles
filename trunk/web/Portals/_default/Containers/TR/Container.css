@@ -50,12 +50,12 @@
 .YellowTopLeft{ position:absolute; top:0; left:0; display:block; width:10px; height:5px; background:url(Cimages/yellow-top-left.gif) 0 0 no-repeat;}
 .YellowTopRight{ position:absolute; top:0; right:0; display:block; width:10px; height:5px; background:url(Cimages/yellow-top-right.gif) 100% 0 no-repeat;}
 .YellowContainerTitle h2, .YellowContainerTitle .ContainerTitle{padding:0!important; margin:0; font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:18px; line-height:22px; font-weight: normal; color:#6A1111; white-space:nowrap;}
-.YellowContainerIcon{ float:left; width:auto; margin:0 16px 0 0;}
+.YellowContainerIcon{ float:left; width:auto; margin:0 16px 16px 0;}
 .YellowContainerWidth { padding:0; background-color:#F0DA29; padding:0 0 3px 0; position:relative; margin:0 0 10px 0;}
 .YellowBottomLeft{ position:absolute; bottom:0; left:0; display:block; width:3px; height:3px; background:url(Cimages/yellow-bottom-left.gif) 0 100% no-repeat;}
 .YellowBottomRight{ position:absolute; bottom:0; right:0; display:block; width:3px; height:3px; background:url(Cimages/yellow-bottom-right.gif) 100% 100% no-repeat;}
 .YellowContainerTopMIddle {padding:0;}
-.YellowContainerContentpane { float:left; text-align:left; vertical-align: top; padding:0;}
+.YellowContainerContentpane { display:inline; text-align:left; vertical-align: top; padding:0;}
 .YellowContainerVisibilitycell {float:right;text-align: right;}
 .YellowContainerTitleTable {width:100%;}
 .YellowContainerBottomBox{background-color:#FFF7D7; border-left:solid 2px #F0DA29; border-right:solid 2px #F0DA29; padding:12px 0 0px 12px; height:100%; overflow:hidden;}
@@ -65,12 +65,12 @@
 .GreenTopLeft{ position:absolute; top:0; left:0; display:block; width:10px; height:5px; background:url(Cimages/green-top-left.gif) 0 0 no-repeat;}
 .GreenTopRight{ position:absolute; top:0; right:0; display:block; width:10px; height:5px; background:url(Cimages/green-top-right.gif) 100% 0 no-repeat;}
 .GreenContainerTitle h2, .GreenContainerTitle .ContainerTitle{padding:0!important; margin:0; font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:18px; line-height:22px; font-weight: normal; color:#fff; white-space:nowrap;}
-.GreenContainerIcon{ float:left; width:auto; margin:0 16px 0 0;}
+.GreenContainerIcon{ float:left; width:auto; margin:0 16px 16px 0;}
 .GreenContainerWidth { padding:0; background-color:#7AC62E;padding:0 0 3px 0; position:relative; margin:0 0 10px 0;}
 .GreenBottomLeft{ position:absolute; bottom:0; left:0; display:block; width:3px; height:3px; background:url(Cimages/green-bottom-left.gif) 0 100% no-repeat;}
 .GreenBottomRight{ position:absolute; bottom:0; right:0; display:block; width:3px; height:3px; background:url(Cimages/green-bottom-right.gif) 100% 100% no-repeat;}
 .GreenContainerTopMIddle {padding:0;}
-.GreenContainerContentpane { float:left; text-align:left; vertical-align: top; padding:0;}
+.GreenContainerContentpane { display:inline; text-align:left; vertical-align: top; padding:0;}
 .GreenContainerVisibilitycell {float:right;text-align: right;}
 .GreenContainerTitleTable {width:100%;}
 .GreenContainerBottomBox{background-color:#F4FEE9; border-left:solid 2px #7AC62E; border-right:solid 2px #7AC62E; padding:12px 0 0px 12px; height:100%; overflow:hidden;}
