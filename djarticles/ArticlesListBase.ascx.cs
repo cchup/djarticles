@@ -39,6 +39,10 @@ namespace DjArticles
         /// 文章列表分页控件
         /// </summary>
         protected global::DotNetNuke.UI.WebControls.PagingControl ctlPagingControl;
+        /// <summary>
+        /// 更多文章
+        /// </summary>
+        protected global::System.Web.UI.WebControls.HyperLink lnkMoreArticles;
         #endregion
 
         #region Private Members
@@ -136,6 +140,27 @@ namespace DjArticles
         }
 
         /// <summary>
+        /// 显示绑定数据Footer内容
+        /// </summary>
+        /// <param name="e"></param>
+        private void ShowFooter(RepeaterItemEventArgs e)
+        {
+           bool moreArticles=  GetSettingBool("MoreArticles", false);
+           HyperLink  _lnkMoreArticles= e.Item.FindControl("lnkMoreArticles") as HyperLink; ;
+           if (_lnkMoreArticles != null)
+           {
+               if (moreArticles)
+               {
+                   _lnkMoreArticles.Visible = true;
+               }
+               else
+               {
+                   _lnkMoreArticles.Visible = false;
+               }
+           }
+        }
+
+        /// <summary>
         /// 找到文章详细信息的Url
         /// </summary>
         /// <param name="articleId"></param>
@@ -218,6 +243,10 @@ namespace DjArticles
             if (e.Item.ItemType == ListItemType.Item)
             {
                 ShowArticles(e);
+            }
+            if (e.Item.ItemType == ListItemType.Footer)
+            {
+                ShowFooter(e);
             }
         }
 

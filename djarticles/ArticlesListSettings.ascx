@@ -110,7 +110,7 @@
         </tr>
         <tr>
             <td class="SubHead">
-                <dnn:label id="plMoreArticlesPage" runat="server" controlname="chkMoreArticles" suffix=":" />
+                <dnn:label id="plMoreArticlesPage" runat="server" controlname="drpMoreArticlesPage" suffix=":" />
             </td>
             <td>
                  <asp:DropDownList ID="drpMoreArticlesPage" runat="server">

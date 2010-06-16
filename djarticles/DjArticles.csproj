@@ -257,6 +257,7 @@
     <Content Include="ArticlesList_Standard.ascx" />
     <Content Include="ArticlesList_TitleOnly.ascx" />
     <Content Include="CategoryList.ascx" />
+    <Content Include="images\dian.jpg" />
     <Content Include="images\list-icon.png" />
     <Content Include="ArticleDetail.ascx" />
   </ItemGroup>
