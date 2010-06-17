@@ -13,6 +13,7 @@ using Microsoft.ApplicationBlocks.Data;
 using Microsoft.VisualBasic.CompilerServices;
 using System.Data.SqlClient;
 using System.Data.Common;
+using DotNetNuke.Common.Utilities;
 
 namespace DjArticles.Providers.Data_Providers
 {
@@ -132,16 +133,26 @@ namespace DjArticles.Providers.Data_Providers
         /// <returns></returns>
         public override IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, DbParameter paTotalCount)
         {
-            string commandName = getCommandName("Article", "SelectArticlesByPage");
-           
-            SqlParameter paCategoryId=new SqlParameter("CategoryID",categoryId);
-            SqlParameter paPageSize=new SqlParameter("pageSize",pageSize);
-            SqlParameter paCurrentPage=new SqlParameter("currentPage",currentPage);
+
+            SqlParameter paCategoryId = new SqlParameter("CategoryID", categoryId);
+            SqlParameter paPageSize = new SqlParameter("pageSize", pageSize);
+            SqlParameter paCurrentPage = new SqlParameter("currentPage", currentPage);
             if (paTotalCount != null)
             {
                 paTotalCount.Direction = ParameterDirection.Output;
             }
-            return SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName, paCategoryId, paPageSize, paCurrentPage,(SqlParameter)paTotalCount);
+            string commandName = "";
+            if (Null.IsNull(categoryId))
+            {
+                commandName = getCommandName("Article", "SelectAllArticlesByPage");
+                return SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName , paPageSize, paCurrentPage, (SqlParameter)paTotalCount);
+            }
+            else
+            {
+                commandName = getCommandName("Article", "SelectArticlesByPage");
+                return SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName, paCategoryId, paPageSize, paCurrentPage, (SqlParameter)paTotalCount);
+            }
+            
         }
 
         /// <summary>

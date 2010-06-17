@@ -190,47 +190,11 @@ namespace DjArticles
                 this.lblCreateDate.Text = this.createdDate.ToString("yyyy年M月d日 hh:mm:ss");
                 this.lblHits.Text = this.hits.ToString();
                 this.hdfArticleId.Value = this.articleId.ToString();
-                this.UpdateComments(articleId);
+                //this.UpdateComments(articleId);
             }
 
         }
 
-        private void UpdateComments(int articleId)
-        {
-            List<CommentInfo> comments = commentController.GetCommentsByIArticleID(articleId);
-            this.dalComments.DataSource = comments;
-            this.dalComments.DataBind();
-        }
-
-        /// <summary>
-        /// 发表评论
-        /// </summary>
-        private void PostComment()
-        {
-            string commentMessage = this.txtMessage.Text;
-            articleId = WebControlUtils.GetObjectIntValue(this.hdfArticleId);
-            if (Null.IsNull(articleId))
-            {
-                return;
-            }
-            if (string.IsNullOrEmpty(commentMessage))
-            {
-                throw new ArticlesException("评论内容为空！");
-            }
-            if (this.UserId == Null.NullInteger)
-            {
-                throw new ArticlesException("您还未登录！");
-            }
-            int referenceId = WebControlUtils.GetObjectIntValue(this.hdfReferenceId);
-            CommentInfo commentInfo = new CommentInfo();
-            commentInfo.Comment = commentMessage;
-            commentInfo.ArticleID = articleId;
-            commentInfo.CreatedByUserID = this.UserId;
-            commentInfo.CreatedByUserName = this.GetUserName();
-            commentInfo.Ip = Request.UserHostAddress;
-            commentController.AddComment(commentInfo);
-            this.UpdateComments(articleId);
-        }
         #endregion
 
         #region Event Handler
@@ -245,11 +209,6 @@ namespace DjArticles
                     SetArticleInfo(articleId);
                 }
             }
-        }
-
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            this.PostComment();
         }
 
         protected void lbnDelete_Click(object sender, EventArgs e)

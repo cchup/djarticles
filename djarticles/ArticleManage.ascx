@@ -48,35 +48,25 @@
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField>
-            <HeaderStyle Width="30px"></HeaderStyle>
+            <HeaderStyle Width="100px"></HeaderStyle>
             <ItemTemplate>
                 <asp:HyperLink ID="editPreview" NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleView") %>'
                     runat="server">
                     <asp:Image ID="editLinkImage" ImageUrl="~/images/preview.jpg"  
                         AlternateText="Preview" runat="server" resourcekey="Preview" />
                 </asp:HyperLink>
-            </ItemTemplate>
-       </asp:TemplateField>
-        <asp:TemplateField>
-            <HeaderStyle Width="30px"></HeaderStyle>
-            <ItemTemplate>
                 <asp:HyperLink ID="editLink" NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleEdit") %>'
                     runat="server">
                     <asp:Image ID="editLinkImage" ImageUrl="~/images/edit.gif" Visible="<%# IsEditable %>"
                         AlternateText="Edit" runat="server" resourcekey="Edit" />
                 </asp:HyperLink>
-            </ItemTemplate>
-       </asp:TemplateField>
-       <asp:TemplateField>
-       <HeaderStyle Width="30px"></HeaderStyle>
-             <ItemTemplate>
-                <asp:linkButton id="btnDelete" 
+                 <asp:linkButton id="btnDelete" 
                     runat="server" onclientclick='return confirm(&quot;你确认要删除吗?&quot;)'>
                     <asp:Image ID="editLinkImage" ImageUrl="~/images/delete.gif" Visible="<%# IsEditable %>"
                         AlternateText="Delete" runat="server" resourcekey="Delete" />
                 </asp:linkButton>
             </ItemTemplate>
-        </asp:TemplateField>
+       </asp:TemplateField>
     </Columns>
 </dj:djgridview>
 <table class="table_default" cellspacing="1">
