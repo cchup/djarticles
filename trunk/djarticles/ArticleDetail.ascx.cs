@@ -24,6 +24,8 @@ namespace DjArticles
 
         private CommentController commentController = new CommentController();
 
+        private readonly string  defaultGravatarImg="~/DesktopModules/DjArticles/images/noimage.gif";
+
         private int articleId = Null.NullInteger;
 
         private int categoryID;
@@ -205,12 +207,38 @@ namespace DjArticles
             {
                 this.txtAuthor.Text = this.UserInfo.FullName;
                 this.txtEmail.Text = this.UserInfo.Email;
+                if (!string.IsNullOrEmpty(this.UserInfo.Profile.Photo))
+                {
+                    imgGravatarPreview.ImageUrl = this.UserInfo.Profile.Photo;
+                }
             }
+            if (string.IsNullOrEmpty(imgGravatarPreview.ImageUrl))
+            {
+                imgGravatarPreview.ImageUrl = defaultGravatarImg;
+            }
+            //
+            ctlCaptcha.ErrorMessage = this.GetString("InvalidCaptcha");
+            ctlCaptcha.Text = this.GetString("CaptchaText");
+            //设置登录是否可见
+            if (Null.IsNull(this.UserId))
+            {
+                this.cmdLogin.Visible = true;
+            }
+            else
+            {
+                this.cmdLogin.Visible = false;
+            }
+
         }
 
+        /// <summary>
+        /// 绑定评论数据源
+        /// </summary>
+        /// <param name="articleId"></param>
         private void BindingComments(int articleId)
         {
             List<CommentInfo> comments = commentController.GetCommentsByIArticleID(articleId);
+            this.lblComments.Text = string.Format(GetString("lblComments"), comments.Count);
             this.lstComments.DataSource = comments;
             this.lstComments.DataBind();
         }
@@ -263,7 +291,10 @@ namespace DjArticles
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            this.PostComment();
+            if (Page.IsValid && ctlCaptcha.IsValid)
+            {
+                this.PostComment();
+            }
         }
 
         protected void lbnDelete_Click(object sender, EventArgs e)
@@ -284,21 +315,36 @@ namespace DjArticles
                 Label lblCommentDate = e.Item.FindControl("lblCommentDate") as Label;
                 Image imgGravatar = e.Item.FindControl("imgGravatar") as Image;
                 lblUserName.Text = commentInfo.CreatedByUserName;
-                lblCommentDate.Text = commentInfo.CreatedDate.ToString("yyyy-MM-dd hh:mm:ss");
+                lblCommentDate.Text = commentInfo.CreatedDate.ToString(System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat);
                 UserController userController = new UserController();
                 UserInfo user = userController.GetUser(this.PortalId, commentInfo.CreatedByUserID);
-                if (user != null)
+                if (user != null && !string.IsNullOrEmpty(user.Profile.Photo))
                 {
                     imgGravatar.ImageUrl = user.Profile.Photo;
                 }
                 else
                 {
-                    imgGravatar.ImageUrl = "~/DesktopModules/DjArticles/images/noimage.gif";
+                    imgGravatar.ImageUrl = defaultGravatarImg;
                 }
             }
         }
+
+        protected void cmdLogin_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void cmdAddComment_Click(object sender, EventArgs e)
+        {
+            PostComment();
+        }
+
+
+        protected void cmdCancel_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
-     
     }
 }

@@ -13,6 +13,7 @@ using DotNetNuke.Security.Roles;
 using System.Collections;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Common.Utilities;
+using DotNetNuke.Services.Localization;
 
 namespace DjArticles.Components
 {
@@ -288,5 +289,14 @@ namespace DjArticles.Components
             return settingValue;
         }
 
+        /// <summary>
+        /// 获取本地资源字符串
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        protected string GetString(string name)
+        {
+            return Localization.GetString(name,this.LocalResourceFile);
+        }
     }
 }
