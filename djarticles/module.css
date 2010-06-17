@@ -40,7 +40,7 @@ ul.article_list_title span{ float:right; color:#999999; font-size:12px;}
 .LinksWrap li div{ padding-left:15px; display:block;}
 /*评论样式*/
 .Comments {
-background-image:url(images/blog_comments.png);
+background-image:url(images/comments.png);
 background-position:left;
 background-repeat:no-repeat;
 padding-left:20px;
@@ -94,14 +94,14 @@ padding:0;
 div.Bubble cite,div.BubbleOwner cite {
 position:relative;
 top:6px;
-background:transparent url(images/blog_comment_tip.gif) no-repeat 20px 0;
+background:transparent url(images/comment_tip.gif) no-repeat 20px 0;
 font-style:normal;
 margin:0;
 padding:7px 0 0 15px;
 }
 
 div.BubbleOwner cite {
-background:transparent url(images/blog_comment_tip_owner.gif) no-repeat 20px 0;
+background:transparent url(images/comment_tip_owner.gif) no-repeat 20px 0;
 }
 .Gravatar {
 float:left;

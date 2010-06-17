@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleDetail.ascx.cs"
     Inherits="DjArticles.ArticleDetail" %>
-<%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <script type="text/javascript" src='<%=  ResolveUrl("jQComment.js")%>'> </script>
 
 <div class="articleMain">
@@ -70,21 +70,19 @@
         </div>
     </div>--%>
     <!-- Comments Section 该内容布局来至Blog Module -->
-    <asp:Panel ID="pnlComments" runat="server" Visible="False">
+    <asp:Panel ID="pnlComments" runat="server">
         <p>
             <a id="Comments" name="Comments"></a><a href="#AddComment">
-                <asp:Label ID="lblComments" runat="server" CssClass="BlogComments" /></a>
+                <asp:Label ID="lblComments" runat="server" CssClass="Comments" /></a>
         </p>
         <asp:ImageButton ID="lnkDeleteAllUnapproved" runat="server" ImageUrl="~/images/delete.gif"
             Visible="false" CausesValidation="false" AlternateText="Delete Unaproved" />
-        <asp:LinkButton ID="btDeleteAllUnapproved" runat="server" Visible="false" resourcekey="DeleteAllUnapproved"
-            CssClass="CommandButton" CausesValidation="false" /><br />
         <asp:DataList ID="lstComments" runat="server" Width="100%" 
             onitemdatabound="lstComments_ItemDataBound">
             <ItemTemplate>
-                <asp:Panel ID="divBlogBubble" runat="server" CssClass="BlogBubble">
+                <asp:Panel ID="divBubble" runat="server" CssClass="BubbleOwner">
                     <blockquote>
-                        <asp:Panel ID="divBlogGravatar" runat="server" CssClass="BlogGravatar">
+                        <asp:Panel ID="divGravatar" runat="server" CssClass="Gravatar">
                             <asp:Image runat="server" Width="48" ID="imgGravatar" AlternateText="Gravatar" />
                         </asp:Panel>
                         <p>
@@ -114,7 +112,7 @@
     </asp:Panel>
     <asp:Panel ID="pnlLogin" runat="server" Visible="false">
         <asp:LinkButton ID="cmdLogin" TabIndex="7" runat="server" CssClass="CommandButton"
-            BorderStyle="None" ResourceKey="cmdLogin" />
+            BorderStyle="None" ResourceKey="cmdLogin" onclick="cmdLogin_Click" />
     </asp:Panel>
     <asp:Panel ID="pnlAddComment" runat="server">
         <a id="AddComment" name="AddComment"></a>
@@ -129,7 +127,7 @@
         <br />
         <table cellspacing="1" cellpadding="1" width="100%" border="0">
             <tr>
-                <td class="LeftTD" width="1%">
+                <td class="LeftTD" width="13%">
                     <asp:Label ID="lblAuthor" runat="server" ResourceKey="lblAuthor" CssClass="NormalBold"
                         Width="80px" />
                 </td>
@@ -137,13 +135,13 @@
                     <asp:TextBox ID="txtAuthor" TabIndex="1" runat="server" Width="99%" />
                 </td>
                 <td id="tdGravatarPreview" valign="top" align="right" width="1%" rowspan="2" runat="server">
-                    <div class="BlogGravatarPreview">
+                    <div class="GravatarPreview">
                         <asp:Image ID="imgGravatarPreview" runat="server" AlternateText="Gravatar Preview" />
                     </div>
                 </td>
             </tr>
-            <tr runat="server">
-                <td class="BlogLeftTD" width="1%">
+            <tr >
+                <td class="LeftTD" width="13%">
                     <asp:Label ID="lblEmail" runat="server" ResourceKey="lblEmail" CssClass="NormalBold" />
                 </td>
                 <td valign="top">   
@@ -171,12 +169,12 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <asp:LinkButton ID="cmdAddComment" TabIndex="7" runat="server" ResourceKey="cmdAddComment" CssClass="CommandButton"
+                    <asp:LinkButton ID="cmdAddComment" TabIndex="7" runat="server" ResourceKey="cmdAddComment"
+                         CssClass="CommandButton" OnClick="cmdAddComment_Click"
                         BorderStyle="None" />&nbsp;&nbsp;
                     <asp:LinkButton ID="cmdCancel" TabIndex="8" runat="server" ResourceKey="cmdCancel"
+                        OnClick="cmdCancel_Click"
                         CssClass="CommandButton" BorderStyle="None" CausesValidation="False" />&nbsp;
-                    <asp:LinkButton ID="cmdDeleteComment" TabIndex="9" runat="server" ResourceKey="cmdDelete"
-                        CssClass="CommandButton" Visible="False" BorderStyle="None" />
                 </td>
             </tr>
         </table>

@@ -28,3 +28,5 @@ E:\源码\BroadWisdom\DjArticles\src\obj\Debug\DjArticles.dll
 E:\源码\BroadWisdom\web\bin\DjArticles.dll
 E:\源码\BroadWisdom\web\bin\DjArticles.pdb
 E:\源码\BroadWisdom\web\bin\DjArticles.xml
+E:\Developer Project\DjArticles\web\bin\DjArticles.xml
+E:\Developer Project\HomeBook\web\bin\DjArticles.xml
