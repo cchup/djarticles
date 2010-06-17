@@ -12,12 +12,13 @@ using DjArticles.Components;
 using DjArticles.Common;
 using DotNetNuke.Common.Utilities;
 using System.Collections.Generic;
+using DotNetNuke.Entities.Users;
 
 namespace DjArticles
 {
     public partial class ArticleDetail : ArticlePortalModuleBase
     {
-        #region "Private Members"
+        #region Private Members
 
         private ArticlesController controller = new ArticlesController();
 
@@ -190,16 +191,28 @@ namespace DjArticles
                 this.lblCreateDate.Text = this.createdDate.ToString("yyyy年M月d日 hh:mm:ss");
                 this.lblHits.Text = this.hits.ToString();
                 this.hdfArticleId.Value = this.articleId.ToString();
-                this.UpdateComments(articleId);
+                this.BindingComments(articleId);
             }
 
         }
 
-        private void UpdateComments(int articleId)
+        /// <summary>
+        /// 设置其他显示信息
+        /// </summary>
+        private void SetOtherInfo()
+        {
+            if (!Null.IsNull(this.UserId))
+            {
+                this.txtAuthor.Text = this.UserInfo.FullName;
+                this.txtEmail.Text = this.UserInfo.Email;
+            }
+        }
+
+        private void BindingComments(int articleId)
         {
             List<CommentInfo> comments = commentController.GetCommentsByIArticleID(articleId);
-            this.dalComments.DataSource = comments;
-            this.dalComments.DataBind();
+            this.lstComments.DataSource = comments;
+            this.lstComments.DataBind();
         }
 
         /// <summary>
@@ -207,7 +220,7 @@ namespace DjArticles
         /// </summary>
         private void PostComment()
         {
-            string commentMessage = this.txtMessage.Text;
+            string commentMessage = this.txtComment.Text;
             articleId = WebControlUtils.GetObjectIntValue(this.hdfArticleId);
             if (Null.IsNull(articleId))
             {
@@ -229,7 +242,7 @@ namespace DjArticles
             commentInfo.CreatedByUserName = this.GetUserName();
             commentInfo.Ip = Request.UserHostAddress;
             commentController.AddComment(commentInfo);
-            this.UpdateComments(articleId);
+            this.BindingComments(articleId);
         }
         #endregion
 
@@ -243,6 +256,7 @@ namespace DjArticles
                 if (articleId != Null.NullInteger)
                 {
                     SetArticleInfo(articleId);
+                    SetOtherInfo();
                 }
             }
         }
@@ -256,6 +270,35 @@ namespace DjArticles
         {
 
         }
+        protected void lstComments_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            CommentInfo commentInfo=e.Item.DataItem as CommentInfo;
+            ImageButton lnkEditComment = e.Item.FindControl("lnkEditComment") as ImageButton;
+            LinkButton btEditComment = e.Item.FindControl("btEditComment") as LinkButton;
+
+            ImageButton lnkDeleteComment = e.Item.FindControl("lnkDeleteComment") as ImageButton;
+            LinkButton btDeleteComment = e.Item.FindControl("btDeleteComment") as LinkButton;
+            if (commentInfo != null)
+            {
+                Label lblUserName = e.Item.FindControl("lblUserName") as Label;
+                Label lblCommentDate = e.Item.FindControl("lblCommentDate") as Label;
+                Image imgGravatar = e.Item.FindControl("imgGravatar") as Image;
+                lblUserName.Text = commentInfo.CreatedByUserName;
+                lblCommentDate.Text = commentInfo.CreatedDate.ToString("yyyy-MM-dd hh:mm:ss");
+                UserController userController = new UserController();
+                UserInfo user = userController.GetUser(this.PortalId, commentInfo.CreatedByUserID);
+                if (user != null)
+                {
+                    imgGravatar.ImageUrl = user.Profile.Photo;
+                }
+                else
+                {
+                    imgGravatar.ImageUrl = "~/DesktopModules/DjArticles/images/noimage.gif";
+                }
+            }
+        }
         #endregion
+
+     
     }
 }

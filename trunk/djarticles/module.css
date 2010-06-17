@@ -35,6 +35,78 @@ ul.article_list_title p a{padding-left:15px; background:url(images/dian.jpg) no-
 ul.article_list_title span{ float:right; color:#999999; font-size:12px;}
 /*分类列表样式*/
 .LinksWrap{}
-.LinksWrap li a{ line-height:25px;  display:block; border-bottom:#dddddd solid 1px;padding: 0px 5px 0px 27px; border color:#484848; overflow:hidden; text-decoration:none; background:url(images/list-icon.png) no-repeat 6px 7px; font-size:13px;}
+.LinksWrap li a{ line-height:25px;  display:block; border-bottom:#dddddd solid 1px;padding: 0px 5px 0px 27px; border-color:#484848; overflow:hidden; text-decoration:none; background:url(images/list-icon.png) no-repeat 6px 7px; font-size:13px;}
 .LinksWrap li a:hover{ background-color:#7ac62e; color:White;}
 .LinksWrap li div{ padding-left:15px; display:block;}
+/*评论样式*/
+.Comments {
+background-image:url(images/blog_comments.png);
+background-position:left;
+background-repeat:no-repeat;
+padding-left:20px;
+margin-right:10px;
+cursor:pointer;
+font-weight:700;
+display:inline-block;
+height:1.5em;
+}
+
+.CommentsNormal {
+background-image:url(images/blog_comments.png);
+background-repeat:no-repeat;
+padding-left:20px;
+margin-right:10px;
+cursor:pointer;
+font-size:11px;
+}
+div.Bubble p {
+color:#000;
+}
+div.Bubble,div.BubbleOwner {
+width:auto;
+font-size:10pt;
+margin-bottom:24px;
+}
+
+div.Bubble blockquote {
+border:1px solid #c9c2c1;
+background-color:#fff;
+zoom:1;
+min-height:64px;
+margin:0;
+padding:0;
+}
+
+div.BubbleOwner blockquote {
+border:1px solid #aaa;
+background-color:#e0e0e0;
+zoom:1;
+min-height:64px;
+margin:0;
+padding:0;
+}
+
+div.Bubble blockquote p,div.BubbleOwner blockquote p {
+margin:10px;
+padding:0;
+}
+
+div.Bubble cite,div.BubbleOwner cite {
+position:relative;
+top:6px;
+background:transparent url(images/blog_comment_tip.gif) no-repeat 20px 0;
+font-style:normal;
+margin:0;
+padding:7px 0 0 15px;
+}
+
+div.BubbleOwner cite {
+background:transparent url(images/blog_comment_tip_owner.gif) no-repeat 20px 0;
+}
+.Gravatar {
+float:left;
+border:solid 1px #ddd;
+background-color:#fff;
+margin:5px 5px -5px 4px;
+padding:2px;
+}
