@@ -30,6 +30,7 @@ namespace DjArticles.Components
         public abstract IDataReader GetAllArticles();
         public abstract IDataReader GetArticle(int articleId);
 
+        public abstract void DeleteArticlesByCategory(int categoryId);
         public abstract void DeleteArticle(int ArticleID);
         public abstract void DeleteCategory(int CategoryID);
         public abstract void DeleteComment(int CommentID);

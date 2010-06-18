@@ -192,7 +192,10 @@ namespace DjArticles
                 this.ltlContent.Text = this.content;
                 this.lblCreateDate.Text = this.createdDate.ToString("yyyy年M月d日 hh:mm:ss");
                 this.lblHits.Text = this.hits.ToString();
-                this.hdfArticleId.Value = this.articleId.ToString();
+                this.hdfArticleId.Value = this.articleId.ToString(); 
+                this.lblCommentCount1.Text = this.commentCount.ToString();
+                this.lblCommentCount2.Text = this.commentCount.ToString();
+                this.lblKeywords.Text = this.keyWords;
                 this.BindingComments(articleId);
             }
 
@@ -203,22 +206,28 @@ namespace DjArticles
         /// </summary>
         private void SetOtherInfo()
         {
+            this.txtAuthor.ReadOnly = false;
+            this.txtEmail.ReadOnly = false;
+            this.cmdAddComment.Enabled = false;
             if (!Null.IsNull(this.UserId))
             {
-                this.txtAuthor.Text = this.UserInfo.FullName;
+                this.txtAuthor.Text = this.UserInfo.DisplayName;
                 this.txtEmail.Text = this.UserInfo.Email;
+                this.txtAuthor.ReadOnly = true;
+                this.txtEmail.ReadOnly = true;
                 if (!string.IsNullOrEmpty(this.UserInfo.Profile.Photo))
                 {
                     imgGravatarPreview.ImageUrl = this.UserInfo.Profile.Photo;
                 }
+                this.cmdAddComment.Enabled = true;
             }
             if (string.IsNullOrEmpty(imgGravatarPreview.ImageUrl))
             {
                 imgGravatarPreview.ImageUrl = defaultGravatarImg;
             }
             //
-            ctlCaptcha.ErrorMessage = this.GetString("InvalidCaptcha");
-            ctlCaptcha.Text = this.GetString("CaptchaText");
+            //ctlCaptcha.ErrorMessage = this.GetString("InvalidCaptcha");
+            //ctlCaptcha.Text = this.GetString("CaptchaText");
             //设置登录是否可见
             if (Null.IsNull(this.UserId))
             {
@@ -272,28 +281,44 @@ namespace DjArticles
             commentController.AddComment(commentInfo);
             this.BindingComments(articleId);
         }
+
+        /// <summary>
+        /// 设置评论信息
+        /// </summary>
+        /// <param name="commentInfo"></param>
+        private void SetEditCommentInfo(CommentInfo commentInfo)
+        {
+            this.hdfCommentId.Value = commentInfo.CommentID.ToString();
+            this.txtComment.Text = commentInfo.Comment;
+            this.hdfReferenceId.Value = commentInfo.ReferenceCommentID.ToString();
+        }
+
+        /// <summary>
+        /// 清理评论信息
+        /// </summary>
+        private void ClearPostComment()
+        {
+            this.hdfReferenceId.Value = "";
+            this.hdfCommentId.Value = "";
+            this.txtComment.Text = "";
+        }
+
         #endregion
 
         #region Event Handler
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            articleId = this.GetIntParameter("ArticleId");
             if (!IsPostBack)
             {
+                articleId = this.GetIntParameter("ArticleId");
                 if (articleId != Null.NullInteger)
                 {
                     SetArticleInfo(articleId);
                     SetOtherInfo();
+                    //ctlCaptcha.ErrorMessage = GetString("InvalidCaptcha");
+                    //ctlCaptcha.Text = GetString("CaptchaText");
                 }
-            }
-        }
-
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if (Page.IsValid && ctlCaptcha.IsValid)
-            {
-                this.PostComment();
             }
         }
 
@@ -336,15 +361,48 @@ namespace DjArticles
 
         protected void cmdAddComment_Click(object sender, EventArgs e)
         {
-            PostComment();
+            this.valCommentAuthor.Enabled = true;
+            this.valComment.Enabled = true;
+            if (Page.IsValid )
+            {
+                PostComment();
+            }
         }
 
 
         protected void cmdCancel_Click(object sender, EventArgs e)
         {
+            ClearPostComment();
+        }
 
+        protected void lstComments_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            this.valCommentAuthor.Enabled = false;
+            this.valComment.Enabled = false;
+            int commentId=Null.NullInteger;
+            if(e.CommandArgument!=null){
+                int.TryParse(e.CommandArgument.ToString(),out commentId);
+            }
+            if (Null.IsNull(commentId))
+            {
+                return;
+            }
+            switch (e.CommandName.ToLower())
+            {
+                case "editcomment":
+
+                    break;
+                case "deletecomment":
+                    commentController.DeleteComment(commentId);
+                    break;
+                default:
+                    break;
+            }
+            articleId = this.GetIntParameter("ArticleId");
+            this.BindingComments(articleId);
         }
         #endregion
+
 
     }
 }

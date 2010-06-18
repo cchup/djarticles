@@ -170,6 +170,19 @@ namespace DjArticles.Components
             }
         }
 
+        /// <summary>
+        /// 删除文章
+        /// </summary>
+        /// <param name="articleId"></param>
+        public void DeleteArticle(int articleId)
+        {
+            if (Null.IsNull(articleId))
+            {
+                return;
+            }
+            DataProvider.Instance().DeleteArticle(articleId);
+        }
+
         #endregion
 
         #region "Optional Interfaces"

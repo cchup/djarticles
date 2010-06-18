@@ -163,7 +163,7 @@
     <value>评论 (0)</value>
   </data>
   <data name="lblComments.Text" xml:space="preserve">
-    <value>现在有评论{0} ...</value>
+    <value>现在有{0}条评论 ...</value>
   </data>
   <data name="lblCommentTitle.Text" xml:space="preserve">
     <value>标题:</value>
@@ -234,12 +234,15 @@
     <value>评论内容需要输入</value>
   </data>
   <data name="valCommentAuthor.ErrorMessage" xml:space="preserve">
-    <value>作者需要输入</value>
+    <value>姓名需要输入</value>
   </data>
   <data name="valCommentEmail.ErrorMessage" xml:space="preserve">
     <value>邮箱地址需要输入</value>
   </data>
   <data name="valCommentTitle.ErrorMessage" xml:space="preserve">
     <value>标题需要输入</value>
+  </data>
+  <data name="valCommentEmail.InvalidMessage" xml:space="preserve">
+    <value>邮箱地址输入有误</value>
   </data>
 </root>

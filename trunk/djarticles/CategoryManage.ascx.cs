@@ -72,5 +72,28 @@ namespace DjArticles
             //重转向
             this.Response.Redirect(Globals.NavigateURL(), true);
         }
+
+        protected void grdCategories_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int categoryId = Null.NullInteger;
+            if (e.CommandArgument != null)
+            {
+                int.TryParse(e.CommandArgument.ToString(), out categoryId);
+            }
+            if (Null.IsNull(categoryId))
+            {
+                return;
+            }
+            switch (e.CommandName.ToLower())
+            {
+                case "deletecategory":
+                    controller.DeleteCategory(categoryId);
+                    
+                    break;
+                default:
+                    break;
+            }
+            BindCategorySource();
+        }
     }
 }

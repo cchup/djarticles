@@ -83,6 +83,20 @@ namespace DjArticles.Components
         }
 
         /// <summary>
+        /// 获取评论
+        /// </summary>
+        /// <param name="commentId"></param>
+        /// <returns></returns>
+        public CommentInfo GetCommentInf(int commentId)
+        {
+            if (Null.IsNull(commentId))
+            {
+                return null;
+            }
+            return CBO.FillObject<CommentInfo>(DataProvider.Instance().GetComment(commentId));
+        }
+
+        /// <summary>
         /// 删除评论
         /// </summary>
         /// <param name="commentId"></param>

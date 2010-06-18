@@ -32,6 +32,15 @@ namespace DjArticles {
         protected global::System.Web.UI.WebControls.DropDownList cboCategory;
         
         /// <summary>
+        /// ImageButton1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        
+        /// <summary>
         /// cmdSearch 控件。
         /// </summary>
         /// <remarks>
@@ -39,15 +48,6 @@ namespace DjArticles {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton cmdSearch;
-        
-        /// <summary>
-        /// Image1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
         /// cmdCategoryManage 控件。
