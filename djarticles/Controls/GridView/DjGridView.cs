@@ -160,6 +160,10 @@ namespace DjArticles.Controls.GridView
             //设置默认值
             this.AllowPaging = true;
             this.PageSize = 15;
+            this.HeaderStyle.Height = Unit.Pixel(25);
+            this.HeaderStyle.HorizontalAlign = HorizontalAlign.Center;
+            this.HeaderStyle.VerticalAlign = VerticalAlign.Middle;
+            this.RowStyle.Height = Unit.Pixel(25);
         }
 
         protected override void OnRowDataBound(System.Web.UI.WebControls.GridViewRowEventArgs e)

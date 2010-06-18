@@ -38,9 +38,12 @@ namespace DjArticles.Components
             return ((((PortalSecurity.IsInRoles(objCategoryInfo.AdminRoles) | PortalSecurity.IsInRoles(objCategoryInfo.EditRoles)) | PortalSecurity.IsInRoles(objCategoryInfo.ViewRoles)) | (objCategoryInfo.ViewRoles.Length == 0)) | PortalSecurity.IsInRoles("Administrators"));
         }
 
-        public void DeleteCategory(int CategoryID)
+        public void DeleteCategory(int categoryID)
         {
-            DataProvider.Instance().DeleteCategory(CategoryID);
+            //先删除所有的文章
+            DataProvider.Instance().DeleteArticlesByCategory(categoryID);
+            //再删除该分类
+            DataProvider.Instance().DeleteCategory(categoryID);
         }
 
         /// <summary>

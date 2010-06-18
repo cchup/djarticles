@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryManage.ascx.cs"
     Inherits="DjArticles.CategoryManage" %>
 <dj:djgridview id="grdCategories" runat="server" enableviewstate="False" allowpaging="true"
-    custompager="True" width="100%" autogeneratecolumns="False" pagesize="15">
+    custompager="True" width="100%" autogeneratecolumns="False" pagesize="15" 
+    onrowcommand="grdCategories_RowCommand">
     <Columns>
         <asp:BoundField DataField="Name" HeaderText="Name">
             <HeaderStyle Width="200px" CssClass="NormalBold"></HeaderStyle>
@@ -43,8 +44,8 @@
        <asp:TemplateField>
        <HeaderStyle Width="30px"></HeaderStyle>
              <ItemTemplate>
-                <asp:linkButton id="btnDelete" 
-                    runat="server" onclick="btnDelete_Click" onclientclick='return confirm(&quot;你确认要删除吗?&quot;)'>
+                <asp:linkButton id="btnDelete" CommandName="DeleteCategory" CommandArgument='<%#Eval("CategoryID") %>'
+                    runat="server" onclick="btnDelete_Click" onclientclick='return confirm(&quot;删除该分类将一并删除该分类下的所有文章,你确认要删除吗?&quot;)'>
                     <asp:Image ID="editLinkImage" ImageUrl="~/images/delete.gif" Visible="<%# IsEditable %>"
                         AlternateText="Delete" runat="server" resourcekey="Delete" />
                 </asp:linkButton>

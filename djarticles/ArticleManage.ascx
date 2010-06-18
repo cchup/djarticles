@@ -1,24 +1,29 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleManage.ascx.cs" Inherits="DjArticles.ArticleManage" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <div>
+    <p style="display:inline;">
         <dnn:label id="lblCategory" runat="server" controlname="lblContent" 
             suffix=":" />
         <asp:DropDownList ID="cboCategory" runat="server" CssClass="NormalTextBox"
             DataTextField="Name" DataValueField="CategoryID">
         </asp:DropDownList>
+         <asp:ImageButton ID="ImageButton1" ImageUrl="~/images/search_go.gif" resourcekey="cmdSearch"
+             OnClick="cmdSearch_Click"  runat="server"/>
         <asp:LinkButton ID="cmdSearch" resourcekey="cmdSearch" runat="server"
              BorderStyle="none" Text="Search" onclick="cmdSearch_Click"  >
-                 <asp:Image ID="Image1" ImageUrl="~/images/search_go.gif"  
-                        AlternateText="Search" runat="server" resourcekey="cmdSearch" />
-        </asp:LinkButton>&nbsp;
+        </asp:LinkButton>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <asp:ImageButton ImageUrl="~/DesktopModules/DjArticles/images/category.jpg" resourcekey="cmdCategoryManage"
+             OnClick="cmdCategoryManage_Click"  runat="server"/>
         <asp:LinkButton ID="cmdCategoryManage" resourcekey="cmdCategoryManage" runat="server"
              BorderStyle="none" Text="Manage" onclick="cmdCategoryManage_Click" 
-            style="height: 19px"  ></asp:LinkButton>&nbsp;
+            style="height: 19px"  ></asp:LinkButton>
+     </p>
 </div>
 
 <dj:djgridview id="grdArticles" runat="server" enableviewstate="False" allowpaging="true"
     custompager="True" autogeneratecolumns="False" pagesize="15"
-     BackColor="#CAD9EA"  CellPadding="3"  GridLines="None"   CellSpacing="1"   Width="100%"    >
+     BackColor="#CAD9EA"  CellPadding="3"  GridLines="None"   
+    CellSpacing="1"   Width="100%" onrowcommand="grdArticles_RowCommand" >
     <Columns>
         <asp:BoundField DataField="CategoryName" HeaderText="CategoryName">
             <HeaderStyle Width="10%" CssClass="NormalBold"></HeaderStyle>
@@ -52,7 +57,7 @@
             <ItemTemplate>
                 <asp:HyperLink ID="editPreview" NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleView") %>'
                     runat="server">
-                    <asp:Image ID="editLinkImage" ImageUrl="~/images/preview.jpg"  
+                    <asp:Image ID="previewLinkImage" ImageUrl="~/images/view.gif"  
                         AlternateText="Preview" runat="server" resourcekey="Preview" />
                 </asp:HyperLink>
                 <asp:HyperLink ID="editLink" NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleEdit") %>'
@@ -60,9 +65,9 @@
                     <asp:Image ID="editLinkImage" ImageUrl="~/images/edit.gif" Visible="<%# IsEditable %>"
                         AlternateText="Edit" runat="server" resourcekey="Edit" />
                 </asp:HyperLink>
-                 <asp:linkButton id="btnDelete" 
+                 <asp:linkButton id="btnDelete" CommandName="DeleteArticle" CommandArgument='<%#Eval("ArticleID") %>'
                     runat="server" onclientclick='return confirm(&quot;你确认要删除吗?&quot;)'>
-                    <asp:Image ID="editLinkImage" ImageUrl="~/images/delete.gif" Visible="<%# IsEditable %>"
+                    <asp:Image ID="deleteLinkImage" ImageUrl="~/images/delete.gif" Visible="<%# IsEditable %>"
                         AlternateText="Delete" runat="server" resourcekey="Delete" />
                 </asp:linkButton>
             </ItemTemplate>

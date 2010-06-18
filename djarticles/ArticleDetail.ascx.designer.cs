@@ -50,6 +50,24 @@ namespace DjArticles {
         protected global::System.Web.UI.WebControls.Label lblHits;
         
         /// <summary>
+        /// lblCommentCount1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCommentCount1;
+        
+        /// <summary>
+        /// lblKeywords 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblKeywords;
+        
+        /// <summary>
         /// ltlContent 控件。
         /// </summary>
         /// <remarks>
@@ -57,6 +75,15 @@ namespace DjArticles {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltlContent;
+        
+        /// <summary>
+        /// lblCommentCount2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCommentCount2;
         
         /// <summary>
         /// pnlComments 控件。
@@ -131,6 +158,15 @@ namespace DjArticles {
         protected global::System.Web.UI.WebControls.HiddenField hdfReferenceId;
         
         /// <summary>
+        /// hdfCommentId 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdfCommentId;
+        
+        /// <summary>
         /// valSummary 控件。
         /// </summary>
         /// <remarks>
@@ -156,6 +192,24 @@ namespace DjArticles {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator valComment;
+        
+        /// <summary>
+        /// valEmail 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valEmail;
+        
+        /// <summary>
+        /// velEmail 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator velEmail;
         
         /// <summary>
         /// lblAuthor 控件。
@@ -237,33 +291,6 @@ namespace DjArticles {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtComment;
-        
-        /// <summary>
-        /// rowCaptcha 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow rowCaptcha;
-        
-        /// <summary>
-        /// lblCaptcha 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCaptcha;
-        
-        /// <summary>
-        /// ctlCaptcha 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::DotNetNuke.UI.WebControls.CaptchaControl ctlCaptcha;
         
         /// <summary>
         /// cmdAddComment 控件。

@@ -13,6 +13,7 @@ using DjArticles.Components;
 using DjArticles.Common;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Localization;
+using DotNetNuke.Common.Utilities;
 
 namespace DjArticles
 {
@@ -83,6 +84,30 @@ namespace DjArticles
             Response.Redirect(EditUrl("CategoryManage"), true);
         }
 
+
+        protected void grdArticles_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            ShowMessage(e.CommandName.ToLower()+"，"+e.CommandArgument.ToString());
+            int articleId = Null.NullInteger;
+            if (e.CommandArgument != null)
+            {
+                int.TryParse(e.CommandArgument.ToString(), out articleId);
+            }
+            if (Null.IsNull(articleId))
+            {
+                return;
+            }
+            switch (e.CommandName.ToLower())
+            {
+                case "DeleteArticle":
+                     controller.DeleteArticle(articleId);
+                    break;
+                default:
+                    break;
+            }
+            BindArticlesSource();
+        }
+
         protected void cmdSearch_Click(object sender, EventArgs e)
         {
             int categoryId= WebControlUtils.GetObjectIntValue(this.cboCategory);
@@ -106,5 +131,6 @@ namespace DjArticles
         }
 
         #endregion
+
     }
 }

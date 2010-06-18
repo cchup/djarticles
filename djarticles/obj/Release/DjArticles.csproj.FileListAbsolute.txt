@@ -1,0 +1,7 @@
+E:\源码\BroadWisdom\bin\DjArticles.dll
+E:\源码\BroadWisdom\bin\DjArticles.pdb
+E:\源码\BroadWisdom\DjArticles\src\obj\Release\ResolveAssemblyReference.cache
+E:\源码\BroadWisdom\DjArticles\src\obj\Release\DjArticles.dll
+E:\源码\BroadWisdom\DjArticles\src\obj\Release\DjArticles.pdb
+E:\源码\BroadWisdom\web\bin\DjArticles.dll
+E:\源码\BroadWisdom\web\bin\DjArticles.pdb

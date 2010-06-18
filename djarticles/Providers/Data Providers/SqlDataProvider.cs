@@ -177,6 +177,16 @@ namespace DjArticles.Providers.Data_Providers
         }
 
         /// <summary>
+        /// 删除当前分类下的所有文章
+        /// </summary>
+        /// <param name="articleID"></param>
+        public override void DeleteArticlesByCategory(int categoryId)
+        {
+            string commandName = getCommandName("Article", "DeleteByCategory");
+            SqlHelper.ExecuteNonQuery(this._connectionString, commandName, categoryId);
+        }
+
+        /// <summary>
         /// 更新文章
         /// </summary>
         /// <param name="ArticleID"></param>
@@ -331,12 +341,19 @@ namespace DjArticles.Providers.Data_Providers
 
         public override void DeleteComment(int CommentID)
         {
-            throw new NotImplementedException();
+            string commandName = getCommandName("Comment", "Delete");
+            SqlHelper.ExecuteNonQuery(this._connectionString, commandName, CommentID);
         }
 
+        /// <summary>
+        /// 获取评论信息
+        /// </summary>
+        /// <param name="CommentID"></param>
+        /// <returns></returns>
         public override IDataReader GetComment(int CommentID)
         {
-            throw new NotImplementedException();
+            string commandName = getCommandName("Comment", "Select");
+            return SqlHelper.ExecuteReader(this._connectionString, commandName, CommentID);
         }
 
         /// <summary>
