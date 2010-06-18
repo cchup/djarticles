@@ -1,0 +1,18 @@
+/* Skin Colored Wong */
+.TagCloud-ColoredWong {margin: 0;padding: 0;background-color:#990000;
+           font-style: normal;font-variant: normal;font-weight: 400;font-size: 100%;line-height: 160%;text-align: center;}
+		   
+.TagCloud-ColoredWong span a {margin-top: 0px;margin-right: 5px;margin-bottom: 0px;margin-left: 5px;
+                  white-space: nowrap;text-transform: capitalize;color: white;font-family: "Georgia", "Times New Roman", "Times", serif;}
+				  
+.TagCloud-ColoredWong span a:hover {background-color:white;color:#990000;text-decoration:none}
+
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_0 {color:#d26666;}
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_1 {color:#db8787;}
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_2 {color:white;}
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_3 {color:#d26666;} 
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_4 {color:#db8787;}
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_5 {color:white;}
+.TagCloud-ColoredWong span .CloudItem-ColoredWong_6 {color:#d26666;}
+
+.TagCloud-ColoredWong hr {display:none;}
