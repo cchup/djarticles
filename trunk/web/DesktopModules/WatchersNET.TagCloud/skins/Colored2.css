@@ -1,0 +1,16 @@
+/* Skin COLORED2 TAGS */
+.TagCloud-Colored2 {margin: 0;padding: 0;
+           font-style: normal;font-variant: normal;font-weight: 400;font-size: 100%;line-height: 160%;text-align: center;}
+		   
+.TagCloud-Colored2 span a {margin-top: 0px;margin-right: 5px;margin-bottom: 0px;margin-left: 5px;
+                  white-space: nowrap;text-transform: capitalize;color: #763712;font-family: "Georgia", "Times New Roman", "Times", serif;}
+				  
+.TagCloud-Colored2 span a:hover {background-color:black;color:white;text-decoration:none}
+
+.TagCloud-Colored2 span .CloudItem-Colored2_0 {color:#8ab027;}
+.TagCloud-Colored2 span .CloudItem-Colored2_1 {color:#a49a50;}
+.TagCloud-Colored2 span .CloudItem-Colored2_2 {color:#f3764b;}
+.TagCloud-Colored2 span .CloudItem-Colored2_3 {color:#dd8105;}
+.TagCloud-Colored2 span .CloudItem-Colored2_4 {color:#8ab027;}
+.TagCloud-Colored2 span .CloudItem-Colored2_5 {color:#a49a50;}
+.TagCloud-Colored2 span .CloudItem-Colored2_6 {color:#f3764b;}

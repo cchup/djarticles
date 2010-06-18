@@ -1,0 +1,19 @@
+/* Skin Colored Purple */
+.TagCloud-ColoredPurple {margin: 0;padding: 0;background-color:#333;border:2px solid #ccc;
+           font-style: normal;font-variant: normal;font-weight: 400;font-size: 100%;line-height: 160%;text-align: center;}
+		   
+.TagCloud-ColoredPurple span a {margin-top: 0px;margin-right: 5px;margin-bottom: 0px;margin-left: 5px;
+                  white-space: nowrap;text-transform: capitalize;color: #ccc;font-family: "Lucida Sans Unicode";}
+				  
+.TagCloud-ColoredPurple span a:hover {text-decoration:underline}
+
+
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_0 {color:#ff42a5;}
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_1 {color:#ffc4e2;}
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_2 {color:#ccc;}
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_3 {color:#ff84c5;} 
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_4 {color:#ff0084;}
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_5 {color:#ff42a5;}
+.TagCloud-ColoredPurple span .CloudItem-ColoredPurple_6 {color:#ffc4e2;}
+
+.TagCloud-ColoredPurple hr {display:none;}
