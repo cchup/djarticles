@@ -84,10 +84,10 @@ namespace DjArticles.Common
             {
                 return "";
             }
-            if (editorControl.RichText != null)
-            {
-                return editorControl.RichText.Text;
-            }
+            //if (editorControl.RichText != null && editorControl.)
+            //{
+            //    return editorControl.RichText.Text;
+            //}
             return editorControl.Text;
         }
     }

@@ -4,13 +4,13 @@
 <asp:Label ID="lblMessage" runat="server" />
 <ul class="article_list_title">
     <asp:Repeater ID="lstArticles" runat="server" OnItemDataBound="Item_Bound"
-        EnableViewState="false">
+        EnableViewState="false" onitemcommand="lstArticles_ItemCommand">
         <ItemTemplate>
             <li>
-                <p>
+                <span class="article_title">
                     <asp:HyperLink CssClass="Normal" ID="titleLink" runat="server" NavigateUrl='<%# GetArticleDetailUrl(DataBinder.Eval(Container.DataItem,"ArticleID"))  %>'  Text='<%# Eval("Title") %>' />
-                </p>
-                <span>
+                </span>
+                <span class="article_other">
                     <%# Eval("CreatedDate", "{0:yyyy-MM-dd}") %>
                 </span>
                 <div class="clear"></div>

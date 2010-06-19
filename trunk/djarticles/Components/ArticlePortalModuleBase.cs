@@ -298,15 +298,14 @@ namespace DjArticles.Components
         {
             return Localization.GetString(name,this.LocalResourceFile);
         }
-
+        private const string MessageKey = "message_alert";
         /// <summary>
         /// 弹出提示
         /// </summary>
         /// <param name="message"></param>
         protected void ShowMessage(string message)
         {
-            string messageScript=" <script   language= 'javascript '> alert( '该用户名已被占用，请换一个用户名！ '); </script> ";
-            this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "message", messageScript);
+            this.Page.ClientScript.RegisterStartupScript(this.GetType(), MessageKey, "alert('" + message + "');", true);
         }
     }
 }

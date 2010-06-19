@@ -29,6 +29,8 @@ namespace DjArticles.Components
         public abstract IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, DbParameter paTotalCount);
         public abstract IDataReader GetAllArticles();
         public abstract IDataReader GetArticle(int articleId);
+        public abstract IDataReader GetPassedArticles();
+        public abstract IDataReader GetPassedArticles(int categoryId);
 
         public abstract void DeleteArticlesByCategory(int categoryId);
         public abstract void DeleteArticle(int ArticleID);

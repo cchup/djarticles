@@ -30,12 +30,12 @@
 .Article H3{ font-size:14px; font-weight:bold; color:#105cb6;}
 ul.article_list_title{ list-style-type:none; line-height:24px;margin:0px; padding:0px;}
 ul.article_list_title li{ list-style-type:none; margin:0px; width:100%}
-ul.article_list_title p{  float:left; line-height:18px; color:#999999; width:auto !important; vertical-align:middle; padding-top:2px;}
-ul.article_list_title p a{padding-left:15px; background:url(images/dian.jpg) no-repeat left;}
-ul.article_list_title span{ float:right; color:#999999; font-size:12px;}
+ul.article_list_title .aclrtie_title{  float:left; line-height:18px; color:#999999; width:auto !important; vertical-align:middle; padding-top:2px;}
+ul.article_list_title .article_title a{padding-left:15px; background:url(images/dian.jpg) no-repeat left;}
+ul.article_list_title .article_other{ float:right; color:#999999; font-size:12px;}
 /*分类列表样式*/
 .LinksWrap{}
-.LinksWrap li a{ line-height:25px;  display:block; border-bottom:#dddddd solid 1px;padding: 0px 5px 0px 27px; border-color:#484848; overflow:hidden; text-decoration:none; background:url(images/list-icon.png) no-repeat 6px 7px; font-size:13px;}
+.LinksWrap li a{ line-height:25px;  display:block; border-bottom:#dddddd dashed 1px;padding: 0px 5px 0px 27px; border-color:#484848; overflow:hidden; text-decoration:none; background:url(images/list-icon.png) no-repeat 6px 7px; font-size:13px;}
 .LinksWrap li a:hover{ background-color:#7ac62e; color:White;}
 .LinksWrap li div{ padding-left:15px; display:block;}
 /*评论样式*/
