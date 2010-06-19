@@ -1,0 +1,19 @@
+/* Skin Colored Waves */
+.TagCloud-ColoredWaves {margin: 0;padding: 0;background-color:#333;
+           font-style: normal;font-variant: normal;font-weight: 400;font-size: 100%;line-height: 160%;text-align: center;}
+		   
+.TagCloud-ColoredWaves span a {margin-top: 0px;margin-right: 5px;margin-bottom: 0px;margin-left: 5px;
+                  white-space: nowrap;text-transform: capitalize;color: #eefaad;text-decoration:none;border-bottom: 2px solid #ff9900}
+				  
+.TagCloud-ColoredWaves span a:hover {text-decoration:underline}
+
+
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_0 {color:#eefaad;}
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_1 {color:#aad815;}
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_2 {color:#039faf;}
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_3 {color:#eefaad;} 
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_4 {color:#aad815;}
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_5 {color:#ff7600;}
+.TagCloud-ColoredWaves span .CloudItem-ColoredWaves_6 {color:#039faf;}
+
+.TagCloud-ColoredWaves hr {display:none;}
