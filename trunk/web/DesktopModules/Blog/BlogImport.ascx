@@ -28,7 +28,7 @@
      <asp:Label ID="lblCategory" runat="server" Visible="True" CssClass="Normal" Text="Category:" />
     </asp:TableCell>
     <asp:TableCell>
-     <asp:DropDownList ID="ddlBlogs" runat="server" Text=" " />
+     <asp:DropDownList ID="ddlBlogs" runat="server"/>
     </asp:TableCell>
     <asp:TableCell HorizontalAlign="Right">
      <asp:CheckBox ID="chkImport" runat="server" CssClass="Normal" ResourceKey="chkImport" Text=" " />
@@ -70,5 +70,5 @@
   </asp:Table>
  </ItemTemplate>
 </asp:DataList>
-<asp:LinkButton ID="cmdImport" ResourceKey="cmdImport" runat="server" CssClass="CommandButton" BorderStyle="None" OnClick="cmdImport_Click" Style="height: 19px" Text="Import" />&nbsp;
+<asp:LinkButton ID="cmdImport" ResourceKey="cmdImport" runat="server" CssClass="CommandButton" BorderStyle="None" Style="height: 19px" Text="Import" />&nbsp;
 <asp:LinkButton ID="cmdCancel" ResourceKey="cmdCancel" runat="server" CssClass="CommandButton" BorderStyle="None" CausesValidation="False" Text="Cancel" />&nbsp; 
