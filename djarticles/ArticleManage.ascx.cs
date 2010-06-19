@@ -28,7 +28,7 @@ namespace DjArticles
         /// </summary>
         private void BindArticlesSource()
         {
-            this.grdArticles.DataSource = controller.GetArticles();
+            this.grdArticles.DataSource = controller.GetAllArticles();
             this.grdArticles.DataBind();
         }
 
@@ -87,7 +87,6 @@ namespace DjArticles
 
         protected void grdArticles_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            ShowMessage(e.CommandName.ToLower()+"，"+e.CommandArgument.ToString());
             int articleId = Null.NullInteger;
             if (e.CommandArgument != null)
             {
@@ -99,13 +98,14 @@ namespace DjArticles
             }
             switch (e.CommandName.ToLower())
             {
-                case "DeleteArticle":
-                     controller.DeleteArticle(articleId);
+                case "deletearticle":
+                    controller.DeleteArticle(articleId);
                     break;
                 default:
                     break;
             }
             BindArticlesSource();
+            ShowMessage("删除成功！");
         }
 
         protected void cmdSearch_Click(object sender, EventArgs e)

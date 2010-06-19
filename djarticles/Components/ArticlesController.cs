@@ -34,13 +34,22 @@ namespace DjArticles.Components
         /// 查询所有的文章
         /// </summary>
         /// <returns></returns>
-        public List<ArticleInfo> GetArticles()
+        public List<ArticleInfo> GetAllArticles()
         {
             return CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetAllArticles());
         }
 
         /// <summary>
-        /// 查询文章列表
+        /// 查询所有的文章
+        /// </summary>
+        /// <returns></returns>
+        public List<ArticleInfo> GetPassedArticles()
+        {
+            return CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetPassedArticles());
+        }
+
+        /// <summary>
+        /// 查询文章列表（已发布的）
         /// </summary>
         /// <param name="filterByCategory">是否按分类进行查询</param>
         /// <param name="filterCategoryID">要查询的分类</param>
@@ -57,11 +66,6 @@ namespace DjArticles.Components
             {
                 throw new ArticlesException("分页大小必须指定！");
             }
-            // 下面的代码注释掉：如果不按模块分类，可能系统接受模块ID参数也可以查询指定模块
-            //if (!filterByCategory)
-            //{
-            //    filterCategoryID = Null.NullInteger;
-            //}
             if (willPage)
             {
                 DbParameter paTotalCount = DataProvider.Instance().GetParameter("totalCount", Null.NullInteger);
@@ -78,14 +82,14 @@ namespace DjArticles.Components
             }
             else
             {
-                List<ArticleInfo> articles = this.GetArticles(filterCategoryID);
+                List<ArticleInfo> articles = this.GetPassedArticles(filterCategoryID);
                 totalCount = articles.Count;
                 return articles;
             }
         }
 
         /// <summary>
-        /// 查获分类文章，如果没有置顶分类查询所有的文章
+        /// 查获分类文章，如果没有指定分类查询所有的文章
         /// </summary>
         /// <param name="categoryId"></param>
         /// <returns></returns>
@@ -93,11 +97,28 @@ namespace DjArticles.Components
         {
             if (categoryId == Null.NullInteger)
             {
-                return this.GetArticles();
+                return this.GetAllArticles();
             }
             else
             {
                 return CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetArticles(categoryId));
+            }
+        }
+
+        /// <summary>
+        /// 查获分类文章（已通过），如果没有指定分类查询所有的文章
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
+        public List<ArticleInfo> GetPassedArticles(int categoryId)
+        {
+            if (categoryId == Null.NullInteger)
+            {
+                return this.GetPassedArticles();
+            }
+            else
+            {
+                return CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetPassedArticles(categoryId));
             }
         }
 

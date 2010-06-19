@@ -189,13 +189,14 @@ namespace DjArticles
                 this.stars = article.Stars;
                 // 设置控件值
                 this.lblTitle.Text = this.title;
-                this.ltlContent.Text = this.content;
+                this.ltlContent.Text = Server.HtmlDecode(this.content);
                 this.lblCreateDate.Text = this.createdDate.ToString("yyyy年M月d日 hh:mm:ss");
                 this.lblHits.Text = this.hits.ToString();
                 this.hdfArticleId.Value = this.articleId.ToString(); 
                 this.lblCommentCount1.Text = this.commentCount.ToString();
                 this.lblCommentCount2.Text = this.commentCount.ToString();
                 this.lblKeywords.Text = this.keyWords;
+                this.cmdAddComment.Enabled = !this.allowComment;
                 this.BindingComments(articleId);
             }
 
@@ -276,7 +277,7 @@ namespace DjArticles
             commentInfo.Comment = commentMessage;
             commentInfo.ArticleID = articleId;
             commentInfo.CreatedByUserID = this.UserId;
-            commentInfo.CreatedByUserName = this.GetUserName();
+            commentInfo.CreatedByUserName = this.UserInfo.FullName;
             commentInfo.Ip = Request.UserHostAddress;
             commentController.AddComment(commentInfo);
             this.BindingComments(articleId);
@@ -377,6 +378,7 @@ namespace DjArticles
 
         protected void lstComments_ItemCommand(object source, DataListCommandEventArgs e)
         {
+            ShowMessage(e.CommandName + "," + e.CommandArgument);
             this.valCommentAuthor.Enabled = false;
             this.valComment.Enabled = false;
             int commentId=Null.NullInteger;
@@ -400,6 +402,7 @@ namespace DjArticles
             }
             articleId = this.GetIntParameter("ArticleId");
             this.BindingComments(articleId);
+            ShowMessage("删除成功！");
         }
         #endregion
 

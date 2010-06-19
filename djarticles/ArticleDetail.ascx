@@ -34,7 +34,8 @@
         </p>
         <asp:ImageButton ID="lnkDeleteAllUnapproved" runat="server" ImageUrl="~/images/delete.gif"
             Visible="false" CausesValidation="false" AlternateText="Delete Unaproved" />
-        <asp:DataList ID="lstComments" runat="server" Width="100%" 
+        <asp:DataList ID="lstComments" runat="server" Width="100%"
+            EnableViewState="true" 
             onitemdatabound="lstComments_ItemDataBound" 
             onitemcommand="lstComments_ItemCommand">
             <ItemTemplate>
@@ -44,11 +45,7 @@
                             <asp:Image runat="server" Width="48" ID="imgGravatar" AlternateText="Gravatar" />
                         </asp:Panel>
                         <p>
-                           <%-- <asp:ImageButton ID="lnkEditComment" runat="server" Visible="<%# IsEditable %>" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "CommentID") %>'
-                                CommandName="EditComment" ImageUrl="~/images/edit.gif" AlternateText="Edit Comment" />
-                            <asp:LinkButton ID="btEditComment" runat="server" Visible="<%# IsEditable %>" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "CommentID") %>'
-                                CommandName="EditComment" resourcekey="cmdEdit" CssClass="CommandButton" />
-                           --%>  <asp:ImageButton ID="lnkDeleteComment" runat="server" Visible="<%# IsEditable %>" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "CommentID") %>'
+                            <asp:ImageButton ID="lnkDeleteComment" runat="server" Visible="<%# IsEditable %>" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "CommentID") %>'
                                 CommandName="DeleteComment" ImageUrl="~/images/delete.gif" CausesValidation="false"
                                 AlternateText="Delete Comment" />
                             <asp:LinkButton ID="btDeleteComment" runat="server" Visible="<%# IsEditable %>" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "CommentID") %>'

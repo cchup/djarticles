@@ -129,11 +129,12 @@ namespace DjArticles
                 articleImage = new Image();
             }
             object _objPicUrl =DataBinder.Eval(e.Item.DataItem, "DefaultPicUrl");
-            if (_objPicUrl != null)
+            if (_objPicUrl != null && !string.IsNullOrEmpty(_objPicUrl.ToString().Trim()))
             {
+                articleImage.Visible = true;
                 articleImage.ImageUrl = _objPicUrl.ToString();
             }
-            if (string.IsNullOrEmpty(articleImage.ImageUrl))
+            else
             {
                 articleImage.Visible = false;
             }
@@ -170,7 +171,6 @@ namespace DjArticles
             int _articleId = Null.NullInteger;
             if (articleId != null)
             {
-                
                 if(!int.TryParse(articleId.ToString(),out _articleId)){
                     _articleId=Null.NullInteger;
                 }
@@ -240,7 +240,7 @@ namespace DjArticles
 
         protected void Item_Bound(object sender, RepeaterItemEventArgs e)
         {
-            if (e.Item.ItemType == ListItemType.Item)
+            if (e.Item.ItemType == ListItemType.Item|| e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 ShowArticles(e);
             }
@@ -265,5 +265,10 @@ namespace DjArticles
         }
 
         #endregion
+
+        protected void lstArticles_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
     }
 }

@@ -88,12 +88,12 @@ namespace DjArticles
             {
                 case "deletecategory":
                     controller.DeleteCategory(categoryId);
-                    
                     break;
                 default:
                     break;
             }
             BindCategorySource();
+            ShowMessage("删除成功！");
         }
     }
 }

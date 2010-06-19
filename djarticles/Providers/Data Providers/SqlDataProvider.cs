@@ -114,12 +114,34 @@ namespace DjArticles.Providers.Data_Providers
         }
 
         /// <summary>
+        /// 
+        /// 获取某一分类的文章(已通过）
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
+        public override IDataReader GetPassedArticles(int categoryId)
+        {
+            string commandName = getCommandName("Article", "SelectCategoryPassedAll");
+            return SqlHelper.ExecuteReader(this._connectionString, commandName, categoryId);
+        }
+
+        /// <summary>
         /// 查询所有文章，默认按照创建时间排序
         /// </summary>
         /// <returns></returns>
         public override IDataReader GetAllArticles()
         {
             string commandName = getCommandName("Article", "SelectAll");
+            return SqlHelper.ExecuteReader(this._connectionString, commandName);
+        }
+
+        /// <summary>
+        /// 查询文章，只查询已发布的文章
+        /// </summary>
+        /// <returns></returns>
+        public override IDataReader GetPassedArticles()
+        {
+            string commandName = getCommandName("Article", "SelectArticles");
             return SqlHelper.ExecuteReader(this._connectionString, commandName);
         }
 

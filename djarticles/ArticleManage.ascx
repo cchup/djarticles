@@ -20,7 +20,7 @@
      </p>
 </div>
 
-<dj:djgridview id="grdArticles" runat="server" enableviewstate="False" allowpaging="true"
+<dj:djgridview id="grdArticles" runat="server" allowpaging="true"
     custompager="True" autogeneratecolumns="False" pagesize="15"
      BackColor="#CAD9EA"  CellPadding="3"  GridLines="None"   
     CellSpacing="1"   Width="100%" onrowcommand="grdArticles_RowCommand" >
@@ -47,6 +47,7 @@
         </asp:BoundField>
         <asp:TemplateField HeaderText="Passed">
             <HeaderStyle HorizontalAlign="Center" Width="60px" CssClass="NormalBold"></HeaderStyle>
+            <ItemStyle HorizontalAlign="Center" />
             <ItemTemplate>
                 <asp:Image runat="server" ID="imgActived" ImageUrl="~/images/checked.gif" Visible='<%# EvalChecked(Eval("Passed")) %>'/>
                 <asp:Image runat="server" ID="imgNotActived" ImageUrl="~/images/unchecked.gif" Visible='<%# !EvalChecked(Eval("Passed")) %>'/>
@@ -54,6 +55,7 @@
         </asp:TemplateField>
         <asp:TemplateField>
             <HeaderStyle Width="100px"></HeaderStyle>
+            <ItemStyle HorizontalAlign="Center" />
             <ItemTemplate>
                 <asp:HyperLink ID="editPreview" NavigateUrl='<%# EditUrl("ArticleID",DataBinder.Eval(Container.DataItem,"ArticleID").ToString(),"ArticleView") %>'
                     runat="server">

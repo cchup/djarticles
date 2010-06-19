@@ -186,7 +186,7 @@ namespace DjArticles
                 this.stars = article.Stars;
                 // 设置控件值
                 this.lblTitle.Text = this.title;
-                this.ltlContent.Text = this.content;
+                this.ltlContent.Text = Server.HtmlDecode(this.content);
                 this.lblCreateDate.Text = this.createdDate.ToString("yyyy年M月d日 hh:mm:ss");
                 this.lblHits.Text = this.hits.ToString();
                 this.hdfArticleId.Value = this.articleId.ToString();
