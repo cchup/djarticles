@@ -31,17 +31,17 @@
 	{color: #e2f2d4;background:none!important;}
 
 .RadMenu_TRMenu .rmRootGroup .rmText
-	{color:#e2f2d4;padding: 0px 20px 0px 15px!important;}
+	{color:#e2f2d4;padding: 0px 10px 0px 10px!important;}
 	
 
 
 .RadMenu_TRMenu .rmRootGroup .rmLink:hover,.RadMenu_TRMenu .rmRootGroup .rmFocused,.RadMenu_TRMenu .rmRootGroup .rmSelected, 
 .RadMenu_TRMenu .rmRootGroup .rmExpanded,.RadMenu_TRMenu .rmRootGroup .rmExpanded:hover
-	{color: #ffffff; background:url(images/nav-hover.gif) 0 0 no-repeat!important; padding: 0px 0 0px 15px!important;}
+	{color: #ffffff; background:url(images/nav-hover.gif) 0 0 no-repeat!important; padding: 0px 0 0px 10px!important;}
 
 .RadMenu_TRMenu .rmLink:hover .rmText,.RadMenu_TRMenu .rmFocused .rmText,.RadMenu_TRMenu .rmSelected .rmText, .RadMenu_TRMenu .rmExpanded .rmText,
 .RadMenu_TRMenu .rmExpanded:hover .rmText
-	{ background:url(images/nav-hover-right.gif) 100% 0 no-repeat!important; color:#FFF; padding: 0px 20px 0px 0!important;}
+	{ background:url(images/nav-hover-right.gif) 100% 0 no-repeat!important; color:#FFF; padding: 0px 15px 0px 0!important;}
 	
 .RadMenu_TRMenu .rmExpanded,.RadMenu_TRMenu .rmExpanded:hover
 	{color: #fff;}
