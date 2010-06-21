@@ -42,6 +42,7 @@ TopMain Ends here
 .BodyContentJoint{ background:url(images/box-joint.gif) 0 0 no-repeat; width:907px; height:84px;}
 .BodyContentBottom{ background:url(images/bottom-curve.gif) 0 0 no-repeat; width:907px; height:14px;}
 
+.ContentTopPane{width:828px; margin:0 0 0 0px; padding:0 0 5px 0; float:left;}
 .ContentPane1{ padding:3px 0 5px 40px; clear:both;}
 .ContentPane2{ float:left; width:360px;}
 .ContentPane3{ float:right; width:478px;}
@@ -77,8 +78,8 @@ TopMain Ends here
 /* BottomPane start here */
 .BottomPane{background:url(images/bottom-bg.gif) 0 100% repeat-x; }
 .FooterPane{background:url(images/footer-bg.jpg) 50% 0 no-repeat;}
-.FooterInner{	width:730px; margin:0 auto; padding:8px 0 0 170px; height:369px;}
-.FooterLeft{ float:left; width:460px;}
+.FooterInner{	width:796px; margin:0 auto; padding:8px 0 0 120px; height:369px;}
+.FooterLeft{ float:left; width:540px;}
 .FooterRight{ float:right; width:250px; text-align:right;}
 /* BottomPane ends here */
 
