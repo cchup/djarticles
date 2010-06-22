@@ -213,16 +213,16 @@
     <value>Feedback Moderation</value>
   </data>
   <data name="plCaptcha.Text" xml:space="preserve">
-    <value>Security Code</value>
+    <value>验证码</value>
   </data>
   <data name="plCaptcha.Help" xml:space="preserve">
-    <value>Enter the security code.</value>
+    <value>验证码需要输入.</value>
   </data>
   <data name="CaptchaText.Text" xml:space="preserve">
-    <value>Enter the code shown above in the box below</value>
+    <value>请输入上面方框内显示的验证码</value>
   </data>
   <data name="InvalidCaptcha.Text" xml:space="preserve">
-    <value>Incorrect Security Code</value>
+    <value>验证码错误</value>
   </data>
   <data name="cmdModeratePosts.Text" xml:space="preserve">
     <value>Moderate Posts</value>
@@ -231,6 +231,24 @@
     <value>&lt;br/&gt;请输入留言内容.</value>
   </data>
   <data name="valName.Text" xml:space="preserve">
-    <value>&lt;br\&gt;请输入您的姓名.</value>
+    <value>&lt;br/&gt;请输入您的姓名.</value>
+  </data>
+  <data name="plOrgName.Help" xml:space="preserve">
+    <value>输入您所在的单位或机构的名称</value>
+  </data>
+  <data name="plOrgName.Text" xml:space="preserve">
+    <value>单位(机构)名称</value>
+  </data>
+  <data name="plTelephone.Help" xml:space="preserve">
+    <value>输入您的固定电话或移动电话，以方便我们联系您</value>
+  </data>
+  <data name="plTelephone.Text" xml:space="preserve">
+    <value>联系电话</value>
+  </data>
+  <data name="valOrgName.Text" xml:space="preserve">
+    <value>&lt;br/&gt;单位(机构)名称需要输入</value>
+  </data>
+  <data name="valTelephone.Text" xml:space="preserve">
+    <value>&lt;br/&gt;联系电话需要输入</value>
   </data>
 </root>
