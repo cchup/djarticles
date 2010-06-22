@@ -94,14 +94,17 @@
           <!-- Contant panel 4 start -->
           <div class="ContentPane4">
             <div class="ContentPane1T" id="ContentPane1" runat="server" visible="false"></div>
-            <div class="ContentPane5" id="ContentPane5" runat="server" visible="false"></div>
-            <div class="ContentPane6" id="ContentPane6" runat="server" visible="false"></div>
-            <div class="ContentPane7" id="ContentPane7" runat="server" visible="false"></div>
-            <div class="ClearFloat"></div>
-	    <div class="ContentPane5" id="ContentPane11" runat="server" visible="false"></div>
-            <div class="ContentPane6" id="ContentPane12" runat="server" visible="false"></div>
-            <div class="ContentPane7" id="ContentPane13" runat="server" visible="false"></div>
-            <div class="ClearFloat"></div>
+		<div class="ContentPaneLeft">
+			 <div class="ContentPane5" id="ContentPane5" runat="server" visible="false"></div>
+            		 <div class="ContentPane6" id="ContentPane6" runat="server" visible="false"></div>
+			 <div class="ClearFloat"></div>
+			 <div class="ContentPane5" id="ContentPane11" runat="server" visible="false"></div>
+            		 <div class="ContentPane6" id="ContentPane12" runat="server" visible="false"></div>
+		</div>
+           	<div class="ContentPaneRight" >
+			<div class="ContentPane7" id="ContentPane7" runat="server" visible="false"></div>
+		</div>
+            	<div class="ClearFloat"></div>
           </div>
           <!-- Contant panel 4 end -->
         </div>
