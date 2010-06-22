@@ -1,7 +1,5 @@
 E:\源码\BroadWisdom\modules\Feedback_04.04.03_Source\bin\DotNetNuke.Modules.Feedback.SqlDataProvider.dll
 E:\源码\BroadWisdom\modules\Feedback_04.04.03_Source\bin\DotNetNuke.Modules.Feedback.SqlDataProvider.pdb
-E:\源码\BroadWisdom\web\bin\DotNetNuke.Modules.Feedback.SqlDataProvider.dll
-E:\源码\BroadWisdom\web\bin\DotNetNuke.Modules.Feedback.SqlDataProvider.pdb
 E:\源码\BroadWisdom\modules\Feedback_04.04.03_Source\Providers\DataProviders\SqlDataProvider\obj\Debug\ResolveAssemblyReference.cache
 E:\源码\BroadWisdom\modules\Feedback_04.04.03_Source\Providers\DataProviders\SqlDataProvider\obj\Debug\DotNetNuke.Modules.Feedback.SqlDataProvider.dll
 E:\源码\BroadWisdom\modules\Feedback_04.04.03_Source\Providers\DataProviders\SqlDataProvider\obj\Debug\DotNetNuke.Modules.Feedback.SqlDataProvider.pdb

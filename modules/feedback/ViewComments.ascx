@@ -2,7 +2,7 @@
 <%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ViewComments.ascx.vb"
     Inherits="DotNetNuke.Modules.Feedback.ViewComments" TargetSchema="http://schemas.microsoft.com/intellisense/ie3-2nav3-0" %>
 <style type="text/css">
-    .feedbacklist blockquote
+    .feedbacklist .blockquote
     {
         padding: 2px 5px 2px 5px;
         border: #aaa 1px solid;
@@ -10,7 +10,7 @@
         min-height:45px;
         margin:0px;
     }
-    .feedbacklist cite
+    .feedbacklist .cite
     {
         position:relative;
         padding:7px 0px 10px 15px;
@@ -26,16 +26,16 @@
                 <asp:DataList ID="dlComments" Width="100%" runat="server" RepeatColumns="1">
                     <ItemTemplate>
                         <div class="feedbacklist">
-                            <blockquote>
+                            <div class="blockquote">
                                 <asp:Label ID="lblSubject" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Subject") %>'
                                     CssClass="subhead" />
                                 <span style="line-height: 23px;">
                                     <asp:Label ID="lblMessage" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Message") %>'
                                         CssClass="Normal" />
                                 </span>
-                            </blockquote>
-                            <cite>
-                                <h3>
+                            </div>
+                            <div class="cite">
+                                <span>
                                     <asp:Label ID="lblAuthor" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "CreatedByName") %>'
                                         CssClass="NormalBold" />&nbsp;&nbsp;
                                     <asp:Label ID="lblDate" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "DateCreated","{0:yyyy-M-d hh:mm:ss}") %>'
@@ -44,20 +44,20 @@
                                         CssClass="NormalBold" />&nbsp;&nbsp;
                                     <asp:Label ID="lblFeedbackID" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "FeedbackID") %>'
                                         Visible="False" />
-                                </h3>
-                                <div visible='<%# IsEditable %>' class="feedback_contract">
+                                </span><br />
+                                <asp:Panel visible='<%# IsEditable %>' runat="server" class="feedback_contract">
                                     <%--  <asp:label ID="Label1" class="SubHead" Runat="server" resourcekey="lblContactInfo"></asp:label><br />--%>
                                     <asp:Label ID="Label2" class="NormalBold" runat="server" resourcekey="lblEmail"></asp:Label><asp:Label
                                         ID="lblEmail" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "CreatedByEmail") %>'
-                                        CssClass="Normal" Visible='<%# IsEditable %>' />&nbsp;&nbsp;
+                                        CssClass="Normal"  />&nbsp;&nbsp;
                                     <asp:Label ID="Label3" class="NormalBold" runat="server" resourcekey="lblTelephone"></asp:Label><asp:Label
                                         ID="lblTelephone" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Telephone") %>'
-                                        CssClass="Normal" Visible='<%# IsEditable %>' />&nbsp;&nbsp;
+                                        CssClass="Normal" />&nbsp;&nbsp;
                                     <asp:Label ID="Label6" class="NormalBold" runat="server" resourcekey="lblOrgName"></asp:Label><asp:Label
                                         ID="lblOrgName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "OrgName") %>'
-                                        CssClass="Normal" Visible='<%# IsEditable %>' />
-                                </div>
-                            </cite>
+                                        CssClass="Normal" />
+                                </asp:Panel >
+                            </div>
                         </div>
                         <%--<hr style="width: 100%; size: 1;" />--%>
                     </ItemTemplate>
