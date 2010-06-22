@@ -68,7 +68,7 @@ TopMain Ends here
 
 .ContentPane1T{ margin:0 0 5px 0; min-height:5px;}
 .ContentPaneLeft{ float:left; width:554px; min-height:20px;}
-.ContentPaneRight{ float:right; width:310px; min-height:20px;}
+.ContentPaneRight{ float:right; width:260px; min-height:20px;}
 /* ContentPane Ends here */
 
 .FontSizerPane{ float:left; width:200px; margin:0 0px 0 0; position:relative;}
