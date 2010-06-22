@@ -1,0 +1,213 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/*****													*****/
+/*****                                                  *****/
+/************************************************************/
+
+/* Modify the Feedback Table to include the name of the user sending the feedback */
+if col_length('{databaseOwner}[{objectQualifier}Feedback]','Telephone') is  NULL
+	BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}Feedback] ADD
+		[Telephone] [nvarchar] (200) DEFAULT NULL
+	END
+GO
+if col_length('{databaseOwner}[{objectQualifier}Feedback]','OrgName') is  NULL
+	BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}Feedback] ADD
+		[OrgName] [nvarchar] (400) DEFAULT NULL
+	END
+GO
+
+ALTER PROCEDURE {databaseOwner}[{objectQualifier}CreateFeedback]
+	@PortalID int,
+	@CategoryID nvarchar(100), 
+	@CreatedByEmail nvarchar(256), 
+	@ModuleID int, 
+	@Status int,
+	@Message nvarchar(1000),
+	@Subject nvarchar(200),
+	@CreatedByName nvarchar(200),
+	@Telephone nvarchar(200),
+	@OrgName nvarchar(400)
+AS
+INSERT INTO dbo.[dj_Feedback] (
+	PortalID,
+	CategoryID, 
+	CreatedByEmail, 
+	DateCreated, 
+	ModuleID, 
+	Status,
+	Message,
+	Subject,
+	CreatedByName,
+	Telephone,
+	OrgName
+) 
+VALUES (
+	@PortalID,
+	@CategoryID, 
+	@CreatedByEmail, 
+	getdate(),
+	@ModuleID, 
+	@Status,
+	@Message,
+	@Subject,
+	@CreatedByName,
+	@Telephone,
+	@OrgName
+)
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+
+go
+
+ALTER PROCEDURE [dbo].[dj_GetCategoryFeedback]
+ @PortalID int,
+ @CategoryID nvarchar(100),
+ @Status int,
+ @CurrentPage int,
+ @PageSize int
+AS
+ --Create a temp table to hold the current page of data
+ --Add and ID column to count the records
+ CREATE TABLE #TempTable
+ (
+  ID int IDENTITY PRIMARY KEY,
+  PortalID int,
+  FeedbackID int,
+  CategoryID nvarchar(100) COLLATE database_default, 
+  CategoryValue nvarchar(100) COLLATE database_default,
+  CreatedByEmail nvarchar(256) COLLATE database_default, 
+  ApprovedBy int,
+  DateCreated datetime,
+  ModuleID int, 
+  Status int,
+  Message nvarchar(1000) COLLATE database_default,
+  Subject nvarchar(200) COLLATE database_default,
+  CreatedByName nvarchar(200) COLLATE database_default,
+  Telephone  nvarchar(200) COLLATE database_default,
+  OrgName  nvarchar(400) COLLATE database_default
+ )
+--Fill the temp table with the Feedback data
+ IF @CategoryID = ''
+	 BEGIN
+		
+		 INSERT INTO #TempTable 
+		 (
+		PortalID,
+		FeedbackID,
+		CategoryID, 
+		CategoryValue,
+		CreatedByEmail, 
+		ApprovedBy,
+		DateCreated,
+		ModuleID, 
+		Status,
+		Message,
+		Subject,
+		CreatedByName,
+		Telephone,
+		OrgName
+		  )
+		 SELECT
+		F.PortalID,
+		FeedbackID,
+		CategoryID, 
+		(SELECT ListValue FROM dbo.[dj_FeedbackList] WHERE f.CategoryID = dbo.[dj_FeedbackList].ListID),
+		CreatedByEmail, 
+		ApprovedBy,
+		DateCreated,
+		ModuleID, 
+		Status,
+		Message,
+		Subject = CASE WHEN fs.[ListID] IS null THEN [Subject] ELSE fs.[ListValue] END,
+		CreatedByName,
+		Telephone,
+		OrgName
+		FROM dbo.[dj_Feedback] f
+		LEFT OUTER JOIN dbo.[dj_FeedbackList] fs ON f.[Subject] = convert(varchar,fs.ListID)
+		LEFT OUTER JOIN dbo.[dj_FeedbackList] fc ON f.[CategoryID] = convert(varchar,fc.ListID)
+		WHERE 
+		Status = @Status and F.PortalID = @PortalID
+		ORDER BY
+		DateCreated Desc
+	END
+
+ Else
+	 BEGIN
+		 INSERT INTO #TempTable 
+		 (
+		PortalID,
+		FeedbackID,
+		CategoryID, 
+		CategoryValue,
+		CreatedByEmail, 
+		ApprovedBy,
+		DateCreated,
+		ModuleID, 
+		Status,
+		Message,
+		Subject,
+		CreatedByName,
+		Telephone,
+		OrgName
+		  )
+		 SELECT
+		F.PortalID,
+		FeedbackID,
+		CategoryID, 
+		(SELECT ListValue FROM dbo.[dj_FeedbackList] WHERE f.CategoryID = dbo.[dj_FeedbackList].ListID),
+		CreatedByEmail, 
+		ApprovedBy,
+		DateCreated,
+		ModuleID, 
+		Status,
+		Message,
+		Subject = CASE WHEN fs.[ListID] IS null THEN [Subject] ELSE fs.[ListValue] END,
+		CreatedByName,
+		Telephone,
+		OrgName
+		FROM dbo.[dj_Feedback] f
+		LEFT OUTER JOIN dbo.[dj_FeedbackList] fs ON f.[Subject] = convert(varchar,fs.ListID)
+		LEFT OUTER JOIN dbo.[dj_FeedbackList] fc on f.[CategoryID] = convert(varchar,fc.ListID)
+		WHERE 
+		CategoryID = @CategoryID and F.PortalID = @PortalID
+		and Status = @Status
+		ORDER BY
+		DateCreated Desc
+	END
+
+--Return the total number of records available 
+ DECLARE @TotalRecords int
+ SELECT @TotalRecords = COUNT(FeedbackID) FROM #TempTable
+ 
+ --Create variable to identify the first and last record that should be selected
+ DECLARE @FirstRec int, @LastRec int
+ SELECT @FirstRec = (@CurrentPage - 1) * @PageSize
+ SELECT @LastRec = (@CurrentPage * @PageSize + 1)
+ --Select one page of data based on the record numbers above
+ SELECT
+	PortalID,
+	FeedbackID,
+	CategoryID, 
+	CategoryValue,
+	CreatedByEmail, 
+	ApprovedBy,
+	DateCreated,
+	ModuleID, 
+	Status,
+	Message,
+	Subject,
+	CreatedByName,
+	Telephone,
+	OrgName,
+	TotalRecords = @TotalRecords
+ FROM  #TempTable
+ WHERE ID > @FirstRec 
+ AND   ID < @LastRec
+
+
+go

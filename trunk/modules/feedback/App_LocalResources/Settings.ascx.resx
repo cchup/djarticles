@@ -295,4 +295,16 @@ Send Copy &lt;/strong&gt;&amp;ndash; Enabling this option allows a copy of the f
   <data name="plRequireNameField.Text" xml:space="preserve">
     <value>Name Field Required</value>
   </data>
+  <data name="plOrgNameHidden.Text" xml:space="preserve">
+    <value>OrgName Hidden</value>
+  </data>
+  <data name="plOrgNameRequire.Text" xml:space="preserve">
+    <value>OrgName Field Require</value>
+  </data>
+  <data name="plTelephoneHidden.Text" xml:space="preserve">
+    <value>Telephone Hidden</value>
+  </data>
+  <data name="plTelephoneRequire.Text" xml:space="preserve">
+    <value>Telephone Field Require</value>
+  </data>
 </root>

@@ -1,0 +1,12 @@
+DesktopModules\Feedback\CommentSettings.ascx.resx
+DesktopModules\Feedback\FeedBack.ascx.resx
+DesktopModules\Feedback\Moderation.ascx.resx
+DesktopModules\Feedback\Settings.ascx.resx
+DesktopModules\Feedback\ViewComments.ascx.resx
+DesktopModules\Feedback\App_LocalResources\_sgbak\
+Install\Module\Feedback_03.02.01_Install.zip
+Install\Module\Feedback_03.02.01_Install.resources
+Install\Module\Feedback_04.04.01_Install.zip
+Install\Module\Feedback_04.04.01_Install.resources
+Install\Module\Feedback_04.04.02_Install.resources
+Install\Module\Feedback_04.04.02_Install.zip

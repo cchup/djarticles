@@ -120,7 +120,19 @@
   <data name="ControlTitle_commentviewsettings.Text" xml:space="preserve">
     <value>Comment View Settings</value>
   </data>
+  <data name="lblEmail.Text" xml:space="preserve">
+    <value>邮箱：</value>
+  </data>
+  <data name="lblOrgName.Text" xml:space="preserve">
+    <value>单位(机构)名称：</value>
+  </data>
+  <data name="lblTelephone.Text" xml:space="preserve">
+    <value>联系电话：</value>
+  </data>
   <data name="RecordsPage.Text" xml:space="preserve">
     <value>每页记录数</value>
+  </data>
+  <data name="lblContactInfo.Text" xml:space="preserve">
+    <value>个人信息</value>
   </data>
 </root>
