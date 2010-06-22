@@ -59,9 +59,10 @@ namespace DjArticles
                         this.txtName.Text = category.Name;
                         this.txtDescription.Text = category.Description;
                         this.chkIsActive.Checked = category.IsActive;
-                        this.SetDualListValue(this.ctlAdminRoles, category.AdminRoles);
-                        this.SetDualListValue(this.ctlEditRoles, category.EditRoles);
-                        this.SetDualListValue(this.ctlViewRoles, category.ViewRoles);
+                        this.chkIsSpecial.Checked = category.IsSpecial;
+                        //this.SetDualListValue(this.ctlAdminRoles, category.AdminRoles);
+                        //this.SetDualListValue(this.ctlEditRoles, category.EditRoles);
+                        //this.SetDualListValue(this.ctlViewRoles, category.ViewRoles);
                     }
                     else
                     {
@@ -70,9 +71,9 @@ namespace DjArticles
                 }
                 else
                 {
-                    this.SetDualListValue(this.ctlAdminRoles, null);
-                    this.SetDualListValue(this.ctlEditRoles, null);
-                    this.SetDualListValue(this.ctlViewRoles, null);
+                    //this.SetDualListValue(this.ctlAdminRoles, null);
+                    //this.SetDualListValue(this.ctlEditRoles, null);
+                    //this.SetDualListValue(this.ctlViewRoles, null);
                 }
             }
         }
@@ -86,6 +87,7 @@ namespace DjArticles
             category.ParentID = WebControlUtils.GetObjectIntValue(cboParentCategory);
             category.CategoryID = WebControlUtils.GetObjectIntValue(this.hfCategoryID);
             category.CreatedByUserID = this.UserId;
+            category.IsSpecial = this.chkIsSpecial.Checked;
             UserController userController = new UserController();
             if (!Null.IsNull(category.CreatedByUserID))
             {

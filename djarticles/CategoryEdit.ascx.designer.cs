@@ -122,76 +122,22 @@ namespace DjArticles {
         protected global::System.Web.UI.WebControls.CheckBox chkIsActive;
         
         /// <summary>
-        /// dshAuthorize 控件。
+        /// plIsSpecial 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UserControl dshAuthorize;
+        protected global::System.Web.UI.UserControl plIsSpecial;
         
         /// <summary>
-        /// tblAuthorize 控件。
+        /// chkIsSpecial 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tblAuthorize;
-        
-        /// <summary>
-        /// plAdminRoles 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.UserControl plAdminRoles;
-        
-        /// <summary>
-        /// ctlAdminRoles 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.UserControl ctlAdminRoles;
-        
-        /// <summary>
-        /// plEditRoles 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.UserControl plEditRoles;
-        
-        /// <summary>
-        /// ctlEditRoles 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.UserControl ctlEditRoles;
-        
-        /// <summary>
-        /// plViewRoles 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.UserControl plViewRoles;
-        
-        /// <summary>
-        /// ctlViewRoles 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.UserControl ctlViewRoles;
+        protected global::System.Web.UI.WebControls.CheckBox chkIsSpecial;
         
         /// <summary>
         /// btnSave 控件。

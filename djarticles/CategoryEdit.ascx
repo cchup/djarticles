@@ -55,14 +55,24 @@
             <asp:CheckBox ID="chkIsActive" runat="server" CssClass="NormalTextBox"></asp:CheckBox>
         </td>
     </tr>
-    <tr>
+    <tr valign="top">
+        <td class="SubHead">
+            <dnn:label id="plIsSpecial" runat="server" controlname="chkIsSpecial" suffix=":">
+            </dnn:label>
+        </td>
+        <td>
+           <asp:CheckBox ID="chkIsSpecial" runat="server" CssClass="NormalTextBox"></asp:CheckBox>
+        </td>
+    </tr>
+   <%-- <tr>
         <td colspan="2">
             <dnn:sectionhead id="dshAuthorize" cssclass="Head" runat="server" isexpanded="False"
                 text="Authorize Settings" section="tblAuthorize" resourcekey="dshAuthorize" />
         </td>
-    </tr>
+    </tr>--%>
+
 </table>
-<table id="tblAuthorize" runat="server" cellspacing="0" cellpadding="0" width="600"
+<%--<table id="tblAuthorize" runat="server" cellspacing="0" cellpadding="0" width="600"
     summary="Authorize Settings">
     <tr valign="top">
         <td class="SubHead">
@@ -98,7 +108,7 @@
         </td>
     </tr>
 </table>
-<asp:Button ID="btnSave" runat="server" Text="保 存" onclick="btnSave_Click" />
+--%><asp:Button ID="btnSave" runat="server" Text="保 存" onclick="btnSave_Click" />
 <asp:Button ID="btnCancel" runat="server" Text="取 消"
      CausesValidation="false" 
     onclick="btnCancel_Click" />

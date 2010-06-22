@@ -62,14 +62,14 @@ namespace DjArticles.Components
             {
                 throw new ArticlesException("按分类查询时，分类标识ID必须指定！");
             }
-            if (willPage && (pageSize == Null.NullInteger || pageSize == 0))
+            if (willPage && (pageSize == Null.NullInteger || pageSize <= 0))
             {
                 throw new ArticlesException("分页大小必须指定！");
             }
             if (willPage)
             {
                 DbParameter paTotalCount = DataProvider.Instance().GetParameter("totalCount", Null.NullInteger);
-                List<ArticleInfo> articles = CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetArticlesByPage(filterCategoryID, pageSize, currentPage, paTotalCount));
+                List<ArticleInfo> articles = CBO.FillCollection<ArticleInfo>(DataProvider.Instance().GetPassedArticlesByPage(filterCategoryID, pageSize, currentPage, paTotalCount));
                 if (paTotalCount.Value!=null)
                 {
                     totalCount = (int)paTotalCount.Value;

@@ -25,7 +25,7 @@ namespace DjArticles.Components
         // Methods
         public void AddCategory(CategoryInfo objCategoryInfo)
         {
-            DataProvider.Instance().AddCategory( objCategoryInfo.Name,objCategoryInfo.Description,objCategoryInfo.ParentID,objCategoryInfo.Depth,objCategoryInfo.ViewOrder,objCategoryInfo.AdminRoles,objCategoryInfo.EditRoles,objCategoryInfo.ViewRoles,objCategoryInfo.CreatedByUserID,objCategoryInfo.CreatedByUserName,objCategoryInfo.CreatedDate,objCategoryInfo.IsActive);
+            DataProvider.Instance().AddCategory( objCategoryInfo.Name,objCategoryInfo.Description,objCategoryInfo.ParentID,objCategoryInfo.Depth,objCategoryInfo.ViewOrder,objCategoryInfo.AdminRoles,objCategoryInfo.EditRoles,objCategoryInfo.ViewRoles,objCategoryInfo.CreatedByUserID,objCategoryInfo.CreatedByUserName,objCategoryInfo.CreatedDate,objCategoryInfo.IsActive,objCategoryInfo.IsSpecial);
         }
 
         public bool CanEdit(CategoryInfo objCategoryInfo)
@@ -233,7 +233,7 @@ namespace DjArticles.Components
         {
             DataProvider.Instance().UpdateCategory(objCategoryInfo.CategoryID,objCategoryInfo.Name,objCategoryInfo.Description,
                 objCategoryInfo.ParentID,objCategoryInfo.Depth, objCategoryInfo.ViewOrder,objCategoryInfo.AdminRoles,objCategoryInfo.EditRoles,
-                objCategoryInfo.ViewRoles,objCategoryInfo.CreatedByUserName,objCategoryInfo.CreatedByUserID, DateTime.Now,objCategoryInfo.IsActive);
+                objCategoryInfo.ViewRoles, objCategoryInfo.CreatedByUserName, objCategoryInfo.CreatedByUserID, DateTime.Now, objCategoryInfo.IsActive, objCategoryInfo.IsSpecial);
         }
 
         /// <summary>

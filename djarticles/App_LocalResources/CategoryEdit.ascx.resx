@@ -129,6 +129,12 @@
   <data name="plIsActive.Text" xml:space="preserve">
     <value>是否启用</value>
   </data>
+  <data name="plIsSpecial.Help" xml:space="preserve">
+    <value>专辑分类不作为默认的新闻类型显示</value>
+  </data>
+  <data name="plIsSpecial.Text" xml:space="preserve">
+    <value>是否是专辑分类</value>
+  </data>
   <data name="plName.Text" xml:space="preserve">
     <value>分类名称</value>
   </data>

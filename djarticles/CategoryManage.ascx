@@ -24,13 +24,13 @@
             <HeaderStyle CssClass="NormalBold"></HeaderStyle>
             <ItemStyle Wrap="False" CssClass="Normal"></ItemStyle>
         </asp:BoundField>
-        <asp:TemplateField HeaderText="IsActived">
+<%--        <asp:TemplateField HeaderText="IsActived">
             <HeaderStyle HorizontalAlign="Center" Width="60px" CssClass="NormalBold"></HeaderStyle>
             <ItemTemplate>
                 <asp:Image runat="server" ID="imgActived" ImageUrl="~/images/checked.gif" Visible='<%# EvalChecked(Eval("IsActive")) %>'/>
                 <asp:Image runat="server" ID="imgNotActived" ImageUrl="~/images/unchecked.gif" Visible='<%# !EvalChecked(Eval("IsActive")) %>'/>
             </ItemTemplate>
-        </asp:TemplateField>
+        </asp:TemplateField>--%>
         <asp:TemplateField>
             <HeaderStyle Width="30px"></HeaderStyle>
             <ItemTemplate>
