@@ -141,7 +141,7 @@ namespace DjArticles.Providers.Data_Providers
         /// <returns></returns>
         public override IDataReader GetPassedArticles()
         {
-            string commandName = getCommandName("Article", "SelectArticles");
+            string commandName = getCommandName("Article", "SelectPassedAllArticles");
             return SqlHelper.ExecuteReader(this._connectionString, commandName);
         }
 
@@ -153,7 +153,7 @@ namespace DjArticles.Providers.Data_Providers
         /// <param name="currentPage">当前页</param>
         /// <param name="totalCount">输出总数</param>
         /// <returns></returns>
-        public override IDataReader GetArticlesByPage(int categoryId, int pageSize, int currentPage, DbParameter paTotalCount)
+        public override IDataReader GetPassedArticlesByPage(int categoryId, int pageSize, int currentPage, DbParameter paTotalCount)
         {
 
             SqlParameter paCategoryId = new SqlParameter("CategoryID", categoryId);
@@ -166,12 +166,12 @@ namespace DjArticles.Providers.Data_Providers
             string commandName = "";
             if (Null.IsNull(categoryId))
             {
-                commandName = getCommandName("Article", "SelectAllArticlesByPage");
+                commandName = getCommandName("Article", "SelectPassedAllArticlesByPage");
                 return SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName , paPageSize, paCurrentPage, (SqlParameter)paTotalCount);
             }
             else
             {
-                commandName = getCommandName("Article", "SelectArticlesByPage");
+                commandName = getCommandName("Article", "SelectCategoryPassedAllByPage");
                 return SqlHelper.ExecuteReader(this._connectionString, CommandType.StoredProcedure, commandName, paCategoryId, paPageSize, paCurrentPage, (SqlParameter)paTotalCount);
             }
             
@@ -266,10 +266,10 @@ namespace DjArticles.Providers.Data_Providers
         /// <param name="CreatedDate"></param>
         /// <param name="IsActive"></param>
         /// <returns></returns>
-        public override int AddCategory( string Name, string Description, int ParentID,int Depth, int ViewOrder, string AdminRoles, string EditRoles, string ViewRoles, int CreatedByUserID, string CreatedByUserName, DateTime CreatedDate, bool IsActive)
+        public override int AddCategory( string Name, string Description, int ParentID,int Depth, int ViewOrder, string AdminRoles, string EditRoles, string ViewRoles, int CreatedByUserID, string CreatedByUserName, DateTime CreatedDate, bool IsActive,bool IsSpecial)
         {
             string commandName = getCommandName("Category", "Insert");
-            return Conversions.ToInteger(SqlHelper.ExecuteScalar(this._connectionString, commandName, Name, Description, ParentID,Depth, ViewOrder, AdminRoles, EditRoles, ViewRoles, CreatedByUserID, CreatedByUserName, CreatedDate, IsActive));
+            return Conversions.ToInteger(SqlHelper.ExecuteScalar(this._connectionString, commandName, Name, Description, ParentID, Depth, ViewOrder, AdminRoles, EditRoles, ViewRoles, CreatedByUserID, CreatedByUserName, CreatedDate, IsActive, IsSpecial));
 
         }
 
@@ -329,11 +329,11 @@ namespace DjArticles.Providers.Data_Providers
         /// <param name="createByUserId"></param>
         /// <param name="CreatedDate"></param>
         /// <param name="IsActive"></param>
-        public override void UpdateCategory(int CategoryID, string Name, string Description,int ParentID, int Depth, int ViewOrder, string AdminRoles, string EditRoles, string ViewRoles, string CreatedByUserName, int createByUserId, DateTime CreatedDate, bool IsActive)
+        public override void UpdateCategory(int CategoryID, string Name, string Description, int ParentID, int Depth, int ViewOrder, string AdminRoles, string EditRoles, string ViewRoles, string CreatedByUserName, int createByUserId, DateTime CreatedDate, bool IsActive, bool IsSpecial)
         {
             string commandName = getCommandName("Category", "Update");
-            SqlHelper.ExecuteNonQuery(this._connectionString, commandName, CategoryID, Name, Description, ParentID, 
-                Depth, ViewOrder, AdminRoles, EditRoles, ViewRoles, CreatedByUserName, createByUserId, CreatedDate, IsActive);
+            SqlHelper.ExecuteNonQuery(this._connectionString, commandName, CategoryID, Name, Description, ParentID,
+                Depth, ViewOrder, AdminRoles, EditRoles, ViewRoles, CreatedByUserName, createByUserId, CreatedDate, IsActive, IsSpecial);
         }
 
         #endregion

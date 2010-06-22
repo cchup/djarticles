@@ -29,7 +29,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <OutputPath>..\..\..\HomeBook\web\bin\</OutputPath>
+    <OutputPath>..\..\web\bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -215,6 +215,7 @@
     <None Include="01.00.00.SqlDataProvider" />
     <None Include="DjArticles.dnn" />
     <None Include="Uninstall.SqlDataProvider" />
+    <None Include="01.00.01.SqlDataProvider" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

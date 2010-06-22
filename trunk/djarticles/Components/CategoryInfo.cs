@@ -97,6 +97,14 @@ namespace DjArticles.Components
             set { isActive = value; }
         }
 
+        private bool isSpecial;
+
+        public bool IsSpecial
+        {
+            get { return isSpecial; }
+            set { isSpecial = value; }
+        }
+
         private List<CategoryInfo> childCategorys=new List<CategoryInfo>();
 
         /// <summary>

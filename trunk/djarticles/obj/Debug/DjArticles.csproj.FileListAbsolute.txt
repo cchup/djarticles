@@ -16,7 +16,6 @@ E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Debug\DjArticles.dll
 E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Debug\DjArticles.pdb
 E:\源码\HomeBook\web\bin\DjArticles.dll
 E:\源码\HomeBook\web\bin\DjArticles.pdb
-E:\源码\HomeBook\web\bin\DjArticles.xml
 E:\源码\BroadWisdom\web\bin\DjArticles.dll
 E:\源码\BroadWisdom\web\bin\DjArticles.pdb
 E:\源码\BroadWisdom\DjArticles\src\obj\Debug\ResolveAssemblyReference.cache

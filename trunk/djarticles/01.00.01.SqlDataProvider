@@ -1,0 +1,70 @@
+﻿/**修改DjArticles_Category表**/
+if col_length('{databaseOwner}[{objectQualifier}DjArticles_Category]','IsSpecial') is  NULL
+	BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}DjArticles_Category] ADD
+		[IsSpecial] [bit] NULL
+	END
+GO
+
+
+----------------------------------------------------------------------------
+-- Insert a single record into dj_DjArticles_Category
+----------------------------------------------------------------------------
+ALTER PROC [dbo].[dj_DjArticles_Category_Insert]
+	@Name nvarchar(510),
+	@Description nvarchar(4000),
+	@ParentID int,
+	@Depth int,
+	@ViewOrder int,
+	@AdminRoles nvarchar(510) = NULL,
+	@EditRoles nvarchar(510) = NULL,
+	@ViewRoles nvarchar(510) = NULL,
+	@CreatedByUserID int,
+	@CreatedByUserName nvarchar(200) = NULL,
+	@CreatedDate datetime = NULL,
+	@IsActive bit = NULL,
+	@IsSpecial bit = NULL
+AS
+
+INSERT dj_DjArticles_Category(Name, Description, ParentID, Depth, ViewOrder, AdminRoles, EditRoles, ViewRoles, CreatedByUserID, CreatedByUserName, CreatedDate, IsActive,IsSpecial)
+VALUES (@Name, @Description, @ParentID, @Depth, @ViewOrder, @AdminRoles, @EditRoles, @ViewRoles, @CreatedByUserID, @CreatedByUserName, @CreatedDate, COALESCE(@IsActive, (1)),COALESCE(@IsSpecial, (1)))
+
+RETURN SCOPE_IDENTITY()
+
+GO
+----------------------------------------------------------------------------
+-- Update a single record in dj_DjArticles_Category
+----------------------------------------------------------------------------
+ALTER PROC [dbo].[dj_DjArticles_Category_Update]
+	@CategoryID int,
+	@Name nvarchar(510),
+	@Description nvarchar(4000),
+	@ParentID int,
+	@Depth int,
+	@ViewOrder int,
+	@AdminRoles nvarchar(510) = NULL,
+	@EditRoles nvarchar(510) = NULL,
+	@ViewRoles nvarchar(510) = NULL,
+	@CreatedByUserID int,
+	@CreatedByUserName nvarchar(200) = NULL,
+	@CreatedDate datetime = NULL,
+	@IsActive bit = NULL,
+	@IsSpecial bit = NULL
+AS
+
+UPDATE	dj_DjArticles_Category
+SET	Name = @Name,
+	Description = @Description,
+	ParentID = @ParentID,
+	Depth = @Depth,
+	ViewOrder = @ViewOrder,
+	AdminRoles = @AdminRoles,
+	EditRoles = @EditRoles,
+	ViewRoles = @ViewRoles,
+	CreatedByUserID = @CreatedByUserID,
+	CreatedByUserName = @CreatedByUserName,
+	CreatedDate = @CreatedDate,
+	IsActive = COALESCE(@IsActive, (1)),
+	IsSpecial = COALESCE(@IsSpecial, (1))
+WHERE 	CategoryID = @CategoryID
+
