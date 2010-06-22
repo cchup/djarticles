@@ -1,0 +1,6 @@
+E:\源码\BroadWisdom\modules\Feedback\bin\DotNetNuke.Modules.Feedback.dll
+E:\源码\BroadWisdom\modules\Feedback\bin\DotNetNuke.dll
+E:\源码\BroadWisdom\modules\Feedback\obj\Release\ResolveAssemblyReference.cache
+E:\源码\BroadWisdom\modules\Feedback\obj\Release\SharedResources.resources
+E:\源码\BroadWisdom\modules\Feedback\obj\Release\DotNetNuke.Feedback.vbproj.GenerateResource.Cache
+E:\源码\BroadWisdom\modules\Feedback\obj\Release\DotNetNuke.Modules.Feedback.dll

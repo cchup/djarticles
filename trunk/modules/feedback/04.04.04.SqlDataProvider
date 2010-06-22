@@ -32,7 +32,7 @@ ALTER PROCEDURE {databaseOwner}[{objectQualifier}CreateFeedback]
 	@Telephone nvarchar(200),
 	@OrgName nvarchar(400)
 AS
-INSERT INTO dbo.[dj_Feedback] (
+INSERT INTO {databaseOwner}[{objectQualifier}Feedback] (
 	PortalID,
 	CategoryID, 
 	CreatedByEmail, 
@@ -116,7 +116,7 @@ AS
 		F.PortalID,
 		FeedbackID,
 		CategoryID, 
-		(SELECT ListValue FROM dbo.[dj_FeedbackList] WHERE f.CategoryID = dbo.[dj_FeedbackList].ListID),
+		(SELECT ListValue FROM {databaseOwner}[{objectQualifier}FeedbackList] WHERE f.CategoryID = {databaseOwner}[{objectQualifier}FeedbackList].ListID),
 		CreatedByEmail, 
 		ApprovedBy,
 		DateCreated,
@@ -127,9 +127,9 @@ AS
 		CreatedByName,
 		Telephone,
 		OrgName
-		FROM dbo.[dj_Feedback] f
-		LEFT OUTER JOIN dbo.[dj_FeedbackList] fs ON f.[Subject] = convert(varchar,fs.ListID)
-		LEFT OUTER JOIN dbo.[dj_FeedbackList] fc ON f.[CategoryID] = convert(varchar,fc.ListID)
+		FROM {databaseOwner}[{objectQualifier}Feedback] f
+		LEFT OUTER JOIN {databaseOwner}[{objectQualifier}FeedbackList] fs ON f.[Subject] = convert(varchar,fs.ListID)
+		LEFT OUTER JOIN {databaseOwner}[{objectQualifier}FeedbackList] fc ON f.[CategoryID] = convert(varchar,fc.ListID)
 		WHERE 
 		Status = @Status and F.PortalID = @PortalID
 		ORDER BY
@@ -159,7 +159,7 @@ AS
 		F.PortalID,
 		FeedbackID,
 		CategoryID, 
-		(SELECT ListValue FROM dbo.[dj_FeedbackList] WHERE f.CategoryID = dbo.[dj_FeedbackList].ListID),
+		(SELECT ListValue FROM {databaseOwner}[{objectQualifier}FeedbackList] WHERE f.CategoryID = {databaseOwner}[{objectQualifier}FeedbackList].ListID),
 		CreatedByEmail, 
 		ApprovedBy,
 		DateCreated,
@@ -170,9 +170,9 @@ AS
 		CreatedByName,
 		Telephone,
 		OrgName
-		FROM dbo.[dj_Feedback] f
-		LEFT OUTER JOIN dbo.[dj_FeedbackList] fs ON f.[Subject] = convert(varchar,fs.ListID)
-		LEFT OUTER JOIN dbo.[dj_FeedbackList] fc on f.[CategoryID] = convert(varchar,fc.ListID)
+		FROM {databaseOwner}[{objectQualifier}Feedback] f
+		LEFT OUTER JOIN {databaseOwner}[{objectQualifier}FeedbackList] fs ON f.[Subject] = convert(varchar,fs.ListID)
+		LEFT OUTER JOIN {databaseOwner}[{objectQualifier}FeedbackList] fc on f.[CategoryID] = convert(varchar,fc.ListID)
 		WHERE 
 		CategoryID = @CategoryID and F.PortalID = @PortalID
 		and Status = @Status
