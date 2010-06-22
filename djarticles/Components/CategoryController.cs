@@ -86,6 +86,11 @@ namespace DjArticles.Components
             return CBO.FillCollection(DataProvider.Instance().GetAllCategorys(), typeof(CategoryInfo));
         }
 
+        public ArrayList GetNoSpecialCategories()
+        {
+            return CBO.FillCollection(DataProvider.Instance().GetAllNoSpecialCategories(), typeof(CategoryInfo));
+        }
+
         /// <summary>
         ///  获取绑定DropDownList的数据集
         /// </summary>
@@ -170,7 +175,7 @@ namespace DjArticles.Components
         /// <returns></returns>
         public SideMenuSource GetCategorysForSideMenu()
         {
-            ArrayList categorys = this.GetCategories();
+            ArrayList categorys = this.GetNoSpecialCategories();
 
             Dictionary<int, ArrayList> allDepthCategory = GetDepthCategoryTree(categorys);
 

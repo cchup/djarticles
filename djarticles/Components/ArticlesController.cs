@@ -66,6 +66,10 @@ namespace DjArticles.Components
             {
                 throw new ArticlesException("分页大小必须指定！");
             }
+            if (currentPage <= 0)
+            {
+                currentPage = 1;
+            }
             if (willPage)
             {
                 DbParameter paTotalCount = DataProvider.Instance().GetParameter("totalCount", Null.NullInteger);
@@ -168,6 +172,22 @@ namespace DjArticles.Components
                 return null;
             }
             return CBO.FillObject<ArticleInfo>(DataProvider.Instance().GetArticle(articleId));
+        }
+
+        /// <summary>
+        /// 获取文章
+        /// </summary>
+        /// <param name="articleId">文章Id</param>
+        /// <returns>文章对象</returns>
+        public ArticleInfo GetArticleForView(int articleId)
+        {
+            if (articleId == Null.NullInteger)
+            {
+                return null;
+            }
+            ArticleInfo articleInfo = CBO.FillObject<ArticleInfo>(DataProvider.Instance().GetArticle(articleId));
+            DataProvider.Instance().UpdateArticleHits(articleId);
+            return articleInfo;
         }
 
         /// <summary>

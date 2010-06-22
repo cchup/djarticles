@@ -179,13 +179,18 @@ namespace DjArticles
             {
                 return Globals.NavigateURL();
             }
-            int detailTablId=Null.NullInteger;
-            ModuleInfo module = moduleController.GetModuleByDefinition(this.PortalId, DetailModuleName);
-            if (module != null)
+            //先从模块设置中查看是否设置了详细信息转向页面
+            int detailTablId = GetSettingInt("DetailArticlesPage");
+            if (Null.IsNull(detailTablId))
             {
-                detailTablId = module.TabID;
+                // 未指定详细信息转向页面，系统自动查找定义了改模块的页面
+                ModuleInfo module = moduleController.GetModuleByDefinition(this.PortalId, DetailModuleName);
+                if (module != null)
+                {
+                    detailTablId = module.TabID;
+                }
             }
-            if (!Null.IsNull(detailTablId))
+            if (!Null.IsNull(detailTablId)&&detailTablId!=this.TabId)
             {
                 return Globals.NavigateURL(detailTablId, "", "ArticleID=" + _articleId);
             }
