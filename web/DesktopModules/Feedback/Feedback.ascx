@@ -12,7 +12,25 @@
 				controltovalidate="txtName" resourcekey="valName" ValidationGroup="FeedbackForm"></asp:requiredfieldvalidator>
 		
 		</td>
-	</tr>	
+	</tr>
+	<tr valign="top" id="trTelephone" runat="server" visible="false">
+		<td class="SubHead">
+			<dnn:label id="plTelephone" runat="server" controlname="txtTelephone" suffix=":"></dnn:label>
+			<asp:textbox id="txtTelephone" runat="server"  cssclass="NormalTextBox" columns="35"
+				maxlength="100"></asp:textbox>
+			<asp:requiredfieldvalidator id="valTelephone" runat="server" cssclass="NormalRed" display="Dynamic" errormessage="<br\>Telephone Is Required."
+				controltovalidate="txtTelephone" resourcekey="valTelephone" ValidationGroup="FeedbackForm"></asp:requiredfieldvalidator>
+		</td>
+	</tr>
+	<tr valign="top" id="trOrgName" runat="server" visible="false">
+		<td class="SubHead">
+			<dnn:label id="plOrgName" runat="server" controlname="txtOrgName" suffix=":"></dnn:label>
+			<asp:textbox id="txtOrgName" runat="server"  cssclass="NormalTextBox" columns="35"
+				maxlength="100"></asp:textbox>
+			<asp:requiredfieldvalidator id="valOrgName" runat="server" cssclass="NormalRed" display="Dynamic" errormessage="<br\>OrgName Is Required."
+				controltovalidate="txtOrgName" resourcekey="valOrgName" ValidationGroup="FeedbackForm"></asp:requiredfieldvalidator>
+		</td>
+	</tr>
 	<tr valign="top">
 		<td class="SubHead" style="white-space:nowrap;">
 			<dnn:label id="plEmail" runat="server" controlname="txtEmail" suffix=":"></dnn:label>

@@ -136,12 +136,18 @@
     <value>Hide Name</value>
   </data>
   <data name="plHideSubject.Help" xml:space="preserve">
-      <value>Check this box if you don't want to show the subject of the feedback that was submitted</value>
-    </data>
-    <data name="plHideSubject.Text" xml:space="preserve">
-      <value>Hide Subject</value>
+    <value>Check this box if you don't want to show the subject of the feedback that was submitted</value>
+  </data>
+  <data name="plHideSubject.Text" xml:space="preserve">
+    <value>Hide Subject</value>
   </data>
   <data name="ControlTitle_settings.Text" xml:space="preserve">
-      <value>Comments View Settings</value>
+    <value>Comments View Settings</value>
+  </data>
+  <data name="plHideOrgName.Text" xml:space="preserve">
+    <value>Hide OrgName Field</value>
+  </data>
+  <data name="plHideTelephone.Text" xml:space="preserve">
+    <value>Hide Telephone Field</value>
   </data>
 </root>

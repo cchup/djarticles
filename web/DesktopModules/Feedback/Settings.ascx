@@ -124,4 +124,33 @@
 			<asp:CheckBox id="chkRequireNameField" runat="server" cssclass="normal"></asp:CheckBox>
 		</td>
 	</tr>
+	
+	<tr valign="top">
+		<td class="SubHead" style="width:175pt">
+		<dnn:label id="plTelephoneHidden" runat="server" controlname="chkTelephoneHidden" suffix=":"></dnn:label></td>
+		<td valign="bottom" style="width:325pt">
+			<asp:CheckBox id="chkTelephoneHidden" runat="server" cssclass="normal"></asp:CheckBox>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="SubHead" style="width:175pt">
+		<dnn:label id="plTelephoneRequire" runat="server" controlname="chkTelephoneRequire" suffix=":"></dnn:label></td>
+		<td valign="bottom" style="width:325pt">
+			<asp:CheckBox id="chkTelephoneRequire" runat="server" cssclass="normal"></asp:CheckBox>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="SubHead" style="width:175pt">
+		<dnn:label id="plOrgNameHidden" runat="server" controlname="chkOrgNameHidden" suffix=":"></dnn:label></td>
+		<td valign="bottom" style="width:325pt">
+			<asp:CheckBox id="chkOrgNameHidden" runat="server" cssclass="normal"></asp:CheckBox>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="SubHead" style="width:175pt">
+		<dnn:label id="plOrgNameRequire" runat="server" controlname="chkOrgNameRequire" suffix=":"></dnn:label></td>
+		<td valign="bottom" style="width:325pt">
+			<asp:CheckBox id="chkOrgNameRequire" runat="server" cssclass="normal"></asp:CheckBox>
+		</td>
+	</tr>
 </table>
