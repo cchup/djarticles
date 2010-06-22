@@ -168,7 +168,7 @@ namespace DjArticles
             {
                 return;
             }
-            ArticleInfo article = controller.GetArticle(articleId);
+            ArticleInfo article = controller.GetArticleForView(articleId);
             if (article != null)
             {
                 this.title = article.Title;

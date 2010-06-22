@@ -117,6 +117,15 @@
                  </asp:DropDownList>
             </td>
         </tr>
+        <tr>
+            <td class="SubHead">
+                <dnn:label id="plDetialArticlesPage" runat="server" controlname="drpDetialArticlesPage" suffix=":" />
+            </td>
+            <td>
+                 <asp:DropDownList ID="drpDetialArticlesPage" runat="server">
+                 </asp:DropDownList>
+            </td>
+        </tr>
           <tr>
             <td class="SubHead">
                 <dnn:label id="plAcceptParameter" runat="server" suffix=":" />

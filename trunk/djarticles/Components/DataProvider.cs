@@ -43,6 +43,7 @@ namespace DjArticles.Components
 
         public abstract IDataReader GetCategories(int Depth, int ParentID);
         public abstract IDataReader GetCategory(int CategoryID);
+        public abstract IDataReader GetAllNoSpecialCategories();
         public abstract IDataReader GetAllCategorys();
         public abstract IDataReader GetComment(int CommentID);
         public abstract IDataReader GetCommentsByArticleID(int ArticleID);

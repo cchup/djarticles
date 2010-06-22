@@ -242,9 +242,14 @@ namespace DjArticles.Providers.Data_Providers
                 DefaultPicUrl, AllowPrint, AllowComment, CommentCount);
         }
 
+        /// <summary>
+        /// 更新文章浏览次数
+        /// </summary>
+        /// <param name="ArticleID"></param>
         public override void UpdateArticleHits(int ArticleID)
         {
-            throw new NotImplementedException();
+            string commandName = getCommandName("Article", "UpdateArticleHits");
+            SqlHelper.ExecuteNonQuery(this._connectionString, commandName, ArticleID);
         }
 
         #endregion
@@ -303,7 +308,16 @@ namespace DjArticles.Providers.Data_Providers
             string commandName = getCommandName("Category", "GetAllCategorys");
             return SqlHelper.ExecuteReader(this._connectionString, commandName);
         }
-
+  
+        /// <summary>
+        /// 获取所有的分类信息
+        /// </summary>
+        /// <returns></returns>
+        public override IDataReader GetAllNoSpecialCategories( )
+        {
+            string commandName = getCommandName("Category", "GetAllNoSpecialCategorys");
+            return SqlHelper.ExecuteReader(this._connectionString, commandName);
+        }
         /// <summary>
         /// 查询一个分类信息
         /// </summary>

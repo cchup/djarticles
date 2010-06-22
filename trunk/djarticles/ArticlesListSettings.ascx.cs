@@ -12,6 +12,7 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Services.Exceptions;
 using DjArticles.Components;
 using DotNetNuke.Entities.Tabs;
+using DotNetNuke.Common.Utilities;
 
 namespace DjArticles
 {
@@ -55,6 +56,7 @@ namespace DjArticles
                 drpTemplate.SelectedValue = TabModuleSettings["Template"] as string;
                 cboCategory.SelectedValue = TabModuleSettings["FilterCategoryID"] as string;
                 drpMoreArticlesPage.SelectedValue=TabModuleSettings["MoreArticlesPage"] as string;
+                drpDetialArticlesPage.SelectedValue = TabModuleSettings["DetailArticlesPage"] as string;
 
                 chkShowCategory.Checked = (TabModuleSettings["ShowCategory"] as string == "True");
                 chkShowReadMore.Checked = (TabModuleSettings["ShowReadMore"] as string == "True");
@@ -99,6 +101,7 @@ namespace DjArticles
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "FilterCategoryID", cboCategory.SelectedValue);
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "AcceptParameter", chkAcceptParameter.Checked.ToString());
                 objModuleController.UpdateTabModuleSetting(this.TabModuleId, "MoreArticlesPage", drpMoreArticlesPage.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "DetailArticlesPage", drpDetialArticlesPage.SelectedValue);
             }
             catch (Exception exc)
             {
@@ -131,11 +134,20 @@ namespace DjArticles
         /// </summary>
         private void BindPages()
         {
-            ArrayList tabCollection = tabController.GetTabs(this.PortalId);
-            this.drpMoreArticlesPage.DataSource = tabCollection;
+            TabCollection tabCollection = tabController.GetTabsByPortal(this.PortalId);
+            TabInfo emptyTab = new TabInfo();
+            emptyTab.TabName = "--无--";
+            emptyTab.TabID = Null.NullInteger;
+            tabCollection.Add(emptyTab);
+            this.drpMoreArticlesPage.DataSource = tabCollection.Values;
             this.drpMoreArticlesPage.DataTextField="TabName";
             this.drpMoreArticlesPage.DataValueField="TabID";
             this.drpMoreArticlesPage.DataBind();
+
+            this.drpDetialArticlesPage.DataSource = tabCollection.Values;
+            this.drpDetialArticlesPage.DataTextField = "TabName";
+            this.drpDetialArticlesPage.DataValueField = "TabID";
+            this.drpDetialArticlesPage.DataBind();
         }
 
         #endregion
