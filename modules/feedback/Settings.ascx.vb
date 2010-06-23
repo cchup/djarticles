@@ -70,7 +70,7 @@ Namespace DotNetNuke.Modules.Feedback
         Protected WithEvents chkTelephoneRequire As System.Web.UI.WebControls.CheckBox
         Protected WithEvents chkOrgNameHidden As System.Web.UI.WebControls.CheckBox
         Protected WithEvents chkOrgNameRequire As System.Web.UI.WebControls.CheckBox
-
+        Protected WithEvents chkEmailRequire As System.Web.UI.WebControls.CheckBox
 #End Region
 
 #Region "Base Method Implementations"
@@ -152,6 +152,8 @@ Namespace DotNetNuke.Modules.Feedback
                     Me.chkTelephoneRequire.Checked = CType(ModuleSettings("Feedback_RequireTelephone"), Boolean)
                     Me.chkOrgNameHidden.Checked = CType(ModuleSettings("Feedback_OrgNameHidden"), Boolean)
                     Me.chkOrgNameRequire.Checked = CType(ModuleSettings("Feedback_RequireOrgName"), Boolean)
+                    Me.chkEmailRequire.Checked = CType(ModuleSettings("Feedback_RequireEmail"), Boolean)
+
 
                     Me.cboCategory.SelectedIndex = Me.cboCategory.Items.IndexOf(Me.cboCategory.Items.FindByValue(CType(ModuleSettings("Feedback_Category"), String)))
                     Me.cboModerationCategory.SelectedIndex = Me.cboModerationCategory.Items.IndexOf(Me.cboModerationCategory.Items.FindByValue(CType(ModuleSettings("Feedback_ModCategory"), String)))
@@ -227,7 +229,7 @@ Namespace DotNetNuke.Modules.Feedback
                     objModules.UpdateModuleSetting(ModuleId, "Feedback_RequireTelephone", Me.chkTelephoneRequire.Checked.ToString)
                     objModules.UpdateModuleSetting(ModuleId, "Feedback_OrgNameHidden", Me.chkOrgNameHidden.Checked.ToString)
                     objModules.UpdateModuleSetting(ModuleId, "Feedback_RequireOrgName", Me.chkOrgNameRequire.Checked.ToString)
-
+                    objModules.UpdateModuleSetting(ModuleId, "Feedback_RequireEmail", Me.chkEmailRequire.Checked.ToString)
                 End If
             Catch exc As Exception    'Module failed to load
                 ProcessModuleLoadException(Me, exc)

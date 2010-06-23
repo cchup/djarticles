@@ -86,6 +86,7 @@ Namespace DotNetNuke.Modules.Feedback
         Private requireOrgNameField As Boolean = False
         Private telephoneFieldVisible As Boolean = False
         Private orgNameFieldVisible As Boolean = False
+        Private requiredEmailField As Boolean = False
 #End Region
 
 #Region "Public Methods"
@@ -178,12 +179,16 @@ Namespace DotNetNuke.Modules.Feedback
                 If Not IsNothing(Settings("Feedback_TelephoneHidden")) Then
                     telephoneFieldVisible = Not CType(Settings("Feedback_TelephoneHidden"), Boolean)
                 End If
+                If Not IsNothing(Settings("Feedback_RequireEmail")) Then
+                    requiredEmailField = CType(Settings("Feedback_RequireEmail"), Boolean)
+                End If
                 'Turn on or off the required field 
                 trOrgName.Visible = orgNameFieldVisible
                 trTelephone.Visible = telephoneFieldVisible
                 valName.Enabled = (orgNameFieldVisible And requireNameField)
                 valTelephone.Enabled = (telephoneFieldVisible And requireTelephoneField)
                 valOrgName.Enabled = requireOrgNameField
+                valEmail1.Enabled = requiredEmailField
 
                 trCaptcha1.Visible = useCaptcha
                 trCaptcha2.Visible = useCaptcha
@@ -232,7 +237,7 @@ Namespace DotNetNuke.Modules.Feedback
                     Dim SubjectEdit As String = CType(Settings("Feedback_SubjectEdit"), String)
                     sendCopy = CType(Settings("Feedback_SendCopy"), Boolean)
                     optOut = CType(Settings("Feedback_OptOut"), Boolean)
-                 
+
                     'Set both rows to false and then show one based on whether the values from the settings are correct.
                     trSubject.Visible = False
                     trSubject2.Visible = False
@@ -274,7 +279,7 @@ Namespace DotNetNuke.Modules.Feedback
 
 
                 End If
-           
+
             Catch exc As Exception           'Module failed to load
                 ProcessModuleLoadException(Me, exc)
             End Try
