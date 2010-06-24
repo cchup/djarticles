@@ -3,6 +3,7 @@
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="TextEditor" Src="~/controls/TextEditor.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Audit" Src="~/controls/ModuleAuditControl.ascx" %>
+<%@ Register TagPrefix="Portal" TagName="URL" Src="~/controls/URLControl.ascx" %>
 <table width="650" cellspacing="0" cellpadding="0" border="0">
     <tr height="30px">
         <td class="SubHead">
@@ -14,13 +15,13 @@
                 DataTextField="Name" DataValueField="CategoryID">
             </asp:DropDownList>
             <asp:LinkButton ID="cmdCategoryManage" resourcekey="cmdCategoryManage" runat="server"
-                 BorderStyle="none" Text="Manage" onclick="cmdCategoryManage_Click"  ></asp:LinkButton>&nbsp;
+                BorderStyle="none" Text="Manage" CausesValidation="False" OnClick="cmdCategoryManage_Click"></asp:LinkButton>&nbsp;
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" resourcekey="valCategory.ErrorMessage"
-                    runat="server" ErrorMessage="<br>Category is required" 
-                ControlToValidate="cboCategory" ValidationExpression="\d*"></asp:RegularExpressionValidator>
+                runat="server" ErrorMessage="<br>Category is required" ControlToValidate="cboCategory"
+                ValidationExpression="\d*"></asp:RegularExpressionValidator>
         </td>
     </tr>
-    <tr  height="30px">
+    <tr height="30px">
         <td class="SubHead" width="125">
             <dnn:Label id="lblTitle" runat="server" controlname="txtTitle" suffix=":">
             </dnn:Label>
@@ -32,7 +33,16 @@
                 runat="server" />
         </td>
     </tr>
-    <tr  height="40px">
+    <tr  height="30px">
+        <td class="SubHead" width="125">
+            <dnn:label id="lblImage" runat="server" controlname="ctlImage" suffix=":" />
+        </td>
+        <td>
+            <Portal:url id="ctlImage" runat="server" width="300" showtabs="False" showurls="False"
+                urltype="F" showtrack="False" showlog="False" required="False" />
+        </td>
+    </tr>
+    <tr height="40px">
         <td class="SubHead" width="125">
             <dnn:Label id="lblKeyWords" runat="server" controlname="txtKeyWords" suffix=":">
             </dnn:Label>

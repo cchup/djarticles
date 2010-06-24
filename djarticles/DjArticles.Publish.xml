@@ -1,13 +1,12 @@
 <publishData>
   <publishTarget publishUrl="http://localhost/DesktopModules/DjArticles/">
     <file relUrl="CategoryList.ascx" publishTime="06/17/2010 08:34:03" />
-    <file relUrl="ArticleEdit.ascx" publishTime="06/23/2010 17:26:09" />
-    <file relUrl="ArticleView.ascx" publishTime="06/17/2010 17:32:07" />
-    <file relUrl="ArticlesListSettings.ascx" publishTime="06/23/2010 09:35:50" />
-    <file relUrl="App_LocalResources/ArticlesListSettings.ascx.resx" publishTime="06/23/2010 09:35:48" />
-    <file relUrl="App_LocalResources/CategoryManage.ascx.resx" publishTime="06/17/2010 08:34:01" />
-    <file relUrl="App_LocalResources/CategoryEdit.ascx.resx" publishTime="06/22/2010 17:50:58" />
     <file relUrl="App_LocalResources/ArticleManage.ascx.resx" publishTime="06/17/2010 08:34:01" />
+    <file relUrl="ArticleEdit.ascx" publishTime="06/24/2010 13:17:37" />
+    <file relUrl="ArticleView.ascx" publishTime="06/17/2010 17:32:07" />
+    <file relUrl="App_LocalResources/ArticlesListSettings.ascx.resx" publishTime="06/23/2010 09:35:48" />
+    <file relUrl="App_LocalResources/CategoryEdit.ascx.resx" publishTime="06/22/2010 17:50:58" />
+    <file relUrl="ArticlesListSettings.ascx" publishTime="06/23/2010 09:35:50" />
     <file relUrl="ArticlesList_Standard.ascx" publishTime="06/21/2010 08:32:11" />
     <file relUrl="ArticleComments.ascx" publishTime="06/17/2010 08:34:03" />
     <file relUrl="jQComment.js" publishTime="06/17/2010 08:34:03" />
@@ -22,13 +21,14 @@
     <file relUrl="images/topic.png" publishTime="06/17/2010 12:47:50" />
     <file relUrl="images/dian.jpg" publishTime="06/17/2010 08:34:03" />
     <file relUrl="images/comments.png" publishTime="06/17/2010 12:47:29" />
-    <file relUrl="App_LocalResources/ArticleEdit.ascx.resx" publishTime="06/23/2010 18:18:37" />
+    <file relUrl="App_LocalResources/ArticleEdit.ascx.resx" publishTime="06/24/2010 11:39:58" />
     <file relUrl="App_LocalResources/ArticleDetail.ascx.resx" publishTime="06/18/2010 13:24:57" />
     <file relUrl="ArticleManage.ascx" publishTime="06/21/2010 08:32:11" />
-    <file relUrl="CategoryEdit.ascx" publishTime="06/22/2010 18:00:19" />
+    <file relUrl="App_LocalResources/CategoryManage.ascx.resx" publishTime="06/17/2010 08:34:01" />
     <file relUrl="module.css" publishTime="06/21/2010 08:32:11" />
     <file relUrl="images/comment_tip.gif" publishTime="06/18/2010 08:33:06" />
     <file relUrl="ArticleDetail.ascx" publishTime="06/21/2010 08:32:11" />
+    <file relUrl="CategoryEdit.ascx" publishTime="06/22/2010 18:00:19" />
     <file relUrl="images/comment_tip_owner.gif" publishTime="06/18/2010 08:33:06" />
     <file relUrl="images/category.jpg" publishTime="06/18/2010 14:53:28" />
     <file relUrl="ArticlePreview.ascx" publishTime="06/17/2010 08:34:03" />
