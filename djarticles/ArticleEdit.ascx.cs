@@ -76,6 +76,10 @@ namespace DjArticles
             ArticleInfo article = new ArticleInfo();
             article.ArticleID = WebControlUtils.GetObjectIntValue(this.hfArticleId);
             article.CategoryID = WebControlUtils.GetObjectIntValue(this.cboCategory);
+            if (Null.IsNull(article.CategoryID))
+            {
+                throw new ArticlesException("所属分类必须选择！");
+            }
             article.Title = this.txtTitle.Text;
             article.KeyWords = this.txtKeyWords.Text;
             article.Summary = this.txtSummary.Text;
@@ -132,6 +136,10 @@ namespace DjArticles
 
         protected void cmdUpdate_Click(object sender, EventArgs e)
         {
+            if (!this.Page.IsValid)
+            {
+                return;
+            }
             try
             {
                 ArticleInfo articleInfo= GetArticleInfo();
