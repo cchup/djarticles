@@ -7,6 +7,7 @@ using DotNetNuke.Services.Localization;
 using DotNetNuke.Entities.Modules;
 using DjArticles.Components;
 using DjArticles.Common;
+using DotNetNuke.UI.UserControls;
 
 namespace DjArticles
 {
@@ -76,10 +77,8 @@ namespace DjArticles
             ArticleInfo article = new ArticleInfo();
             article.ArticleID = WebControlUtils.GetObjectIntValue(this.hfArticleId);
             article.CategoryID = WebControlUtils.GetObjectIntValue(this.cboCategory);
-            if (Null.IsNull(article.CategoryID))
-            {
-                throw new ArticlesException("所属分类必须选择！");
-            }
+            UrlControl urlControl = this.ctlImage as UrlControl;
+            article.DefaultPicUrl = (urlControl == null ? "" : urlControl.Url);
             article.Title = this.txtTitle.Text;
             article.KeyWords = this.txtKeyWords.Text;
             article.Summary = this.txtSummary.Text;
@@ -117,6 +116,11 @@ namespace DjArticles
                 if (articleId != Null.NullInteger)
                 {
                     SetArticleInfo(articleId);
+                }
+                UrlControl urlControl = this.ctlImage as UrlControl;
+                if (urlControl != null)
+                {
+                    urlControl.FileFilter = Globals.glbImageFileTypes;
                 }
             }
         }

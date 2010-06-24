@@ -141,6 +141,9 @@
   <data name="lblContent.Text" xml:space="preserve">
     <value>内容</value>
   </data>
+  <data name="lblImage.Text" xml:space="preserve">
+    <value>默认显示图片</value>
+  </data>
   <data name="lblKeyWords.Text" xml:space="preserve">
     <value>关键字</value>
   </data>
