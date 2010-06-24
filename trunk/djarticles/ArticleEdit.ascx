@@ -15,6 +15,9 @@
             </asp:DropDownList>
             <asp:LinkButton ID="cmdCategoryManage" resourcekey="cmdCategoryManage" runat="server"
                  BorderStyle="none" Text="Manage" onclick="cmdCategoryManage_Click"  ></asp:LinkButton>&nbsp;
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" resourcekey="valCategory.ErrorMessage"
+                    runat="server" ErrorMessage="<br>Category is required" 
+                ControlToValidate="cboCategory" ValidationExpression="\d*"></asp:RegularExpressionValidator>
         </td>
     </tr>
     <tr  height="30px">
@@ -24,8 +27,8 @@
         </td>
         <td>
             <asp:TextBox ID="txtTitle" runat="server" MaxLength="100" Width="500" CssClass="NormalTextBox"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" resourcekey="valContent.ErrorMessage"
-                ControlToValidate="txtContent" CssClass="NormalRed" Display="Dynamic" ErrorMessage="<br>Content is required"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" resourcekey="valTitle.ErrorMessage"
+                ControlToValidate="txtTitle" CssClass="NormalRed" ErrorMessage="<br>Title is required"
                 runat="server" />
         </td>
     </tr>
@@ -37,8 +40,8 @@
         <td>
             <asp:TextBox ID="txtKeyWords" runat="server" MaxLength="100" Width="500" Height="30"
                 CssClass="NormalTextBox" TextMode="MultiLine"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" resourcekey="valContent.ErrorMessage"
-                ControlToValidate="txtContent" CssClass="NormalRed" Display="Dynamic" ErrorMessage="<br>Content is required"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" resourcekey="valKeyWords.ErrorMessage"
+                ControlToValidate="txtKeyWords" CssClass="NormalRed" ErrorMessage="<br>KeyWords is required"
                 runat="server" />
         </td>
     </tr>
@@ -50,8 +53,8 @@
         <td>
             <asp:TextBox ID="txtSummary" runat="server" MaxLength="100" Width="500" Height="50"
                 CssClass="NormalTextBox" TextMode="MultiLine"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" resourcekey="valContent.ErrorMessage"
-                ControlToValidate="txtContent" CssClass="NormalRed" Display="Dynamic" ErrorMessage="<br>Content is required"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" resourcekey="valSummary.ErrorMessage"
+                ControlToValidate="txtSummary" CssClass="NormalRed" ErrorMessage="<br>Summary is required"
                 runat="server" />
         </td>
     </tr>
@@ -63,7 +66,7 @@
         <td>
             <dnn:texteditor id="txtContent" runat="server" height="550" width="500" />
             <asp:RequiredFieldValidator ID="valContent" resourcekey="valContent.ErrorMessage"
-                ControlToValidate="txtContent" CssClass="NormalRed" Display="Dynamic" ErrorMessage="<br>Content is required"
+                ControlToValidate="txtContent" CssClass="NormalRed" ErrorMessage="<br>Content is required"
                 runat="server" />
         </td>
     </tr>

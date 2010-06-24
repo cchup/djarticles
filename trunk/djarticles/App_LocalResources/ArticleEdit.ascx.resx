@@ -156,10 +156,22 @@
   <data name="lblTitle.Text" xml:space="preserve">
     <value>标题</value>
   </data>
+  <data name="valCategory.ErrorMessage" xml:space="preserve">
+    <value>&lt;br/&gt;所属分类必须选择</value>
+  </data>
   <data name="valContent.ErrorMessage" xml:space="preserve">
-    <value>内容必须填写</value>
+    <value>&lt;br/&gt;内容必须填写</value>
   </data>
   <data name="valContent.Text" xml:space="preserve">
     <value>内容</value>
+  </data>
+  <data name="valKeyWords.ErrorMessage" xml:space="preserve">
+    <value>&lt;br/&gt;关键字必须填写</value>
+  </data>
+  <data name="valSummary.ErrorMessage" xml:space="preserve">
+    <value>&lt;br/&gt;摘要必须填写</value>
+  </data>
+  <data name="valTitle.ErrorMessage" xml:space="preserve">
+    <value>&lt;br/&gt;标题必须填写</value>
   </data>
 </root>
