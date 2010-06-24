@@ -151,7 +151,7 @@ A:Link, A:Visited, A:Active {color: #83011F;text-decoration: none;font-family:Ar
 A:Hover {color: #000009;text-decoration: underline;font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;}
 
 /* Black (Default color) */
-.Normal { color: #333333; font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif; font-size: 13px; font-weight: normal; line-height:18px;}
+.Normal { color: #333333; font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif; font-size: 13px; font-weight: normal; line-height:22px;}
 A.Normal:link, A.Normal:visited, A.Normal:Active { color: #83011F; font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif; font-size: 13px; font-weight: normal; text-decoration: none; }
 A.Normal:Hover { color: #000009; font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif; font-size: 13px; font-weight: normal; text-decoration: underline; }
 
