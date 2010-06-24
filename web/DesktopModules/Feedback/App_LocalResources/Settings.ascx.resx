@@ -307,4 +307,7 @@ Send Copy &lt;/strong&gt;&amp;ndash; Enabling this option allows a copy of the f
   <data name="plTelephoneRequire.Text" xml:space="preserve">
     <value>Telephone Field Require</value>
   </data>
+  <data name="plEmailRequire.Text" xml:space="preserve">
+    <value>Email Field Require</value>
+  </data>
 </root>

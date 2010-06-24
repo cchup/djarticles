@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cmdLogin.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>登录</value>
   </data>
   <data name="plVerification.Help" xml:space="preserve">
     <value>Enter the verification code. You should have received the verification code on the email address used when registering</value>
