@@ -153,4 +153,11 @@
 			<asp:CheckBox id="chkOrgNameRequire" runat="server" cssclass="normal"></asp:CheckBox>
 		</td>
 	</tr>
+	<tr valign="top">
+		<td class="SubHead" style="width:175pt">
+		<dnn:label id="plEmailRequire" runat="server" controlname="chkEmailRequire" suffix=":"></dnn:label></td>
+		<td valign="bottom" style="width:325pt">
+			<asp:CheckBox id="chkEmailRequire" runat="server" cssclass="normal"></asp:CheckBox>
+		</td>
+	</tr>
 </table>

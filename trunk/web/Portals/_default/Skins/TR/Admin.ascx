@@ -52,7 +52,7 @@
           <!-- Font sizer panel end -->
           <!-- Login panel start -->
           <div class="LoginPane">
-            <dnn:LOGIN runat="server" id="dnnLOGIN"  CssClass="Login" Text="Login" LogoffText="LogOut" />
+            <dnn:LOGIN runat="server" id="dnnLOGIN"  CssClass="Login" Text="登录" LogoffText="退出" RegisterText="注册"/>
             |
             <dnn:USER runat="server" id="dnnUSER"  CssClass="User" />
           </div>
