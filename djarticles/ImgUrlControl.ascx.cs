@@ -8,10 +8,11 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using DotNetNuke.UI.UserControls;
 
 namespace DjArticles
 {
-    public partial class ArticlePreview : System.Web.UI.UserControl
+    public partial class ImgUrlControl : UrlControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

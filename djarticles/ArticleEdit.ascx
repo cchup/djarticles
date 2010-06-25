@@ -1,9 +1,31 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticleEdit.ascx.cs"
     Inherits="DjArticles.ArticleEdit" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="TextEditor" Src="~/controls/TextEditor.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Audit" Src="~/controls/ModuleAuditControl.ascx" %>
-<%@ Register TagPrefix="Portal" TagName="URL" Src="~/controls/URLControl.ascx" %>
+<%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>
+<script type="text/javascript">
+    //<![CDATA[
+    function OnClientItemSelected(sender, args)
+    {
+        var pvwImage = $get("pvwImage");
+        var imageSrc = args.get_item().get_url();
+
+        if (imageSrc.match(/\.(gif|jpg)$/gi))
+        {
+            pvwImage.src = imageSrc;
+            pvwImage.style.display = "";
+        }
+        else
+        {
+            pvwImage.src = imageSrc;
+            pvwImage.style.display = "none";
+        }
+    }
+    //]]>
+</script>
+<%--<telerik:RadScriptManager ID="RadScriptManager1" runat="Server" />--%>
 <table width="650" cellspacing="0" cellpadding="0" border="0">
     <tr height="30px">
         <td class="SubHead">
@@ -38,8 +60,17 @@
             <dnn:label id="lblImage" runat="server" controlname="ctlImage" suffix=":" />
         </td>
         <td>
-            <Portal:url id="ctlImage" runat="server" width="300" showtabs="False" showurls="False"
-                urltype="F" showtrack="False" showlog="False" required="False" />
+            <%--<telerik:RadFileExplorer runat="server" ID="reImage" Width="500px" Height="300px"
+                    OnClientItemSelected="OnClientItemSelected" EnableOpenFile="false">
+                </telerik:RadFileExplorer>
+            <fieldset style="width: 270px; height: 270px">
+                    <legend>Preview</legend>
+                    <img id="pvwImage" src="" alt="" style="display: none; margin: 10px; width: 250px;
+                        height: 225px;" />
+            </fieldset>
+            <%--<dnn:DnnFilePicker ID="ctlImage" runat="server" style="width:450px" Required="False" ShowSecure="True" ShowDatabase="False" />--%>
+        <dj:ImageFilePicker runat="server"  ID="ctlImage" runat="server" style="width:450px" Required="False" ShowSecure="True" ShowDatabase="False"  >
+        </dj:ImageFilePicker>
         </td>
     </tr>
     <tr height="40px">

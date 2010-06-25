@@ -14,6 +14,8 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.Entities.Modules.Actions;
 using DjArticles.Components;
+using DotNetNuke.Services.FileSystem;
+using DotNetNuke.Web.UI;
 
 namespace DjArticles
 {
@@ -49,6 +51,7 @@ namespace DjArticles
 
         ArticlesController articleController = new ArticlesController();
         ModuleController moduleController = new ModuleController();
+        FileController fileController = new FileController();
         /// <summary>
         /// 是否按类别查询
         /// </summary>
@@ -65,6 +68,11 @@ namespace DjArticles
         /// 每页大小
         /// </summary>
         private int articlesPerPage = 10;
+        /// <summary>
+        /// 图片最大大小
+        /// </summary>
+        private int maxImgHeight = 100;
+        private int maxImgWidth = 0x87;
         /// <summary>
         /// 文章详细模块名称
         /// </summary>
@@ -131,8 +139,19 @@ namespace DjArticles
             object _objPicUrl =DataBinder.Eval(e.Item.DataItem, "DefaultPicUrl");
             if (_objPicUrl != null && !string.IsNullOrEmpty(_objPicUrl.ToString().Trim()))
             {
+
                 articleImage.Visible = true;
-                articleImage.ImageUrl = _objPicUrl.ToString();
+                FileInfo file=fileController.GetFile(_objPicUrl.ToString(),this.PortalId);
+                //articleImage.ImageUrl =.RelativePath;
+                if (file != null)
+                {
+                    articleImage.ImageUrl = Globals.LinkClick("fileid=" + file.FileId.ToString(), this.TabId, Null.NullInteger);
+                    Utilities.CreateThumbnail(file, articleImage, this.maxImgWidth, this.maxImgHeight);
+                }
+                else
+                {
+                    articleImage.Visible = false;
+                }
             }
             else
             {

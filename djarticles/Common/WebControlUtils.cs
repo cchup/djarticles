@@ -65,11 +65,10 @@ namespace DjArticles.Common
         public static void SetTextEditorValue(UserControl userControl, string value)
         {
             TextEditor editorControl = userControl as TextEditor;
-            if (editorControl == null)
+            if (editorControl != null && value != null)
             {
-                return;
+                editorControl.Text = value;
             }
-            editorControl.Text = value;
         }
 
         /// <summary>
