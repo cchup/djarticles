@@ -52,6 +52,7 @@
                  <asp:DropDownList ID="drpTemplate" runat="server">
                     <asp:ListItem Value="Standard" Selected="True" ResourceKey="Template_Standard" />
                     <asp:ListItem Value="TitleOnly" ResourceKey="Template_TitleOnly" />
+                    <asp:ListItem Value="ImageArray" ResourceKey="Template_ImageArray" />
                 </asp:DropDownList>
             </td>
         </tr>

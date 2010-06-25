@@ -8,6 +8,7 @@ using DotNetNuke.Entities.Modules;
 using DjArticles.Components;
 using DjArticles.Common;
 using DotNetNuke.UI.UserControls;
+using DotNetNuke.Web.UI.WebControls;
 
 namespace DjArticles
 {
@@ -60,6 +61,7 @@ namespace DjArticles
                 this.txtTitle.Text = article.Title;
                 this.txtKeyWords.Text = article.KeyWords;
                 this.txtSummary.Text = article.Summary;
+                ctlImage.FilePath = article.DefaultPicUrl;
                 WebControlUtils.SetTextEditorValue(this.txtContent, article.Content);
                 this.cbAllowComment.Checked = article.AllowComment;
                 this.cbAllowPrint.Checked = article.AllowPrint;
@@ -77,8 +79,7 @@ namespace DjArticles
             ArticleInfo article = new ArticleInfo();
             article.ArticleID = WebControlUtils.GetObjectIntValue(this.hfArticleId);
             article.CategoryID = WebControlUtils.GetObjectIntValue(this.cboCategory);
-            UrlControl urlControl = this.ctlImage as UrlControl;
-            article.DefaultPicUrl = (urlControl == null ? "" : urlControl.Url);
+            article.DefaultPicUrl = ctlImage.FilePath;
             article.Title = this.txtTitle.Text;
             article.KeyWords = this.txtKeyWords.Text;
             article.Summary = this.txtSummary.Text;
@@ -117,12 +118,8 @@ namespace DjArticles
                 {
                     SetArticleInfo(articleId);
                 }
-                UrlControl urlControl = this.ctlImage as UrlControl;
-                if (urlControl != null)
-                {
-                    urlControl.FileFilter = Globals.glbImageFileTypes;
-                }
             }
+            ctlImage.FileFilter = Globals.glbImageFileTypes;
         }
 
         protected void cmdCancel_Click(object sender, EventArgs e)
@@ -146,7 +143,7 @@ namespace DjArticles
             }
             try
             {
-                ArticleInfo articleInfo= GetArticleInfo();
+                ArticleInfo articleInfo = GetArticleInfo();
                 controller.SaveArticle(articleInfo);
                 Response.Redirect(Globals.NavigateURL(), true);
             }
