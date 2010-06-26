@@ -14,12 +14,16 @@ using System.Collections;
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Services.Localization;
+using DotNetNuke.Services.FileSystem;
+using DotNetNuke.Web.UI;
+using DotNetNuke.Common;
 
 namespace DjArticles.Components
 {
     public class ArticlePortalModuleBase : PortalModuleBase
     {
         private UserController userController = new UserController();
+        protected FileController fileController = new FileController();
 
         /// <summary>
         /// 当前用户是否已登录
@@ -306,6 +310,24 @@ namespace DjArticles.Components
         protected void ShowMessage(string message)
         {
             this.Page.ClientScript.RegisterStartupScript(this.GetType(), MessageKey, "alert('" + message + "');", true);
+        }
+
+        /// <summary>
+        /// 获取引用文件的Url路径
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        protected string GetFileResolveUrl(string filePath)
+        {
+            FileInfo file = fileController.GetFile(filePath, this.PortalId);
+            if (file != null)
+            {
+                return  Globals.LinkClick("fileid=" + file.FileId.ToString(), this.TabId, Null.NullInteger);
+            }
+            else
+            {
+                return filePath;
+            }
         }
     }
 }

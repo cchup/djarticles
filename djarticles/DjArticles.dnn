@@ -36,7 +36,7 @@
                   <moduleControl>
                     <controlKey>ArticleEdit</controlKey>
                     <controlSrc>DesktopModules/DjArticles/ArticleEdit.ascx</controlSrc>
-                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <supportsPartialRendering>True</supportsPartialRendering>
                     <controlTitle>文章发表（修改）</controlTitle>
                     <controlType>Admin</controlType>
                     <iconFile />
@@ -51,6 +51,7 @@
                     <controlType>View</controlType>
                     <iconFile />
                     <helpUrl />
+                    <viewOrder>0</viewOrder>
                   </moduleControl>
                   <moduleControl>
                     <controlKey>CategoryEdit</controlKey>
@@ -60,6 +61,7 @@
                     <controlType>Edit</controlType>
                     <iconFile />
                     <helpUrl />
+                    <viewOrder>0</viewOrder>
                   </moduleControl>
                   <moduleControl>
                     <controlKey>CategoryManage</controlKey>
@@ -85,13 +87,64 @@
                     <controlType>View</controlType>
                     <iconFile />
                     <helpUrl />
+                    <viewOrder>0</viewOrder>
                   </moduleControl>
                   <moduleControl>
-                    <controlKey>ArticlesListSettings</controlKey>
+                    <controlKey>ArticleDetail</controlKey>
+                    <controlSrc>DesktopModules/DjArticles/ArticleDetail.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>ArticleView</controlKey>
+                    <controlSrc>DesktopModules/DjArticles/ArticleView.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
                     <controlSrc>DesktopModules/DjArticles/ArticlesListSettings.ascx</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle>设置</controlTitle>
-                    <controlType>Edit</controlType>
+                    <controlType>Admin</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+              <moduleDefinition>
+                <friendlyName>DjArticles-CategoryList</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DjArticles/CategoryList.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+              <moduleDefinition>
+                <friendlyName>DjArticles-Detail</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DjArticles/ArticleDetail.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
                     <iconFile />
                     <helpUrl />
                   </moduleControl>
@@ -100,38 +153,13 @@
             </moduleDefinitions>
           </desktopModule>
         </component>
-        <component type="Assembly">
-          <assemblies>
-            <basePath>bin</basePath>
-            <assembly>
-              <path>bin</path>
-              <name>CountryListBox.dll</name>
-            </assembly>
-            <assembly>
-              <path>bin</path>
-              <name>Dj.Modules.Articles.dll</name>
-            </assembly>
-            <assembly>
-              <path>bin</path>
-              <name>DotNetNuke.Services.Syndication.dll</name>
-            </assembly>
-            <assembly>
-              <path>bin</path>
-              <name>DotNetNuke.WebControls.dll</name>
-            </assembly>
-            <assembly>
-              <path>bin</path>
-              <name>DotNetNuke.WebUtility.dll</name>
-            </assembly>
-            <assembly>
-              <path>bin</path>
-              <name>SharpZipLib.dll</name>
-            </assembly>
-          </assemblies>
-        </component>
         <component type="File">
           <files>
             <basePath>DesktopModules\DjArticles</basePath>
+            <file>
+              <path>App_LocalResources</path>
+              <name>ArticleDetail.ascx.resx</name>
+            </file>
             <file>
               <path>App_LocalResources</path>
               <name>ArticleEdit.ascx.resx</name>
@@ -157,116 +185,63 @@
               <name>CategoryManage.ascx.resx</name>
             </file>
             <file>
-              <path>bin\.svn\prop-base</path>
-              <name>CountryListBox.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>CountryListBox.pdb.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>Dj.Modules.Articles.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>Dj.Modules.Articles.pdb.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>DotNetNuke.Services.Syndication.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>DotNetNuke.WebControls.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>DotNetNuke.WebUtility.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\prop-base</path>
-              <name>SharpZipLib.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>CountryListBox.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>CountryListBox.pdb.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>CountryListBox.xml.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>Dj.Modules.Articles.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>Dj.Modules.Articles.pdb.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>Dj.Modules.Articles.xml.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>DotNetNuke.Services.Syndication.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>DotNetNuke.WebControls.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>DotNetNuke.WebUtility.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn\text-base</path>
-              <name>SharpZipLib.dll.svn-base</name>
-            </file>
-            <file>
-              <path>bin\.svn</path>
-              <name>all-wcprops</name>
-            </file>
-            <file>
-              <path>bin\.svn</path>
-              <name>entries</name>
-            </file>
-            <file>
-              <path>bin</path>
-              <name>CountryListBox.pdb</name>
-            </file>
-            <file>
-              <path>bin</path>
-              <name>CountryListBox.xml</name>
-            </file>
-            <file>
-              <path>bin</path>
-              <name>Dj.Modules.Articles.pdb</name>
-            </file>
-            <file>
-              <path>bin</path>
-              <name>Dj.Modules.Articles.xml</name>
+              <path>App_LocalResources</path>
+              <name>ImageFilePicker.resx</name>
             </file>
             <file>
               <path>Controls\GridView</path>
               <name>DjGridView.bmp</name>
             </file>
             <file>
+              <path>images</path>
+              <name>accept.png</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>category.jpg</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>comments.png</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>comment_tip.gif</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>comment_tip_owner.gif</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>dian.jpg</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>list-icon.png</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>noimage.gif</name>
+            </file>
+            <file>
+              <path>images</path>
+              <name>topic.png</name>
+            </file>
+            <file>
               <name>ArticleComments.ascx</name>
+            </file>
+            <file>
+              <name>ArticleDetail.ascx</name>
             </file>
             <file>
               <name>ArticleEdit.ascx</name>
             </file>
             <file>
-              <name>ArticleManage.ascx</name>
+              <name>ArticleFileManager.ascx</name>
             </file>
             <file>
-              <name>ArticlePreview.ascx</name>
+              <name>ArticleManage.ascx</name>
             </file>
             <file>
               <name>ArticlesList.ascx</name>
@@ -278,13 +253,31 @@
               <name>ArticlesListTop.ascx</name>
             </file>
             <file>
+              <name>ArticlesList_ImageArray.ascx</name>
+            </file>
+            <file>
+              <name>ArticlesList_ImageTitleArray.ascx</name>
+            </file>
+            <file>
+              <name>ArticlesList_Standard.ascx</name>
+            </file>
+            <file>
+              <name>ArticlesList_TitleOnly.ascx</name>
+            </file>
+            <file>
               <name>ArticleView.ascx</name>
             </file>
             <file>
               <name>CategoryEdit.ascx</name>
             </file>
             <file>
+              <name>CategoryList.ascx</name>
+            </file>
+            <file>
               <name>CategoryManage.ascx</name>
+            </file>
+            <file>
+              <name>ImgUrlControl.ascx</name>
             </file>
             <file>
               <name>jQComment.js</name>
@@ -294,9 +287,6 @@
             </file>
             <file>
               <name>Settings.ascx</name>
-            </file>
-            <file>
-              <name>vssver2.scc</name>
             </file>
             <file>
               <name>Web.config</name>

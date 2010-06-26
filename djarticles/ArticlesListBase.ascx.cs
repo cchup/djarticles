@@ -51,7 +51,7 @@ namespace DjArticles
 
         ArticlesController articleController = new ArticlesController();
         ModuleController moduleController = new ModuleController();
-        FileController fileController = new FileController();
+        
         /// <summary>
         /// 是否按类别查询
         /// </summary>
@@ -142,7 +142,6 @@ namespace DjArticles
 
                 articleImage.Visible = true;
                 FileInfo file=fileController.GetFile(_objPicUrl.ToString(),this.PortalId);
-                //articleImage.ImageUrl =.RelativePath;
                 if (file != null)
                 {
                     articleImage.ImageUrl = Globals.LinkClick("fileid=" + file.FileId.ToString(), this.TabId, Null.NullInteger);
@@ -215,7 +214,7 @@ namespace DjArticles
             }
             else
             {
-                return this.EditUrl("ArticleID", _articleId.ToString(), "ArticleView");
+                return this.EditUrl("ArticleID", _articleId.ToString(), "ArticleDetail");
             }
         }
 
