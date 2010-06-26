@@ -53,6 +53,7 @@
                     <asp:ListItem Value="Standard" Selected="True" ResourceKey="Template_Standard" />
                     <asp:ListItem Value="TitleOnly" ResourceKey="Template_TitleOnly" />
                     <asp:ListItem Value="ImageArray" ResourceKey="Template_ImageArray" />
+                    <asp:ListItem Value="ImageTitleArray" ResourceKey="Template_ImageTitleArray" />
                 </asp:DropDownList>
             </td>
         </tr>

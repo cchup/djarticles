@@ -10,13 +10,16 @@
             <asp:Label ID="lblCreateDate" runat="server" />
             |
             <asp:Label ID="lblHits" runat="server" />
-            次阅读 | 【已有条<asp:Label ID="lblCommentCount1" runat="server" Text=""/>评论】<a href="#postcomment" target="_self">发表评论</a>
+            次阅读 | 【已有<asp:Label ID="lblCommentCount1" runat="server" Text=""/>条评论】<a href="#postcomment" target="_self">发表评论</a>
         </p>
         <p>
             关键字：<asp:Label ID="lblKeywords" runat="server" Text=""/>
         </p>
     </div>
     <div class="articleItem articleContent">
+        <div style="text-align:center;">
+        <asp:Image ID="imgArticleImage" runat="server" />    
+        </div>
         <asp:Literal ID="ltlContent" runat="server" />
         <p align="right">
             【<a href="#postcomment" target="_self">发表评论</a>】 <font style="color: #c00; font-size: 12px;">

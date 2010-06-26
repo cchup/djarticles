@@ -2,11 +2,13 @@ E:\源码\BroadWisdom\bin\DjArticles.dll
 E:\源码\BroadWisdom\bin\DjArticles.pdb
 E:\Developer Project\DjArticles\web\bin\DjArticles.dll
 E:\Developer Project\DjArticles\web\bin\DjArticles.pdb
-E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Release\ResolveAssemblyReference.cache
-E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Release\DjArticles.dll
-E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Release\DjArticles.pdb
 E:\源码\BroadWisdom\web\bin\DjArticles.dll
 E:\源码\BroadWisdom\web\bin\DjArticles.pdb
 E:\源码\BroadWisdom\DjArticles\src\obj\Release\ResolveAssemblyReference.cache
 E:\源码\BroadWisdom\DjArticles\src\obj\Release\DjArticles.dll
 E:\源码\BroadWisdom\DjArticles\src\obj\Release\DjArticles.pdb
+E:\Developer Project\HomeBook\web\bin\DjArticles.dll
+E:\Developer Project\HomeBook\web\bin\DjArticles.pdb
+E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Release\ResolveAssemblyReference.cache
+E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Release\DjArticles.dll
+E:\Developer Project\DjArticles\src\Dj.Modules.Articles\obj\Release\DjArticles.pdb

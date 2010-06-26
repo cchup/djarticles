@@ -189,6 +189,15 @@ namespace DjArticles
                 this.stars = article.Stars;
                 // 设置控件值
                 this.lblTitle.Text = this.title;
+                if (!string.IsNullOrEmpty(this.defaultPicUrl))
+                {
+                    this.imgArticleImage.Visible = true;
+                    this.imgArticleImage.ImageUrl = this.GetFileResolveUrl(this.defaultPicUrl);
+                }
+                else
+                {
+                    this.imgArticleImage.Visible = false;
+                }
                 this.ltlContent.Text = Server.HtmlDecode(this.content);
                 this.lblCreateDate.Text = this.createdDate.ToString("yyyy年M月d日 hh:mm:ss");
                 this.lblHits.Text = this.hits.ToString();

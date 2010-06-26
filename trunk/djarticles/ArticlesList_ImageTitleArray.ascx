@@ -7,7 +7,8 @@
         OnItemCommand="lstArticles_ItemCommand">
         <ItemTemplate>
             <li><span><a href='<%# GetArticleDetailUrl(DataBinder.Eval(Container.DataItem,"ArticleID"))  %>'>
-                <asp:Image ID="imgArticleImage" ToolTip='<%# DataBinder.Eval(Container.DataItem,"Title") %>' runat="server" CssClass="thumbnail" />
+                <asp:Image ID="imgArticleImage" runat="server" CssClass="thumbnail" />
+                <span class="article_title"><%# DataBinder.Eval(Container.DataItem,"Title") %></span>
             </a></span></li>
         </ItemTemplate>
         <FooterTemplate>
