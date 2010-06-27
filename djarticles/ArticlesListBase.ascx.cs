@@ -144,7 +144,7 @@ namespace DjArticles
                 FileInfo file=fileController.GetFile(_objPicUrl.ToString(),this.PortalId);
                 if (file != null)
                 {
-                    articleImage.ImageUrl = Globals.LinkClick("fileid=" + file.FileId.ToString(), this.TabId, Null.NullInteger);
+                    articleImage.ImageUrl = PortalSettings.HomeDirectory + file.RelativePath;
                     Utilities.CreateThumbnail(file, articleImage, this.maxImgWidth, this.maxImgHeight);
                 }
                 else
