@@ -15,7 +15,7 @@ General End Here
 .BGTable2{ background:url(images/header-bg.jpg) 50% 0 no-repeat;}
 
 .Container{position:relative;width:810px; margin:0 auto; padding:0 0 0 0px; }
-.LeftSidePane{ float:left;position:absolute;left:-160px;width:160px;}
+.LeftSidePane{ float:left; position:absolute;left:-130px;width:130px;}
 
 /* Navigation panel start here */
 .NavPane{ background:url(images/nav-bg.gif) 0 0 repeat-x; position:relative; height:67px; padding:0 27px; }
