@@ -12,5 +12,21 @@ namespace DjArticles.Controls
 {
     public class ImageFilePicker:DotNetNuke.Web.UI.WebControls.DnnFilePicker
     {
+        public new string FilePath
+        {
+            get
+            {
+                string filePath = base.FilePath;
+                if (filePath.Contains("//"))
+                {
+                    filePath = filePath.Replace("//", "/");
+                }
+                return filePath;
+            }
+            set
+            {
+                base.FilePath = value;
+            }
+        }
     }
 }
