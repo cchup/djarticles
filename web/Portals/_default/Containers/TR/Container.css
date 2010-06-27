@@ -7,7 +7,7 @@
 .BlackTitleContentpane {text-align:left;vertical-align: top;padding:10px 0px 10px 0px; clear:both;}
 .BlackTitleVisibilitycell {float:right;text-align: right;}
 .BlackTitleTitleTable {width:100%;}
-
+.NoTitleIconTitle {position:relative;padding:0px 0px 60px 10px;}
 /* Styles for Containers NoPaddingNoTitle Title Container */
 .NoPaddingNoTitleTitleWidth { padding:0px 0px 0px 0px;}
 .NoPaddingNoTitleTitleContentpane {	text-align: left;	vertical-align: top;	padding:0px 0px 0px 0px; clear:both;}
