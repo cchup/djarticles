@@ -321,7 +321,7 @@ namespace DjArticles.Components
             FileInfo file = fileController.GetFile(filePath, this.PortalId);
             if (file != null)
             {
-                return  Globals.LinkClick("fileid=" + file.FileId.ToString(), this.TabId, Null.NullInteger);
+                return PortalSettings.HomeDirectory + file.RelativePath;
             }
             else
             {
