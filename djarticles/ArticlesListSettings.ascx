@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlesListSettings.ascx.cs"
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="ArticlesListSettings.ascx.cs"
     Inherits="DjArticles.ArticlesListSettings" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="DualList" Src="~/controls/DualListControl.ascx" %>

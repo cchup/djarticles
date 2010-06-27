@@ -15,7 +15,6 @@ using DotNetNuke.Entities.Users;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Services.Localization;
 using DotNetNuke.Services.FileSystem;
-using DotNetNuke.Web.UI;
 using DotNetNuke.Common;
 
 namespace DjArticles.Components

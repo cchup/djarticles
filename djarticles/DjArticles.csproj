@@ -30,7 +30,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <OutputPath>..\..\web\bin\</OutputPath>
+    <OutputPath>..\..\..\HomeBook\web\bin\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,7 +51,7 @@
     </Reference>
     <Reference Include="DotNetNuke.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\DotNetNuke.Web.dll</HintPath>
+      <HintPath>..\..\bin\DotNetNuke.Web.dll</HintPath>
     </Reference>
     <Reference Include="DotNetNuke.WebControls, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -185,7 +185,6 @@
     <Compile Include="Components\DataProvider.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Components\ImageFilePicker.cs" />
     <Compile Include="Components\SideMenuSource.cs" />
     <Compile Include="Controls\DJBaseControl.cs" />
     <Compile Include="Controls\GridView\DjGridView.cs" />

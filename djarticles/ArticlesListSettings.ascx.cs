@@ -21,7 +21,7 @@ namespace DjArticles
         #region Private Members
 
         CategoryController categoryController = new CategoryController();
-        ModuleController objModuleController = new ModuleController();
+      
         TabController tabController = new TabController();
         #endregion
 
@@ -38,6 +38,10 @@ namespace DjArticles
         /// ----------------------------------------------------------------------------- 
         public override void LoadSettings()
         {
+            if (IsPostBack)
+            {
+                return;
+            }
             try
             {
 
@@ -87,21 +91,22 @@ namespace DjArticles
         {
             try
             {
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "ArticlesPerPage", txtArticlesPerPage.Text);
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "SortField", drpSortField.SelectedValue);
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "DateRange", drpDateRange.SelectedValue);
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "Template", drpTemplate.SelectedValue);
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "ShowCategory", chkShowCategory.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "ShowReadMore", chkShowReadMore.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "AllowComments", chkAllowComments.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "AnonymousComments", chkAnonymousComments.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "MoreArticles", chkMoreArticles.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "WillPage", chkWillPage.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "FilterByCategory", chkFilterByCategory.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "FilterCategoryID", cboCategory.SelectedValue);
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "AcceptParameter", chkAcceptParameter.Checked.ToString());
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "MoreArticlesPage", drpMoreArticlesPage.SelectedValue);
-                objModuleController.UpdateTabModuleSetting(this.TabModuleId, "DetailArticlesPage", drpDetialArticlesPage.SelectedValue);
+                ModuleController objModuleController = new ModuleController();
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "ArticlesPerPage", txtArticlesPerPage.Text);
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "SortField", drpSortField.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "DateRange", drpDateRange.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "Template", drpTemplate.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "ShowCategory", chkShowCategory.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "ShowReadMore", chkShowReadMore.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "AllowComments", chkAllowComments.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "AnonymousComments", chkAnonymousComments.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "MoreArticles", chkMoreArticles.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "WillPage", chkWillPage.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "FilterByCategory", chkFilterByCategory.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "FilterCategoryID", cboCategory.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "AcceptParameter", chkAcceptParameter.Checked.ToString());
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "MoreArticlesPage", drpMoreArticlesPage.SelectedValue);
+                objModuleController.UpdateTabModuleSetting(TabModuleId, "DetailArticlesPage", drpDetialArticlesPage.SelectedValue);
             }
             catch (Exception exc)
             {
