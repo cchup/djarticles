@@ -13,7 +13,9 @@ General End Here
 .BGTable{ background:url(images/bg.gif) 0 0 repeat-x #B7D9D1;}
 .BGTable1{ background:url(images/body-bg.jpg) 50% 0 repeat-y;}
 .BGTable2{ background:url(images/header-bg.jpg) 50% 0 no-repeat;}
-.Container{	width:810px; margin:0 auto; padding:0 0 0 0px; }
+
+.Container{position:relative;width:810px; margin:0 auto; padding:0 0 0 0px; }
+.LeftSidePane{ float:left;position:absolute;left:-160px;width:160px;}
 
 /* Navigation panel start here */
 .NavPane{ background:url(images/nav-bg.gif) 0 0 repeat-x; position:relative; height:67px; padding:0 27px; }

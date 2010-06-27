@@ -19,6 +19,7 @@
   <div class="BGTable1">
     <!-- BG Table 2 start -->
     <div class="BGTable2">
+     
       <!-- Container start -->
       <div class="Container">
         <!-- Logo Panel start -->
@@ -33,6 +34,8 @@
         <!-- Twitter panel start -->
         <div class="TwitterPane" id="TwitterPane" runat="server" visible="false"></div>
         <!-- Twitter panel end -->
+        <!--左边栏区--><div class="ClearFloat"></div>
+	<div class="LeftSidePane" id="LeftSidePane" runat="server"  visible="false"></div>
         <!-- Body Content Top start -->
         <div class="BodyContentTop">
           <!-- Font sizer panel start -->
