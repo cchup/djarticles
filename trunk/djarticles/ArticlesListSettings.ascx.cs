@@ -13,6 +13,7 @@ using DotNetNuke.Services.Exceptions;
 using DjArticles.Components;
 using DotNetNuke.Entities.Tabs;
 using DotNetNuke.Common.Utilities;
+using System.Collections.Generic;
 
 namespace DjArticles
 {
@@ -21,8 +22,6 @@ namespace DjArticles
         #region Private Members
 
         CategoryController categoryController = new CategoryController();
-      
-        TabController tabController = new TabController();
         #endregion
 
         #region Members Methods
@@ -139,17 +138,19 @@ namespace DjArticles
         /// </summary>
         private void BindPages()
         {
-            TabCollection tabCollection = tabController.GetTabsByPortal(this.PortalId);
+
+
+            List<TabInfo> tabCollection = TabController.GetPortalTabs(PortalId, -1, false, Null.NullString, true, false, true, false, true);
             TabInfo emptyTab = new TabInfo();
             emptyTab.TabName = "--无--";
             emptyTab.TabID = Null.NullInteger;
             tabCollection.Add(emptyTab);
-            this.drpMoreArticlesPage.DataSource = tabCollection.Values;
-            this.drpMoreArticlesPage.DataTextField="TabName";
-            this.drpMoreArticlesPage.DataValueField="TabID";
+            this.drpMoreArticlesPage.DataSource = tabCollection;
+            this.drpMoreArticlesPage.DataTextField = "TabName";
+            this.drpMoreArticlesPage.DataValueField = "TabID";
             this.drpMoreArticlesPage.DataBind();
 
-            this.drpDetialArticlesPage.DataSource = tabCollection.Values;
+            this.drpDetialArticlesPage.DataSource = tabCollection;
             this.drpDetialArticlesPage.DataTextField = "TabName";
             this.drpDetialArticlesPage.DataValueField = "TabID";
             this.drpDetialArticlesPage.DataBind();
