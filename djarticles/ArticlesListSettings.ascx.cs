@@ -138,13 +138,11 @@ namespace DjArticles
         /// </summary>
         private void BindPages()
         {
-
-
             List<TabInfo> tabCollection = TabController.GetPortalTabs(PortalId, -1, false, Null.NullString, true, false, true, false, true);
             TabInfo emptyTab = new TabInfo();
             emptyTab.TabName = "--无--";
             emptyTab.TabID = Null.NullInteger;
-            tabCollection.Add(emptyTab);
+            tabCollection.Insert(0, emptyTab);
             this.drpMoreArticlesPage.DataSource = tabCollection;
             this.drpMoreArticlesPage.DataTextField = "TabName";
             this.drpMoreArticlesPage.DataValueField = "TabID";
