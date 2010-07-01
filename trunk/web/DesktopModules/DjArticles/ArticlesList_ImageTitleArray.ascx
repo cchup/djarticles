@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlesListBase.ascx.cs"
+﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeBehind="ArticlesListBase.ascx.cs"
     Inherits="DjArticles.ArticlesListBase" %>
 <%@ Register TagPrefix="dnnsc" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <asp:Label ID="lblMessage" runat="server" />

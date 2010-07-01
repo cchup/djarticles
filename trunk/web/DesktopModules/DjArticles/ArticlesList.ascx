@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ArticlesList.ascx.cs" Inherits="DjArticles.ArticlesList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" CodeBehind="ArticlesList.ascx.cs" Inherits="DjArticles.ArticlesList" %>
 <asp:Label ID="lblSearchResults" cssclass="SubHead" Visible="False" Runat="server" />
 <asp:Placeholder ID="objPlaceholder" Runat="server" />
 <br />
