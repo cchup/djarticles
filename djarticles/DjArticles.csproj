@@ -78,6 +78,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleCommentAdd.ashx.cs">
+      <DependentUpon>ArticleCommentAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleCommentDelete.ashx.cs">
+      <DependentUpon>ArticleCommentDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleCommentQuote.ashx.cs">
+      <DependentUpon>ArticleCommentQuote.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ArticleComments.ascx.cs">
       <DependentUpon>ArticleComments.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,9 +236,11 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="01.00.00.SqlDataProvider" />
+    <Content Include="ArticleCommentDelete.ashx" />
+    <Content Include="ArticleCommentAdd.ashx" />
+    <Content Include="ArticleCommentQuote.ashx" />
     <None Include="DjArticles.dnn" />
     <None Include="Uninstall.SqlDataProvider" />
-    <None Include="01.00.01.SqlDataProvider" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
