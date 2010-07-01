@@ -257,6 +257,12 @@ namespace DjArticles
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            //系统传递了文章ID参数，需要转到详细信息页面，系统自动转换
+            if (!String.IsNullOrEmpty(Request.Params["ArticleID"]))
+            {
+                Response.Redirect(this.EditUrl("ArticleID",Request.Params["ArticleID"], "ArticleDetail"));
+                return;
+            }
             this.LocalResourceFile = Localization.GetResourceFile(this, "ArticlesList.ascx").Replace("/Templates", "");
         }
 
