@@ -1,0 +1,185 @@
+@import url("css/admin.css");
+/*  Brisk 1.0 Skin styles for DotNetNuke by dnnskin.net Overall support@dnnskin.net */  
+/* Default Style */
+
+#Body								{ height:100%}
+body,th,td,table,h1,h2,h3,h4,h5,h6,.Normal,.NormalDisabled,.Head,.SubHead,.SubSubHead, a:link, a:visited, a:hover, input, .CommandButton{ font-family: Arial, Helvetica, sans-serif}
+body,th,td,table,.Normal,.NormalDisabled,.Head,.SubHead,.SubSubHead, a:link, a:visited, a:hover{font-size:small}
+h1, h2, h3, h4, h5, h6, h2 input	{ color:#000;font-weight:bold;margin:1ex 0}
+h1									{ font-size:1.8em;margin:10px 0}
+h2, h2 input						{ font-size:1.5em}
+h3									{ font-size:1.3em}
+h4									{ font-size:1.1em}
+h5									{ font-size:1em}
+h6									{ font-size:0.8em}
+p									{ padding:5px 0; margin:0px}
+li									{ list-style: disc; padding:0px; margin:0px}
+ol li								{ list-style: decimal; }
+ul li								{ list-style: disc }
+.Head, .SubHead, .SubSubHead, 
+.Normal, .NormalDisabled, 
+.NormalDisabled, .NormalBold, 
+.NormalRed, .NormalTextBox			{ font-family: Arial, Helvetica, sans-serif}
+.Head								{ color:#419bc4;font-weight:bold}
+.SubHead 							{ color:#4C6171}
+.SubSubHead							{ color:#999}
+.NormalRed							{ color:#F00}
+
+/* pane style */
+
+.BannerPane 						{ margin:0px;padding:0px}
+.TopLeftPane 						{ width:49%}
+.TopRightPane						{ width:49%}
+.MainaPane							{ width:32.7%}
+.MainbPane							{ width:32.6%;margin-left:1%; display:inline}
+.MaincPane							{ width:32.7%}
+.BoxaPane							{ width:24.2%}
+.BoxbPane							{ width:24.2%;margin-left:1%; display:inline}
+.BoxcPane							{ width:24.2%;margin-left:1%; display:inline}
+.BoxdPane							{ width:24.2%}
+.HeadPane							{ clear:both;width:60%;float:right}
+.LeftPane							{ padding:0 10px 0 0;width:24%;margin:0}
+.RightPane							{ padding:0 0 0 10px;width:24%;margin:0}
+.ContentPane, .TopPane			 	{ padding:0;margin:0}
+.FooterPane							{ clear:both}
+.InnerLeftPane						{ width:49.5%}
+.InnerRightPane						{ width:49.5%}
+.InnerAPane							{ width:32.3%}
+.InnerBPane							{ width:32.2%;margin-left:0.9%; display:inline}
+.InnerCPane							{ width:32.3%}
+.BottomPane							{ clear:both}
+
+/* Empty panes Style */
+
+.DNNEmptyPane						{ width:0;padding:0;margin:0}
+
+/* design style */
+
+#Brisk_wrapper						{ margin:0 auto; width:970px}/*the skin default width*/
+#brisk_header						{ min-height:90px; height:auto}/*the skin head default height*/
+* html #brisk_header				{ height:90px}/*the skin head default height*/
+#brisk_header .logo					{ float:left}
+#brisk_header .topbar				{ float:right;text-align:center;color:#FFFFFF}
+#brisk_header .headpane				{ float:right}
+#brisk_innermain_content			{ width:79%;float:right}
+.clear_float						{ clear:both;line-height:0;font-size:0;height:0}
+.spacer								{ height:5px}
+.float_left							{ float:left}
+.float_right						{ float:right}
+/*the top menu background*/
+.brisk_nav_left						{ background:url(images/menu_left.png) left top no-repeat; clear:both}
+.brisk_nav_right					{ background:url(images/menu_right.png) right top no-repeat;}
+.brisk_nav_bg						{ background:url(images/menu_bg.png) top left repeat-x;margin:0 187px 0 13px;height:43px}
+/*the breader background*/
+.brisk_bread_left					{ background:url(images/bread_left.png) no-repeat top left}
+.brisk_bread_right					{ background:url(images/bread_right.png) no-repeat top right}
+.brisk_bread_bg						{ background:url(images/bread_bg.png) repeat-x top left;margin:0 11px;height:28px}
+/*the links background*/
+.brisk_links_left					{ background:url(images/links_left.png) no-repeat top left}
+.brisk_links_right					{ background:url(images/links_right.png) no-repeat top right}
+.brisk_links_bg						{ background:url(images/links_bg.png) repeat-x top left;margin:0 10px;height:40px;text-align:center}
+.Language img						{ width:16px}
+.dnnpanes							{ clear:both}
+
+/*- Search SkinObject Styles */
+
+div.SearchContainer					{ position:relative;white-space:nowrap;float:right}
+div.SearchBorder					{ width:140px;height:20px;border:solid 0px #e0e0e0;position:absolute;right:-150px;top:9px;background:transparent}
+div.SearchContainer a				{ padding:0px;display:block;position:absolute;right:-175px;top:9px;background:url(images/search.gif) top center no-repeat;}
+div.SearchContainer a:hover			{ background:url(images/search.gif) bottom center no-repeat;}
+div.SearchContainer a img			{ width:22px;height:22px;border:none}
+div.SearchIcon						{ float:left;width:31px;height:20px;cursor:pointer;z-index:11;background:no-repeat 2px 2px;text-align:right}
+div.SearchIcon img					{ margin-top:5px}
+input.SearchTextBox					{ float:left;z-index:10;border:0;width:90px;height:18px;margin-left:3px;color:#000;border:none;background:#fff;font-size:12px}
+#SearchChoices						{ clear:both;display:none;border:solid 1px #C3D4DF;z-index:2000;cursor:pointer;margin:0;padding:0;text-align:left;background-color:#F3F7FA;position:absolute;top:22px;left:0}
+#SearchChoices li					{ cursor:pointer;margin:0;padding:2px 2px 0 2px;padding-left:25px;height:18px;text-align:left;background-color:#F3F7FA;background-repeat:no-repeat;background-position:2px center;list-style:none;list-style-image:none;border:none;display:block}
+#SearchChoices li.searchHilite		{ background-color:#666;	color:#ffffff;border:none}
+#SearchChoices li.searchDefault		{ background-color:#F8FAFF;border:none}
+a.CommandButton:link,a.CommandButton:active, a.CommandButton:visited{color:#f00;font-weight:bold;text-decoration:none}
+a.CommandButton:hover				{ color:#000;text-decoration:underline}
+
+/*the copyright object link default styles*/
+.copyright							{ line-height:28px;padding:0 5px;font-size:.8em}
+/*the CurrentDate object link default styles*/
+.CurrentDate						{ padding:0 5px; font-size:0.9em}
+/*the privacy object link default styles*/
+.privacy,a.privacy:link,a.privacy:active,
+a.privacy:visited 					{ line-height:28px; padding:0 5px; font-size:.8em} 
+a.privacy:hover						{ font-size:0.8em}
+/*the terms object link default styles*/
+.terms,a.terms:link,a.terms:active,
+a.terms:visited 					{ line-height:28px; padding:0 5px; font-size:.8em} 
+a.terms:hover						{ font-size:.8em}
+/*the Breadcrumb object link default styles*/
+.Breadcrumb,a.Breadcrumb:link,
+a.Breadcrumb:active,a.Breadcrumb:visited{line-height:28px;padding:0 5px; font-size:.9em}
+a.Breadcrumb:hover					{}
+/*the options link default styles*/
+.options,a.options:link,
+a.options:active,a.options:visited 	{ padding:0 15px 0 10px;background:url(images/option.gif) right center no-repeat;font-size:0.9em; font-weight:bold} 
+/*the user object link default styles*/
+.user,a.user:link,a.user:active,a.user:visited,a.user:hover{ line-height:28px;padding:0 5px 0 15px;background:url(images/arrow.gif) left center no-repeat; font-size:0.9em} 
+/*the login object link default styles*/
+.login,a.login:link,a.login:active,a.login:visited,a.login:hover { line-height:28px;padding:0 5px 0 15px;background:url(images/arrow.gif) left center no-repeat; font-size:0.9em}
+/*the Links object link Default styles*/
+.links{ font-size:.7em; padding:0 3px}
+a.links:link,a.links:active,a.links:visited,a.links:hover{ line-height:40px;padding:0 5px; font-size:0.9em}
+
+/*Page Options */
+#options							{ width:390px;background:#000;border:2px #fff solid;padding:10px;text-align:left}
+#options h2							{ clear:both;color:#ccc}
+#themes ul 							{ margin:0px;padding:0px;list-style:none}
+#themes ul li						{ float:left;margin:5px;list-style:none;cursor:pointer}
+#themes ul li img					{ border:2px #fff solid}
+#themes ul li.selected img			{ border:2px #ff9900 solid}
+#themes ul li:hover img				{ border:2px #000 solid}
+.Separator							{ font-size:10px;color:#CCCCCC}
+.options							{ cursor:pointer;}
+.close								{ float:right;cursor:pointer;margin:-20px -20px 0 0;position:relative;z-index:100}
+
+/*- Horizontal Menu */
+
+.mainMenu .root						{ color:#222;text-align:center;padding:12px 10px 12px 10px;white-space:nowrap;float:left;font-weight:bold}
+.mainMenu .hov						{ color:#000;background:url(images/menu_hover.png) top center no-repeat}
+.mainMenu .sel, .mainMenu .bc 		{ color:#000;background:url(images/menu_active.png) bottom center no-repeat}
+.mainMenu table						{ border:1px solid #d3d3d3;z-index:5000}
+.mainMenu tr.mi						{ background:url(images/subbg.png) top left repeat-x;z-index:10000;font-size:11px;font-weight:normal;text-align:left;color:#000;line-height:27px;text-transform:none}
+.mainMenu tr.mi td					{ padding:0 3px;text-transform:none}
+.mainMenu tr.hov, .mainMenu tr.sel, .mainMenu tr.bc{background:url(images/subbg.png) bottom left repeat-x}
+.mainMenu tr.hov td,.mainMenu tr.sel td, .mainMenu tr.bc td{color:#fff}
+.menuspace							{ background:url(images/ms.gif) center center no-repeat #000;padding:0 1px;height:40px;border:1px #000 solid}
+
+/*- Vertical Menu */
+
+.leftnav							{ width:20%}
+.LeftMenu_l							{ background:url(images/LeftMenu_l.png) top left no-repeat;height:18px}
+.LeftMenu_r							{ background:url(images/LeftMenu_r.png) top right no-repeat;height:18px}
+.LeftMenu							{ background:url(images/LeftMenu.png) top left repeat-x;margin:0 14px;height:18px}
+.leftnav .lm						{ background:url(images/lm.png) top left repeat-y}
+.leftnav .rm						{ background:url(images/rm.png) top right repeat-y}
+.leftnav .mbox						{ background:url(images/leftmenubg.png) top left repeat;margin:0 20px}
+.leftnav .mb						{ margin:0 14px;height:18px;background:url(images/mb.png) top left repeat-x}
+.leftnav .mbl						{ height:18px;background:url(images/lmb.png) top left no-repeat}
+.leftnav .mbr						{ height:18px;background:url(images/rmb.png) top right no-repeat}
+.leftnav .mb						{ margin:0 14px;height:18px;background:url(images/mb.png) top left repeat-x}
+.leftMenu .root						{ color:#000;padding:0px;white-space:nowrap;text-align:left;height:28px;cursor:pointer;margin:0px}
+.leftMenu .root span				{ height:28px;padding:0px;line-height:28px;margin:0px}
+.leftMenu .root img					{ width:20px}
+.leftMenu .hov						{ color:#222}
+.leftMenu .sel, .leftMenu .bc 		{}
+.leftMenu table						{ border:2px solid #d3d3d3;z-index:5000}
+.leftMenu tr.mi						{ background:url(images/subbg.png) top left repeat-x;z-index:1000;font-size:11px;font-weight:normal;text-align:left;color:#222;text-transform:none;line-height:27px }
+.leftMenu tr.mi td					{ padding:0 3px;text-transform:none}
+.leftMenu tr.hov, .leftMenu tr.sel, .leftMenu tr.bc{background:url(images/subbg.png) bottom left repeat-x}
+.leftMenu tr.hov td,.leftMenu tr.sel td, .leftMenu tr.bc td{ color:#fff}
+
+
+
+
+
+
+
+
+
+
+

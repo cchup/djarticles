@@ -1,8 +1,8 @@
-<h3>TR Complete Package</h3>
+<h3>Expression Complete Package</h3>
 <p class="Contributor">
-	Tracy Wittenkeller of T-Worx<br />
-	<a href="mailto:info@t-worx.com">info@t-worx.com</a><br />
-	<a href="http://www.t-worx.com">http://www.t-worx.com</a><br />
+	Bazeeth Ali & Dilip of SalarO<br />
+	<a href="mailto:support@salaro.net">support@salaro.net</a><br />
+	<a href="http://www.salaro.com">http://www.salaro.com</a><br />
 </p>
 <p class="Contributor">
 	DotNetNuke&reg; <br />
@@ -12,12 +12,14 @@
 <hr/>
 <div class="License">
 	<p class="Owner">
-		<h3>About TR (Skin & Container Set)</h3>
+		<h3>About Expression (Skin & Container Set)</h3>
 		<b>Verion 1.0.0 </b><br /><br />
 
-		A DotNetNuke Designer Challenge skin package submitted to the "Out of the box" category by Tracy Wittenkeller of T-Worx. This package is 100% XHTML, CSS W3C, and uses the DNNRadMenu Telerik skin object (included in this release package download).<br /><br />
+		A DotNetNuke Design Challenge skin package submitted to the "Out of the box" category by Bazeeth Ali & Dilip of SalarO. This is a pure CSS skin with XHTML and CSS W3C standards uses Horizontal RadMenu by Telerik.It is fully tested against: IE7, IE8, Firefox and Chrome.<br /><br />
+		
+		Please be advised, because this install contains installable skin  objects: at first it may appear that you are installing a package that exists, this can happen if you installed one of the skin objects or another skin that utilizes the same skin object(s) previously. <br /><br />
 
-		For more information about  the TR project, or to check for the latest version, please visit the project on CodePlex at: <a href="http://dnnskintr.codeplex.com">http://dnnskintr.codeplex.com</a>. 
+		For more information about  the Expression project, or to check for the latest version, please visit the project on CodePlex at: <a href="http://dnnskinexpression.codeplex.com">http://dnnskinexpression.codeplex.com</a>. 
 	</p>
 </div>
 <div class="License">

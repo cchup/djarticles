@@ -1,0 +1,191 @@
+/**** container Padding Styles ******/
+.con_full_width{width:100%;}
+
+.common_head_pad{padding:0px 10px 0px 0px;}
+.head_pad{padding:7px 0px 0px 0px;}
+.head_pad_sandal{padding:7px 10px 0px 10px;}
+.head_pad_greybor{padding:5px 10px 0px 15px;}
+
+.action_pad{float:left;}
+.visibility_pad{margin:0; float:right;}
+
+.common_content_pad{padding:10px 10px 0px 0px;}
+.content_pad{ padding:10px 11px 20px 0px;}
+.content_pad1{ padding:15px 11px 0px 20px;}
+.content_pad2{ padding:10px;}
+.content_pad_greybor{padding:10px 17px;}
+
+.bottom_pad{padding:0px 10px; clear:both;}
+
+.clear_both{clear:both;}
+
+/* ********** top_Green Style ************** */
+.green_bg{background:url(cimages/green_bg.gif) no-repeat top left; padding-left:48px;}
+
+.green_top_lt{background:url(cimages/green_top_lt.gif) no-repeat top left; height:39px;}
+.green_top_rt{background:url(cimages/green_top_rt.gif) no-repeat top right; padding-right:21px;}
+.green_top_bg{background:url(cimages/green_top_bg.gif) repeat-x top left;}
+
+.green_rt_bg{ background:url(cimages/green_right_bg.gif) no-repeat top right; background-color:#ffffff;}
+
+/* ********** sandal Style ************** */
+.sandal_top_lt{background:url(cimages/sandal_top_lt.gif) no-repeat top left;}
+.sandal_top_rt{background:url(cimages/sandal_top_rt.gif) no-repeat top right; padding:0px 5px;}
+.sandal_top_bg{background:url(cimages/sandal_top_bg.gif) repeat-x top left; height:4px;}
+
+.sandal_bg{background-color:#ddd9c0;}
+
+.sandal_bot_lt{background:url(cimages/sandal_bot_lt.gif) no-repeat top left;}
+.sandal_bot_rt{background:url(cimages/sandal_bot_rt.gif) no-repeat top right; padding:0px 5px;}
+.sandal_bot_bg{background:url(cimages/sandal_bot_bg.gif) repeat-x top left; height:5px;}
+
+/* ********** grey_border Style ************** */
+.grey_border_lt{background:url(cimages/grey_border_lt.gif) no-repeat top left;}
+.grey_border_rt{background:url(cimages/grey_border_rt.gif) no-repeat top right; padding:0px 5px;}
+.grey_border_bg{background:url(cimages/grey_border_bg.gif) repeat-x top left; height:5px;}
+
+.grey_border_lt_bg{background:url(cimages/grey_border_lt_bg.gif) no-repeat top left;}
+.grey_border_rt_bg{background:url(cimages/grey_border_rt_bg.gif) no-repeat top right; padding:0px 2px;}
+.grey_border_cen_bg{background:url(cimages/grey_border_cen_bg.gif) repeat-x top left; background-color:#ffffff;}
+
+/* ********** Grey Style ************** */
+.grey_top_lt{background:url(cimages/grey_top_lt.gif) no-repeat top left;}
+.grey_top_rt{background:url(cimages/grey_top_rt.gif) no-repeat top right; padding:0px 18px;}
+.grey_top_bg{background:url(cimages/grey_top_bg.gif) repeat-x top left; height:41px;}
+
+/***************general font style**************************/
+
+.Head
+{
+    font-size:18px;
+    font-weight:bold;
+    color:#004b38;
+}
+
+.Normal
+{
+    font-size: 13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+/***** common_print ******/
+.common_print .Head
+{
+    font-size:18px;
+    font-weight:bold;
+    color:#004b38;
+}
+
+.common_print .Normal
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+.common_print td, .common_print th, .common_print div, .common_print p 
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+/***** green ******/
+.green .Head
+{
+    font-size:18px;
+    font-weight:bold;
+    color:#004b38;
+}
+
+.green .Normal
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+.green td, .green th, .green div, .green p 
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+/***** Sandal ******/
+.Sandal .Head
+{
+    font-size:18px;
+    font-weight:bold;
+    color:#7c733e;
+}
+
+.Sandal .Normal
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+.Sandal td, .Sandal th, .Sandal div, .Sandal p 
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+/***** Grey ******/
+.Grey .Head
+{
+    font-size:18px;
+    font-weight:bold;
+    color:#8a8a8a;
+}
+
+.Grey .Normal
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+.Grey td, .Grey th, .Grey div, .Grey p 
+{
+    font-size:13px;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+
+/* Module Action Menus Styles */
+
+.ModuleTitle_MenuItem td, .ModuleTitle_MenuItem th, .ModuleTitle_MenuItem div
+{ 
+	border:none; 
+	padding:3px; 
+	color:#000000 !important; 
+	font-size:11px; 
+	font-weight:bold !important;
+	white-space:nowrap;
+}
+
+.ModuleTitle_MenuItem { 
+	border:none;
+	padding-right:10px;
+}
+
+.ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon
+{
+	background-color: #c1d2ee !important;
+	color:#000000 !important; 
+	font-size:11px; 
+	font-weight:bold !important;
+	white-space:nowrap;
+}
+
+.ModuleTitle_MenuBreak td, .ModuleTitle_MenuBreak, .ModuleTitle_MenuIcon
+{
+	height: 2px;
+	background:transparent;
+}
+

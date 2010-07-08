@@ -1,17 +1,17 @@
-<h3>TR Skin Package</h3>
+<h3>Alpha Brisk Skin Package</h3>
 <p class="Contributor">
-	Tracy Wittenkeller of T-Worx<br />
-	<a href="mailto:info@t-worx.com">info@t-worx.com</a><br />
-	<a href="http://www.t-worx.com">http://www.t-worx.com</a><br />
+    dnnskin.net<br />
+    <a href="mailto:support@dnnskin.net">support@dnnskin.net</a><br />
+    <a href=http://www.dnnskin.net>http://www.dnnskin.net</a><br />
 </p>
 <hr/>
 <div class="License">
 	<p class="Owner">
-		<h3>About TR (Skin & Container Set)</h3>
+		<h3>About Alpha Brisk (Skin & Container Set)</h3>
 		<b>Verion 1.0.0 </b><br /><br />
+		
+		A DotNetNuke Designer Challenge skin package submitted to the "Web Standards" category by dnnskin.net. Eight themes using transparent png, div, CSS, JQuery, XHTML and CSS W3C standards. This skin and container set uses the Core DNN Navigation provider. <br /><br />
 
-		A DotNetNuke Designer Challenge skin package submitted to the "Out of the box" category by Tracy Wittenkeller of T-Worx. This package is 100% XHTML, CSS W3C, and uses the DNNRadMenu Telerik skin object (included in the release package download).<br /><br />
-
-		For more information about  the TR project, or to check for the latest version, please visit the project on CodePlex at: <a href="http://dnnskintr.codeplex.com">http://dnnskintr.codeplex.com</a>. 
+		For more information about  the Alpha Brisk Skin & Container project, or to check for the latest version, please visit the project on CodePlex at: <a href="http://dnnskinalphabrisk.codeplex.com">http://dnnskinsalphabrisk.codeplex.com</a>.
 	</p>
 </div>

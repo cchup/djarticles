@@ -1,0 +1,28 @@
+.dbwbc .stl{ background:url(images/dbwb1.png) top left no-repeat}
+.dbwbc .str{ background:url(images/dbwb3.png) top right no-repeat}
+.dbwbc .st{ background:url(images/dbwb2.png) top left repeat-x; margin:0 14px; height:13px; overflow:hidden}
+.dbwbc .sml{ background:url(images/dbwb7.png) top left repeat-y}
+.dbwbc .smr{ background:url(images/dbwb9.png) top right repeat-y}
+.dbwbc .sm{ background:url(images/dbwb8.png) repeat; margin:0 14px; min-height:1px; height:auto; padding:5px 5px 0 5px}
+* html .dbwbc .sm{ height:1px;}
+.dbwbc .sbl{ background:url(images/dbwb4.png) top left no-repeat}
+.dbwbc .sbr{ background:url(images/dbwb6.png) top right no-repeat}
+.dbwbc .sb{ background:url(images/dbwb5.png) top left repeat-x; margin:0 14px; height:18px}
+.dbwbc .Title{ color:#000000; font-size:1.2em; font-weight:bold;}
+.dbwbc .c_contentpane .Normal, .dbwbc .c_contentpane div, .dbwbc .c_contentpane p, .dbwbc .c_contentpane td,
+.dbwbc .c_contentpane ul, .dbwbc .c_contentpane ul li, .dbwbc .c_contentpane strong, .dbwbc .c_contentpane b{ line-height:1.4em; color:#888}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

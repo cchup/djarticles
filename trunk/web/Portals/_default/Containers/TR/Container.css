@@ -1,4 +1,17 @@
 /* Styles for Containers  */
+/* Styles for Blue Title,Round Border */
+.BlueTitleRound .stl{ background:url(Cimages/btr_top_left.png) top left no-repeat}
+.BlueTitleRound .str{ background:url(Cimages/btr_top_right.png) top right no-repeat}
+.BlueTitleRound .st{ background:url(Cimages/btr_top_bg.png) top left repeat-x; margin:0 9px; height:10px; overflow:hidden}
+.BlueTitleRound .sml{ background:url(Cimages/btr_center_left.png) top left repeat-y}
+.BlueTitleRound .smr{ background:url(Cimages/btr_center_right.png) top right repeat-y}
+.BlueTitleRound .sm{ background-color:#E6F1F3;margin:0px 9px 0px 9px; min-height:1px; height:auto; padding:5px; text-align:center;}
+.BlueTitleRound .sbl{ background:url(Cimages/btr_foot_left.png) top left no-repeat}
+.BlueTitleRound .sbr{ background:url(Cimages/btr_foot_right.png) top right no-repeat}
+.BlueTitleRound .sb{ background:url(Cimages/btr_foot_bg.png) top left repeat-x; margin:0 9px; height:8px}
+.BlueTitleRound .Title{ color:#027074 !important; font-size:18px;font-weight:bold; border-bottom:solid 1px #308A8D; padding-bottom:10px; }
+.BlueTitleRound .BlueTitle { display:block; margin-bottom:20px;}
+.BlueTitleRound UL LI{ margin:0px;}
 /* Styles for Containers BlackTitle Container */
 .BlackTitleTitle {padding:0; float:left;}
 .BlackTitleTitle h2, .BlackTitleTitle .ContainerTitle{padding:0!important; margin:0;font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:16px;line-height:20px; font-weight: bold;color:#3C3C3C; white-space:nowrap;}
@@ -25,10 +38,10 @@
 
 /* Styles for Containers IconTitleBlue Container */
 .IconTitleBlueTitle {padding:0; float:left;}
-.IconTitleBlueTitle h2, .IconTitleTitle .ContainerTitle{padding:0!important; margin:0 0 0 0;font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:15px;line-height:18px; font-weight:normal!important; color:#777777; white-space:nowrap; float:left;}
+.IconTitleBlueTitle h2, .IconTitleTitle .ContainerTitle{padding:8px 0px 0px 0px!important; margin:0 0 0 0;font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:15px;line-height:18px; font-weight:bold!important; color:#777777; white-space:nowrap; float:left;}
 .IconTitleBlueTitle h2 strong{ display:block; font-weight:bold!important; font-family:Tahoma, Arial, Sans-serif!important;}
 .IconTitleBlueIcon{ float:left; width:auto; margin:0 10px 0 0;}
-.IconTitleBlueWidth { padding:0;}
+.IconTitleBlueWidth { padding:0px;margin-top:10px;}
 .IconTitleBlueTopMIddle {padding:0 0 10px 0; border-bottom:solid 5px #35C3D7;}
 .IconTitleBlueContentpane {text-align:left;vertical-align: top;padding:10px 0px 0 0px; clear:both;}
 .IconTitleBlueVisibilitycell {float:right;text-align: right;}
@@ -36,10 +49,10 @@
 
 /* Styles for Containers IconTitleGreen Container */
 .IconTitleGreenTitle {padding:0; float:left;}
-.IconTitleGreenTitle h2, .IconTitleTitle .ContainerTitle{padding:0!important; margin:0 0 0 0;font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:15px;line-height:18px; font-weight:normal!important; color:#777777; white-space:nowrap; float:left;}
+.IconTitleGreenTitle h2, .IconTitleTitle .ContainerTitle{padding:8px 0px 0px 0px!important; margin:0 0 0 0;font-family:Arial, Verdana, Geneva, sans-serif ,Helvetica, sans-serif;font-size:15px;line-height:18px; font-weight:bold!important; color:#777777; white-space:nowrap; float:left;}
 .IconTitleGreenTitle h2 strong{ display:block; font-weight:bold!important; font-family:Tahoma, Arial, Sans-serif!important;}
 .IconTitleGreenIcon{ float:left; width:auto; margin:0 10px 0 0;}
-.IconTitleGreenWidth { padding:0;}
+.IconTitleGreenWidth { padding:0px;margin-top:10px;}
 .IconTitleGreenTopMIddle {padding:0 0 10px 0; border-bottom:solid 5px #7AC62E;}
 .IconTitleGreenContentpane {text-align:left;vertical-align: top;padding:10px 0px 0 0px; clear:both;}
 .IconTitleGreenVisibilitycell {float:right;text-align: right;}

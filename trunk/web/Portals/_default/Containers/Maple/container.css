@@ -1,0 +1,116 @@
+/* 
+================================
+ Container Styles for DotNetNuke
+================================
+*/   
+.containermaster {
+	width:100%;
+	background-color:transparent;
+	padding:10px 20px 10px 20px; 
+	text-align:left;
+}
+.content {
+	padding-top:0px; 
+	padding-right:7px;
+	padding-left:7px;
+	padding-bottom:0px;
+	text-align:left;
+}
+.box .content {
+	padding-top:10px; 
+	padding-right:14px;
+	padding-left:14px;
+	padding-bottom:0px;
+	text-align:left;
+}
+.leaf_back .content {
+	padding-top:10px; 
+	padding-right:7px;
+	padding-left:7px;
+	padding-bottom:3px;
+	text-align:left;
+}
+.containerwidth {
+	width:190px;
+}
+/* Titles */
+.title {
+	padding-left:6px;
+}
+
+/* Box */
+.boxtitle {
+	background-image:url(container_images/c_back_title.gif);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	background-color:#FEFCF9;
+	border-bottom:1px solid #FFFFFF;
+	height:42px;
+	vertical-align:middle;
+	padding-left:8px;
+}
+.boxtitle h1 {
+	margin-bottom:0px;
+}
+.box {
+	background-image:url(container_images/c_back_content.gif);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	background-color:#FDF8EF;
+	height:140px;
+}
+.canopy {
+	background-image:url(container_images/c_canopy.gif);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	height:155px;
+}
+.canopy2 {
+	background-image:url(container_images/c_canopy.gif);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	height:108px;
+}
+
+/* Leaf Containers */
+.leaf_back {
+	background-image:url(container_images/c_leaf_back_title.gif);
+	background-position:top left;
+	background-repeat:repeat-x;
+}
+.leaf_green {
+	background-image:url(container_images/c_leaf_green.gif);
+	background-position:top left;
+	background-repeat:no-repeat;
+	height:46px;
+	padding-top:9px;
+	padding-left:39px;
+}
+.leaf_red {
+	background-image:url(container_images/c_leaf_red.gif);
+	background-position:top left;
+	background-repeat:no-repeat;
+	height:46px;
+	padding-top:9px;
+	padding-left:39px;
+}
+.leaf_yellow {
+	background-image:url(container_images/c_leaf_yellow.gif);
+	background-position:top left;
+	background-repeat:no-repeat;
+	height:46px;
+	padding-top:9px;
+	padding-left:39px;
+}
+.leaf_winter {
+	background-image:url(container_images/c_leaf_winter.gif);
+	background-position:top left;
+	background-repeat:no-repeat;
+	height:46px;
+	padding-top:9px;
+	padding-left:39px;
+}
+
+.print {}
+
+

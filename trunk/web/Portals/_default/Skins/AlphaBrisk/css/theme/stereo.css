@@ -1,0 +1,39 @@
+/*the background image for the Grassland theme*/
+Body{ background:url(../../images/background/stereo.jpg) top center no-repeat}
+
+/*the link styles for the Grassland theme*/
+a,a:link,a:visited,a:active{ color:#3E81B5;text-decoration:none;font-weight: bold;}
+a:hover	{ color:#0090cf;text-decoration:underline;}
+
+/*the options link styles for the Grassland theme*/
+.options,a.options:link,a.options:active,a.options:visited { color:#5b6a6f; border-left:1px #ddd solid} span.options:hover{ color:#1a98f0}
+
+/*the CurrentDate link styles for the Grassland theme*/
+.CurrentDate{ color:#5b6a6f}
+
+/*the user object link styles for the Grassland theme*/
+.user,a.user:link,a.user:active,a.user:visited{ color:#000;} a.user:hover{ color:#1a98f0;}
+
+/*the login object link styles for the Grassland theme*/
+.login,a.login:link,a.login:active,a.login:visited { color:#000;} a.login:hover{ color:#1a98f0;}
+
+/*the text "You are here" styles for the Grassland theme*/
+.brisk_bread_bg{ color:#000; font-weight:bold}
+
+/*the Breadcrumb object link styles for the Grassland theme*/
+.Breadcrumb,a.Breadcrumb:link,a.Breadcrumb:active,a.Breadcrumb:visited{color:#000} a.Breadcrumb:hover{ color:#1a98f0}
+
+/*the Privacy object link styles for the Grassland theme*/
+.privacy,a.privacy:link,a.privacy:active,a.privacy:visited { color:#aaa} a.privacy:hover{ color:#1a98f0}
+
+/*the Terms object link styles for the Grassland theme*/
+.terms,a.terms:link,a.terms:active,a.terms:visited { color:#aaa} a.terms:hover{ color:#1a98f0}
+
+/*the CopyRight object link styles for the Grassland theme*/
+.copyright{ color:#aaa}
+
+/*the Links object link styles for the Grassland theme*/
+.links{ color:#ccc}a.links:link,a.links:active,a.links:visited{ color:#094e66;} a.links:hover{ color:#1a98f0}
+
+
+

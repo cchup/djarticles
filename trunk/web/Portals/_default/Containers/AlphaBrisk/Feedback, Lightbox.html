@@ -1,0 +1,19 @@
+﻿<script type="text/javascript">
+	$(function(){
+		$(".feedback").bindPopup("feedback");
+		$("#close").bindClosePopup();
+	})
+</script>
+<span class="feedback fbbutton"></span>
+<div id="feedback" style="display: none;">
+		<img src="images/close.png" onclick="disablePopups()" class="close" alt="Close" />
+		<object id="dnnTITLE" codetype="dotnetnuke/server" codebase="TITLE">
+			<param name="CssClass" value="title" />
+		</object>				
+		<object id="dnnACTIONS" codetype="dotnetnuke/server" codebase="ACTIONS">
+			<param name="ProviderName" value="DNNMenuNavigationProvider" />
+			<param name="ExpandDepth" value="1" />
+			<param name="PopulateNodesFromClient" value="True" />
+		</object>
+	<div id="ContentPane" runat="server" class="containerpane"></div>
+</div>

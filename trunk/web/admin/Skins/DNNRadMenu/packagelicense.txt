@@ -1,8 +1,8 @@
 <h3>Original contribution by</h3>
 <p class="Contributor">
-	Tracy Wittenkeller of T-Worx<br />
-	<a href="mailto:info@t-worx.com">info@t-worx.com</a><br />
-	<a href="http://www.t-worx.com">http://www.t-worx.com</a><br />
+	Bazeeth Ali & Dilip of SalarO<br />
+	<a href="mailto:support@salaro.net">support@salaro.net</a><br />
+	<a href="http://www.salaro.com">http://www.salaro.com</a><br />
 </p>
 <hr/>
 <div class="License">

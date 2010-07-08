@@ -1,0 +1,42 @@
+/*the background image for the Grainy theme*/
+Body{ background:url(../../images/background/grainy.jpg) repeat}
+
+/*the link styles for the Grainy theme*/
+a,a:link,a:visited,a:active	{ color:#fbbc14;text-decoration:none;font-weight: bold}
+a:hover{ color:#ffa406;text-decoration:underline}
+
+/*the options link styles for the Grassland theme*/
+.options,a.options:link,a.options:active,a.options:visited { color:#fff; border-left:1px #fff solid} span.options:hover{ color:#efce5c}
+
+/*the CurrentDate link styles for the Grassland theme*/
+.CurrentDate{ color:#fff}
+
+/*the user object link styles for the Grassland theme*/
+.user,a.user:link,a.user:active,a.user:visited{ color:#fff;background:url(../../images/whitearrow.gif) left center no-repeat;} a.user:hover{ color:#efce5c;}
+
+/*the login object link styles for the Grassland theme*/
+.login,a.login:link,a.login:active,a.login:visited { color:#fff;background:url(../../images/whitearrow.gif) left center no-repeat;} a.login:hover{ color:#efce5c;}
+
+/*the text "You are here" styles for the Grassland theme*/
+.brisk_bread_bg{ color:#fff; font-weight:bold}
+
+/*the Breadcrumb object link styles for the Grassland theme*/
+.Breadcrumb,a.Breadcrumb:link,a.Breadcrumb:active,a.Breadcrumb:visited{color:#fff} a.Breadcrumb:hover{ color:#efce5c}
+
+/*the Privacy object link styles for the Grassland theme*/
+.privacy,a.privacy:link,a.privacy:active,a.privacy:visited { color:#fff} a.privacy:hover{ color:#efce5c}
+
+/*the Terms object link styles for the Grassland theme*/
+.terms,a.terms:link,a.terms:active,a.terms:visited { color:#fff} a.terms:hover{ color:#efce5c}
+
+/*the CopyRight object link styles for the Grassland theme*/
+.copyright{ color:#fff}
+
+/*the Links object link styles for the Grassland theme*/
+.links,a.links:link,a.links:active,a.links:visited{ color:#fff;} a.links:hover{ color:#492202}
+
+/*the text color for the container which is compatible with the Grassland theme*/
+.Black_Gradient .Normal, .Black_Gradient div, .Black_Gradient p, .Black_Gradient td, .Black_Gradient h1, .Black_Gradient h2, .Black_Gradient h3, .Black_Gradient h4, .Black_Gradient h5, .Black_Gradient h6, .Black_Gradient ul, .Black_Gradient ul li, .Black_Gradient strong, .Black_Gradient b { color:#fbe3d3}
+.White_Gradient .Normal, .White_Gradient div, .White_Gradient p, .White_Gradient td, .White_Gradient h1, .White_Gradient h2, .White_Gradient h3, .White_Gradient h4, .White_Gradient h5, .White_Gradient h6, .White_Gradient ul, .White_Gradient ul li, .White_Gradient strong, .White_Gradient b, .White_Gradient .wgtitle,.Black_Gradient .bgtitle,.emptycontainer .Normal, .emptycontainer div, .emptycontainer p, .emptycontainer td, .emptycontainer h1, .emptycontainer h2, .emptycontainer h3, .emptycontainer h4, .emptycontainer h5, .emptycontainer h6, .emptycontainer ul, .emptycontainer ul li, .emptycontainer strong, .emptycontainer b { color:#FFF}
+
+
