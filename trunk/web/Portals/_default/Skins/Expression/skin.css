@@ -30,21 +30,21 @@ A:hover{color:#000000; text-decoration:none;}
 
 .overall_width{width:100%; position:relative; z-index:1;}
 .clear_both{clear:both;}
-.overall_pad{width:960px; margin:auto;}
-.logo_hgt{height:281px;}
+.overall_pad{width:960px; margin:auto; padding-top:2px;}
+.logo_hgt{height:0px;}
 .logo_pad{float:left; padding:205px 0px 0px 115px;}
 .user_pad{float:right; padding:155px 0px 0px 0px;}
 .search_pad{padding:86px 0px 0px 0px;}
-.menu_pad{height:46px; padding:4px 0px 0px 79px;}
+.menu_pad{height:46px; padding:1px 0px 0px 10px;background:url(images/menu_bg.png) repeat-x; margin:0px 0px 0px 0px;}
 .bread_hgt{height:33px;}
-.bread_pad{padding:9px 0px 0px 76px; float:left;}
+.bread_pad{padding:9px 0px 0px 10px; float:left;}
 .footer_ltpad{padding:12px 0px 0px 0px; float:left;}
 .footer_rtpad{padding:12px 0px 0px 0px; float:right;}
 
 .LtArea {float:left; width:633px; background:none;}
 .RtArea {float:right; margin-left:20px; width:307px; background:none;}
 
-.ContArea{float:left; width:49%; background:none;}
+.ContArea{float:left; width:100%; background:none;}
 .MiddArea{float:left; width:48%; background:none; margin-left:15px;}
 
 .FooterLtArea {float:left; width:320px; background:none; margin-right:20px;}

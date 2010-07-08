@@ -8,23 +8,11 @@
 <%@ Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="STYLES" Src="~/Admin/Skins/Styles.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="DNNRADMENU" Src="~/Admin/Skins/DNNRadMenu/DNNRadMenu.ascx" %>
-        <!--
-Skin Designed and developed by SalarO
-http://www.salaro.com
-Designer       : Bazeeth Ali
-Skin Developer : Dilip
-Released for free under Dotnetnuke License
-
-Skin Information
-Title        : salaro outofbox
-DNN Version  : 5.2.2
--->
-
 <div class="body_bg">
     <div align="center">
         <div class="banner_bg">
             <div class="overall_pad" align="left">
-                <div class="logo_hgt">
+                <!--<div class="logo_hgt">
                     <div class="logo_pad"><dnn:LOGO runat="server" id="dnnLOGO" /></div>
                     <div class="user_pad">
                         <div class="search_pad">
@@ -33,7 +21,7 @@ DNN Version  : 5.2.2
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="menu_pad">
                 	<dnn:DNNRADMENU runat="server" id="dnnRADMENU"  EnableEmbeddedSkins="false" SelectedPathHeaderItemCss="focused" SelectedPathItemCss="focused" ShowPath="true" Skin="Topmenu" />
                 </div>
@@ -42,7 +30,7 @@ DNN Version  : 5.2.2
                             <dnn:USER runat="server" id="dnnUSER" CssClass="user" />&nbsp;&nbsp;|&nbsp;&nbsp;<dnn:LOGIN runat="server" id="dnnLOGIN" CssClass="user" />
                         </div></div>
                     <div class="bread_pad">
-                        <div class="bread_img"><dnn:TEXT runat="server" id="dnnTEXT" CssClass="breadcrumb_text" Text="You are here" ResourceKey="Breadcrumb" /> :&nbsp;&nbsp;<dnn:BREADCRUMB runat="server" id="dnnBREADCRUMB" RootLevel="0" Separator="&nbsp;>&nbsp;" CssClass="Breadcrumb" /></div>
+                        <div class="bread_img"><dnn:TEXT runat="server" id="dnnTEXT" CssClass="breadcrumb_text" Text="You are here" ResourceKey="Breadcrumb" /> &nbsp;&nbsp;<dnn:BREADCRUMB runat="server" id="dnnBREADCRUMB" RootLevel="0" Separator="&nbsp;>&nbsp;" CssClass="Breadcrumb" /></div>
                     </div>
                 </div>
                 <div>
