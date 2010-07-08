@@ -1,0 +1,49 @@
+/*========================================================*/
+/* Brisk 1.0 Container Style  by dnnskin.net                       */
+/*========================================================*/
+.ModuleTitle_MenuItem TD 	{ cursor: pointer; text-align:left; white-space:nowrap; padding:2px;font:bold 11px  Tahoma}
+.ModuleTitle_MenuIcon		{ cursor: pointer; background-color: #EEEEEE; width: 15px;height: 100%; }
+.ModuleTitle_SubMenu 		{ z-index: 1000; cursor: pointer; background-color: #FFFFFF; padding: 1px;border:2px #999 solid;}
+.ModuleTitle_SubMenu span	{ color:#000000}
+.ModuleTitle_MenuBreak  	{ background-color: #EEEEEE; font-size: 1px;}
+.ModuleTitle_MenuItemSel 	{ cursor: pointer;background-color: #eee;}
+
+/*---------- To align the Actions, Icon and Title ---------*/
+
+.c_icon,.c_actions, h2.c_title{ float:left;}
+.c_icon img 				{ float:left; padding-right:4px;} 
+.icn img					{ margin-right:5px;}
+.title_vis					{ float:right;}
+.c_content					{ clear:both;}
+.c_contentpane				{ padding:8px 0 0 0;}
+.c_footer 					{ clear:both;padding:0; text-align:right; min-height:1px; height:auto;}
+* html .c_footer			{ height:1px}
+.Normal p					{ margin-top:0px}
+.eipbackimg 				{ background-color:#DAE7F2;border:solid 1px #4F839F;}
+.c_content .eipbackimg 		{ margin-top:0;margin-left:-20px;}
+
+/*---------- banner container default background ---------*/
+.bannercontainer .stl		{ background:url(images/slideshow1.png) top left no-repeat}
+.bannercontainer .str		{ background:url(images/slideshow3.png) top right no-repeat}
+.bannercontainer .st		{ background:url(images/slideshow2.png) top left repeat-x; margin:0 485px 0 47px; height:18px; overflow:hidden}
+.bannercontainer .sml		{ background:url(images/slideshow7.png) bottom left no-repeat}
+.bannercontainer .smr		{ background:url(images/slideshow9.png) bottom right no-repeat}
+.bannercontainer .sm		{ background:url(images/slideshow8.png) bottom left repeat-x; margin:0 22px;}
+.bannercontainer .sbl		{ background:url(images/slideshow4.png) bottom left no-repeat}
+.bannercontainer .sbr		{ background:url(images/slideshow6.png) bottom right no-repeat}
+.bannercontainer .sb		{ background:url(images/slideshow5.png) bottom left repeat-x; margin:0 485px 0 47px; height:21px; overflow:hidden}
+.bannercontainer .contentpane{ color:#555}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+div.form							{ width:500px;text-align:left}
+div.form_group						{ text-align:left;margin-bottom:10px;font-size:14px;color:#4b91ae}
+div.form_text						{ float:left;margin:0}
+p.form_text							{ margin:0 0 3px 0}
+textarea.form_text,
+input.form_text,
+select.form_text					{ color:#333;background:#efefef;border-color:#bbb #bbb #ddd;border-width:2px 1px 1px;padding:0.2em;margin:0 10px 10px 0}
+input,select, .SkinObject label		{ color:#666}
+.StandardButton						{ color:#666;background:#EEE;border:solid 1px #D1C7BE;line-height:22px;padding:0 10px;height:22px;cursor:pointer}
+.NormalTextBox						{ color:#666;padding-left:4px;line-height:12px;font-weight:normal}
+td.NormalTextBox					{ padding:0;margin:0;background:transparent;visibility:inherit;border:0}
+.DataGrid_Container 				{ margin-top:15px}
+.DataGrid_Header,
+.DataGrid_Header td, .NormalBold td	{ font-weight:bold}
+div.FileManager						{ height:auto;border:none}
+table.FileManager					{ width:99%;text-align:left;background:#FFF}
+.Settings,
+.Settings,.WorkPanel,
+.ExtensionsContent td, .DNN_HTMLContent,
+#dnn_ctr322_ModuleDefinitions_divInstalled{ text-align:left}
+#dnn_ctr363_editskins_lblOutput		{ display:block; text-align:left}
+#dnn_ctr_Login_pnlLogin table		{ float:none;margin:0 auto}
+#dnn_ctr_ManageUsers_pnlUser		{ text-align:left;min-height:1px}
+#dnn_ctr_ManageUsers_pnlUser .Normal,
+#dnn_ctr_Terms_lblTerms,
+#dnn_ctr_Privacy_lblPrivacy			{ line-height:20px}
+#dnn_ctr_Terms_lblTerms .SubHead,
+#dnn_ctr_Privacy_lblPrivacy .SubHead{ font-size:14px;color:#f97703;border-bottom:1px #f97703 solid;line-height:26px;margin:0px;padding:0px;font-weight:normal}
+#dnn_ctr979_LogViewer_dlLog td		{ text-align:left;white-space:normal;border:1px #fff solid}
+
+/*-ControlPanel changes -*/
+.ControlPanel a.CommandButton:link, 
+.ControlPanel a.CommandButton:visited{ color:#CB2027}
+.ControlPanel a.CommandButton:hover	{ color:#000; text-decoration:underline;}
+
+
+

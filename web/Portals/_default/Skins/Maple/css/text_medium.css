@@ -1,0 +1,44 @@
+/* Menu */
+.mainMenu,
+.mainMenu .root,
+.mainMenu tr.mi td {
+	font-size:13px;
+}
+
+/* Text Styles */
+.Head {
+	font-size:15px;
+}
+.SubHead {
+	font-size:14px;
+}
+h1, H2	{
+	font-size:19px;
+}
+H3, H4	{
+	font-size:17px;
+}
+H5, H6,
+.Normal, p, div, td	{
+	font-size:14px;
+}
+.StandardButton,
+.NormalTextBox,
+.datetxt,
+a.logintxt:link, a.logintxt:visited,
+a.logintxt:hover, a.logintxt:active,
+span.breadcrumbtxt,
+a.breadcrumbtxt:link, a.breadcrumbtxt:visited,
+a.breadcrumbtxt:hover, a.breadcrumbtxt:active,
+.search .NormalTextBox,
+a.linktxt:link, a.linktxt:visited, span.linktxt,
+a.linktxt:hover, a.linktxt:active,
+a.footertxt_1st:link, a.footertxt_1st:visited, span.footertxt_1st,
+a.footertxt_1st:hover, a.footertxt_1st:active,
+a.footertxt:link, a.footertxt:visited, span.footertxt,
+a.footertxt:hover, a.footertxt:active,
+.Help,
+.CommandButton {
+	font-size:13px;
+}
+

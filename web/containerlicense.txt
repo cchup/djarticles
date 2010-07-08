@@ -1,8 +1,8 @@
 <h3>Original contribution by</h3>
 <p class="Contributor">
-	Tracy Wittenkeller<br />
-	<a href="mailto:info@t-worx.com">info@t-worx.com</a><br />
-	<a href="http://www.t-worx.com">http://www.t-worx.com</a><br />
+    dnnskin.net<br />
+    <a href="mailto:support@dnnskin.net">support@dnnskin.net</a><br />
+    <a href=http://www.dnnskin.net>http://www.dnnskin.net</a><br />
 </p>
 <hr/>
 <div class="License">

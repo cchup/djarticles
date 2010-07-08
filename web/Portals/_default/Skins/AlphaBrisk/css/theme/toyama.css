@@ -1,0 +1,42 @@
+/*the background image for the Grainy theme*/
+Body{ background:url(../../images/background/toyama.jpg) top center no-repeat #142762}
+
+/*the link styles for the Grainy theme*/
+a,a:link,a:visited,a:active{ color:#3E81B5;text-decoration:none;font-weight: bold;}
+a:hover	{ color:#ff0;text-decoration:underline;}
+
+/*the options link styles for the Grassland theme*/
+.options,a.options:link,a.options:active,a.options:visited { color:#000; border-left:1px #ccc solid} span.options:hover{ color:#3f5d93}
+
+/*the CurrentDate link styles for the Grassland theme*/
+.CurrentDate{ color:#000}
+
+/*the user object link styles for the Grassland theme*/
+.user,a.user:link,a.user:active,a.user:visited{ color:#000;} a.user:hover{ color:#3f5d93;}
+
+/*the login object link styles for the Grassland theme*/
+.login,a.login:link,a.login:active,a.login:visited { color:#000;} a.login:hover{ color:#3f5d93;}
+
+/*the text "You are here" styles for the Grassland theme*/
+.brisk_bread_bg{ color:#000; font-weight:bold}
+
+/*the Breadcrumb object link styles for the Grassland theme*/
+.Breadcrumb,a.Breadcrumb:link,a.Breadcrumb:active,a.Breadcrumb:visited{color:#000} a.Breadcrumb:hover{ color:#3f5d93}
+
+/*the Privacy object link styles for the Grassland theme*/
+.privacy,a.privacy:link,a.privacy:active,a.privacy:visited { color:#fff} a.privacy:hover{ color:#adc2df}
+
+/*the Terms object link styles for the Grassland theme*/
+.terms,a.terms:link,a.terms:active,a.terms:visited { color:#fff} a.terms:hover{ color:#adc2df}
+
+/*the CopyRight object link styles for the Grassland theme*/
+.copyright{ color:#fff}
+
+/*the Links object link styles for the Grassland theme*/
+.links{ color:#adc2df}a.links:link,a.links:active,a.links:visited{ color:#fff;} a.links:hover{ color:#adc2df}
+
+/*the text color for the container which is compatible with the Grassland theme*/
+.Black_Gradient .Normal, .Black_Gradient div, .Black_Gradient p, .Black_Gradient td, .Black_Gradient h1, .Black_Gradient h2, .Black_Gradient h3, .Black_Gradient h4, .Black_Gradient h5, .Black_Gradient h6, .Black_Gradient ul, .Black_Gradient ul li, .Black_Gradient strong, .Black_Gradient b,
+.White_Gradient .Normal, .White_Gradient div, .White_Gradient p, .White_Gradient td, .White_Gradient h1, .White_Gradient h2, .White_Gradient h3, .White_Gradient h4, .White_Gradient h5, .White_Gradient h6, .White_Gradient ul, .White_Gradient ul li, .White_Gradient strong, .White_Gradient b, .White_Gradient .wgtitle,.Black_Gradient .bgtitle,.emptycontainer .Normal, .emptycontainer div, .emptycontainer p, .emptycontainer td, .emptycontainer h1, .emptycontainer h2, .emptycontainer h3, .emptycontainer h4, .emptycontainer h5, .emptycontainer h6, .emptycontainer ul, .emptycontainer ul li, .emptycontainer strong, .emptycontainer b { color:#FFF}
+
+

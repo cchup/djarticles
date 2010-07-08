@@ -1,0 +1,19 @@
+.Black_Gradient_l{ background:url(images/Black_Gradient_l.png) top left no-repeat}
+.Black_Gradient_r{ background:url(images/Black_Gradient_r.png) top right no-repeat}
+.Black_Gradient{ background:url(images/Black_Gradient_b.png) top left repeat-x; margin:0 12px; padding-top:10px}
+.Black_Gradient .bgtitle{ font-size:1.2em;line-height:30px; font-weight:bold;}
+.Black_Gradient .Normal, .Black_Gradient div, .Black_Gradient p, .Black_Gradient td, .Black_Gradient h1, .Black_Gradient h2, .Black_Gradient h3, .Black_Gradient h4, .Black_Gradient h5, .Black_Gradient h6, .Black_Gradient ul, .Black_Gradient ul li,, .Black_Gradient strong, .Black_Gradient b { line-height:1.5em}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

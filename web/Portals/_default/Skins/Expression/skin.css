@@ -1,0 +1,137 @@
+        /****
+Skin Designed and developed by SalarO
+http://www.salaro.com
+Designer       : Bazeeth Ali
+Skin Developer : Dilip
+Released for free under Dotnetnuke License
+
+Skin Information
+Title        : salaro outofbox
+DNN Version  : 5.2.2
+***/
+
+body {
+	margin: 0px;
+	height:100%;
+}
+.body_bg{background:url(images/body_bg.jpg) repeat-x top left; background-color:#ffffff;}
+
+.banner_bg{background:url(images/banner_bg.jpg) no-repeat top center;}
+
+.search_bg{width:217px; height:23px;}
+.bread_img{background:url(images/bread_bg.gif) no-repeat top left; padding-left:22px;}
+.user_right{float:right; text-align:right; padding:9px 0px 0px 10px;}
+
+.footer_line{background:url(images/footer_line.jpg) no-repeat top left; height:40px;}
+
+TH,TD,DIV,P{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#4a4a4a; font-weight:normal;}
+A,A:link,A:visited,A:active{color:#00553c; text-decoration:underline;}
+A:hover{color:#000000; text-decoration:none;}
+
+.overall_width{width:100%; position:relative; z-index:1;}
+.clear_both{clear:both;}
+.overall_pad{width:960px; margin:auto;}
+.logo_hgt{height:281px;}
+.logo_pad{float:left; padding:205px 0px 0px 115px;}
+.user_pad{float:right; padding:155px 0px 0px 0px;}
+.search_pad{padding:86px 0px 0px 0px;}
+.menu_pad{height:46px; padding:4px 0px 0px 79px;}
+.bread_hgt{height:33px;}
+.bread_pad{padding:9px 0px 0px 76px; float:left;}
+.footer_ltpad{padding:12px 0px 0px 0px; float:left;}
+.footer_rtpad{padding:12px 0px 0px 0px; float:right;}
+
+.LtArea {float:left; width:633px; background:none;}
+.RtArea {float:right; margin-left:20px; width:307px; background:none;}
+
+.ContArea{float:left; width:49%; background:none;}
+.MiddArea{float:left; width:48%; background:none; margin-left:15px;}
+
+.FooterLtArea {float:left; width:320px; background:none; margin-right:20px;}
+.FooterCenArea {float:left; width:290px; background:none;}
+.FooterrtArea {float:left; width:290px; background:none; margin-left:20px;}
+
+.logo_lt{background:url(images/logo_lt.gif) no-repeat top left;}
+.logo_rt{background:url(images/logo_rt.gif) no-repeat top right; height:111px; padding:30px 0px 0px 15px;}
+.logo_bg{background:url(images/logo_bg.gif) repeat-x top left;}
+
+.footer_leaf_pad{position:relative; top:-25px; margin-bottom:-25px;}
+
+.footer_lt{background:url(images/footer_left.gif) no-repeat top left;}
+.footer_rt{background:url(images/footer_right.gif) no-repeat top right; padding:0px 5px;}
+.footer_bg{background:url(images/footer_bg.gif) repeat-x top left; height:37px;}
+
+/* ********** Green_leaf Style ************** */
+.green_leaf_toplt{background:url(images/green_leaf_toplt.gif) no-repeat top left;}
+.green_leaf_toprt{background:url(images/green_leaf_toprt.gif) no-repeat top right; padding:0px 177px 0px 43px;}
+.green_leaf_topbg{background:url(images/green_leaf_topbg.gif) repeat-x top left; height:108px;}
+
+/* ********** Control Panel Style ************** */
+/* ControlPanel style */
+.ControlPanel{border:none;background-color:#ffffff; border-bottom:#cccccc 1px dotted;}
+.cpanel_left {padding-left:21px;}
+.cpanel_right {padding-right:33px;}
+
+/*-------ControlPanel changes ---------------*/
+.ControlPanel a.CommandButton:link, .ControlPanel a.CommandButton:visited{color:#000000;}
+.ControlPanel a.CommandButton:hover{color:#000000; text-decoration:underline;}
+.ControlPanel a.CommandButton:link, .ControlPanel a.CommandButton:visited, .ControlPanel .SubHead{font-size:11px;}
+
+/* ********** Search Style ************** */
+#SearchContainer Input{border:none; outline:none; width:175px; font-size:11px; HEIGHT:23px; background:transparent; padding:5px 0px 0px 5px; margin:0px; color:#00563d; vertical-align:top;}
+#SearchContainer a,#SearchContainer a:link,#SearchContainer a:hover{text-decoration:none;}
+
+/* ********** Pane Style ************** */
+.TopPane{padding:0px 0px 0px 0px; margin:0;}
+.ContentPane{padding:0px 0px 0px 0px;}
+.BottomPane{padding:0px 0px 0px 0px;}
+.LeftPane { padding:0px 0px 0px 0px; margin:0px;}
+.MiddlePane { padding:0px 0px 0px 0px; margin:0px;}
+.MiddleLeftPane{padding:0px; margin:0px;}
+.MiddleRightPane{padding:0px; margin:0px;}
+.RightPane { padding:0px 0px 0px 0px; margin:0px;}
+
+.DNNEmptyPane {width:0px !important;}
+
+/* ********** Container Style ************** */
+.Head{font-size:12px; font-weight:bold; color:#000000;}
+.SubHead{font-size:11px; color:#000000;}
+.SubSubHead{font-size:11px; color:#000000;}
+.Normal{font-size:11px; color:#6b6b6b;}
+
+
+/* ********** User Style ************** */
+.user,a.user:link,a.user:active,a.user:visited {font-size:11px; font-weight:bold; color:#00553c; text-decoration:none;}
+a.user:hover{color:#000000;}
+
+/* ********** Link Style **************/
+.links,a.links:link,a.links:active,a.links:visited{font-size:13px; color:#00553c; text-decoration:none; font-weight:normal;}
+a.links:hover{color:#505050;}
+
+/* ********** Footer Style ************** */
+.footer,a.footer:link,a.footer:active,a.footer:visited{font-size:13px; font-weight:bold; color:#505050; text-decoration:none;}
+a.footer:hover{color:#00553c;}
+
+/* ********** Breadcrumb Style ***************/
+.Breadcrumb,a.Breadcrumb:link,a.Breadcrumb:active,a.Breadcrumb:visited{font-size:13px; color:#00553c; text-decoration:none; font-weight:bold;}
+a.Breadcrumb:hover{color:#000000;}
+
+/* ********** Date Style ************** */
+.date,a.date:link,a.date:active,a.date:visited{font-size:10px; color:#FFFFFF; text-decoration:none; font-weight:normal;}
+a.date:hover{color:#22A9DA;}
+
+img{border:none;}
+
+.footer_link,a.footer_link:link,a.footer_link:active,a.footer_link:visited{font-size:13px; font-weight:bold; color:#00553c; text-decoration:none;}
+a.footer_link:hover{color:#505050;}
+
+
+ ul, li {
+	line-height:normal;
+	list-style-image:url(images/bullets_img.gif);
+	line-height:1.7em;
+	list-style-type: disc;
+}
+
+.breadcrumb_text{font-size:13px; color:#00553c; text-decoration:none; font-weight:bold;}
+

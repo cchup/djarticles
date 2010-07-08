@@ -1,0 +1,95 @@
+<div id="ControlPanel" runat="server"></div>
+<table summary="" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="skinmaster fixed" id="yellow">
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" summary="">
+                        <tr>
+                          <td class="language" valign="middle"><div class="languagetxt">[LANGUAGE]</div><div class="datetxt">[CURRENTDATE]</div>
+						  <div class="Widgets">
+	                 <object id="SizeWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+	                    <param name="baseUrl" value="<%= SkinPath %>css/" />
+	                    <param name="template" value="&lt;div title='{TEXT}' {ID} {CLASS}&gt;&lt;/div&gt;" />
+	                    <param name="default" value="width_fixed" />
+	                    <param name="Fixed Width" value="width_fixed" />
+	                    <param name="Medium Width" value="width_medium" />
+	                    <param name="Full Width" value="width_large" />
+	                </object>
+	                <object id="TextSizeWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+	                    <param name="baseUrl" value="<%= SkinPath %>css/" />
+	                    <param name="template" value="&lt;div title='{TEXT}' {ID} {CLASS}&gt;&lt;/div&gt;" />
+	                    <param name="default" value="MediumText" />
+	                    <param name="Small Text" value="text_small" />
+	                    <param name="Medium Text" value="text_medium" />
+	                    <param name="Large Text" value="text_large" />
+	                </object>
+	            </div></td>
+                        </tr>
+                    </table><div class="frame_top">
+      <div class="frame_bottom">
+      <div class="frame_left">
+      <div class="frame_right">
+      <div class="frame_top_left">
+      <div class="frame_top_right">
+      <div class="frame_bottom_left">
+      <div class="frame_bottom_right">
+      <table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="88" valign="bottom" class="skinpad"><table summary="" width="100%" border="0" cellspacing="0" cellpadding="0" class="breadcrumbtxt">
+            <tr>
+              <td height="88" align="left" valign="bottom" nowrap="nowrap" id="logintxt"><div><div><div>[LOGIN]</div></div></div><div><div><div>[USER]</div></div></div></td>
+              <td height="88" align="right" valign="bottom" class="top_image" nowrap="nowrap"><img src="images/spacer.gif" class="maple_top" width="214" height="88" hspace="0" vspace="0" border="0" alt="" /></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td valign="top" align="center" class="skinpad"><table summary="" width="100%" border="0" cellpadding="0" cellspacing="0" class="back_grass">
+            <tr>
+              <td height="5" valign="middle" class="logo">[LOGO]</td>
+              <td height="5" align="right" valign="top"><img src="images/spacer.gif" class="maple" width="417" height="156" hspace="0" vspace="0" border="0" alt="" /></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td valign="top" align="center" class="skinpad"><div class="tabmenu">[NAV]</div></td>
+        </tr>
+        <tr>
+          <td height="28" class="skinpad"><table summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="31" align="left" valign="middle" class="breadcrumbtxt" nowrap="nowrap">[TEXT][BREADCRUMB]</td>
+                <td height="31" align="right" valign="top" class="search">[SEARCH]</td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="170" valign="top" class="skinpad"><table summary="" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" valign="top"><table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td valign="top" class="main"><table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="100%" align="center" valign="top"><div class="toppane" id="TopPane" runat="server"></div>
+                              <table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td valign="top" class="leftpane" id="LeftPane" runat="server"></td>
+                                  <td width="100%" class="contentpane" id="ContentPane" runat="server" valign="top"></td>
+                                  <td valign="top" class="rightpane" id="RightPane" runat="server"></td>
+                                </tr>
+                              </table>
+                              <div class="bottompane" id="BottomPane" runat="server"></div></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="20" align="center" class="linktxt">[LINKS]</td>
+        </tr>
+      </table>
+      </div></div></div></div></div></div></div></div><table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="20" align="center" class="footertxt">[COPYRIGHT]<a href="http://www.dynnamite.co.uk" target="_blank" class="footertxt">Designed by DyNNamite</a>[TERMS][PRIVACY]</td>
+              </tr>
+            </table></td>
+  </tr>
+</table>

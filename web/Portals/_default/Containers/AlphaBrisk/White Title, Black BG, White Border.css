@@ -1,0 +1,28 @@
+.wbdbc .stl{ background:url(images/wbdb1.png) top left no-repeat}
+.wbdbc .str{ background:url(images/wbdb3.png) top right no-repeat}
+.wbdbc .st{ background:url(images/wbdb2.png) top left repeat-x; margin:0 14px; height:13px; overflow:hidden}
+.wbdbc .sml{ background:url(images/wbdb7.png) top left repeat-y}
+.wbdbc .smr{ background:url(images/wbdb9.png) top right repeat-y}
+.wbdbc .sm{ background:url(images/wbdb8.png) repeat; margin:0 14px; min-height:1px; height:auto; padding:5px 5px 0 5px}
+* html .wbdbc .sm{ height:1px;}
+.wbdbc .sbl{ background:url(images/wbdb4.png) top left no-repeat}
+.wbdbc .sbr{ background:url(images/wbdb6.png) top right no-repeat}
+.wbdbc .sb{ background:url(images/wbdb5.png) top left repeat-x; margin:0 14px; height:18px}
+.wbdbc .Title{ color:#fff; font-size:1.2em; font-weight:bold; }
+.wbdbc .c_contentpane .Normal, .wbdbc .c_contentpane div, .wbdbc .c_contentpane p, .wbdbc .c_contentpane td,
+.wbdbc .c_contentpane h1, .wbdbc .c_contentpane h2, .wbdbc .c_contentpane h3, .wbdbc .c_contentpane h4, .wbdbc .c_contentpane h5, .wbdbc .c_contentpane h6,
+.wbdbc .c_contentpane ul, .wbdbc .c_contentpane ul li, .wbdbc .c_contentpane strong, .wbdbc .c_contentpane b,.wbdbc a.CommandButton:link, .wbdbc a.CommandButton:active, .wbdbc a.CommandButton:visited { color:#aaa; line-height:1.4em}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

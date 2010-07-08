@@ -1,0 +1,6 @@
+/*--------- IE overrides with .gif backgrounds style ----------*/
+.mainMenu .hov{background:url(../images/menu_hover.gif) top center no-repeat;}
+.mainMenu .sel, .mainMenu .bc {background:url(../images/menu_active.gif) top center no-repeat;}
+
+
+
