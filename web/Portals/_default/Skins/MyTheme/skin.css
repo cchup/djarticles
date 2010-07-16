@@ -1,0 +1,70 @@
+/* HTML & CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{margin: 0;padding: 0;border: 0;outline: 0;vertical-align: baseline;}
+: focus, a, button, input{outline: 0;}
+body{line-height: 1;}
+ol, ul{list-style: none;}
+table{border-collapse: separate;border-spacing: 0;}
+caption, th, td{text-align: left;font-weight: normal;}
+blockquote: before, blockquote: after,
+q: before, q: after{content: "";}
+blockquote, q{quotes: "" "";}
+h1,h2,h3,h4,h5{font-weight: bold;}
+input{font-family: Helvetica, Arial, sans-serif;}
+/**布局、全局样式**/
+body{font: 62.5% Helvetica, Arial, sans-serif;background: #f5f5e8;color: #555;}
+div.body_bg{margin: 0 auto;padding: 0 10px;min-width: 755px;/**width: expression(document.body.clientWidth < 782? "755px" : "auto");**/width: 960px;}
+.clearfloat{clear: both;}
+/**header**/
+div#header{float: left;margin: 15px auto 20px;width: 100%;}
+div#logo{float: left;margin: 5px 0 0;width: 245px;height: 55px;background: url(images/) no-repeat;}
+div#logo a{display: block;width: 245px;height: 55px;text-indent: -9999px;}
+div#logo a: hover{background-position: 0 -55px;}
+div#globalnav { float:right;}
+/* Breadcrumbss*/
+div#breadcrumbs_box{width:100%;margin:0px;padding: 0; }
+div#breadcrumbs { float:left;margin: 0px;padding: 10px 0px 0px 0px;height: 25px; }
+div#head_search{float: right;right: 5px;margin: 6px 3px 0px 0px;width: 197px;height: 25px;}
+div#breadcrumbs .Breadcrumb{ padding:0px 10px 0px 10px; background: url(images/breadcrumb_arrow.gif) no-repeat 2px; display:block;}
+div#head_search .search{display: block;float: right;background: url(images/search_button.gif) no-repeat;width: 24px;height: 21px;}
+div#head_search .NormalTextBox{width: 160px;}
+/** Body **/
+div#body{display: block;clear: both;width: 960px;}
+div#contentpane{float: left; width:642px;margin: 0 16px 0 0;padding: 0;}
+div#rightsidepane{float: right;width: 300px;}
+
+/* Boxes */
+b.bt, b.bt b, b.bb, b.bb b,
+b.ht, b.ht b,
+b.ft, b.ft b, b.fb, b.fb b{display: block;clear: both;height: 10px;font-size: 1px;background: url(images/corners_light.gif) no-repeat;position: relative;z-index: 2;}
+b.ht, b.ht b{background: url(images/corners_blue.gif) no-repeat;}
+b.ft, b.ft b,
+b.fb, b.fb b{background: url(images/corners_light_borderless.gif) no-repeat;}
+b.bt, b.ht, b.ft{top: -1px;left: -1px;}
+b.bt b, b.ht b, b.ft b{background-position: 100% -10px;left: 2px;}
+b.bb, b.fb{background-position: 0 -20px;top: 1px;left: -1px;}
+b.bb b, b.fb b{background-position: 100% -30px;left: 2px;}
+*.content_wrap{position: relative;clear: both;border: 1px solid #ddd ;}
+*.content_borderless{position: relative;clear: both;background: #edede1;border: 1px solid #edede1;}
+*.content_border{position: relative;clear: both;background: #f5f5e8;border: 1px solid #f2f2e5;}
+div.content_head{float: left;clear: both;margin: -11px 0 0 -1px;width: 725px;height: 30px;background: #00b0d8 url(images/bg_titlebar.gif) repeat-x;border: 1px solid #00b0d8;}
+div.content_head h2{position: absolute;z-index: 3;margin: -3px 0 0 10px;font-size: 1.5em;color: #fff;}
+div.content_body{float: left;margin: 0;}
+
+/** buttons **/
+a.button_medium, button.button_medium{float: left;display: inline;margin: 0;padding: 0 0 0 5px;background: url(images/button_medium_left.gif) no-repeat 0 0 !important;font-family: Arial, Helvetica, sans-serif;text-decoration: none;border: 0;cursor: pointer;}
+a.button_medium span, button.button_medium span{float: left;padding: 6px 10px 0 5px;height: 26px;background: url(images/button_medium_right.gif) no-repeat 100% 0;color: #fff;font-size: 16px;font-weight: bold;white-space: nowrap;}
+button.button_medium{margin: 0;padding: 0 0 0 2px;}
+button.button_medium span{margin: -1px 0 0;padding: 6px 10px 0 5px;}
+a.button_medium: hover, button.button_medium: hover,
+a.button_medium.sfhhover, button.button_medium.sfhover,
+li.selected a.button_medium{background-position: 0 -32px !important;}
+a.button_medium: hover span, button.button_medium: hover span,
+a.button_medium.sfhover span, button.button_medium.sfhover span,
+li.selected a.button_medium span{background-position: 100% -32px;}
