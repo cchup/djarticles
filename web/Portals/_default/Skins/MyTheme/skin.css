@@ -6,7 +6,7 @@ del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td{margin: 0;padding: 0;border: 0;outline: 0;vertical-align: baseline;}
+table, caption, tbody, tfoot, thead, tr, th, td{margin: 0;padding: 0;border: 0;outline: 0; }
 : focus, a, button, input{outline: 0;}
 body{line-height: 1;}
 ol, ul{list-style: none;}
@@ -31,14 +31,13 @@ div#globalnav { float:right;}
 div#breadcrumbs_box{width:100%;margin:0px;padding: 0; }
 div#breadcrumbs { float:left;margin: 0px;padding: 10px 0px 0px 0px;height: 25px; }
 div#head_search{float: right;right: 5px;margin: 6px 3px 0px 0px;width: 197px;height: 25px;}
-div#breadcrumbs .Breadcrumb{ padding:0px 10px 0px 10px; background: url(images/breadcrumb_arrow.gif) no-repeat 2px; display:block;}
+div#breadcrumbs .Breadcrumb{ float:left; padding:0px 10px 0px 10px; background: url(images/breadcrumb_arrow.gif) no-repeat 2px; display:block;}
 div#head_search .search{display: block;float: right;background: url(images/search_button.gif) no-repeat;width: 24px;height: 21px;}
 div#head_search .NormalTextBox{width: 160px;}
 /** Body **/
 div#body{display: block;clear: both;width: 960px;}
-div#contentpane{float: left; width:642px;margin: 0 16px 0 0;padding: 0;}
-div#rightsidepane{float: right;width: 300px;}
-
+div#contentpane{float: left; width:682px;margin: 0 16px 0 0;padding: 0;}
+div#rightsidepane{float: right;width: 260px;}
 /* Boxes */
 b.bt, b.bt b, b.bb, b.bb b,
 b.ht, b.ht b,

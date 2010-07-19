@@ -1,1 +1,4 @@
 .Head { color: #555; font-weight:bold;}
+.action_pad { float:left;}
+.con_full_width{width:100%;}
+.common_head_pad,.common_content_pad,.bottom_pad{ padding:2px 10px 2px 10px;}
