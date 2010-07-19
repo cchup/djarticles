@@ -10,9 +10,11 @@
 			<div class="action_pad Head">
                			<dnn:ACTIONS runat="server" id="dnnACTIONS" ProviderName="DNNMenuNavigationProvider" />
             		</div>
+            		<div class="action_pad Head">
+		                <dnn:TITLE runat="server" id="dnnTITLE" CssClass="Head" />
+		        </div>
 			<div class="clearfloat"></div>
 		</div>
-        <div class="clearfloat"></div>
 	</div>
 	<div class="common_content_pad">
 		<div class="con_full_width">
