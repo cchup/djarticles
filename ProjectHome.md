@@ -1,0 +1,1 @@
+the DjArticles is a news articles project for dotnetnuke platform,you can use it to manage your news articles in you website
